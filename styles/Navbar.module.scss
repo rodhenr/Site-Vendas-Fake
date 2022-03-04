@@ -1,0 +1,40 @@
+.container {
+  background-color: #0057ff;
+  display: flex;
+  flex-direction: column;
+  font-family: "Audiowide", cursive;
+}
+
+.navInfo {
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    align-self: center;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+}
+
+.navInfoMenu {
+  align-self: center;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.navInfoRight {
+  align-self: center;
+  display: flex;
+  font-size: 1.5rem;
+  gap: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.search {
+  height: 35px;
+  margin: 1.5rem 2rem 1rem;
+
+  &::placeholder {
+    padding-left: 1rem;
+  }
+}

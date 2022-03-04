@@ -4,17 +4,26 @@ import {
   faUser,
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
+import styles from "../../styles/Navbar.module.scss";
 
 function index() {
   return (
-    <div>
-      <div>
-        <FontAwesomeIcon icon={faBars} />
+    <div className={styles.container}>
+      <div className={styles.navInfo}>
+        <div className={styles.navInfoMenu}>
+          <FontAwesomeIcon icon={faBars} />
+        </div>
         <h1>PC Shop</h1>
-        <FontAwesomeIcon icon={faUser} />
-        <FontAwesomeIcon icon={faCartShopping} />
+        <div className={styles.navInfoRight}>
+          <FontAwesomeIcon icon={faUser} />
+          <FontAwesomeIcon icon={faCartShopping} />
+        </div>
       </div>
-      <input type="text" />
+      <input
+        type="text"
+        className={styles.search}
+        placeholder="Digite o que você procura"
+      />
     </div>
   );
 }

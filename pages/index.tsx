@@ -1,13 +1,18 @@
-import type { NextPage } from 'next';
-import Navbar from '../components/Navbar/index'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Navbar from "../components/Navbar/index";
+import Banner from "../components/Banner/index";
+import Products from "../components/Home/index";
+import Footer from "../components/Footer/index";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Navbar />
+      <Banner />
+      <Products />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

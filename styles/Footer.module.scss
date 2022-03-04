@@ -1,0 +1,54 @@
+.store {
+  background-color: #0057ff;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  padding: 2rem;
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 1rem 0 0 0;
+  }
+
+  hr {
+    margin-top: 1rem;
+  }
+}
+
+.pagamento {
+  background-color: #0057ff;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  padding: 2rem;
+  text-align: center;
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+
+.pagamentoFormas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.footer {
+  background-color: #303030;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+
+  p {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 1rem 0;
+  }
+}

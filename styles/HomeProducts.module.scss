@@ -1,0 +1,46 @@
+.container {
+  background-color: #303030;
+  padding: 2.5rem 0;
+}
+
+.itemsContainer {
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  margin: 2.5rem 3rem;
+  padding: 1.5rem;
+  text-align: center;
+
+  h1 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  button {
+    background-color: #f00;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    height: 40px;
+    width: 150px;
+  }
+}
+
+.precoP {
+  color: #f00;
+  font-size: 1rem;
+  margin: 1.5rem 0 0 0;
+
+  p {
+    margin: 0;
+  }
+}
+
+.precoV {
+  color: #17a500;
+  font-size: 1.7rem;
+  margin: 1rem 0 1.5rem 0;
+
+  p {
+    margin: 0;
+  }
+}
