@@ -9,9 +9,8 @@ function index() {
         <HomeItems
           key={key}
           img={i.img}
-          desc={i.desc}
-          precoVista={i.precoVista}
-          precoPrazo={i.precoPrazo}
+          name={i.name}
+          pPrazo={i.pPrazo}
         />
       ))}
     </div>

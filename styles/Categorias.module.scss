@@ -1,0 +1,66 @@
+.containerCategoria {
+  background-color: #303030 !important;
+  padding-bottom: 15rem;
+  margin: 0;
+}
+
+.categName {
+  color: #fff;
+  margin: 0;
+  padding: 1rem 1.5rem;
+}
+
+.nameItem {
+  color: white;
+  margin: 0;
+  padding: 2rem 0rem 5rem;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.item {
+  margin: 2rem 1rem;
+  text-align: center;
+
+  h1 {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  button {
+    background-color: #f00;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    height: 30px;
+    margin-top: 1rem;
+    width: 150px;
+  }
+}
+
+.pPrazo {
+  color: red;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.pPrazoDesc {
+  color: red;
+  font-size: 0.8rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.pVista {
+  color: lime;
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.pVistaDesc {
+  color: lime;
+  font-size: 0.8rem;
+  margin: 0;
+}

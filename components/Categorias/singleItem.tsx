@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import styles from "../../styles/HomeProducts.module.scss";
+import styles from "../../styles/Categorias.module.scss";
 
 interface Props {
   img: string;
@@ -8,13 +7,12 @@ interface Props {
   pPrazo: number;
 }
 
-function homeItems({ img, name, pPrazo }: Props) {
+function singleItem({ img, name, pPrazo }: Props) {
   return (
-    <div className={styles.itemsContainer}>
-      <Image src={img} alt="processador" height={200} width={200} />
-      <h1>
-        <Link href={`/cpu/${name}`}>{name}</Link>
-      </h1>
+    <div className={styles.item}>
+      <Image src={img} alt="processador" height={140} width={140} />
+      <h1 className={styles.nameItem}>{name}</h1>
+      <hr />
       <p className={styles.pPrazo}>R$ {pPrazo.toFixed(2).replace(".", ",")}</p>
       <p className={styles.pPrazoDesc}>em até 12x no cartão</p>
       <p className={styles.pVista}>
@@ -26,4 +24,4 @@ function homeItems({ img, name, pPrazo }: Props) {
   );
 }
 
-export default homeItems;
+export default singleItem;

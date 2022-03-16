@@ -3,7 +3,7 @@ import styles from "../../styles/Footer.module.scss";
 
 function index() {
   return (
-    <div className={styles.container}>
+    <div>
       <div className={styles.store}>
         <h1>SOBRE A LOJA</h1>
         <p>

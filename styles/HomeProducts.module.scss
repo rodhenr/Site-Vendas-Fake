@@ -25,22 +25,26 @@
   }
 }
 
-.precoP {
-  color: #f00;
-  font-size: 1rem;
-  margin: 1.5rem 0 0 0;
-
-  p {
-    margin: 0;
-  }
+.pPrazo {
+  color: red;
+  font-size: 1.5rem;
+  margin: 1rem 0 0 0;
 }
 
-.precoV {
-  color: #17a500;
-  font-size: 1.7rem;
-  margin: 1rem 0 1.5rem 0;
+.pPrazoDesc {
+  color: red;
+  font-size: 0.8rem;
+  margin: 0 0 1.5rem 0;
+}
 
-  p {
-    margin: 0;
-  }
+.pVista {
+  color: green;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.pVistaDesc {
+  color: green;
+  font-size: 1.3rem;
+  margin: 0 0 1rem 0;
 }

@@ -13,7 +13,9 @@ function index() {
         <div className={styles.navInfoMenu}>
           <FontAwesomeIcon icon={faBars} />
         </div>
-        <h1>PC Shop</h1>
+        <h1>
+          <a href="/">PC Shop</a>
+        </h1>
         <div className={styles.navInfoRight}>
           <FontAwesomeIcon icon={faUser} />
           <FontAwesomeIcon icon={faCartShopping} />
