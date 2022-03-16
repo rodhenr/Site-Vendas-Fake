@@ -22,7 +22,8 @@ function Index() {
               img={i.img}
               pPrazo={i.pPrazo}
               name={i.name}
-              category={router.route}
+              pathName={i.pathName}
+              category={i.categoria}
             />
           ))}
         </div>

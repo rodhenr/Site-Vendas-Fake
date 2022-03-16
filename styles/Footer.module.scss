@@ -33,10 +33,11 @@
 }
 
 .pagamentoFormas {
+  align-items: center;
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0rem 0.5rem;
   justify-content: center;
-  padding: 1rem;
 }
 
 .footer {
@@ -51,4 +52,15 @@
     font-weight: 300;
     margin: 1rem 0;
   }
+}
+
+.tipoPagamento {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 80px;
 }

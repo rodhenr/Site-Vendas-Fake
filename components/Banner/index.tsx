@@ -1,18 +1,26 @@
 import Image from "next/image";
-import banner from "../../public/images/banner.jpg";
 import styles from "../../styles/Banner.module.scss";
 
 function index() {
   return (
-    <div className={styles.container}>
-      <Image
-        src={banner}
-        alt="Banner"
-        height={390}
-        width={1100}
-        layout="responsive"
-      />
-    </div>
+    <>
+      <div className={styles.container}>
+        <Image
+          src={"/images/banner1.jpg"}
+          alt="Banner1"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+      <div className={styles.container}>
+        <Image
+          src={"/images/banner2.jpg"}
+          alt="Banner2"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+    </>
   );
 }
 

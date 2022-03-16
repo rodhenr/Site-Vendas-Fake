@@ -6,16 +6,17 @@ interface Props {
   img: string;
   name: string;
   pPrazo: number;
+  pathName: string,
   category: string;
 }
 
-function singleItem({ img, name, pPrazo, category }: Props) {
+function singleItem({ img, name, pathName, pPrazo, category }: Props) {
   return (
     <div className={styles.item}>
-      <Link href={`${category}/${name.replace("/%20/g", "-")}`}>
+      <Link href={`${category}/${pathName}`}>
         <Image src={img} alt="processador" height={140} width={140} />
       </Link>
-      <Link href={`${category}/${name.replace("/%20/g", "-")}`}>
+      <Link href={`${category}/${pathName}`}>
         <h1 className={styles.nameItem}>{name}</h1>
       </Link>
       <hr />

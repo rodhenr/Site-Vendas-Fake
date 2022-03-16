@@ -17,10 +17,28 @@ function index() {
       <div className={styles.pagamento}>
         <h1>ACEITAMOS AS SEGUINTES FORMAS DE PAGAMENTO</h1>
         <div className={styles.pagamentoFormas}>
-          <Image src={"/images/elo.png"} alt="" height={25} width={45} />
-          <Image src={"/images/visa.png"} alt="" height={25} width={35} />
-          <Image src={"/images/master.png"} alt="" height={20} width={35} />
-          <Image src={"/images/boleto.png"} alt="" height={20} width={35} />
+          <div className={styles.tipoPagamento}>
+            <Image src={"/images/american.png"} alt="" height={40} width={64} />
+          </div>
+          <div className={styles.tipoPagamento}>
+            <Image src={"/images/pix.png"} alt="" height={40} width={64} />
+          </div>
+          <div className={styles.tipoPagamento}>
+            <Image src={"/images/visa.png"} alt="" height={40} width={64} />
+          </div>
+          <div className={styles.tipoPagamento}>
+            <Image
+              src={"/images/mastercard.png"}
+              alt=""
+              height={40} width={64}
+            />
+          </div>
+          <div className={styles.tipoPagamento}>
+            <Image src={"/images/boleto.png"} alt="" height={40} width={64} />
+          </div>
+          <div className={styles.tipoPagamento}>
+            <Image src={"/images/paypal.png"} alt="" height={40} width={64} />
+          </div>
         </div>
       </div>
       <footer className={styles.footer}>

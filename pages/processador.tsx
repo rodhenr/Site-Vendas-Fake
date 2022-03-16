@@ -1,8 +1,8 @@
 import React from "react";
 import Categorias from "../components/Categorias/index";
 
-function cpu() {
+function processador() {
   return <Categorias />;
 }
 
-export default cpu;
+export default processador;

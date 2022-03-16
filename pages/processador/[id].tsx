@@ -7,7 +7,7 @@ export default function ItemPage() {
   const router = useRouter();
   const itemID = router.query.id;
 
-  const item = itemsList.filter((i) => i.name === itemID);
+  const item = itemsList.filter((i) => i.pathName === itemID);
   const obj = Object.assign({}, ...item);
 
   return (
@@ -27,7 +27,7 @@ export async function getStaticPaths() {
   const paths = itemsList.map((i) => {
     return {
       params: {
-        id: i.name,
+        id: i.pathName,
       },
     };
   });

@@ -10,7 +10,9 @@ function index() {
           key={key}
           img={i.img}
           name={i.name}
+          pathName={i.pathName}
           pPrazo={i.pPrazo}
+          category={i.categoria}
         />
       ))}
     </div>

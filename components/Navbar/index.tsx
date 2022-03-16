@@ -5,7 +5,7 @@ import {
   faBars,
   faUser,
   faCartShopping,
-  faXmark
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "../../styles/Navbar.module.scss";
 
@@ -16,39 +16,45 @@ function Index() {
     setOpen(!open);
   }
 
+  function changeMouseOver() {}
+
   return (
     <div className={styles.container}>
       <div className={styles.navInfo}>
         <div className={styles.navInfoMenu}>
           <FontAwesomeIcon icon={faBars} onClick={changeOpen} />
-          {open && (
-            <div className={styles.sidebarMenu}>
-              <FontAwesomeIcon icon={faXmark} onClick={changeOpen} />
-              <ul>
-                <li>
-                  <Link href="/placamae">Placa-Mãe</Link>
-                </li>
-                <li>
-                  <Link href="/cpu">Processador</Link>
-                </li>
-                <li>
-                  <Link href="/placadevideo">Placa de Vídeo</Link>
-                </li>
-                <li>
-                  <Link href="/fonte">Fonte</Link>
-                </li>
-                <li>
-                  <Link href="/gabinete">Gabinete</Link>
-                </li>
-                <li>
-                  <Link href="/memoria">Memória RAM</Link>
-                </li>
-                <li>
-                  <Link href="/ssd">SSD</Link>
-                </li>
-              </ul>
-            </div>
-          )}
+          <div
+            className={
+              open
+                ? `${styles.sidebarMenu} ${styles.active}`
+                : styles.sidebarMenu
+            }
+          >
+            <FontAwesomeIcon icon={faXmark} onClick={changeOpen} />
+            <ul>
+              <li onMouseOver={changeMouseOver}>
+                <Link href="/placa-mae">Placa-Mãe</Link>
+              </li>
+              <li>
+                <Link href="/processador">Processador</Link>
+              </li>
+              <li>
+                <Link href="/placa-de-video">Placa de Vídeo</Link>
+              </li>
+              <li>
+                <Link href="/fonte">Fonte</Link>
+              </li>
+              <li>
+                <Link href="/gabinete">Gabinete</Link>
+              </li>
+              <li>
+                <Link href="/memoria-ram">Memória RAM</Link>
+              </li>
+              <li>
+                <Link href="/ssd">SSD</Link>
+              </li>
+            </ul>
+          </div>
         </div>
         <h1>
           <Link href="/">PC Shop</Link>
