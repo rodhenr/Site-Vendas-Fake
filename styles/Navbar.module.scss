@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   font-family: "Audiowide", cursive;
+  position: relative;
 }
 
 .navInfo {
@@ -36,5 +37,38 @@
 
   &::placeholder {
     padding-left: 1rem;
+  }
+}
+
+.sidebarMenu {
+  background-color: #303030;
+  height: 100vh;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 70%;
+  z-index: 100;
+
+  svg {
+    color: white;
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.4rem;
+      font-family: Roboto;
+      list-style: none;
+      margin: 1rem;
+      padding: 0;
+
+      a {
+        text-decoration: none;
+      }
+    }
   }
 }

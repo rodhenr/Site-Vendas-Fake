@@ -13,7 +13,7 @@ function homeItems({ img, name, pPrazo }: Props) {
     <div className={styles.itemsContainer}>
       <Image src={img} alt="processador" height={200} width={200} />
       <h1>
-        <Link href={`/cpu/${name}`}>{name}</Link>
+        <Link href={`/cpu/${name.replace("/ /g", "-")}`}>{name}</Link>
       </h1>
       <p className={styles.pPrazo}>R$ {pPrazo.toFixed(2).replace(".", ",")}</p>
       <p className={styles.pPrazoDesc}>em até 12x no cartão</p>

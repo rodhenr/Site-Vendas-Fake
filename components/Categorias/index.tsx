@@ -2,14 +2,19 @@ import Navbar from "../Navbar/index";
 import Footer from "../Footer/index";
 import Product from "./singleItem";
 import itemsList from "../itemsList";
+import { useRouter } from "next/router";
 import styles from "../../styles/Categorias.module.scss";
 
-function index() {
+function Index() {
+  const router = useRouter();
+
   return (
     <div>
       <Navbar />
       <div className={styles.containerCategoria}>
-        <h1 className={styles.categName}>{"PLACA DE VÍDEO"}</h1>
+        <h1 className={styles.categName}>
+          {router.route.replace("/", "").toUpperCase()}
+        </h1>
         <div className={styles.list}>
           {itemsList.map((i, key) => (
             <Product
@@ -17,6 +22,7 @@ function index() {
               img={i.img}
               pPrazo={i.pPrazo}
               name={i.name}
+              category={router.route}
             />
           ))}
         </div>
@@ -26,4 +32,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;
