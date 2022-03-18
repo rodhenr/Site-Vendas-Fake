@@ -16,14 +16,36 @@
   text-align: center;
 }
 
-.garantia {
-  align-self: center;
-  color: #fff;
-  margin: 0;
-}
-
 .img {
   padding-top: 2rem;
+}
+
+.containerPrices {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.containerPrazo {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+
+  svg {
+    color: red;
+    font-size: 2rem;
+  }
+}
+
+.containerVista {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+
+  svg {
+    color: green;
+    font-size: 2rem;
+  }
 }
 
 .pPrazo {
@@ -60,8 +82,22 @@
   width: 300px;
 }
 
+.productDesc {
+  background-color: #424242;
+  color: #fff;
+  margin: 5rem 0.5rem 0;
+  padding: 1rem;
+
+  h1 {
+    margin: 0;
+  }
+}
+
 .specs {
-  margin: 5rem 0 8rem 0;
+  background-color: #424242;
+  margin-bottom: 12rem;
+  margin-top: 2rem;
+  padding: 1rem;
 
   h1 {
     color: #fff;
@@ -71,4 +107,10 @@
 
 .specsDesc {
   color: #fff;
+}
+
+.garantia {
+  align-self: flex-start;
+  color: #fff;
+  font-size: 0.7rem;
 }

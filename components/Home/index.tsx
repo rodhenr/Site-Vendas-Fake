@@ -1,5 +1,5 @@
 import HomeItems from "./homeItems";
-import itemsList from "../itemsList";
+import itemsList from "../../listaItems/index";
 import styles from "../../styles/HomeProducts.module.scss";
 
 function index() {
