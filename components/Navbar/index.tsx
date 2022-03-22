@@ -61,7 +61,9 @@ function Index() {
         </h1>
         <div className={styles.navInfoRight}>
           <FontAwesomeIcon icon={faUser} />
-          <FontAwesomeIcon icon={faCartShopping} />
+          <Link href="/carrinho">
+            <FontAwesomeIcon icon={faCartShopping} />
+          </Link>
         </div>
       </div>
       <input

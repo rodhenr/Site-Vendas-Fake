@@ -7,6 +7,7 @@ function index() {
     <div className={styles.container}>
       {itemsList.map((i, key) => (
         <HomeItems
+          array={i}
           key={key}
           img={i.img}
           name={i.name}
