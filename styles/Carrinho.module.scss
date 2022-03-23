@@ -1,3 +1,199 @@
-.container {
+.containerCart {
+  font-family: roboto;
 
+  hr {
+    margin: 0;
+  }
+}
+
+.cartTitle {
+    margin: 0;
+    padding: 1rem;
+}
+
+.cartItemNumber {
+  background-color: rgb(240, 240, 240);
+  color: rgba(0, 0, 0, 0.3);
+  margin: 0;
+  padding: 10px;
+}
+
+.cartTotalPrice {
+  font-family: roboto;
+  margin: 1rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.containerCartShip {
+  h3 {
+    margin: 1rem;
+  }
+}
+
+.cartRemoveAll {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem;
+
+  button {
+    background-color: #f00;
+    color: #fff;
+    border: #000;
+    font-family: roboto;
+    height: 30px;
+    width: 200px;
+  }
+}
+
+.cartShipMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem;
+
+  input {
+    height: 35px;
+
+    &::placeholder {
+      padding-left: 10px;
+    }
+  }
+
+  button {
+    color: #303030;
+    height: 35px;
+    margin-left: 0.5rem;
+  }
+}
+
+.containerCartItem {
+  button {
+    background-color: #fff;
+    border: none;
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+.cartItemMain {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  margin: 0.5rem 5px;
+}
+
+.cartItemImage {
+  margin: 0.5rem;
+}
+
+.cartItemDesc {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.cartItemPrices {
+  margin: 1rem 0;
+}
+
+.cartItemPriceVista {
+  color: green;
+  font-size: 1.4rem;
+}
+
+.cartItemPricePrazo {
+  color: red;
+}
+
+.prices {
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  flex-direction: column;
+  font-family: roboto;
+  margin: 5rem 0 1rem 0;
+
+  h3 {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.cartProductTotal {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+  padding: 1rem 0;
+}
+
+.cartPricesShip {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+  padding: 1rem 0;
+}
+
+.cartPricesTotal {
+  background-color: rgb(210, 210, 210);
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+.cartTotal {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.cartTotalVista {
+  color: green;
+  margin-bottom: 1.5rem;
+}
+
+.cartTotalVistaPrice {
+  font-size: 2rem;
+}
+
+.cartTotalPrazo {
+  color: red;
+}
+
+.cartTotalPrazoPrice {
+  font-size: 2rem;
+}
+
+.cartItemAddRemove {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+
+  svg {
+    font-size: 1.5rem;
+  }
+}
+
+.cartCheckout {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
+  justify-content: center;
+
+  button {
+    background: green;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    height: 60px;
+    width: 90vw;
+  }
 }

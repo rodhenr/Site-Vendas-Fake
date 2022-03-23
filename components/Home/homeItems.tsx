@@ -1,34 +1,55 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
-
 import { addToCart } from "../../store/slices/cartSlice";
 import styles from "../../styles/HomeProducts.module.scss";
 
 interface Props {
-  array: object;
-  category: string;
+  categoria: string;
   img: string;
+  id: string;
+  fabricante: string;
   name: string;
   pathName: string;
   pPrazo: number;
+  garantia: string;
+  specs: string[];
 }
 
-function HomeItems({ array, category, img, name, pathName, pPrazo }: Props) {
+function HomeItems(props: Props) {
   const dispatch = useDispatch();
+  const { categoria, img, name, pathName, pPrazo } = props;
+
+  function handleClick() {
+    alert("Adicionado ao carrinho com sucesso!");
+    dispatch(addToCart(props));
+  }
+
   return (
     <div className={styles.itemsContainer}>
-      <Image src={img} alt="processador" height={200} width={200} />
-      <h1>
-        <Link href={`/${category}/${pathName}`}>{name}</Link>
-      </h1>
-      <p className={styles.pPrazo}>R$ {pPrazo.toFixed(2).replace(".", ",")}</p>
+      <Link href={`/${categoria}/${pathName}`} passHref>
+        <Image src={img} alt="processador" height={200} width={200} />
+      </Link>
+      <Link href={`/${categoria}/${pathName}`} passHref>
+        <h1>{name}</h1>
+      </Link>
+      <p className={styles.pPrazo}>
+        {pPrazo.toLocaleString("pt-BR", {
+          minimumFractionDigits: 2,
+          style: "currency",
+          currency: "BRL",
+        })}
+      </p>
       <p className={styles.pPrazoDesc}>em até 12x no cartão</p>
       <p className={styles.pVista}>
-        R$ {(pPrazo * 0.85).toFixed(2).replace(".", ",")}
+        {(pPrazo * 0.85).toLocaleString("pt-BR", {
+          minimumFractionDigits: 2,
+          style: "currency",
+          currency: "BRL",
+        })}
       </p>
       <p className={styles.pVistaDesc}>à vista no boleto</p>
-      <button onClick={() => dispatch(addToCart(array))}>COMPRAR</button>
+      <button onClick={handleClick}>COMPRAR</button>
     </div>
   );
 }

@@ -1,14 +1,9 @@
 import Categoria from "../../components/Categorias/index";
 import itemsList from "../../listaItems/index";
 import { GetStaticProps } from "next";
-import { ParsedUrlQuery } from "querystring";
 
 interface Props {
-  itemObj: Array<Object>;
-}
-
-interface IParams extends ParsedUrlQuery {
-  id: string;
+  itemObj: object[];
 }
 
 export default function index({ itemObj }: Props) {

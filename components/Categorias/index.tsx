@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import styles from "../../styles/Categorias.module.scss";
 
 interface Props {
-  listaItem: Array<Object>;
+  listaItem: object[];
 }
 
 function Index({ listaItem }: Props) {
@@ -19,17 +19,21 @@ function Index({ listaItem }: Props) {
       <Navbar />
       <div className={styles.containerCategoria}>
         <h1 className={styles.categName}>
-          {router.route.replace("/", "").toUpperCase()}
+          {items[0].categoria.replace(/-/g, " ").toUpperCase()}
         </h1>
         <div className={styles.list}>
           {items.map((i, key) => (
             <Product
               key={key}
               img={i.img}
-              pPrazo={i.pPrazo}
               name={i.name}
               pathName={i.pathName}
-              category={i.categoria}
+              pPrazo={i.pPrazo}
+              categoria={i.categoria}
+              fabricante={i.fabricante}
+              id={i.id}
+              garantia={i.garantia}
+              specs={i.specs}
             />
           ))}
         </div>

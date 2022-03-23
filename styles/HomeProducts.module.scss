@@ -1,5 +1,6 @@
 .container {
   background-color: #303030;
+  font-family: roboto;
   padding: 2.5rem 0;
 }
 
@@ -48,4 +49,10 @@
   color: green;
   font-size: 1.3rem;
   margin: 0 0 1rem 0;
+}
+
+.homeTitle {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 3rem;
 }

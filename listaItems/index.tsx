@@ -11,6 +11,8 @@ const listaItens = [
     pathName:
       "processador-intel-core-i3-10105-cache-6mb-3-7ghz-4-4ghz-max-turbo-lga-1200-bx8070110105",
     pPrazo: 1000,
+    tags: [],
+    destaque: true,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -38,6 +40,8 @@ const listaItens = [
     pathName:
       "processador-intel-core-i5-12400f-cache-18mb-2-5ghz-4-4ghz-max-turbo-lga-1700-bx8071512400f",
     pPrazo: 1600,
+    tags: [],
+    destaque: false,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -65,6 +69,8 @@ const listaItens = [
     pathName:
       "processador-intel-core-i7-12700k-cache-25mb-3-6ghz-5-0ghz-max-turbo-lga-1700-bx8071512700k",
     pPrazo: 3400,
+    tags: [],
+    destaque: true,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -92,6 +98,8 @@ const listaItens = [
     pathName:
       "processador-intel-core-i9-12900k-cache-30mb-3-2ghz-5-2ghz-max-turbo-lga-1700-bx8071512900k",
     pPrazo: 7500,
+    tags: [],
+    destaque: false,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -119,6 +127,8 @@ const listaItens = [
     pathName:
       "processador-amd-ryzen-3-3200g-3-6ghz-4-0ghz-max-turbo-am4-vídeo-integrado-4-núcleos--yd3200c5fhbox",
     pPrazo: 1100,
+    tags: [],
+    destaque: true,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -146,6 +156,8 @@ const listaItens = [
     pathName:
       "processador-amd-ryzen-5-5600g-3-9ghz-4-4ghz-max-turbo-am4-vídeo-integrado-6-núcleos-100100000252box",
     pPrazo: 1900,
+    tags: [],
+    destaque: false,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -173,6 +185,8 @@ const listaItens = [
     pathName:
       "processador-amd-ryzen-7-5700g-3-8ghz-4-6ghz-max-turbo-am4-vídeo-integrado-8-núcleos-100100000263box",
     pPrazo: 2400,
+    tags: [],
+    destaque: true,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -200,6 +214,8 @@ const listaItens = [
     pathName:
       "processador-amd-ryzen-9-5900x-3-7ghz-4-8ghz-max-turbo-am4-vídeo-integrado-12-núcleos-100100000061wof",
     pPrazo: 3600,
+    tags: [],
+    destaque: false,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -226,6 +242,8 @@ const listaItens = [
     name: "Fonte Gigabyte GP-P450B 450W, 80 Plus Bronze - 28200-P450B-1BRR",
     pathName: "fonte-gigabyte-gpp450b-450w-80-plus-bronze-28200p450b1brr",
     pPrazo: 375,
+    tags: [],
+    destaque: true,
     specs: [
       "Marca: Gigabyte",
       "Modelo: 28200-P450B-1BRR",
@@ -249,6 +267,8 @@ const listaItens = [
     name: "Fonte XPG Core Reactor, 850W, 80 Plus Gold Modular",
     pathName: "fonte-xpg-core-reactor-850w-80-plus-gold-modular",
     pPrazo: 940,
+    tags: [],
+    destaque: false,
     specs: [
       "Marca: Gigabyte",
       "Modelo: 28200-P450B-1BRR",
@@ -270,9 +290,10 @@ const listaItens = [
     img: "/images/fonte-gigabyte-p550b.jpg",
     garantia: "36 meses",
     name: "Fonte Gigabyte GP-P550B 550W, 80 Plus Bronze - 28200-P550B-1BRR",
-    pathName:
-      "fonte-gigabyte-gpp550b-550w-80-plus-bronze-28200p550b1brr",
+    pathName: "fonte-gigabyte-gpp550b-550w-80-plus-bronze-28200p550b1brr",
     pPrazo: 505,
+    tags: [],
+    destaque: true,
     specs: [
       "Marca: Gigabyte",
       "Modelo: 28200-P450B-1BRR",
@@ -284,7 +305,7 @@ const listaItens = [
       "80 PLUS: Bronze",
       "Eficiência: 85% em carga típica",
       "Dimensões: 150 x 140 x 86 mm",
-      "Peso: 1912 gramas (bruto com embalagem)"
+      "Peso: 1912 gramas (bruto com embalagem)",
     ],
   },
   {
@@ -294,9 +315,10 @@ const listaItens = [
     img: "/images/fonte-xpg-750.jpg",
     garantia: "36 meses",
     name: "Fonte XPG Core Reactor, 750W, 80 Plus Gold Modular",
-    pathName:
-      "fonte-xpg-core-reactor-750w-80-plus-gold-modular",
+    pathName: "fonte-xpg-core-reactor-750w-80-plus-gold-modular",
     pPrazo: 940,
+    tags: [],
+    destaque: false,
     specs: [
       "Marca: Gigabyte",
       "Modelo: 28200-P450B-1BRR",
@@ -308,7 +330,7 @@ const listaItens = [
       "80 PLUS: Bronze",
       "Eficiência: 85% em carga típica",
       "Dimensões: 150 x 140 x 86 mm",
-      "Peso: 1912 gramas (bruto com embalagem)"
+      "Peso: 1912 gramas (bruto com embalagem)",
     ],
   },
   {
@@ -318,9 +340,10 @@ const listaItens = [
     img: "/images/fonte-xpg-650.jpg",
     garantia: "36 meses",
     name: "Fonte XPG Pylon, 650W, 80 Plus Bronze - PYLON650B-BKCBR",
-    pathName:
-      "fonte-xpg-pylon-650w-80-plus-bronze-pylon650bbkcbr",
+    pathName: "fonte-xpg-pylon-650w-80-plus-bronze-pylon650bbkcbr",
     pPrazo: 590,
+    tags: [],
+    destaque: true,
     specs: [
       "Marca: Gigabyte",
       "Modelo: 28200-P450B-1BRR",
@@ -332,7 +355,7 @@ const listaItens = [
       "80 PLUS: Bronze",
       "Eficiência: 85% em carga típica",
       "Dimensões: 150 x 140 x 86 mm",
-      "Peso: 1912 gramas (bruto com embalagem)"
+      "Peso: 1912 gramas (bruto com embalagem)",
     ],
   },
   {
@@ -345,6 +368,8 @@ const listaItens = [
     pathName:
       "placa-de-vídeo-zotac-gaming-nvidia-geforce-rtx-2060-6gb-gddr6-ztt20600h10m",
     pPrazo: 4000,
+    tags: [],
+    destaque: false,
     specs: [
       "Marca: Zotac",
       "Modelo: ZT-T20600H-10M",
@@ -357,9 +382,10 @@ const listaItens = [
       "Dimensões: 209.6 x 119.3 x 41mm",
       "Fonte de Alimentação Recomendada: 500W",
       "Consumo de Energia: 160W",
-      "Entrada de Energia: 8 pinos"
+      "Entrada de Energia: 8 pinos",
     ],
-  },{
+  },
+  {
     categoria: "placa-de-video",
     fabricante: "zotac",
     id: uuidv4(),
@@ -369,6 +395,8 @@ const listaItens = [
     pathName:
       "placa-de-vídeo-zotac-gaming-nvidia-geforce-rtx-3050-twin-edge-8gb-gddr6-lhr-ray-tracing-vr-ready-zta30500e10m",
     pPrazo: 3500,
+    tags: [],
+    destaque: true,
     specs: [
       "Marca: Zotac",
       "Modelo: ZT-T20600H-10M",
@@ -381,9 +409,10 @@ const listaItens = [
       "Dimensões: 209.6 x 119.3 x 41mm",
       "Fonte de Alimentação Recomendada: 500W",
       "Consumo de Energia: 160W",
-      "Entrada de Energia: 8 pinos"
+      "Entrada de Energia: 8 pinos",
     ],
-  },{
+  },
+  {
     categoria: "placa-de-video",
     fabricante: "pc yes",
     id: uuidv4(),
@@ -393,6 +422,8 @@ const listaItens = [
     pathName:
       "placa-de-vídeo-pcyes-amd-radeon-rx-550-4gb-gddr5-grafiti-series-pajrx550dr5df",
     pPrazo: 1100,
+    tags: [],
+    destaque: false,
     specs: [
       "Marca: Zotac",
       "Modelo: ZT-T20600H-10M",
@@ -405,9 +436,10 @@ const listaItens = [
       "Dimensões: 209.6 x 119.3 x 41mm",
       "Fonte de Alimentação Recomendada: 500W",
       "Consumo de Energia: 160W",
-      "Entrada de Energia: 8 pinos"
+      "Entrada de Energia: 8 pinos",
     ],
-  },{
+  },
+  {
     categoria: "placa-de-video",
     fabricante: "zotac",
     id: uuidv4(),
@@ -417,6 +449,8 @@ const listaItens = [
     pathName:
       "placa-de-vídeo-zotac-nvidia-geforce-rtx-3060-ti-twin-edge-lhr-8gb-140-gbps-gddr6-dlss-ray-tracing-zta30610e10mlhr",
     pPrazo: 6000,
+    tags: [],
+    destaque: true,
     specs: [
       "Marca: Zotac",
       "Modelo: ZT-T20600H-10M",
@@ -429,9 +463,10 @@ const listaItens = [
       "Dimensões: 209.6 x 119.3 x 41mm",
       "Fonte de Alimentação Recomendada: 500W",
       "Consumo de Energia: 160W",
-      "Entrada de Energia: 8 pinos"
+      "Entrada de Energia: 8 pinos",
     ],
-  },{
+  },
+  {
     categoria: "placa-de-video",
     fabricante: "sapphire",
     id: uuidv4(),
@@ -441,6 +476,8 @@ const listaItens = [
     pathName:
       "placa-de-vídeo-sapphire-pulse-rx-6500-xt-gaming-oc-4gb-gddr6-amd-113140120g",
     pPrazo: 2000,
+    tags: [],
+    destaque: false,
     specs: [
       "Marca: Zotac",
       "Modelo: ZT-T20600H-10M",
@@ -453,9 +490,10 @@ const listaItens = [
       "Dimensões: 209.6 x 119.3 x 41mm",
       "Fonte de Alimentação Recomendada: 500W",
       "Consumo de Energia: 160W",
-      "Entrada de Energia: 8 pinos"
+      "Entrada de Energia: 8 pinos",
     ],
-  },{
+  },
+  {
     categoria: "placa-de-video",
     fabricante: "sapphire",
     id: uuidv4(),
@@ -465,6 +503,8 @@ const listaItens = [
     pathName:
       "placa-de-vídeo-sapphire-pulse-rx6600xt-oc-8gb-gddr6-amd-rdna-2-architecture-113090320g",
     pPrazo: 4500,
+    tags: [],
+    destaque: true,
     specs: [
       "Marca: Zotac",
       "Modelo: ZT-T20600H-10M",
@@ -477,10 +517,9 @@ const listaItens = [
       "Dimensões: 209.6 x 119.3 x 41mm",
       "Fonte de Alimentação Recomendada: 500W",
       "Consumo de Energia: 160W",
-      "Entrada de Energia: 8 pinos"
+      "Entrada de Energia: 8 pinos",
     ],
   },
-  
 ];
 
 export default listaItens;

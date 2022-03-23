@@ -1,6 +1,8 @@
 import Navbar from "../Navbar/index";
 import Footer from "../Footer/index";
 import Image from "next/image";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../store/slices/cartSlice";
 import {
   faCreditCard,
   faMoneyBill1Wave,
@@ -9,14 +11,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../../styles/ProductPage.module.scss";
 
 interface Props {
+  categoria: string;
   img: string;
-  garantia: string;
+  id: string;
+  fabricante: string;
   name: string;
+  pathName: string;
   pPrazo: number;
-  specs: Array<string>;
+  garantia: string;
+  specs: string[];
 }
 
-function index({ img, garantia, name, pPrazo, specs }: Props) {
+function Index(props: Props) {
+  const dispatch = useDispatch();
+  const { img, garantia, name, specs, pPrazo } = props;
+
+  function handleClick() {
+    alert("Adicionado ao carrinho com sucesso!");
+    dispatch(addToCart(props));
+  }
+
   return (
     <div>
       <Navbar />
@@ -25,14 +39,17 @@ function index({ img, garantia, name, pPrazo, specs }: Props) {
           <div className={styles.img}>
             <Image src={img} alt="testando" height={350} width={350} />
           </div>
-          <p className={styles.garantia}>***Garantia de {garantia}</p>
           <h1 className={styles.name}>{name}</h1>
           <div className={styles.containerPrices}>
             <div className={styles.containerPrazo}>
               <FontAwesomeIcon icon={faCreditCard} />
               <div>
                 <p className={styles.pPrazo}>
-                  R$ {pPrazo.toFixed(2).replace(".", ",")}
+                  {pPrazo.toLocaleString("pt-BR", {
+                    minimumFractionDigits: 2,
+                    style: "currency",
+                    currency: "BRL",
+                  })}
                 </p>
                 <p className={styles.pPrazoDesc}>em até 12x no cartão</p>
               </div>
@@ -41,13 +58,19 @@ function index({ img, garantia, name, pPrazo, specs }: Props) {
               <FontAwesomeIcon icon={faMoneyBill1Wave} />
               <div>
                 <p className={styles.pVista}>
-                  R$ {(pPrazo * 0.85).toFixed(2).replace(".", ",")}
+                  {(pPrazo * 0.85).toLocaleString("pt-BR", {
+                    minimumFractionDigits: 2,
+                    style: "currency",
+                    currency: "BRL",
+                  })}
                 </p>
                 <p className={styles.pVistaDesc}>à vista no boleto</p>
               </div>
             </div>
           </div>
-          <button className={styles.buyButton}>COMPRAR</button>
+          <button className={styles.buyButton} onClick={handleClick}>
+            COMPRAR
+          </button>
           <div className={styles.productDesc}>
             <h1>Descrição do Produto</h1>
             <hr />
@@ -74,6 +97,7 @@ function index({ img, garantia, name, pPrazo, specs }: Props) {
                 - {i}
               </p>
             ))}
+            <p className={styles.garantia}>Garantia de {garantia}</p>
           </div>
         </div>
       </div>
@@ -82,4 +106,4 @@ function index({ img, garantia, name, pPrazo, specs }: Props) {
   );
 }
 
-export default index;
+export default Index;

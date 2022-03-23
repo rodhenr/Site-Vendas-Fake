@@ -16,8 +16,6 @@ function Index() {
     setOpen(!open);
   }
 
-  function changeMouseOver() {}
-
   return (
     <div className={styles.container}>
       <div className={styles.navInfo}>
@@ -31,8 +29,8 @@ function Index() {
             }
           >
             <FontAwesomeIcon icon={faXmark} onClick={changeOpen} />
-            <ul>
-              <li onMouseOver={changeMouseOver}>
+            <ul onClick={changeOpen}>
+              <li>
                 <Link href="/placa-mae">Placa-Mãe</Link>
               </li>
               <li>
@@ -61,7 +59,7 @@ function Index() {
         </h1>
         <div className={styles.navInfoRight}>
           <FontAwesomeIcon icon={faUser} />
-          <Link href="/carrinho">
+          <Link href="/carrinho" passHref>
             <FontAwesomeIcon icon={faCartShopping} />
           </Link>
         </div>

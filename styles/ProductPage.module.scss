@@ -24,6 +24,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
+  justify-items: center;
 }
 
 .containerPrazo {
@@ -58,6 +59,7 @@
   color: red;
   font-size: 1rem;
   margin: 0 0 0.5rem 0;
+  text-align: center;
 }
 
 .pVista {
@@ -70,6 +72,7 @@
   color: green;
   font-size: 1.5rem;
   margin: 0;
+  text-align: center;
 }
 
 .buyButton {
@@ -110,7 +113,8 @@
 }
 
 .garantia {
-  align-self: flex-start;
   color: #fff;
   font-size: 0.7rem;
+  margin-top: 1.8rem;
+  text-align: end;
 }

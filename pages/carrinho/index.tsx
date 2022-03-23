@@ -1,6 +1,7 @@
 import Navbar from "../../components/Navbar/index";
 import Footer from "../../components/Footer/index";
-import Carrinho from "../../components/Carrinho/index";
+import Carrinho from "../../components/Carrinho/Index";
+
 function index() {
   return (
     <div>

@@ -4,11 +4,15 @@ import { GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 
 interface Props {
+  categoria: string;
   img: string;
-  garantia: string;
+  id: string;
+  fabricante: string;
   name: string;
+  pathName: string;
   pPrazo: number;
-  specs: Array<string>;
+  garantia: string;
+  specs: string[];
 }
 
 interface IParams extends ParsedUrlQuery {
@@ -16,18 +20,26 @@ interface IParams extends ParsedUrlQuery {
 }
 
 export default function ItemPage({
+  categoria,
+  fabricante,
+  id,
   img,
   garantia,
   name,
+  pathName,
   pPrazo,
   specs,
 }: Props) {
   return (
     <div>
       <TestItem
+        categoria={categoria}
+        fabricante={fabricante}
+        id={id}
         img={img}
         garantia={garantia}
         name={name}
+        pathName={pathName}
         pPrazo={pPrazo}
         specs={specs}
       />
@@ -59,9 +71,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
+      categoria: obj.categoria,
+      fabricante: obj.fabricante,
+      id: obj.id,
       img: obj.img,
       garantia: obj.garantia,
       name: obj.name,
+      pathName: obj.pathName,
       pPrazo: obj.pPrazo,
       specs: obj.specs,
     },
