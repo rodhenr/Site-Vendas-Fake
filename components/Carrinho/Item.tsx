@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { removeFromCart } from "../../store/slices/cartSlice";
+import { updateTotalPrice } from "../../store/slices/newSlice";
 import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import styles from "../../styles/Carrinho.module.scss";
+import { useState } from "react";
 
 interface Props {
   id: string;
@@ -15,6 +17,27 @@ interface Props {
 
 function Item({ id, img, name, pPrazo, num }: Props) {
   const dispatch = useDispatch();
+  const [itemQtde, setItemQtde] = useState(1);
+
+  function aumentarQtde() {
+    const newQtde = itemQtde + 1;
+    setItemQtde(newQtde);
+    dispatch(updateTotalPrice({ id, valorTotal: newQtde * pPrazo }));
+  }
+
+  function diminuirQtde() {
+    if (itemQtde > 1) {
+      const newQtde = itemQtde - 1;
+      setItemQtde(newQtde);
+      dispatch(updateTotalPrice({ id, valorTotal: newQtde * pPrazo }));
+    }
+  }
+
+  function handleDelete(itemID: string): void {
+    if (window.confirm("Deseja excluir o item?")) {
+      dispatch(removeFromCart(itemID));
+    }
+  }
 
   return (
     <div className={styles.containerCartItem}>
@@ -27,33 +50,36 @@ function Item({ id, img, name, pPrazo, num }: Props) {
           <p>{name}</p>
           <div className={styles.cartItemPrices}>
             <p className={styles.cartItemPriceVista}>
-              {(pPrazo * 0.85).toLocaleString("pt-BR", {
+              {`${(itemQtde * pPrazo * 0.85).toLocaleString("pt-BR", {
                 minimumFractionDigits: 2,
                 style: "currency",
                 currency: "BRL",
-              })}{" "}
-              à vista
+              })} à vista`}
             </p>
             <p className={styles.cartItemPricePrazo}>
-              {pPrazo.toLocaleString("pt-BR", {
+              {`${(itemQtde * pPrazo).toLocaleString("pt-BR", {
                 minimumFractionDigits: 2,
                 style: "currency",
                 currency: "BRL",
-              })}{" "}
-              em até 12x no cartão
+              })} em até 12x no cartão`}
             </p>
           </div>
         </div>
       </div>
       <div className={styles.cartItemAddRemove}>
-        <button>
-          <p>+</p>
+        <button onClick={aumentarQtde}>
+          <FontAwesomeIcon icon={faPlus} />
         </button>
-        <input value="1" />
-        <button>
-          <p>-</p>
+        <div className={styles.cartItemQt}>
+          <span>{itemQtde}</span>
+        </div>
+        <button onClick={diminuirQtde}>
+          <FontAwesomeIcon icon={faMinus} />
         </button>
-        <button onClick={() => dispatch(removeFromCart(id))}>
+        <button
+          className={styles.cartItemRemove}
+          onClick={() => handleDelete(id)}
+        >
           <FontAwesomeIcon icon={faTrash} />
         </button>
       </div>

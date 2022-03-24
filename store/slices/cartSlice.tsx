@@ -25,11 +25,13 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action: PayloadAction<Props>) => {
-      state.cart.push(action.payload);
+      if (!state.cart.some((i) => i.id === action.payload.id)) {
+        state.cart.push(action.payload);
+      }
     },
     removeFromCart: (state, action: PayloadAction<string>) => {
       const newItem = state.cart.filter((i) => {
-        i.categoria !== action.payload;
+        return i.id !== action.payload;
       });
       state.cart = newItem;
     },

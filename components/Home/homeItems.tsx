@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/slices/cartSlice";
+import { updateTotalPrice } from "../../store/slices/newSlice";
 import styles from "../../styles/HomeProducts.module.scss";
 
 interface Props {
@@ -18,11 +19,12 @@ interface Props {
 
 function HomeItems(props: Props) {
   const dispatch = useDispatch();
-  const { categoria, img, name, pathName, pPrazo } = props;
+  const { categoria, img, name, pathName, pPrazo, id } = props;
 
   function handleClick() {
     alert("Adicionado ao carrinho com sucesso!");
     dispatch(addToCart(props));
+    dispatch(updateTotalPrice({ id, valorTotal: pPrazo }));
   }
 
   return (

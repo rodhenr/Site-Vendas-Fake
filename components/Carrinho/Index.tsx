@@ -10,6 +10,7 @@ import styles from "../../styles/Carrinho.module.scss";
 
 function Index() {
   const cartStore = useSelector((state: RootState) => state.cartStore.cart);
+  const totalPrice = useSelector((state: RootState) => state.newSlice.obj);
   const dispatch = useDispatch();
   const [totalProdutos, setTotalProdutos] = useState(0);
 
@@ -17,15 +18,15 @@ function Index() {
     if (cartStore.length === 0) {
       setTotalProdutos(0);
     } else {
-      const prices = cartStore.map((i) => {
-        return i.pPrazo;
+      const prices = totalPrice.map((i) => {
+        return i.valorTotal;
       });
-      const totalPrices = prices.reduce((a, b) => {
+      const reducedPrices = prices.reduce((a, b) => {
         return a + b;
       });
-      setTotalProdutos(totalPrices);
+      setTotalProdutos(reducedPrices);
     }
-  }, [cartStore]);
+  }, [totalPrice]);
 
   const cep = 50;
 
@@ -34,10 +35,10 @@ function Index() {
       <h2 className={styles.cartTitle}>CARRINHO</h2>
       <hr />
       {cartStore.length === 0 ? (
-        <>
+        <div className={styles.cartNoProducts}>
           <p>Nenhum produto no seu carrinho.</p>
           <button>CONTINUAR COMPRANDO</button>
-        </>
+        </div>
       ) : (
         <>
           <div className={styles.containerCartShip}>
