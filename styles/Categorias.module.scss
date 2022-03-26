@@ -64,3 +64,20 @@
   font-size: 0.8rem;
   margin: 0;
 }
+
+/*PARTE DE CIMA*/
+.categoriaTopo {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+
+
+  p {
+    color: #fff;
+    margin: 0;
+  }
+
+  select {
+    margin-right: 1rem;
+  }
+}

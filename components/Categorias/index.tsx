@@ -1,26 +1,36 @@
 import Navbar from "../Navbar/index";
 import Footer from "../Footer/index";
-import Product from "./singleItem";
+import Product from "./SingleItem";
 import itemsList from "../../listaItems/index";
 import { useRouter } from "next/router";
 import styles from "../../styles/Categorias.module.scss";
 
-interface Props {
-  listaItem: object[];
-}
-
-function Index({ listaItem }: Props) {
+function Index() {
   const router = useRouter();
   const { category } = router.query;
   const items = itemsList.filter((i) => i.categoria === category);
+
+  function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
+    console.log(e.target.value);
+  }
 
   return (
     <div>
       <Navbar />
       <div className={styles.containerCategoria}>
-        <h1 className={styles.categName}>
-          {items[0].categoria.replace(/-/g, " ").toUpperCase()}
-        </h1>
+        <div className={styles.categoriaTopo}>
+          <h1 className={styles.categName}>
+            {items[0].categoria.replace(/-/g, " ").toUpperCase()}
+          </h1>
+          <div>
+            <p>Filtrar</p>
+            <select onChange={handleChange}>
+              <option value="padrao">Padrão</option>
+              <option value="maior">Menor Valor</option>
+              <option value="menor">Maior Valor</option>
+            </select>
+          </div>
+        </div>
         <div className={styles.list}>
           {items.map((i, key) => (
             <Product
