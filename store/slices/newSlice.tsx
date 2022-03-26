@@ -31,8 +31,11 @@ export const newSlice = createSlice({
         state.obj = newObj;
       }
     },
+    cleanSlice: (state) => {
+      state.obj = [];
+    },
   },
 });
 
-export const { updateTotalPrice } = newSlice.actions;
+export const { updateTotalPrice, cleanSlice } = newSlice.actions;
 export default newSlice.reducer;

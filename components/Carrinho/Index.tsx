@@ -2,6 +2,7 @@ import Item from "./Item";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { cleanCart } from "../../store/slices/cartSlice";
+import { cleanSlice } from "../../store/slices/newSlice";
 import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
@@ -18,15 +19,21 @@ function Index() {
     if (cartStore.length === 0) {
       setTotalProdutos(0);
     } else {
-      const prices = totalPrice.map((i) => {
-        return i.valorTotal;
-      });
-      const reducedPrices = prices.reduce((a, b) => {
-        return a + b;
-      });
+      const reducedPrices = totalPrice
+        .map((i) => {
+          return i.valorTotal;
+        })
+        .reduce((a, b) => {
+          return a + b;
+        });
       setTotalProdutos(reducedPrices);
     }
   }, [totalPrice]);
+
+  function handleRemove() {
+    dispatch(cleanCart());
+    dispatch(cleanSlice());
+  }
 
   const cep = 50;
 
@@ -60,7 +67,7 @@ function Index() {
             />
           ))}
           <div className={styles.cartRemoveAll}>
-            <button onClick={() => dispatch(cleanCart())}>
+            <button onClick={handleRemove}>
               <FontAwesomeIcon icon={faCartShopping} /> LIMPAR CARRINHO
             </button>
           </div>
