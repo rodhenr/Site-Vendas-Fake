@@ -18,7 +18,7 @@ export const newSlice = createSlice({
   initialState,
   reducers: {
     updateTotalPrice: (state, action: PayloadAction<updateProps>) => {
-      if (!state.obj.some((i) => i.id === action.payload.id)) {
+      if (state.obj.every((i) => i.id !== action.payload.id)) {
         state.obj.push(action.payload);
       } else {
         const newObj = state.obj.map((i) => {
@@ -31,11 +31,15 @@ export const newSlice = createSlice({
         state.obj = newObj;
       }
     },
+    deleteItem: (state, action: PayloadAction<string>) => {
+      const newObj = state.obj.filter((i) => i.id !== action.payload);
+      state.obj = newObj;
+    },
     cleanSlice: (state) => {
       state.obj = [];
     },
   },
 });
 
-export const { updateTotalPrice, cleanSlice } = newSlice.actions;
+export const { updateTotalPrice, cleanSlice, deleteItem } = newSlice.actions;
 export default newSlice.reducer;

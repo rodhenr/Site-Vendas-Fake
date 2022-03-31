@@ -1,35 +1,43 @@
+/*---------- GERAL ----------*/
 .container {
   background-color: #303030;
 }
 
-.productContainer {
+/*----- CONTAINER DO PRODUTO -----*/
+.containerProduto {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.name {
+/* IMAGEM DO PRODUTO*/
+.produtoImagem {
+  padding-top: 2rem;
+}
+
+/* NOME DO PRODUTO */
+.produtoNome {
   color: #fff;
   font-size: 1.7rem;
   margin: 1rem;
   text-align: center;
 }
 
-.img {
-  padding-top: 2rem;
-}
-
-.containerPrices {
+/* CONTAINER DOS PREÇOS */
+.containerPrecos {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   justify-items: center;
 }
 
+/* CONTAINER DO PREÇO À PRAZO */
 .containerPrazo {
   align-items: center;
+  color: red;
   display: flex;
+  font-size: 1.75rem;
   gap: 1rem;
 
   svg {
@@ -38,9 +46,25 @@
   }
 }
 
+/* PREÇO À PRAZO*/
+.precoPrazo {
+  p:first-child {
+    margin: 0;
+  }
+
+  p:last-child {
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+  }
+}
+
+/* CONTAINER DO PREÇO À VISTA */
 .containerVista {
   align-items: center;
+  color: green;
   display: flex;
+  font-size: 3rem;
   gap: 1rem;
 
   svg {
@@ -49,33 +73,21 @@
   }
 }
 
-.pPrazo {
-  color: red;
-  font-size: 1.75rem;
-  margin: 0;
+/* PRECO À VISTA*/
+.precoVista {
+  p:first-child {
+    margin: 0;
+  }
+
+  p:last-child {
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+  }
 }
 
-.pPrazoDesc {
-  color: red;
-  font-size: 1rem;
-  margin: 0 0 0.5rem 0;
-  text-align: center;
-}
-
-.pVista {
-  color: green;
-  font-size: 3rem;
-  margin: 0;
-}
-
-.pVistaDesc {
-  color: green;
-  font-size: 1.5rem;
-  margin: 0;
-  text-align: center;
-}
-
-.buyButton {
+/* BOTÃO DE COMPRAR */
+.comprar {
   background-color: #0057ff;
   border: none;
   color: #fff;
@@ -85,7 +97,8 @@
   width: 300px;
 }
 
-.productDesc {
+/* DESCRIÇÃO DO PRODUTO */
+.productDescricao {
   background-color: #424242;
   color: #fff;
   margin: 5rem 0.5rem 0;
@@ -96,9 +109,10 @@
   }
 }
 
-.specs {
+/* ESPECIFICAÇÕES DO PRODUTO*/
+.produtoEspec {
   background-color: #424242;
-  margin-bottom: 12rem;
+  margin-bottom: 7rem;
   margin-top: 2rem;
   padding: 1rem;
 
@@ -108,10 +122,12 @@
   }
 }
 
-.specsDesc {
+/* DESCRIÇÃO DA ESPECIFICAÇÃO */
+.EspecDescricao {
   color: #fff;
 }
 
+/* GARANTIA */
 .garantia {
   color: #fff;
   font-size: 0.7rem;

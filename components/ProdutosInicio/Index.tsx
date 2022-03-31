@@ -1,15 +1,16 @@
-import HomeItems from "./HomeItems";
-import itemsList from "../../listaItems/index";
-import styles from "../../styles/HomeProducts.module.scss";
+import Itens from "./Itens";
+import itemsList from "../../listaItems/Index";
 
-function index() {
+import styles from "../../styles/ProdutosInicio.module.scss";
+
+function Index() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.homeTitle}>EM DESTAQUE</h1>
+      <h1 className={styles.inicioTitulo}>EM DESTAQUE</h1>
       {itemsList
         .filter((item) => item.destaque === true)
         .map((i, key) => (
-          <HomeItems
+          <Itens
             key={key}
             img={i.img}
             name={i.name}
@@ -26,4 +27,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

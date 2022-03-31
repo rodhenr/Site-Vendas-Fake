@@ -1,4 +1,5 @@
-.store {
+/*---------- GERAL ----------*/
+.containerLoja {
   background-color: #0057ff;
   color: #fff;
   font-family: "Roboto", sans-serif;
@@ -19,7 +20,8 @@
   }
 }
 
-.pagamento {
+/* CONTAINER PAGAMENTO */
+.containerPagamento {
   background-color: #0057ff;
   color: #fff;
   font-family: "Roboto", sans-serif;
@@ -32,6 +34,7 @@
   }
 }
 
+/* FORMAS DE PAGAMENTO */
 .pagamentoFormas {
   align-items: center;
   display: flex;
@@ -40,6 +43,19 @@
   justify-content: center;
 }
 
+/* ITEM (TIPO DE PAGAMENTO) */
+.tipoPagamento {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 80px;
+}
+
+/*---------- FOOTER ----------*/
 .footer {
   background-color: #303030;
   display: flex;
@@ -52,15 +68,4 @@
     font-weight: 300;
     margin: 1rem 0;
   }
-}
-
-.tipoPagamento {
-  align-items: center;
-  background-color: #fff;
-  border-radius: 10px;
-  display: flex;
-  height: 50px;
-  justify-content: center;
-  margin-top: 1rem;
-  width: 80px;
 }

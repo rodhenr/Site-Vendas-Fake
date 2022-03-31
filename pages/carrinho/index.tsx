@@ -1,8 +1,8 @@
-import Navbar from "../../components/Navbar/index";
-import Footer from "../../components/Footer/index";
+import Navbar from "../../components/Navbar/Index";
+import Footer from "../../components/Footer/Index";
 import Carrinho from "../../components/Carrinho/Index";
 
-function index() {
+function Index() {
   return (
     <div>
       <Navbar />
@@ -12,4 +12,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

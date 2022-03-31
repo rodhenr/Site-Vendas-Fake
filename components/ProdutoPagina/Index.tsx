@@ -1,14 +1,17 @@
-import Navbar from "../Navbar/index";
-import Footer from "../Footer/index";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
+
 import { addToCart } from "../../store/slices/cartSlice";
+import Navbar from "../Navbar/Index";
+import Footer from "../Footer/Index";
+
 import {
   faCreditCard,
   faMoneyBill1Wave,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styles from "../../styles/ProductPage.module.scss";
+
+import styles from "../../styles/ProdutoPagina.module.scss";
 
 interface Props {
   categoria: string;
@@ -35,43 +38,43 @@ function Index(props: Props) {
     <div>
       <Navbar />
       <div className={styles.container}>
-        <div className={styles.productContainer}>
-          <div className={styles.img}>
+        <div className={styles.containerProduto}>
+          <div className={styles.produtoImagem}>
             <Image src={img} alt="testando" height={350} width={350} />
           </div>
-          <h1 className={styles.name}>{name}</h1>
-          <div className={styles.containerPrices}>
+          <h1 className={styles.produtoNome}>{name}</h1>
+          <div className={styles.containerPrecos}>
             <div className={styles.containerPrazo}>
               <FontAwesomeIcon icon={faCreditCard} />
-              <div>
-                <p className={styles.pPrazo}>
+              <div className={styles.precoPrazo}>
+                <p>
                   {pPrazo.toLocaleString("pt-BR", {
                     minimumFractionDigits: 2,
                     style: "currency",
                     currency: "BRL",
                   })}
                 </p>
-                <p className={styles.pPrazoDesc}>em até 12x no cartão</p>
+                <p>em até 12x no cartão</p>
               </div>
             </div>
             <div className={styles.containerVista}>
               <FontAwesomeIcon icon={faMoneyBill1Wave} />
-              <div>
-                <p className={styles.pVista}>
+              <div className={styles.precoVista}>
+                <p>
                   {(pPrazo * 0.85).toLocaleString("pt-BR", {
                     minimumFractionDigits: 2,
                     style: "currency",
                     currency: "BRL",
                   })}
                 </p>
-                <p className={styles.pVistaDesc}>à vista no boleto</p>
+                <p>à vista no boleto</p>
               </div>
             </div>
           </div>
-          <button className={styles.buyButton} onClick={handleClick}>
+          <button className={styles.comprar} onClick={handleClick}>
             COMPRAR
           </button>
-          <div className={styles.productDesc}>
+          <div className={styles.productDescricao}>
             <h1>Descrição do Produto</h1>
             <hr />
             <p>
@@ -89,11 +92,11 @@ function Index(props: Props) {
               vitae?
             </p>
           </div>
-          <div className={styles.specs}>
+          <div className={styles.produtoEspec}>
             <h1>Especificações</h1>
             <hr />
             {specs.map((i, key) => (
-              <p key={key} className={styles.specsDesc}>
+              <p key={key} className={styles.EspecDescricao}>
                 - {i}
               </p>
             ))}

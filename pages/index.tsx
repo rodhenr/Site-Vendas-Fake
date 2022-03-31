@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
-import Navbar from "../components/Navbar/index";
-import Banner from "../components/Banner/index";
-import Products from "../components/Home/index";
-import Footer from "../components/Footer/index";
+
+import Navbar from "../components/Navbar/Index";
+import Banner from "../components/Banner/Index";
+import Products from "../components/ProdutosInicio/Index";
+import Footer from "../components/Footer/Index";
 
 const Home: NextPage = () => {
   return (

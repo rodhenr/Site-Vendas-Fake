@@ -1,7 +1,8 @@
-import TestItem from "../../components/ProductPage/index";
-import itemsList from "../../listaItems/index";
 import { GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
+
+import TestItem from "../../components/ProdutoPagina/Index";
+import itemsList from "../../listaItems/Index";
 
 interface Props {
   categoria: string;

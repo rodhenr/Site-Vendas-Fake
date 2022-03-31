@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -7,6 +8,7 @@ import {
   faCartShopping,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
+
 import styles from "../../styles/Navbar.module.scss";
 
 function Index() {
@@ -18,46 +20,48 @@ function Index() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.navInfo}>
-        <div className={styles.navInfoMenu}>
+      <div className={styles.containerCima}>
+        <div className={styles.containerNavbar}>
           <FontAwesomeIcon icon={faBars} onClick={changeOpen} />
           <div
             className={
               open
-                ? `${styles.sidebarMenu} ${styles.active}`
-                : styles.sidebarMenu
+                ? `${styles.navbar} ${styles.active}`
+                : styles.navbar
             }
           >
             <FontAwesomeIcon icon={faXmark} onClick={changeOpen} />
-            <ul onClick={changeOpen}>
-              <li>
-                <Link href="/placa-mae">Placa-Mãe</Link>
-              </li>
-              <li>
-                <Link href="/processador">Processador</Link>
-              </li>
-              <li>
-                <Link href="/placa-de-video">Placa de Vídeo</Link>
-              </li>
-              <li>
-                <Link href="/fonte">Fonte</Link>
-              </li>
-              <li>
-                <Link href="/gabinete">Gabinete</Link>
-              </li>
-              <li>
-                <Link href="/memoria-ram">Memória RAM</Link>
-              </li>
-              <li>
-                <Link href="/ssd">SSD</Link>
-              </li>
-            </ul>
+            <nav>
+              <ul onClick={changeOpen}>
+                <li>
+                  <Link href="/placa-mae">Placa-Mãe</Link>
+                </li>
+                <li>
+                  <Link href="/processador">Processador</Link>
+                </li>
+                <li>
+                  <Link href="/placa-de-video">Placa de Vídeo</Link>
+                </li>
+                <li>
+                  <Link href="/fonte">Fonte</Link>
+                </li>
+                <li>
+                  <Link href="/gabinete">Gabinete</Link>
+                </li>
+                <li>
+                  <Link href="/memoria-ram">Memória RAM</Link>
+                </li>
+                <li>
+                  <Link href="/ssd">SSD</Link>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
         <h1>
           <Link href="/">PC Shop</Link>
         </h1>
-        <div className={styles.navInfoRight}>
+        <div className={styles.loginCarrinho}>
           <FontAwesomeIcon icon={faUser} />
           <Link href="/carrinho" passHref>
             <FontAwesomeIcon icon={faCartShopping} />
@@ -66,7 +70,7 @@ function Index() {
       </div>
       <input
         type="text"
-        className={styles.search}
+        className={styles.busca}
         placeholder="Digite o que você procura"
       />
     </div>

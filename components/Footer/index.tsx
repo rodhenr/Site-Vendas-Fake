@@ -1,10 +1,11 @@
 import Image from "next/image";
+
 import styles from "../../styles/Footer.module.scss";
 
-function index() {
+function Index() {
   return (
-    <div>
-      <div className={styles.store}>
+    <>
+      <div className={styles.containerLoja}>
         <h1>SOBRE A LOJA</h1>
         <p>
           A PC SHOP é uma empresa especializada em componentes de Alta
@@ -14,38 +15,54 @@ function index() {
         </p>
         <hr />
       </div>
-      <div className={styles.pagamento}>
+      <div className={styles.containerPagamento}>
         <h1>ACEITAMOS AS SEGUINTES FORMAS DE PAGAMENTO</h1>
         <div className={styles.pagamentoFormas}>
-          <div className={styles.tipoPagamento}>
-            <Image src={"/images/american.png"} alt="" height={40} width={64} />
-          </div>
-          <div className={styles.tipoPagamento}>
-            <Image src={"/images/pix.png"} alt="" height={40} width={64} />
-          </div>
-          <div className={styles.tipoPagamento}>
-            <Image src={"/images/visa.png"} alt="" height={40} width={64} />
-          </div>
-          <div className={styles.tipoPagamento}>
+          <div className={styles.pagamentoTipo}>
             <Image
-              src={"/images/mastercard.png"}
-              alt=""
-              height={40} width={64}
+              src={"/images/american.png"}
+              alt="AMERICAN"
+              height={40}
+              width={64}
             />
           </div>
-          <div className={styles.tipoPagamento}>
-            <Image src={"/images/boleto.png"} alt="" height={40} width={64} />
+          <div className={styles.pagamentoTipo}>
+            <Image src={"/images/pix.png"} alt="PIX" height={40} width={64} />
           </div>
-          <div className={styles.tipoPagamento}>
-            <Image src={"/images/paypal.png"} alt="" height={40} width={64} />
+          <div className={styles.pagamentoTipo}>
+            <Image src={"/images/visa.png"} alt="VISA" height={40} width={64} />
+          </div>
+          <div className={styles.pagamentoTipo}>
+            <Image
+              src={"/images/mastercard.png"}
+              alt="MASTERCARD"
+              height={40}
+              width={64}
+            />
+          </div>
+          <div className={styles.pagamentoTipo}>
+            <Image
+              src={"/images/boleto.png"}
+              alt="BOLETO"
+              height={40}
+              width={64}
+            />
+          </div>
+          <div className={styles.pagamentoTipo}>
+            <Image
+              src={"/images/paypal.png"}
+              alt="PAYPAL"
+              height={40}
+              width={64}
+            />
           </div>
         </div>
       </div>
       <footer className={styles.footer}>
         <p>2022 - © PC Shop. Todos os direitos reservados.</p>
       </footer>
-    </div>
+    </>
   );
 }
 
-export default index;
+export default Index;

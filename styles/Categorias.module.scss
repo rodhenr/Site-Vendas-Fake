@@ -1,27 +1,37 @@
+/*---------- GERAL ----------*/
 .containerCategoria {
   background-color: #303030 !important;
   padding-bottom: 15rem;
   margin: 0;
 }
 
-.categName {
+/*--- NOME E FILTRO ---*/
+.categoriaTopo {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+
+  p {
+    color: #fff;
+    margin: 0;
+  }
+
+  select {
+    margin-right: 1rem;
+  }
+}
+
+/* NOME DA ACATEGORIA */
+.categoriaNome {
   color: #fff;
   margin: 0;
   padding: 1rem 1.5rem;
 }
 
-.nameItem {
-  color: white;
-  margin: 0;
-  padding: 2rem 0rem 5rem;
-}
-
-.list {
+/*----- ITENS -----*/
+.containerItens {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-.item {
   margin: 2rem 1rem;
   text-align: center;
 
@@ -41,43 +51,33 @@
   }
 }
 
-.pPrazo {
+/* NOME DO ITEM */
+.itemNome {
+  color: white;
+  margin: 0;
+  padding: 2rem 0rem 5rem;
+}
+
+/* PREÇO À PRAZO */
+.itemPrecoPrazo {
   color: red;
   font-size: 1.2rem;
   margin: 0;
+
+  &:last-child {
+    font-size: 0.8rem;
+    margin: 0 0 0.5rem 0;
+  }
 }
 
-.pPrazoDesc {
-  color: red;
-  font-size: 0.8rem;
-  margin: 0 0 0.5rem 0;
-}
-
-.pVista {
+/* PREÇO À VISTA */
+.itemPrecoVista {
   color: lime;
   font-size: 1.7rem;
   margin: 0;
-}
 
-.pVistaDesc {
-  color: lime;
-  font-size: 0.8rem;
-  margin: 0;
-}
-
-/*PARTE DE CIMA*/
-.categoriaTopo {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-
-
-  p {
-    color: #fff;
+  &:last-child {
+    font-size: 0.8rem;
     margin: 0;
-  }
-
-  select {
-    margin-right: 1rem;
   }
 }

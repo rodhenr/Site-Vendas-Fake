@@ -1,6 +1,7 @@
-import Categoria from "../../components/Categorias/index";
-import itemsList from "../../listaItems/index";
 import { GetStaticProps } from "next";
+
+import Categoria from "../../components/Categorias/Index";
+import itemsList from "../../listaItems/Index";
 
 interface Props {
   itemObj: object[];
@@ -9,7 +10,7 @@ interface Props {
 export default function index({ itemObj }: Props) {
   return (
     <div>
-      <Categoria listaItem={itemObj} />
+      <Categoria />
     </div>
   );
 }

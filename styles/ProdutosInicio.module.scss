@@ -1,10 +1,19 @@
+/*---------- GERAL ----------*/
 .container {
   background-color: #303030;
   font-family: roboto;
   padding: 2.5rem 0;
 }
 
-.itemsContainer {
+/* TITULO NO INICIO */
+.inicioTitulo {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 3rem;
+}
+
+/*----- ITENS -----*/
+.containerItens {
   background-color: #fff;
   font-family: "Roboto", sans-serif;
   margin: 2.5rem 3rem;
@@ -27,32 +36,25 @@
   }
 }
 
-.pPrazo {
+/* PREÇO À PRAZO */
+.itemPrecoPrazo {
   color: red;
   font-size: 1.5rem;
   margin: 1rem 0 0 0;
+  &:last-child {
+    font-size: 0.8rem;
+    margin: 0 0 1.5rem 0;
+  }
 }
 
-.pPrazoDesc {
-  color: red;
-  font-size: 0.8rem;
-  margin: 0 0 1.5rem 0;
-}
-
-.pVista {
+/* PREÇO À VISTA */
+.itemPrecoVista {
   color: green;
   font-size: 2.5rem;
   margin: 0;
-}
 
-.pVistaDesc {
-  color: green;
-  font-size: 1.3rem;
-  margin: 0 0 1rem 0;
-}
-
-.homeTitle {
-  color: #fff;
-  font-size: 2rem;
-  margin: 0 3rem;
+  &:last-child {
+    font-size: 1.3rem;
+    margin: 0 0 1rem 0;
+  }
 }

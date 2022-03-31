@@ -1,4 +1,5 @@
-.containerCart {
+/*---------- GERAL ----------*/
+.container {
   font-family: roboto;
 
   hr {
@@ -6,8 +7,14 @@
   }
 }
 
-/* CARRINHO SEM ITENS */
-.cartNoProducts {
+/* TÍTULO DO CARRINHO */
+.carrinhoTitulo {
+  margin: 0;
+  padding: 1rem;
+}
+
+/*---------- CARRINHO SEM ITENS ----------*/
+.carrinhoSemProdutos {
   margin: 5rem 0 5rem;
   text-align: center;
 
@@ -23,34 +30,17 @@
   }
 }
 
-.cartTitle {
-  margin: 0;
-  padding: 1rem;
-}
+/*---------- CARRINHO COM ITENS ----------*/
 
-.cartItemNumber {
-  background-color: rgb(240, 240, 240);
-  color: rgba(0, 0, 0, 0.3);
-  margin: 0;
-  padding: 10px;
-}
-
-.cartTotalPrice {
-  font-family: roboto;
-  margin: 1rem;
-
-  p {
-    margin: 0;
-  }
-}
-
-.containerCartShip {
+/* CONTAINER FRETE */
+.carrinhoFrete {
   h3 {
     margin: 1rem;
   }
 }
 
-.cartShipMain {
+/* FORM FRETE */
+.carrinhoFreteForm {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 1rem;
@@ -64,146 +54,20 @@
   }
 
   button {
-    color: #303030;
+    background-color: red;
+    border: none;
+    color: #fff;
     height: 35px;
     margin-left: 0.5rem;
+
+    &:active {
+      background-color: green;
+    }
   }
 }
 
-.containerCartItem {
-  button {
-    background-color: #fff;
-    border: none;
-    color: #000;
-    cursor: pointer;
-  }
-}
-
-.cartItemMain {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  margin: 0.5rem 5px;
-}
-
-.cartItemImage {
-  margin: 0.5rem;
-}
-
-.cartItemDesc {
-  display: flex;
-  flex-direction: column;
-  margin-top: 0.5rem;
-
-  p {
-    margin: 0;
-  }
-}
-
-.cartItemPrices {
-  margin: 1rem 0;
-}
-
-.cartItemPriceVista {
-  color: green;
-  font-size: 1.4rem;
-}
-
-.cartItemPricePrazo {
-  color: red;
-}
-
-.prices {
-  background-color: rgb(230, 230, 230);
-  display: flex;
-  flex-direction: column;
-  font-family: roboto;
-  margin: 5rem 0 1rem 0;
-
-  h3 {
-    margin: 0;
-    padding: 1rem 0;
-    text-align: center;
-  }
-
-  p {
-    margin: 0;
-  }
-}
-
-.cartProductTotal {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 2rem;
-  padding: 1rem 0;
-}
-
-.cartPricesShip {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 2rem;
-  padding: 1rem 0;
-}
-
-.cartPricesTotal {
-  background-color: rgb(210, 210, 210);
-  display: flex;
-  font-size: 1.4rem;
-  justify-content: space-around;
-  padding: 1rem 0;
-}
-
-.cartTotal {
-  padding: 1.5rem 0;
-  text-align: center;
-}
-
-.cartTotalVista {
-  color: green;
-  margin-bottom: 1.5rem;
-}
-
-.cartTotalVistaPrice {
-  font-size: 2rem;
-}
-
-.cartTotalPrazo {
-  color: red;
-}
-
-.cartTotalPrazoPrice {
-  font-size: 2rem;
-}
-
-/*QUANTIDADE DE CADA ITEM*/
-.cartItemAddRemove {
-  display: flex;
-  margin: 0 0 1rem 1.5rem;
-
-  span {
-    font-size: 1.5rem;
-    margin: 0 0.4rem;
-  }
-
-  svg {
-    font-size: 0.8rem;
-  }
-}
-
-.cartItemRemove {
-  margin-left: 0.5rem;
-
-  svg {
-    font-size: 1.2rem;
-  }
-}
-
-.cartItemQt {
-  background-color: #4f4f4f;
-  color: #fff;
-}
-
-/*REMOVER TODOS ITENS DO CARRINHO*/
-.cartRemoveAll {
+/* REMOVER TODOS ITENS DO CARRINHO */
+.carrinhoLimpar {
   display: flex;
   justify-content: flex-end;
   margin: 1rem;
@@ -225,12 +89,81 @@
   }
 }
 
-/*FINALIZAR COMPRA*/
-.cartCheckout {
+/*----- PREÇOS -----*/
+.carrinhoPrecos {
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  flex-direction: column;
+  font-family: roboto;
+  margin: 5rem 0 1rem 0;
+
+  h3 {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+/* PREÇO PRODUTOS */
+.carrinhoPrecosProdutos {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+  padding: 1rem 0;
+}
+
+/* PREÇO FRETE */
+.carrinhoPrecosFrete {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+  padding: 1rem 0;
+}
+
+/* PREÇO TOTAL */
+.carrinhoPrecosTotal {
+  background-color: rgb(210, 210, 210);
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+/*--- PREÇO FINAL ---*/
+.carrinhoPrecoFinal {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+/* PREÇO À VISTA */
+.carrinhoPrecoFinalVista {
+  color: green;
+  margin-bottom: 1.5rem;
+
+  p:first-child {
+    font-size: 2rem;
+  }
+}
+
+/* PREÇO À PRAZO */
+.carrinhoPrecoFinalPrazo {
+  color: red;
+
+  p:first-child {
+    font-size: 2rem;
+  }
+}
+
+/*--- FINALIZAR COMPRA ---*/
+.carrinhoFinalizar {
   align-items: center;
   display: flex;
   flex-direction: column;
-
+  margin-top: 5rem;
   margin-bottom: 10rem;
   justify-content: center;
 
@@ -251,5 +184,81 @@
   svg {
     font-size: 1.8rem;
     margin-right: 1rem;
+  }
+}
+
+/*---------- ITEM ----------*/
+.containerItem {
+  button {
+    background-color: #fff;
+    border: none;
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+/* NÚMERO DO ITEM */
+.itemNumero {
+  background-color: rgb(240, 240, 240);
+  color: rgba(0, 0, 0, 0.3);
+  margin: 0;
+  padding: 10px;
+}
+
+/*----- CONTAINER PRINCIPAL DO ITEM -----*/
+.item {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  margin: 0.5rem 5px;
+}
+
+/* IMAGEM DO ITEM */
+.itemImagem {
+  margin: 0.5rem;
+}
+
+/* DESCRIÇÃO DO ITEM */
+.itemDescricao {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+/*--- CONTAINER DOS PREÇOS ---*/
+.itemPrecos {
+  margin: 1rem 0;
+}
+
+/*--- CONTAINER DE OPÇÕES DO ITEM ---*/
+.itemAdicionarRemover {
+  display: flex;
+  margin: 0 0 1rem 1.5rem;
+
+  span {
+    font-size: 1.5rem;
+    margin: 0 0.4rem;
+  }
+
+  svg {
+    font-size: 0.8rem;
+  }
+}
+
+/* QUANTIDADE DO ITEM */
+.itemQuantidade {
+  background-color: #4f4f4f;
+  color: #fff;
+}
+
+/* REMOVER DO CARRINHO */
+.itemRemover {
+  margin-left: 0.5rem;
+
+  svg {
+    font-size: 1.2rem;
   }
 }

@@ -1,12 +1,15 @@
-import Item from "./Item";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { RootState } from "../../store/store";
-import { cleanCart } from "../../store/slices/cartSlice";
-import { cleanSlice } from "../../store/slices/newSlice";
 import { useDispatch } from "react-redux";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
+
+import { RootState } from "../../store/Store";
+import { cleanCart } from "../../store/slices/cartSlice";
+import { cleanSlice } from "../../store/slices/newSlice";
+import Item from "./Item";
+
 import styles from "../../styles/Carrinho.module.scss";
 
 function Index() {
@@ -14,6 +17,8 @@ function Index() {
   const totalPrice = useSelector((state: RootState) => state.newSlice.obj);
   const dispatch = useDispatch();
   const [totalProdutos, setTotalProdutos] = useState(0);
+  const [testCep, setTestCep] = useState(false);
+  const [valorCep, setValorCep] = useState(0);
 
   useEffect(() => {
     if (cartStore.length === 0) {
@@ -35,25 +40,47 @@ function Index() {
     dispatch(cleanSlice());
   }
 
-  const cep = 50;
+  function handleCepChange(e: React.ChangeEvent<HTMLInputElement>) {
+    let cep = e.target.value;
+    if (cep.toString().length === 8) {
+      setTestCep(true);
+    } else {
+      setTestCep(false);
+    }
+  }
+
+  function handleCep(e: React.MouseEvent<HTMLElement>) {
+    e.preventDefault();
+    if (testCep) {
+      setValorCep(50);
+    } else {
+      setValorCep(0);
+    }
+  }
 
   return (
-    <div className={styles.containerCart}>
-      <h2 className={styles.cartTitle}>CARRINHO</h2>
+    <div className={styles.container}>
+      <h2 className={styles.carrinhoTitulo}>CARRINHO</h2>
       <hr />
       {cartStore.length === 0 ? (
-        <div className={styles.cartNoProducts}>
+        <div className={styles.carrinhoSemProdutos}>
           <p>Nenhum produto no seu carrinho.</p>
           <button>CONTINUAR COMPRANDO</button>
         </div>
       ) : (
         <>
-          <div className={styles.containerCartShip}>
+          <div className={styles.carrinhoFrete}>
             <h3>CALCULAR FRETE</h3>
-            <div className={styles.cartShipMain}>
-              <input type="text" placeholder="CEP" />
-              <button>Calcular</button>
-            </div>
+            <form className={styles.carrinhoFreteForm}>
+              <input
+                onChange={(e) => handleCepChange(e)}
+                type="text"
+                name="cep"
+                placeholder="CEP"
+                maxLength={8}
+              />
+              <button onClick={(e) => handleCep(e)}>Calcular</button>
+            </form>
           </div>
           <hr />
           {cartStore.map((i, key) => (
@@ -64,18 +91,19 @@ function Index() {
               pPrazo={i.pPrazo}
               name={i.name}
               num={key}
+              handleRemove={handleRemove}
             />
           ))}
-          <div className={styles.cartRemoveAll}>
+          <div className={styles.carrinhoLimpar}>
             <button onClick={handleRemove}>
               <FontAwesomeIcon icon={faCartShopping} /> LIMPAR CARRINHO
             </button>
           </div>
 
-          <div className={styles.prices}>
+          <div className={styles.carrinhoPrecos}>
             <h3>Resumo</h3>
             <hr />
-            <div className={styles.cartProductTotal}>
+            <div className={styles.carrinhoPrecosProdutos}>
               <p>{"TOTAL DOS PRODUTOS"}</p>
               <p>
                 {totalProdutos.toLocaleString("pt-BR", {
@@ -86,20 +114,20 @@ function Index() {
               </p>
             </div>
             <hr />
-            <div className={styles.cartPricesShip}>
+            <div className={styles.carrinhoPrecosFrete}>
               <p>{"FRETE"}</p>
               <p>
-                {cep.toLocaleString("pt-BR", {
+                {valorCep.toLocaleString("pt-BR", {
                   minimumFractionDigits: 2,
                   style: "currency",
                   currency: "BRL",
                 })}
               </p>
             </div>
-            <div className={styles.cartPricesTotal}>
+            <div className={styles.carrinhoPrecosTotal}>
               <p>{"VALOR TOTAL"}</p>
               <p>
-                {(totalProdutos + cep).toLocaleString("pt-BR", {
+                {(totalProdutos + valorCep).toLocaleString("pt-BR", {
                   minimumFractionDigits: 2,
                   style: "currency",
                   currency: "BRL",
@@ -107,10 +135,10 @@ function Index() {
               </p>
             </div>
             <hr />
-            <div className={styles.cartTotal}>
-              <div className={styles.cartTotalVista}>
-                <p className={styles.cartTotalVistaPrice}>
-                  {((totalProdutos + cep) * 0.85).toLocaleString("pt-BR", {
+            <div className={styles.carrinhoPrecoFinal}>
+              <div className={styles.carrinhoPrecoFinalVista}>
+                <p>
+                  {((totalProdutos + valorCep) * 0.85).toLocaleString("pt-BR", {
                     minimumFractionDigits: 2,
                     style: "currency",
                     currency: "BRL",
@@ -118,9 +146,9 @@ function Index() {
                 </p>
                 <p>{"no boleto com 15% desconto"}</p>
               </div>
-              <div className={styles.cartTotalPrazo}>
-                <p className={styles.cartTotalPrazoPrice}>
-                  {(totalProdutos + cep).toLocaleString("pt-BR", {
+              <div className={styles.carrinhoPrecoFinalPrazo}>
+                <p>
+                  {(totalProdutos + valorCep).toLocaleString("pt-BR", {
                     minimumFractionDigits: 2,
                     style: "currency",
                     currency: "BRL",
@@ -131,7 +159,7 @@ function Index() {
             </div>
           </div>
 
-          <div className={styles.cartCheckout}>
+          <div className={styles.carrinhoFinalizar}>
             <button>
               <p>
                 <FontAwesomeIcon icon={faCartShopping} />

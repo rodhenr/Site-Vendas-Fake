@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/Banner.module.scss";
 
-function index() {
+function Index() {
   return (
     <>
       <Link href="/processador" passHref>
@@ -29,4 +29,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;
