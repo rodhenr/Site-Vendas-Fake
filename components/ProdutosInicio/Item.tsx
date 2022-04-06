@@ -19,7 +19,7 @@ interface Props {
   specs: string[];
 }
 
-function Itens(props: Props) {
+function Item(props: Props) {
   const dispatch = useDispatch();
   const { categoria, img, name, pathName, pPrazo, id } = props;
 
@@ -30,7 +30,7 @@ function Itens(props: Props) {
   }
 
   return (
-    <div className={styles.containerItens}>
+    <div className={styles.containerItem}>
       <Link href={`/${categoria}/${pathName}`} passHref>
         <Image src={img} alt="processador" height={200} width={200} />
       </Link>
@@ -63,4 +63,4 @@ function Itens(props: Props) {
   );
 }
 
-export default Itens;
+export default Item;

@@ -1,7 +1,34 @@
 /* GERAL */
 .container {
-    height: 110px;
-    margin: 0;
-    position: relative;
-    width: 100%;
+  background-color: #303030;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+.banner {
+  height: 110px;
+  margin: 0;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: 650px) {
+    height: 150px;
+  }
+
+  @media (min-width: 900px) {
+    height: 170px;
+  }
+
+  @media (min-width: 1024px) {
+    height: 130px;
+  }
+
+  @media (min-width: 1700px) {
+    height: 150px;
+  }
 }

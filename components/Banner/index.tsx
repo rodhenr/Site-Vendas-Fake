@@ -4,9 +4,9 @@ import styles from "../../styles/Banner.module.scss";
 
 function Index() {
   return (
-    <>
+    <div className={styles.container}>
       <Link href="/processador" passHref>
-        <div className={styles.container}>
+        <div className={styles.banner}>
           <Image
             src={"/images/banner1.jpg"}
             alt="Banner1"
@@ -16,7 +16,7 @@ function Index() {
         </div>
       </Link>
       <Link href="/placa-de-video" passHref>
-        <div className={styles.container}>
+        <div className={styles.banner}>
           <Image
             src={"/images/banner2.jpg"}
             alt="Banner2"
@@ -25,7 +25,7 @@ function Index() {
           />
         </div>
       </Link>
-    </>
+    </div>
   );
 }
 

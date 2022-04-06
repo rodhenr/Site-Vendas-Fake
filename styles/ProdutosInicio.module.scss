@@ -3,22 +3,49 @@
   background-color: #303030;
   font-family: roboto;
   padding: 2.5rem 0;
+  overflow: hidden;
 }
 
 /* TITULO NO INICIO */
 .inicioTitulo {
   color: #fff;
   font-size: 2rem;
+
   margin: 0 3rem;
 }
 
-/*----- ITENS -----*/
-.containerItens {
+/* ITENS (GERAL) */
+.itens {
+  display: grid;
+  gap: 1rem;
+
+  @media (min-width: 650px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 970px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1300px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: 1600px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/*----- ITEM -----*/
+.containerItem {
   background-color: #fff;
   font-family: "Roboto", sans-serif;
-  margin: 2.5rem 3rem;
+  margin: 2rem;
   padding: 1.5rem;
   text-align: center;
+
+  img {
+  }
 
   h1 {
     font-size: 1.2rem;
