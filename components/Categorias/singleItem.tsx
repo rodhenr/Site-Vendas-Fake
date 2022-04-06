@@ -28,33 +28,34 @@ function SingleItem(props: Props) {
   }
 
   return (
-    <div>
+    <div className={styles.itemContainer}>
       <Link href={`${categoria}/${pathName}`} passHref>
         <Image src={img} alt="processador" height={140} width={140} />
       </Link>
+      <hr />
       <Link href={`${categoria}/${pathName}`} passHref>
         <h1 className={styles.itemNome}>{name}</h1>
       </Link>
-      <hr />
+
+      <div className={styles.itemPrecoVista}>
+        <p>
+          {`${pPrazo.toLocaleString("pt-BR", {
+            minimumFractionDigits: 2,
+            style: "currency",
+            currency: "BRL",
+          })} à vista`}
+        </p>
+      </div>
+
       <div className={styles.itemPrecoPrazo}>
         <p>
-          {pPrazo.toLocaleString("pt-BR", {
+          {`Em até 12x de 
+          ${(pPrazo / 12).toLocaleString("pt-BR", {
             minimumFractionDigits: 2,
             style: "currency",
             currency: "BRL",
-          })}
+          })}`}
         </p>
-        <p>em até 12x no cartão</p>
-      </div>
-      <div>
-        <p className={styles.itemPrecoVista}>
-          {(pPrazo * 0.85).toLocaleString("pt-BR", {
-            minimumFractionDigits: 2,
-            style: "currency",
-            currency: "BRL",
-          })}
-        </p>
-        <p>à vista no boleto</p>
       </div>
 
       <button onClick={handleClick}>COMPRAR</button>

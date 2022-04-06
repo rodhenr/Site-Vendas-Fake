@@ -20,9 +20,21 @@ function NavDesktop() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.containerLogin}>
+        <FontAwesomeIcon icon={faUser} />
+        <p>Minha Conta</p>
+      </div>
       <div className={styles.containerNavbar}>
+        <h1 className={styles.nomeLoja}>
+          <Link href="/">PC Shop</Link>
+        </h1>
+        <hr />
         <div className={styles.navbarCategorias} onClick={changeOpen}>
           <FontAwesomeIcon icon={faBars} />
+          <div>
+            <p>Compre por</p>
+            <p>DEPARTAMENTO</p>
+          </div>
         </div>
         <div
           className={open ? `${styles.navbar} ${styles.active}` : styles.navbar}
@@ -34,37 +46,39 @@ function NavDesktop() {
               <li>
                 <Link href="/placa-mae">Placa-Mãe</Link>
               </li>
+              <hr />
               <li>
                 <Link href="/processador">Processador</Link>
               </li>
+              <hr />
               <li>
                 <Link href="/placa-de-video">Placa de Vídeo</Link>
               </li>
+              <hr />
               <li>
                 <Link href="/fonte">Fonte</Link>
               </li>
+              <hr />
               <li>
                 <Link href="/gabinete">Gabinete</Link>
               </li>
+              <hr />
               <li>
                 <Link href="/memoria-ram">Memória RAM</Link>
               </li>
+              <hr />
               <li>
                 <Link href="/ssd">SSD</Link>
               </li>
             </ul>
           </nav>
         </div>
-        <h1 className={styles.nomeLoja}>
-          <Link href="/">PC Shop</Link>
-        </h1>
         <input
           type="text"
           className={styles.busca}
           placeholder="Digite o que você procura"
         />
-        <div className={styles.loginCarrinho}>
-          <FontAwesomeIcon icon={faUser} />
+        <div className={styles.carrinho}>
           <Link href="/carrinho" passHref>
             <FontAwesomeIcon icon={faCartShopping} />
           </Link>
