@@ -20,7 +20,7 @@ function Index() {
     };
   }, [setWidth]);
 
-  return <div>{width > 800 ? <NavDesktop /> : <NavMobile />}</div>;
+  return <div>{width > 767 ? <NavDesktop /> : <NavMobile />}</div>;
 }
 
 export default Index;

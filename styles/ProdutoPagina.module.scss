@@ -1,35 +1,107 @@
 /*---------- GERAL ----------*/
 .container {
   background-color: #303030;
+  font-family: "Open Sans", sans-serif;
+  padding: 3rem 0 3rem;
 }
 
 /*----- CONTAINER DO PRODUTO -----*/
 .containerProduto {
   align-items: center;
+  background-color: #424242;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
+  img {
+    height: 400px !important;
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 4rem;
+    padding: 1rem 2.5rem;
+  }
 }
 
-/* IMAGEM DO PRODUTO*/
+/* INFORMAÇÃO DO PRODUTO */
+.produtoInfo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMAGEM DO PRODUTO */
 .produtoImagem {
-  padding-top: 2rem;
+  img {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+
+    img {
+      height: 500px !important;
+      width: 500px !important;
+    }
+  }
 }
 
 /* NOME DO PRODUTO */
 .produtoNome {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   color: #fff;
-  font-size: 1.7rem;
-  margin: 1rem;
-  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 1rem 0 0;
+  padding: 0.5rem 1rem 1.5rem;
+  text-align: justify;
+
+  @media (min-width: 768px) {
+    text-align: start;
+  }
+}
+
+/* CONTAINER INFOS EXTRAS */
+.produtoInfoExtra {
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: #009e2a;
+  display: flex;
+  font-weight: 600;
+  height: 50px;
+  justify-content: space-between;
+  padding: 0 1rem;
+  width: 100%;
+
+  p {
+    margin: 0;
+  }
+}
+
+/* GARANTIA */
+.garantia {
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin: 0;
 }
 
 /* CONTAINER DOS PREÇOS */
 .containerPrecos {
+  align-self: start;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  justify-items: center;
+  padding: 0 1rem;
+
+  @media (min-width: 768px) {
+    justify-items: start;
+  }
 }
 
 /* CONTAINER DO PREÇO À PRAZO */
@@ -37,12 +109,13 @@
   align-items: center;
   color: red;
   display: flex;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   gap: 1rem;
+  padding-top: 3rem;
 
   svg {
     color: red;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -62,14 +135,18 @@
 /* CONTAINER DO PREÇO À VISTA */
 .containerVista {
   align-items: center;
-  color: green;
+  color: #009e2a;
   display: flex;
-  font-size: 3rem;
+  font-size: 1.5rem;
   gap: 1rem;
 
   svg {
-    color: green;
-    font-size: 2rem;
+    color: #009e2a;
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
   }
 }
 
@@ -84,17 +161,30 @@
     margin: 0;
     text-align: center;
   }
+
+  @media (min-width: 768px) {
+    p:last-child {
+      font-size: 1rem;
+      margin: 0;
+      text-align: center;
+    }
+  }
 }
 
 /* BOTÃO DE COMPRAR */
 .comprar {
-  background-color: #0057ff;
+  background-color: #009e2a;
   border: none;
+  border-radius: 8px;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   height: 50px;
   margin: 1rem 0;
   width: 300px;
+
+  svg {
+    padding-right: 1rem;
+  }
 }
 
 /* DESCRIÇÃO DO PRODUTO */
@@ -105,32 +195,50 @@
   padding: 1rem;
 
   h1 {
+    font-size: 1rem;
     margin: 0;
   }
+
+  p {
+    font-size: 0.8rem;
+    margin: 1rem 0 0;
+    text-align: justify;
+  }
+
+  @media (min-width: 768px) {
+    margin: 3rem 4rem 0;
+  }
+}
+
+.produtoDescricaoTitulo {
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 0.4rem;
 }
 
 /* ESPECIFICAÇÕES DO PRODUTO*/
 .produtoEspec {
   background-color: #424242;
-  margin-bottom: 7rem;
-  margin-top: 2rem;
+  color: #fff;
+  margin: 2rem 0.5rem 4rem;
   padding: 1rem;
 
   h1 {
-    color: #fff;
+    font-size: 1rem;
     margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin: 2rem 4rem 0;
   }
 }
 
 /* DESCRIÇÃO DA ESPECIFICAÇÃO */
 .EspecDescricao {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   color: #fff;
-}
-
-/* GARANTIA */
-.garantia {
-  color: #fff;
-  font-size: 0.7rem;
-  margin-top: 1.8rem;
-  text-align: end;
+  font-size: 0.8rem;
+  padding-bottom: 0.4rem;
 }

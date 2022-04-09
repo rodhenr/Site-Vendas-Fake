@@ -1,0 +1,87 @@
+/*----- ITEM -----*/
+.containerItem {
+  background-color: #fff;
+  margin: 2rem 1rem;
+  position: relative;
+  text-align: center;
+
+  hr {
+    background-color: #6969694a;
+    border: none;
+    height: 1px;
+  }
+
+  p {
+    padding: 0 0.5rem;
+    text-align: start;
+  }
+
+  h2 {
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.5rem 0.5rem;
+    text-align: justify;
+  }
+
+  img {
+    cursor: pointer;
+    height: 200px !important;
+    width: 200px !important;
+  }
+
+  button {
+    background-color: #009e2a;
+    border: none;
+    bottom: -40px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    margin: 2rem 1rem;
+    padding: 0;
+
+    p {
+      font-size: 1.1rem;
+      padding: 0 0.8rem;
+    }
+
+    img {
+      height: 220px !important;
+      width: 220px !important;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    button {
+      display: none;
+    }
+
+    &:hover {
+      button {
+        display: block;
+      }
+    }
+  }
+}
+
+/* PREÇO À VISTA */
+.itemPrecoVista {
+  color: green;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1.25rem 0 0.2rem;
+}
+
+/* PREÇO À PRAZO */
+.itemPrecoPrazo {
+  color: #696969;
+  font-size: 0.8rem;
+  margin: 0 0 0.8rem 0;
+}

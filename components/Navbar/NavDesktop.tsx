@@ -7,6 +7,7 @@ import {
   faUser,
   faCartShopping,
   faXmark,
+  faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../../styles/Navbar.module.scss";
@@ -25,15 +26,17 @@ function NavDesktop() {
         <p>Minha Conta</p>
       </div>
       <div className={styles.containerNavbar}>
-        <h1 className={styles.nomeLoja}>
-          <Link href="/">PC Shop</Link>
-        </h1>
-        <hr />
-        <div className={styles.navbarCategorias} onClick={changeOpen}>
-          <FontAwesomeIcon icon={faBars} />
-          <div>
-            <p>Compre por</p>
-            <p>DEPARTAMENTO</p>
+        <div className={styles.navNomeCategoria}>
+          <h1 className={styles.nomeLoja}>
+            <Link href="/">PC Shop</Link>
+          </h1>
+          <hr />
+          <div className={styles.navbarCategorias} onClick={changeOpen}>
+            <FontAwesomeIcon icon={faBars} />
+            <div>
+              <p>Compre por</p>
+              <p>DEPARTAMENTO</p>
+            </div>
           </div>
         </div>
         <div
@@ -73,11 +76,12 @@ function NavDesktop() {
             </ul>
           </nav>
         </div>
-        <input
-          type="text"
-          className={styles.busca}
-          placeholder="Digite o que você procura"
-        />
+        <div className={styles.busca}>
+          <input type="text" placeholder="Digite o que você procura" />
+          <div className={styles.buscaIcone}>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </div>
+        </div>
         <div className={styles.carrinho}>
           <Link href="/carrinho" passHref>
             <FontAwesomeIcon icon={faCartShopping} />

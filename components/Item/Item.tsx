@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/slices/cartSlice";
 import { updateTotalPrice } from "../../store/slices/newSlice";
 
-import styles from "../../styles/ProdutosInicio.module.scss";
+import styles from "../../styles/Item.module.scss";
 
 interface Props {
   categoria: string;
@@ -34,29 +34,25 @@ function Item(props: Props) {
       <Link href={`/${categoria}/${pathName}`} passHref>
         <Image src={img} alt="processador" height={200} width={200} />
       </Link>
+      <hr />
       <Link href={`/${categoria}/${pathName}`} passHref>
-        <h1>{name}</h1>
+        <h2>{name}</h2>
       </Link>
-      <div>
-        <p className={styles.itemPrecoPrazo}>
-          {pPrazo.toLocaleString("pt-BR", {
-            minimumFractionDigits: 2,
-            style: "currency",
-            currency: "BRL",
-          })}
-        </p>
-        <p>em até 12x no cartão</p>
-      </div>
-      <div>
-        <p className={styles.itemPrecoVista}>
-          {(pPrazo * 0.85).toLocaleString("pt-BR", {
-            minimumFractionDigits: 2,
-            style: "currency",
-            currency: "BRL",
-          })}
-        </p>
-        <p>à vista no boleto</p>
-      </div>
+
+      <p className={styles.itemPrecoVista}>
+        {`${(pPrazo * 0.85).toLocaleString("pt-BR", {
+          minimumFractionDigits: 2,
+          style: "currency",
+          currency: "BRL",
+        })} à vista no boleto`}
+      </p>
+      <p className={styles.itemPrecoPrazo}>
+        {`12x de ${(pPrazo / 12).toLocaleString("pt-BR", {
+          minimumFractionDigits: 2,
+          style: "currency",
+          currency: "BRL",
+        })} no cartão`}
+      </p>
 
       <button onClick={handleClick}>COMPRAR</button>
     </div>

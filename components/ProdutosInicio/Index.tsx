@@ -1,4 +1,4 @@
-import Itens from "./Item";
+import Item from "../Item/Item";
 import itemsList from "../../listaItems/Index";
 
 import styles from "../../styles/ProdutosInicio.module.scss";
@@ -11,7 +11,7 @@ function Index() {
         {itemsList
           .filter((item) => item.destaque === true)
           .map((i, key) => (
-            <Itens
+            <Item
               key={key}
               img={i.img}
               name={i.name}

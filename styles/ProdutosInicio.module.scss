@@ -1,8 +1,9 @@
+$widthDesktop: calc(0.15 * 100vw);
+
 /*---------- GERAL ----------*/
 .container {
   background-color: #303030;
-  font-family: roboto;
-  padding: 2.5rem 0;
+  padding: 2.5rem 0 10rem;
   overflow: hidden;
 }
 
@@ -10,8 +11,23 @@
 .inicioTitulo {
   color: #fff;
   font-size: 2rem;
+  margin: 0 1rem;
 
-  margin: 0 3rem;
+  @media (min-width: 768px) {
+    margin: 0 1rem;
+  }
+
+  @media (min-width: 1300px) {
+    margin: 0 calc(0.05 * 100vw)+1;
+  }
+
+  @media (min-width: 1500px) {
+    margin: 0 calc(0.1 * 100vw)+1;
+  }
+
+  @media (min-width: 1600px) {
+    margin: 0 calc(0.15 * 100vw)+1;
+  }
 }
 
 /* ITENS (GERAL) */
@@ -19,7 +35,7 @@
   display: grid;
   gap: 1rem;
 
-  @media (min-width: 650px) {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -29,59 +45,14 @@
 
   @media (min-width: 1300px) {
     grid-template-columns: repeat(4, 1fr);
+    margin: 0 calc(0.05 * 100vw);
+  }
+
+  @media (min-width: 1500px) {
+    margin: 0 calc(0.1 * 100vw);
   }
 
   @media (min-width: 1600px) {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-/*----- ITEM -----*/
-.containerItem {
-  background-color: #fff;
-  font-family: "Roboto", sans-serif;
-  margin: 2rem;
-  padding: 1.5rem;
-  text-align: center;
-
-  img {
-  }
-
-  h1 {
-    font-size: 1.2rem;
-    margin: 0;
-  }
-
-  button {
-    background-color: #f00;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1.5rem;
-    height: 40px;
-    width: 150px;
-  }
-}
-
-/* PREÇO À PRAZO */
-.itemPrecoPrazo {
-  color: red;
-  font-size: 1.5rem;
-  margin: 1rem 0 0 0;
-  &:last-child {
-    font-size: 0.8rem;
-    margin: 0 0 1.5rem 0;
-  }
-}
-
-/* PREÇO À VISTA */
-.itemPrecoVista {
-  color: green;
-  font-size: 2.5rem;
-  margin: 0;
-
-  &:last-child {
-    font-size: 1.3rem;
-    margin: 0 0 1rem 0;
+    margin: 0 calc(0.15 * 100vw);
   }
 }

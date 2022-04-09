@@ -11,6 +11,7 @@
 .containerCima {
   display: flex;
   justify-content: space-between;
+  margin-top: 0.5rem;
 }
 
 /* Container da Navbar */
@@ -19,15 +20,12 @@
   font-size: 2rem;
   margin-left: 1rem;
 
-  hr {
-    border: 1px #fff solid;
-    height: 85%;
-  }
-
-  @media (min-width: 800px) {
+  @media (min-width: 768px) {
+    align-self: auto;
     align-items: center;
     display: flex;
     height: 80px;
+    justify-content: center;
     gap: 1.5rem;
   }
 }
@@ -53,18 +51,27 @@
   }
 }
 
+/* CONTAINER NOME E CATEGORIAS */
+.navNomeCategoria {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+
+  hr {
+    border: 1px #fff solid;
+    height: 60px;
+  }
+}
+
 /*CATEGORIAS*/
 .navbarCategorias {
   align-items: center;
-  background-color: #082853;
   border-radius: 9px;
   color: #fff;
   cursor: pointer;
   display: flex;
   gap: 1rem;
   height: 40px;
-  margin-right: 2.5rem;
-  padding: 1.6rem 1.5rem;
 
   p {
     font-size: 0.8rem;
@@ -73,6 +80,12 @@
     &:last-child {
       font-size: 1.3rem;
     }
+  }
+
+  @media (min-width: 768px) {
+    background-color: #082853;
+    margin-right: 0;
+    padding: 1.5rem 0.7rem;
   }
 
   &:hover {
@@ -85,23 +98,17 @@
   align-self: center;
   color: #fff;
   font-family: "Audiowide", cursive;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   margin: 0;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
 
-  @media (min-width: 800px) {
-    font-size: 2rem;
-    left: auto;
-    position: relative;
-    transform: none;
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
   }
 }
 
 /* Classe geral da Navbar */
 .navbar {
-  background-color: #3f3e3e;
+  background-color: #656565;
   height: 100vh;
   left: -100%;
   margin: 0;
@@ -109,7 +116,7 @@
   top: 0;
   width: 60%;
   transition: all 1s ease;
-  z-index: 100;
+  z-index: 101;
 
   svg {
     color: white;
@@ -135,11 +142,8 @@
     }
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 768px) {
     width: 300px;
-
-    svg {
-    }
   }
 }
 
@@ -147,6 +151,20 @@
 .navbar.active {
   left: 0;
   transition: all 0.6s ease;
+}
+
+/* LOGIN/CARRINHO */
+.loginCarrinho {
+  align-self: center;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  margin-right: 0.5rem;
+
+  svg {
+    color: #fff;
+    font-size: 1.8rem;
+  }
 }
 
 /* Carrinho */
@@ -162,28 +180,68 @@
   svg {
     color: #fff;
     font-size: 2rem;
-    margin-left: 3rem;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 768px) {
     position: relative;
   }
 }
 
 /* Barra de busca */
 .busca {
-  height: 35px;
-  margin: 1.5rem 2rem 1rem;
-  padding-left: 0.7rem;
+  align-items: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
 
-  @media (min-width: 800px) {
-    border: none;
-    height: 40px;
-    margin: 0;
-    width: 400px;
+  margin: 1.5rem 1rem 1rem;
+
+  svg {
+    width: 55px;
   }
 
-  @media (min-width: 1100px) {
-    width: 600px;
+  input {
+    border: none;
+    height: 35px;
+    padding-left: 0.7rem;
+    width: 450px;
+  }
+
+  @media (min-width: 768px) {
+    margin: 0;
+
+    input {
+      border: none;
+      height: 40px;
+      padding-left: 0.7rem;
+      width: 300px;
+    }
+
+    svg {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    input {
+      width: 400px;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    input {
+      width: 600px;
+    }
+  }
+}
+
+.buscaIcone {
+  align-items: center;
+  background-color: red;
+  display: flex;
+  height: 35px;
+
+  @media (min-width: 768px) {
+    height: 40px;
   }
 }

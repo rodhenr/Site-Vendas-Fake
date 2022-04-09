@@ -7,6 +7,7 @@ import {
   faUser,
   faCartShopping,
   faXmark,
+  faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../../styles/Navbar.module.scss";
@@ -37,21 +38,27 @@ function NavMobile() {
                 <li>
                   <Link href="/placa-mae">Placa-Mãe</Link>
                 </li>
+                <hr />
                 <li>
                   <Link href="/processador">Processador</Link>
                 </li>
+                <hr />
                 <li>
                   <Link href="/placa-de-video">Placa de Vídeo</Link>
                 </li>
+                <hr />
                 <li>
                   <Link href="/fonte">Fonte</Link>
                 </li>
+                <hr />
                 <li>
                   <Link href="/gabinete">Gabinete</Link>
                 </li>
+                <hr />
                 <li>
                   <Link href="/memoria-ram">Memória RAM</Link>
                 </li>
+                <hr />
                 <li>
                   <Link href="/ssd">SSD</Link>
                 </li>
@@ -69,11 +76,12 @@ function NavMobile() {
           </Link>
         </div>
       </div>
-      <input
-        type="text"
-        className={styles.busca}
-        placeholder="Digite o que você procura"
-      />
+      <div className={styles.busca}>
+        <input type="text" placeholder="Digite o que você procura" />
+        <div className={styles.buscaIcone}>
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </div>
+      </div>
     </div>
   );
 }

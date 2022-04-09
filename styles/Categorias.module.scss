@@ -1,98 +1,143 @@
 /*---------- GERAL ----------*/
 .containerCategoria {
   background-color: #303030 !important;
+  font-family: "Open Sans", sans-serif;
   padding-bottom: 15rem;
   margin: 0;
-  padding: 2rem;
+  padding: 2rem 0rem;
 }
 
 /*--- NOME E FILTRO ---*/
 .categoriaTopo {
-  align-items: center;
-  background: #fff;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-around;
+  margin: 0 1rem;
 
-  p {
-    margin: 0;
+  @media (min-width: 1300px) {
+    margin: 0 calc(0.05 * 100vw) + 1;
+  }
+
+  @media (min-width: 1500px) {
+    margin: 0 calc(0.1 * 100vw) + 1;
+  }
+
+  @media (min-width: 1600px) {
+    margin: 0 calc(0.15 * 100vw) + 1;
   }
 }
 
 /* NOME DA CATEGORIA */
 .categoriaNome {
-  margin: 0;
-  padding: 1rem 1.5rem;
+  align-self: start;
+  color: #fff;
+  font-size: 1rem;
+  margin: 0 0 0.3rem;
+}
+
+/* OPÇÕES */
+.categoriaOpcao {
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  gap: 0.7rem;
+  height: 50px;
+  justify-content: end;
+  width: 100%;
+
+  p {
+    color: #ff5510;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+  }
 }
 
 /*----- ITENS -----*/
 .containerItens {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  margin: 2rem auto;
-  text-align: center;
-  
+  margin: 1rem 0;
 
-  h1 {
-    font-size: 0.8rem;
-    padding: 0;
-  }
-
-  button {
-    background-color: #f00;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    height: 30px;
-    margin: 1rem 0;
-    width: 150px;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  @media (min-width: 550px) {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (min-width: 750px) {
+  @media (min-width: 970px) {
     grid-template-columns: repeat(3, 1fr);
-    width: 60vw;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1300px) {
     grid-template-columns: repeat(4, 1fr);
+    margin: 0 calc(0.05 * 100vw);
+  }
+
+  @media (min-width: 1500px) {
+    margin: 0 calc(0.1 * 100vw);
+  }
+
+  @media (min-width: 1600px) {
+    margin: 0 calc(0.15 * 100vw);
   }
 }
 
-/* CONTAINER DO ITEM*/
-.itemContainer {
-  background-color: #fff;
-  margin-bottom: 2rem;
-  width: 200px;
+/* BOTAO ORDERNAR*/
+.botaoOrdenar {
+  position: relative;
+
+  button {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    gap: 0.7rem;
+    height: 25px;
+    justify-content: center;
+    margin-right: 1rem;
+    width: 120px;
+  }
+
+  ul {
+    background-color: #383838;
+    color: #fff;
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 120px;
+    top: 26px;
+    z-index: 100;
+  }
+
+  li {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 0.8rem;
+    height: 32px;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+
+    &:hover {
+      background-color: rgb(26, 138, 198);
+      transition: all 0.5s ease;
+    }
+
+    &:first-child {
+      border-bottom: 1px solid rgba(0,0,0,0.5);
+    }
+  }
 }
 
-/* NOME DO ITEM */
-.itemNome {
-  margin: 0 0.5rem;
-  text-align: justify;
-}
+.botaoOrdenar.ativo {
+  ul {
+    display: block !important;
+  }
 
-/* PREÇO À PRAZO */
-.itemPrecoPrazo {
-  color: red;
-  font-size: 0.8rem;
-  margin: 0 0.5rem;
-  text-align: left;
-}
-
-/* PREÇO À VISTA */
-.itemPrecoVista {
-  color: #1b9f36;
-  font-size: 1.2rem;
-  margin: 0.7rem 0.5rem 0.2rem;
-  text-align: left;
+  hr {
+    margin: 0 0 -1px;
+    width: 100%;
+  }
 }

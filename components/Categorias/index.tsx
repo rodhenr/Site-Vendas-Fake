@@ -3,13 +3,17 @@ import { useRouter } from "next/router";
 
 import Navbar from "../Navbar/Index";
 import Footer from "../Footer/Index";
-import Product from "./SingleItem";
+import Item from "../Item/Item";
 import itemsList from "../../listaItems/Index";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../../styles/Categorias.module.scss";
 
 function Index() {
-  const [filtro, setFiltro] = useState("padrao");
+  const [filtro, setFiltro] = useState("");
+  const [open, setOpen] = useState(false);
   const router = useRouter();
   const { category } = router.query;
   const items = itemsList.filter((i) => i.categoria === category);
@@ -20,14 +24,14 @@ function Index() {
     .slice()
     .sort((a, b) => (a.pPrazo > b.pPrazo ? -1 : 1));
 
-  function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
-    setFiltro(e.target.value);
+  function handleChange(opt: string) {
+    setFiltro(opt);
   }
 
-  function renderItems(filtro: string) {
-    if (filtro === "padrao") {
+  function renderItems(opt: string) {
+    if (opt === "") {
       return items.map((i, key) => (
-        <Product
+        <Item
           key={key}
           img={i.img}
           name={i.name}
@@ -40,9 +44,9 @@ function Index() {
           specs={i.specs}
         />
       ));
-    } else if (filtro === "menor") {
+    } else if (opt === "menor") {
       return itemsMenorPreco.map((i, key) => (
-        <Product
+        <Item
           key={key}
           img={i.img}
           name={i.name}
@@ -55,9 +59,9 @@ function Index() {
           specs={i.specs}
         />
       ));
-    } else if (filtro === "maior") {
+    } else if (opt === "maior") {
       return itemsMaiorPreco.map((i, key) => (
-        <Product
+        <Item
           key={key}
           img={i.img}
           name={i.name}
@@ -73,6 +77,10 @@ function Index() {
     }
   }
 
+  function handleState() {
+    setOpen(!open);
+  }
+
   return (
     <div>
       <Navbar />
@@ -81,13 +89,24 @@ function Index() {
           <h1 className={styles.categoriaNome}>
             {items[0].categoria.replace(/-/g, " ").toUpperCase()}
           </h1>
-          <div>
-            <p>Filtrar</p>
-            <select onChange={handleChange}>
-              <option value="padrao">Padrão</option>
-              <option value="menor">Menor Valor</option>
-              <option value="maior">Maior Valor</option>
-            </select>
+          <div className={styles.categoriaOpcao}>
+            <p>FILTRAR:</p>
+            <div
+              className={
+                open
+                  ? `${styles.botaoOrdenar} ${styles.ativo}`
+                  : styles.botaoOrdenar
+              }
+            >
+              <button onClick={handleState}>
+                <span>Ordenar por</span>
+                <FontAwesomeIcon icon={faAngleDown} />
+              </button>
+              <ul>
+                <li onClick={() => handleChange("menor")}>Menor Preço</li>
+                <li onClick={() => handleChange("maior")}>Maior Preço</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className={styles.containerItens}>{renderItems(filtro)}</div>
