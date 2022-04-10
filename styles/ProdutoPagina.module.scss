@@ -1,14 +1,30 @@
 /*---------- GERAL ----------*/
 .container {
-  background-color: #303030;
+  background-color: #ebebeb;
   font-family: "Open Sans", sans-serif;
   padding: 3rem 0 3rem;
+
+  svg {
+    cursor: pointer;
+  }
+
+  @media (min-width: 1300px) {
+    padding: 3rem calc(0.05 * 100vw);
+  }
+
+  @media (min-width: 1500px) {
+    padding: 3rem calc(0.1 * 100vw);
+  }
+
+  @media (min-width: 1600px) {
+    padding: 3rem calc(0.15 * 100vw);
+  }
 }
 
 /*----- CONTAINER DO PRODUTO -----*/
 .containerProduto {
   align-items: center;
-  background-color: #424242;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
 
@@ -21,15 +37,16 @@
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
     margin: 0 4rem;
-    padding: 1rem 2.5rem;
   }
 }
 
 /* INFORMAÇÃO DO PRODUTO */
 .produtoInfo {
   align-items: center;
+  background-color: rgb(63, 63, 63);
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 /* IMAGEM DO PRODUTO */
@@ -39,21 +56,33 @@
     width: 100% !important;
   }
 
+  @media (min-width: 500px) {
+    img {
+      height: 400px !important;
+      margin-top: 1rem !important;
+    }
+  }
+
   @media (min-width: 768px) {
     display: flex;
     justify-content: center;
-    padding-top: 0;
+    padding: 2rem 0;
 
     img {
-      height: 500px !important;
-      width: 500px !important;
+      height: 100% !important;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    img {
+      height: 450px !important;
+      width: 450px !important;
     }
   }
 }
 
 /* NOME DO PRODUTO */
 .produtoNome {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   color: #fff;
   font-size: 1.5rem;
   font-weight: 300;
@@ -69,11 +98,11 @@
 /* CONTAINER INFOS EXTRAS */
 .produtoInfoExtra {
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #ebebeb;
   color: #009e2a;
   display: flex;
   font-weight: 600;
-  height: 50px;
+  height: 35px;
   justify-content: space-between;
   padding: 0 1rem;
   width: 100%;
@@ -85,7 +114,7 @@
 
 /* GARANTIA */
 .garantia {
-  color: #fff;
+  color: #000;
   font-size: 0.8rem;
   font-weight: 300;
   margin: 0;
@@ -177,6 +206,7 @@
   border: none;
   border-radius: 8px;
   color: #fff;
+  cursor: pointer;
   font-size: 1.5rem;
   height: 50px;
   margin: 1rem 0;
@@ -189,10 +219,9 @@
 
 /* DESCRIÇÃO DO PRODUTO */
 .productDescricao {
-  background-color: #424242;
-  color: #fff;
+  background-color: #fff;
   margin: 5rem 0.5rem 0;
-  padding: 1rem;
+  padding: 0.7rem;
 
   h1 {
     font-size: 1rem;
@@ -205,6 +234,10 @@
     text-align: justify;
   }
 
+  svg {
+    color: red;
+  }
+
   @media (min-width: 768px) {
     margin: 3rem 4rem 0;
   }
@@ -212,22 +245,31 @@
 
 .produtoDescricaoTitulo {
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: pointer;
   display: flex;
   gap: 1rem;
+  transition: all 0.5s ease;
+}
+
+.tituloAtivo {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 0.4rem;
 }
 
 /* ESPECIFICAÇÕES DO PRODUTO*/
 .produtoEspec {
-  background-color: #424242;
-  color: #fff;
+  background-color: #fff;
   margin: 2rem 0.5rem 4rem;
-  padding: 1rem;
+  padding: 0.7rem;
+  
 
   h1 {
     font-size: 1rem;
     margin: 0;
+  }
+
+  svg {
+    color: red;
   }
 
   @media (min-width: 768px) {
@@ -237,8 +279,6 @@
 
 /* DESCRIÇÃO DA ESPECIFICAÇÃO */
 .EspecDescricao {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  color: #fff;
   font-size: 0.8rem;
   padding-bottom: 0.4rem;
 }

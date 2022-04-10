@@ -13,6 +13,7 @@ const listaItens = [
     pPrazo: 1000,
     tags: [],
     destaque: true,
+    promo: false,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -42,6 +43,7 @@ const listaItens = [
     pPrazo: 1600,
     tags: [],
     destaque: false,
+    promo: true,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -71,6 +73,7 @@ const listaItens = [
     pPrazo: 3400,
     tags: [],
     destaque: true,
+    promo: false,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -100,6 +103,7 @@ const listaItens = [
     pPrazo: 7500,
     tags: [],
     destaque: false,
+    promo: true,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -128,7 +132,8 @@ const listaItens = [
       "processador-amd-ryzen-3-3200g-3-6ghz-4-0ghz-max-turbo-am4-vídeo-integrado-4-núcleos--yd3200c5fhbox",
     pPrazo: 1100,
     tags: [],
-    destaque: true,
+    destaque: false,
+    promo: true,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -158,6 +163,7 @@ const listaItens = [
     pPrazo: 1900,
     tags: [],
     destaque: false,
+    promo: true,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -187,6 +193,7 @@ const listaItens = [
     pPrazo: 2400,
     tags: [],
     destaque: true,
+    promo: false,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -216,6 +223,7 @@ const listaItens = [
     pPrazo: 3600,
     tags: [],
     destaque: false,
+    promo: false,
     specs: [
       "Número de núcleos: 4",
       "Nº de threads: 8",
@@ -244,6 +252,7 @@ const listaItens = [
     pPrazo: 375,
     tags: [],
     destaque: true,
+    promo: false,
     specs: [
       "Marca: Gigabyte",
       "Modelo: 28200-P450B-1BRR",
@@ -269,6 +278,7 @@ const listaItens = [
     pPrazo: 940,
     tags: [],
     destaque: false,
+    promo: false,
     specs: [
       "Marca: Gigabyte",
       "Modelo: 28200-P450B-1BRR",
@@ -294,6 +304,7 @@ const listaItens = [
     pPrazo: 505,
     tags: [],
     destaque: true,
+    promo: false,
     specs: [
       "Marca: Gigabyte",
       "Modelo: 28200-P450B-1BRR",
@@ -319,6 +330,7 @@ const listaItens = [
     pPrazo: 940,
     tags: [],
     destaque: false,
+    promo: false,
     specs: [
       "Marca: Gigabyte",
       "Modelo: 28200-P450B-1BRR",
@@ -344,6 +356,7 @@ const listaItens = [
     pPrazo: 590,
     tags: [],
     destaque: true,
+    promo: false,
     specs: [
       "Marca: Gigabyte",
       "Modelo: 28200-P450B-1BRR",
@@ -370,6 +383,7 @@ const listaItens = [
     pPrazo: 4000,
     tags: [],
     destaque: false,
+    promo: true,
     specs: [
       "Marca: Zotac",
       "Modelo: ZT-T20600H-10M",
@@ -397,6 +411,7 @@ const listaItens = [
     pPrazo: 3500,
     tags: [],
     destaque: true,
+    promo: false,
     specs: [
       "Marca: Zotac",
       "Modelo: ZT-T20600H-10M",
@@ -424,6 +439,7 @@ const listaItens = [
     pPrazo: 1100,
     tags: [],
     destaque: false,
+    promo: true,
     specs: [
       "Marca: Zotac",
       "Modelo: ZT-T20600H-10M",
@@ -451,6 +467,7 @@ const listaItens = [
     pPrazo: 6000,
     tags: [],
     destaque: true,
+    promo: false,
     specs: [
       "Marca: Zotac",
       "Modelo: ZT-T20600H-10M",
@@ -478,6 +495,7 @@ const listaItens = [
     pPrazo: 2000,
     tags: [],
     destaque: false,
+    promo: true,
     specs: [
       "Marca: Zotac",
       "Modelo: ZT-T20600H-10M",
@@ -505,6 +523,7 @@ const listaItens = [
     pPrazo: 4500,
     tags: [],
     destaque: true,
+    promo: false,
     specs: [
       "Marca: Zotac",
       "Modelo: ZT-T20600H-10M",

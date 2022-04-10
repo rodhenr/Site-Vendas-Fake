@@ -17,11 +17,12 @@ interface Props {
   pPrazo: number;
   garantia: string;
   specs: string[];
+  promo: boolean;
 }
 
 function Item(props: Props) {
   const dispatch = useDispatch();
-  const { categoria, img, name, pathName, pPrazo, id } = props;
+  const { categoria, img, name, pathName, pPrazo, id, promo } = props;
 
   function handleClick() {
     alert("Adicionado ao carrinho com sucesso!");
@@ -38,20 +39,56 @@ function Item(props: Props) {
       <Link href={`/${categoria}/${pathName}`} passHref>
         <h2>{name}</h2>
       </Link>
+      {promo ? (
+        <div className={styles.itemPrecoPromo}>
+          <p>
+            {`De ${pPrazo.toLocaleString("pt-BR", {
+              minimumFractionDigits: 2,
+              style: "currency",
+              currency: "BRL",
+            })}`}
+          </p>
+          <p>por:</p>
+        </div>
+      ) : (
+        <></>
+      )}
 
       <p className={styles.itemPrecoVista}>
-        {`${(pPrazo * 0.85).toLocaleString("pt-BR", {
-          minimumFractionDigits: 2,
-          style: "currency",
-          currency: "BRL",
-        })} à vista no boleto`}
+        {promo ? (
+          <>
+            {" "}
+            {`${(pPrazo * 0.7).toLocaleString("pt-BR", {
+              minimumFractionDigits: 2,
+              style: "currency",
+              currency: "BRL",
+            })} à vista`}
+          </>
+        ) : (
+          <>
+            {" "}
+            {`${(pPrazo * 0.85).toLocaleString("pt-BR", {
+              minimumFractionDigits: 2,
+              style: "currency",
+              currency: "BRL",
+            })} à vista`}
+          </>
+        )}
       </p>
       <p className={styles.itemPrecoPrazo}>
-        {`12x de ${(pPrazo / 12).toLocaleString("pt-BR", {
-          minimumFractionDigits: 2,
-          style: "currency",
-          currency: "BRL",
-        })} no cartão`}
+        {promo ? (
+          <>{`Em até 12x de ${((pPrazo * 0.85) / 12).toLocaleString("pt-BR", {
+            minimumFractionDigits: 2,
+            style: "currency",
+            currency: "BRL",
+          })} no cartão`}</>
+        ) : (
+          <>{`Em até 12x de ${(pPrazo / 12).toLocaleString("pt-BR", {
+            minimumFractionDigits: 2,
+            style: "currency",
+            currency: "BRL",
+          })} no cartão`}</>
+        )}
       </p>
 
       <button onClick={handleClick}>COMPRAR</button>

@@ -1,7 +1,8 @@
 /*----- ITEM -----*/
 .containerItem {
   background-color: #fff;
-  margin: 2rem 1rem;
+  font-family: "Open Sans", sans-serif;
+  margin: 0rem 1rem;
   position: relative;
   text-align: center;
 
@@ -18,15 +19,17 @@
 
   h2 {
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    font-weight: 400;
     margin: 0;
-    padding: 0.5rem 0.5rem;
+    padding: 1rem 0.6rem 1.5rem;
     text-align: justify;
   }
 
   img {
     cursor: pointer;
     height: 200px !important;
+    padding-top: 0.5rem !important;
     width: 200px !important;
   }
 
@@ -41,16 +44,21 @@
     left: 0;
     position: absolute;
     width: 100%;
+
+    &:hover{
+      background-color: #01681d;
+      transition: all 0.5s ease;
+    }
+
+    &:not(hover){
+      transition: all 0.5s ease;
+    }
   }
 
   @media (min-width: 768px) {
-    margin: 2rem 1rem;
+    margin: 0.5rem 1rem;
     padding: 0;
-
-    p {
-      font-size: 1.1rem;
-      padding: 0 0.8rem;
-    }
+    width: 270px;
 
     img {
       height: 220px !important;
@@ -58,15 +66,9 @@
     }
   }
 
-  @media (min-width: 1000px) {
-    button {
-      display: none;
-    }
-
-    &:hover {
-      button {
-        display: block;
-      }
+  @media (min-width: 1300px) {
+    h2 {
+      font-size: 0.9rem;
     }
   }
 }
@@ -74,14 +76,43 @@
 /* PREÇO À VISTA */
 .itemPrecoVista {
   color: green;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 500;
-  margin: 1.25rem 0 0.2rem;
+  margin: 0 0 0.5rem;
+
+  @media (min-width: 1300px) {
+    font-size: 1.5rem;
+  }
 }
 
 /* PREÇO À PRAZO */
 .itemPrecoPrazo {
   color: #696969;
   font-size: 0.8rem;
-  margin: 0 0 0.8rem 0;
+  margin: 0 0 0.5rem 0;
+
+  @media (min-width: 1300px) {
+    font-size: 0.9rem;
+  }
+}
+
+/* PREÇO ANTERIOR PROMO */
+.itemPrecoPromo {
+  color: red;
+  display: flex;
+  font-size: 0.9rem;
+
+  p:first-child {
+    margin: 0 0 0.2rem;
+    text-decoration: line-through;
+  }
+
+  p:last-child {
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: 1300px) {
+    font-size: 1rem;
+  }
 }

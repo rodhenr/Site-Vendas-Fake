@@ -1,6 +1,6 @@
 /*---------- GERAL ----------*/
 .containerCategoria {
-  background-color: #303030 !important;
+  background-color: #ebebeb;
   font-family: "Open Sans", sans-serif;
   padding-bottom: 15rem;
   margin: 0;
@@ -27,7 +27,7 @@
 /* NOME DA CATEGORIA */
 .categoriaNome {
   align-self: start;
-  color: #fff;
+  color: #000;
   font-size: 1rem;
   margin: 0 0 0.3rem;
 }
@@ -54,29 +54,23 @@
 
 /*----- ITENS -----*/
 .containerItens {
+  align-self: start;
   display: grid;
-  gap: 1rem;
-  margin: 1rem 0;
+  gap: 3.5rem 1.5rem;
+  justify-content: center;
+  justify-items: center;
+  padding-bottom: 5rem;
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 270px);
   }
 
   @media (min-width: 970px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 270px);
   }
 
   @media (min-width: 1300px) {
-    grid-template-columns: repeat(4, 1fr);
-    margin: 0 calc(0.05 * 100vw);
-  }
-
-  @media (min-width: 1500px) {
-    margin: 0 calc(0.1 * 100vw);
-  }
-
-  @media (min-width: 1600px) {
-    margin: 0 calc(0.15 * 100vw);
+    grid-template-columns: repeat(4, 270px);
   }
 }
 
@@ -87,7 +81,7 @@
   button {
     align-items: center;
     background-color: #fff;
-    border: 1px solid rgba(0,0,0,0.15);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     cursor: pointer;
     display: flex;
     gap: 0.7rem;
@@ -126,7 +120,7 @@
     }
 
     &:first-child {
-      border-bottom: 1px solid rgba(0,0,0,0.5);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     }
   }
 }

@@ -1,12 +1,56 @@
 /* GERAL */
 .container {
-  background-color: #303030;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    cursor: pointer;
+  }
 
   @media (min-width: 1024px) {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
     padding: 0.5rem 0.5rem;
+  }
+}
+
+.bannerInteiro {
+  height: 100px;
+  margin: 0;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: 650px) {
+    height: 150px;
+  }
+
+  @media (min-width: 900px) {
+    height: 170px;
+  }
+
+  @media (min-width: 1024px) {
+    height: 130px;
+  }
+
+  @media (min-width: 1700px) {
+    height: 200px;
+  }
+}
+
+.containerDuplo {
+  @media (min-width: 1024px) {
+    display: flex;
+    gap: 1rem;
+
+    img {
+      border-radius: 12px;
+    }
+  }
+
+  @media (min-width: 1700px) {
+    margin: 0 auto;
   }
 }
 
@@ -29,6 +73,7 @@
   }
 
   @media (min-width: 1700px) {
-    height: 150px;
+    height: 140px;
+    width: 570px;
   }
 }

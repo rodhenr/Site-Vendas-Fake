@@ -42,34 +42,36 @@ function NavDesktop() {
         <div
           className={open ? `${styles.navbar} ${styles.active}` : styles.navbar}
         >
-          <FontAwesomeIcon icon={faXmark} onClick={changeOpen} />
+          <div className={styles.navAtivoOpcoes}>
+            <FontAwesomeIcon icon={faXmark} onClick={changeOpen} />
+            <div className={styles.navAtivoExtra}>
+              <FontAwesomeIcon icon={faUser} />
+              <Link href="/carrinho" passHref>
+                <FontAwesomeIcon icon={faCartShopping} />
+              </Link>
+            </div>
+          </div>
 
           <nav>
             <ul onClick={changeOpen}>
               <li>
                 <Link href="/placa-mae">Placa-Mãe</Link>
               </li>
-              <hr />
               <li>
                 <Link href="/processador">Processador</Link>
               </li>
-              <hr />
               <li>
                 <Link href="/placa-de-video">Placa de Vídeo</Link>
               </li>
-              <hr />
               <li>
                 <Link href="/fonte">Fonte</Link>
               </li>
-              <hr />
               <li>
                 <Link href="/gabinete">Gabinete</Link>
               </li>
-              <hr />
               <li>
                 <Link href="/memoria-ram">Memória RAM</Link>
               </li>
-              <hr />
               <li>
                 <Link href="/ssd">SSD</Link>
               </li>

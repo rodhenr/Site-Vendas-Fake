@@ -2,15 +2,15 @@ $widthDesktop: calc(0.15 * 100vw);
 
 /*---------- GERAL ----------*/
 .container {
-  background-color: #303030;
-  padding: 2.5rem 0 10rem;
+  background-color: #ebebeb;
+  padding: 2.5rem 0 3rem;
   overflow: hidden;
 }
 
 /* TITULO NO INICIO */
 .inicioTitulo {
-  color: #fff;
-  font-size: 2rem;
+  color: #000;
+  font-size: 1.3rem;
   margin: 0 1rem;
 
   @media (min-width: 768px) {
@@ -18,41 +18,36 @@ $widthDesktop: calc(0.15 * 100vw);
   }
 
   @media (min-width: 1300px) {
-    margin: 0 calc(0.05 * 100vw)+1;
+    margin: 0 calc(0.08 * 100vw);
   }
 
   @media (min-width: 1500px) {
-    margin: 0 calc(0.1 * 100vw)+1;
+    margin: 0 calc(0.13 * 100vw);
   }
 
   @media (min-width: 1600px) {
-    margin: 0 calc(0.15 * 100vw)+1;
+    margin: 0 calc(0.2 * 100vw);
   }
 }
 
 /* ITENS (GERAL) */
 .itens {
+  align-self: start;
   display: grid;
-  gap: 1rem;
+  gap: 3.5rem 1.5rem;
+  justify-content: center;
+  justify-items: center;
+  padding-bottom: 5rem;
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 270px);
   }
 
   @media (min-width: 970px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 270px);
   }
 
   @media (min-width: 1300px) {
-    grid-template-columns: repeat(4, 1fr);
-    margin: 0 calc(0.05 * 100vw);
-  }
-
-  @media (min-width: 1500px) {
-    margin: 0 calc(0.1 * 100vw);
-  }
-
-  @media (min-width: 1600px) {
-    margin: 0 calc(0.15 * 100vw);
+    grid-template-columns: repeat(4, 270px);
   }
 }

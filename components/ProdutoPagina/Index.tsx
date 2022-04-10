@@ -16,6 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from "../../styles/ProdutoPagina.module.scss";
 import { useState } from "react";
+import Link from "next/link";
 
 interface Props {
   categoria: string;
@@ -30,10 +31,10 @@ interface Props {
 }
 
 function Index(props: Props) {
-  const [openTecnico, setOpenTecnico] = useState(false);
-  const [openGeral, setOpenGeral] = useState(false);
+  const [openTecnico, setOpenTecnico] = useState(true);
+  const [openGeral, setOpenGeral] = useState(true);
   const dispatch = useDispatch();
-  const { img, garantia, name, specs, pPrazo } = props;
+  const { img, garantia, name, specs, pPrazo, categoria, pathName } = props;
 
   function handleClick() {
     alert("Adicionado ao carrinho com sucesso!");
@@ -97,11 +98,18 @@ function Index(props: Props) {
           </div>
         </div>
         <div className={styles.productDescricao}>
-          <div className={styles.produtoDescricaoTitulo}>
+          <div
+            className={
+              openGeral
+                ? `${styles.produtoDescricaoTitulo} ${styles.tituloAtivo}`
+                : styles.produtoDescricaoTitulo
+            }
+            onClick={handleGeral}
+          >
             {!openGeral ? (
-              <FontAwesomeIcon icon={faPlus} onClick={handleGeral} />
+              <FontAwesomeIcon icon={faPlus} />
             ) : (
-              <FontAwesomeIcon icon={faMinus} onClick={handleGeral} />
+              <FontAwesomeIcon icon={faMinus} />
             )}
 
             <h1>CARACTERÍSTICAS GERAIS</h1>
@@ -126,11 +134,18 @@ function Index(props: Props) {
           )}
         </div>
         <div className={styles.produtoEspec}>
-          <div className={styles.produtoDescricaoTitulo}>
+          <div
+            className={
+              openTecnico
+                ? `${styles.produtoDescricaoTitulo} ${styles.tituloAtivo}`
+                : styles.produtoDescricaoTitulo
+            }
+            onClick={handleTecnico}
+          >
             {!openTecnico ? (
-              <FontAwesomeIcon icon={faPlus} onClick={handleTecnico} />
+              <FontAwesomeIcon icon={faPlus} />
             ) : (
-              <FontAwesomeIcon icon={faMinus} onClick={handleTecnico} />
+              <FontAwesomeIcon icon={faMinus} />
             )}
             <h1>CARACTERÍSTICAS TÉCNICAS</h1>
           </div>

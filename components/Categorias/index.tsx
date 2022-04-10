@@ -42,6 +42,7 @@ function Index() {
           id={i.id}
           garantia={i.garantia}
           specs={i.specs}
+          promo={i.promo}
         />
       ));
     } else if (opt === "menor") {
@@ -57,6 +58,7 @@ function Index() {
           id={i.id}
           garantia={i.garantia}
           specs={i.specs}
+          promo={i.promo}
         />
       ));
     } else if (opt === "maior") {
@@ -72,6 +74,7 @@ function Index() {
           id={i.id}
           garantia={i.garantia}
           specs={i.specs}
+          promo={i.promo}
         />
       ));
     }
