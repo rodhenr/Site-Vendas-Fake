@@ -4,6 +4,7 @@ import itemsList from "../../listaItems/Index";
 import styles from "../../styles/ProdutosInicio.module.scss";
 
 function Index() {
+
   return (
     <main className={styles.container}>
       <h1 className={styles.inicioTitulo}>PROMOÇÕES</h1>

@@ -12,7 +12,11 @@ import {
 
 import styles from "../../styles/Navbar.module.scss";
 
-function NavMobile() {
+interface Props {
+  numCart: number;
+}
+
+function NavMobile({ numCart }: Props) {
   const [open, setOpen] = useState(false);
   const [busca, setBusca] = useState(false);
 
@@ -84,6 +88,7 @@ function NavMobile() {
           <Link href="/carrinho" passHref>
             <FontAwesomeIcon icon={faCartShopping} />
           </Link>
+          <div className={styles.carrinhoNumeroItem}>{numCart}</div>
         </div>
       </div>
       {busca ? (

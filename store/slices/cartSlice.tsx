@@ -9,7 +9,8 @@ interface Props {
   name: string;
   pathName: string;
   pPrazo: number;
-  specs: string[];
+  specs: object[];
+  promo: boolean;
 }
 
 interface cartType {

@@ -12,7 +12,11 @@ import {
 
 import styles from "../../styles/Navbar.module.scss";
 
-function NavDesktop() {
+interface Props {
+  numCart: number;
+}
+
+function NavDesktop({ numCart }: Props) {
   const [open, setOpen] = useState(false);
 
   function changeOpen() {
@@ -88,6 +92,7 @@ function NavDesktop() {
           <Link href="/carrinho" passHref>
             <FontAwesomeIcon icon={faCartShopping} />
           </Link>
+          <div className={styles.carrinhoNumeroItem}>{numCart}</div>
         </div>
       </div>
     </div>

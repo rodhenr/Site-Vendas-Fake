@@ -130,7 +130,7 @@
   margin: 0;
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 65%;
   transition: all 1s ease;
   z-index: 101;
 
@@ -211,6 +211,7 @@
   display: flex;
   gap: 1rem;
   margin-right: 0.5rem;
+  position: relative;
 
   svg {
     color: #fff;
@@ -236,6 +237,21 @@
   @media (min-width: 768px) {
     position: relative;
   }
+}
+
+.carrinhoNumeroItem {
+  align-items: center;
+  background-color: #000000;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  font-size: 0.8rem;
+  height: 19px;
+  justify-content: center;
+  position: absolute;
+  right: -3px;
+  top: -10px;
+  width: 19px;
 }
 
 /* Barra de busca */

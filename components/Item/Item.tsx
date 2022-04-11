@@ -16,7 +16,7 @@ interface Props {
   pathName: string;
   pPrazo: number;
   garantia: string;
-  specs: string[];
+  specs: object[];
   promo: boolean;
 }
 
@@ -26,8 +26,14 @@ function Item(props: Props) {
 
   function handleClick() {
     alert("Adicionado ao carrinho com sucesso!");
-    dispatch(addToCart(props));
-    dispatch(updateTotalPrice({ id, valorTotal: pPrazo }));
+
+    if (promo === true) {
+      dispatch(addToCart(props));
+      dispatch(updateTotalPrice({ id, valorTotal: 1111 }));
+    } else {
+      dispatch(addToCart(props));
+      dispatch(updateTotalPrice({ id, valorTotal: 2222 }));
+    }
   }
 
   return (

@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../../styles/Categorias.module.scss";
+import { umask } from "process";
 
 function Index() {
   const [filtro, setFiltro] = useState("");
@@ -17,12 +18,28 @@ function Index() {
   const router = useRouter();
   const { category } = router.query;
   const items = itemsList.filter((i) => i.categoria === category);
-  const itemsMenorPreco = items
-    .slice()
-    .sort((a, b) => (a.pPrazo > b.pPrazo ? 1 : -1));
-  const itemsMaiorPreco = items
-    .slice()
-    .sort((a, b) => (a.pPrazo > b.pPrazo ? -1 : 1));
+  const itemsMenorPreco = items.slice().sort((a, b) => {
+    if (a.promo && b.promo) {
+      return a.pPrazo * 0.7 > b.pPrazo * 0.7 ? 1 : -1;
+    } else if (a.promo) {
+      return a.pPrazo * 0.7 > b.pPrazo ? 1 : -1;
+    } else if (b.promo) {
+      return a.pPrazo > b.pPrazo * 0.7 ? 1 : -1;
+    } else {
+      return a.pPrazo > b.pPrazo ? 1 : -1;
+    }
+  });
+  const itemsMaiorPreco = items.slice().sort((a, b) => {
+    if (a.promo && b.promo) {
+      return a.pPrazo * 0.7 > b.pPrazo * 0.7 ? -1 : 1;
+    } else if (a.promo) {
+      return a.pPrazo * 0.7 > b.pPrazo ? -1 : 1;
+    } else if (b.promo) {
+      return a.pPrazo > b.pPrazo * 0.7 ? -1 : 1;
+    } else {
+      return a.pPrazo > b.pPrazo ? -1 : 1;
+    }
+  });
 
   function handleChange(opt: string) {
     setFiltro(opt);

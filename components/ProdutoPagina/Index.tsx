@@ -7,12 +7,12 @@ import { addToCart } from "../../store/slices/cartSlice";
 import Navbar from "../Navbar/Index";
 import Footer from "../Footer/Index";
 import Parcelamento from "./Parcelamento";
+import VerMais from "./VerMais";
 
 import {
   faAngleRight,
-  faMoneyBill1Wave,
-  faPlus,
-  faMinus,
+  faGear,
+  faScroll,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -27,26 +27,31 @@ interface Props {
   pathName: string;
   pPrazo: number;
   garantia: string;
-  specs: string[];
+  specs: object[];
 }
 
 function Index(props: Props) {
-  const [openTecnico, setOpenTecnico] = useState(true);
-  const [openGeral, setOpenGeral] = useState(true);
+  const [desc, setDesc] = useState({ sobre: true, spec: false });
   const dispatch = useDispatch();
-  const { img, garantia, name, specs, pPrazo, categoria, pathName } = props;
+  const { img, name, specs, pPrazo, categoria, pathName } = props;
 
   function handleClick() {
     alert("Adicionado ao carrinho com sucesso!");
     dispatch(addToCart(props));
   }
 
-  function handleGeral() {
-    setOpenGeral(!openGeral);
-  }
-
-  function handleTecnico() {
-    setOpenTecnico(!openTecnico);
+  function handleDesc(state: string) {
+    if (state === "sobre") {
+      setDesc({
+        sobre: true,
+        spec: false,
+      });
+    } else {
+      setDesc({
+        sobre: false,
+        spec: true,
+      });
+    }
   }
 
   return (
@@ -73,13 +78,24 @@ function Index(props: Props) {
           <div className={styles.produtoInfo}>
             <h1 className={styles.produtoNome}>{name}</h1>
             <div className={styles.containerPrecoComprar}>
-              <p className={styles.precoVista}>
-                {(pPrazo * 0.85).toLocaleString("pt-BR", {
-                  minimumFractionDigits: 2,
-                  style: "currency",
-                  currency: "BRL",
-                })}
-              </p>
+              <div>
+                <p className={styles.precoVista}>
+                  {(pPrazo * 0.85).toLocaleString("pt-BR", {
+                    minimumFractionDigits: 2,
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
+                <p className={styles.precoVistaExtra}>
+                  ou 12x de{" "}
+                  {(pPrazo / 12).toLocaleString("pt-BR", {
+                    minimumFractionDigits: 2,
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
+              </div>
+
               <button className={styles.comprar} onClick={handleClick}>
                 COMPRAR
               </button>
@@ -90,69 +106,66 @@ function Index(props: Props) {
             </div>
           </div>
         </div>
-        <div className={styles.produtoDescEspec}>
-          <div className={styles.produtoDescricao}>
+        <div className={styles.produtoDescricao}>
+          <div className={styles.descricaoCima}>
             <div
               className={
-                openGeral
-                  ? `${styles.produtoDescricaoTitulo} ${styles.tituloAtivo}`
-                  : styles.produtoDescricaoTitulo
+                desc.sobre
+                  ? `${styles.descricaoTitulo} ${styles.tituloAtivo}`
+                  : styles.descricaoTitulo
               }
-              onClick={handleGeral}
+              onClick={() => handleDesc("sobre")}
             >
-              {!openGeral ? (
-                <FontAwesomeIcon icon={faPlus} />
-              ) : (
-                <FontAwesomeIcon icon={faMinus} />
-              )}
+              <FontAwesomeIcon icon={faScroll} />
+              <h1>SOBRE</h1>
+            </div>
+            <div
+              className={
+                desc.spec
+                  ? `${styles.descricaoTitulo} ${styles.tituloAtivo}`
+                  : styles.descricaoTitulo
+              }
+              onClick={() => handleDesc("specs")}
+            >
+              <FontAwesomeIcon icon={faGear} />
+              <h1>ESPECIFICAÇÕES</h1>
+            </div>
+          </div>
+          {desc.sobre ? (
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet vel
+              suscipit ipsam eligendi facilis earum adipisci repudiandae vitae
+              soluta nesciunt? Doloremque cumque veniam asperiores dolores
+              necessitatibus, maxime repudiandae delectus consectetur. Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+              exercitationem quo, odit perferendis, consequuntur sunt inventore
+              ullam laudantium vel error, a in accusamus fugiat quam quas
+              placeat et dolorem. Adipisci! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Voluptatem possimus nesciunt modi
+              totam unde vel, fugiat quisquam. Itaque eaque perspiciatis eius.
+              Suscipit, consequatur a alias iste molestiae dicta consequuntur
+              vitae?
+            </p>
+          ) : (
+            <div className={styles.containerEspec}>
+              {specs.map((i, key) => {
+                let a = Object.entries(i);
+                console.log(a[0][1]);
 
-              <h1>CARACTERÍSTICAS GERAIS</h1>
+                return (
+                  <div key={key} className={styles.especTitulo}>
+                    <p>
+                      <strong> {a[0][0].replace(/_/g, " ")}:</strong>
+                    </p>
+                    <p>{a[0][1]}</p>
+                  </div>
+                );
+              })}
             </div>
-            {!openGeral ? (
-              <></>
-            ) : (
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
-                vel suscipit ipsam eligendi facilis earum adipisci repudiandae
-                vitae soluta nesciunt? Doloremque cumque veniam asperiores
-                dolores necessitatibus, maxime repudiandae delectus consectetur.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Tempora exercitationem quo, odit perferendis, consequuntur sunt
-                inventore ullam laudantium vel error, a in accusamus fugiat quam
-                quas placeat et dolorem. Adipisci! Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Voluptatem possimus nesciunt modi
-                totam unde vel, fugiat quisquam. Itaque eaque perspiciatis eius.
-                Suscipit, consequatur a alias iste molestiae dicta consequuntur
-                vitae?
-              </p>
-            )}
-          </div>
-          <div className={styles.produtoEspec}>
-            <div
-              className={
-                openTecnico
-                  ? `${styles.produtoDescricaoTitulo} ${styles.tituloAtivo}`
-                  : styles.produtoDescricaoTitulo
-              }
-              onClick={handleTecnico}
-            >
-              {!openTecnico ? (
-                <FontAwesomeIcon icon={faPlus} />
-              ) : (
-                <FontAwesomeIcon icon={faMinus} />
-              )}
-              <h1>CARACTERÍSTICAS TÉCNICAS</h1>
-            </div>
-            {!openTecnico ? (
-              <></>
-            ) : (
-              specs.map((i, key) => (
-                <p key={key} className={styles.EspecDescricao}>
-                  - {i}
-                </p>
-              ))
-            )}
-          </div>
+          )}
+        </div>
+        <div>
+          <VerMais />
         </div>
       </div>
       <Footer />

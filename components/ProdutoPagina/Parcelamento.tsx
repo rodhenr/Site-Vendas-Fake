@@ -9,134 +9,134 @@ function Parcelamento({ pPrazo }: Props) {
     <div>
       <div className={styles.parcelamentoOpcoes}>
         <p>
-          1X de{" "}
-          <strong>
+          1x de{" "}
+          <span>
             {pPrazo.toLocaleString("pt-BR", {
               minimumFractionDigits: 2,
               style: "currency",
               currency: "BRL",
             })}{" "}
-          </strong>
+          </span>
         </p>
         <p>
-          2X de{" "}
-          <strong>
+          2x de{" "}
+          <span>
             {(pPrazo / 2).toLocaleString("pt-BR", {
               minimumFractionDigits: 2,
               style: "currency",
               currency: "BRL",
             })}{" "}
-          </strong>
+          </span>
           sem juros{" "}
         </p>
         <p>
-          3X de{" "}
-          <strong>
+          3x de{" "}
+          <span>
             {(pPrazo / 3).toLocaleString("pt-BR", {
               minimumFractionDigits: 2,
               style: "currency",
               currency: "BRL",
             })}{" "}
-          </strong>
+          </span>
           sem juros{" "}
         </p>
         <p>
-          4X de{" "}
-          <strong>
+          4x de{" "}
+          <span>
             {(pPrazo / 4).toLocaleString("pt-BR", {
               minimumFractionDigits: 2,
               style: "currency",
               currency: "BRL",
             })}{" "}
-          </strong>
+          </span>
           sem juros{" "}
         </p>
         <p>
-          5X de{" "}
-          <strong>
+          5x de{" "}
+          <span>
             {(pPrazo / 5).toLocaleString("pt-BR", {
               minimumFractionDigits: 2,
               style: "currency",
               currency: "BRL",
             })}{" "}
-          </strong>
+          </span>
           sem juros{" "}
         </p>
         <p>
-          6X de{" "}
-          <strong>
+          6x de{" "}
+          <span>
             {(pPrazo / 6).toLocaleString("pt-BR", {
               minimumFractionDigits: 2,
               style: "currency",
               currency: "BRL",
             })}{" "}
-          </strong>
+          </span>
           sem juros{" "}
         </p>
         <p>
-          7X de{" "}
-          <strong>
+          7x de{" "}
+          <span>
             {(pPrazo / 7).toLocaleString("pt-BR", {
               minimumFractionDigits: 2,
               style: "currency",
               currency: "BRL",
             })}{" "}
-          </strong>
+          </span>
           sem juros{" "}
         </p>
         <p>
-          8X de{" "}
-          <strong>
+          8x de{" "}
+          <span>
             {(pPrazo / 8).toLocaleString("pt-BR", {
               minimumFractionDigits: 2,
               style: "currency",
               currency: "BRL",
             })}{" "}
-          </strong>
+          </span>
           sem juros{" "}
         </p>
         <p>
-          9X de{" "}
-          <strong>
+          9x de{" "}
+          <span>
             {(pPrazo / 9).toLocaleString("pt-BR", {
               minimumFractionDigits: 2,
               style: "currency",
               currency: "BRL",
             })}{" "}
-          </strong>
+          </span>
           sem juros{" "}
         </p>
         <p>
-          10X de{" "}
-          <strong>
+          10x de{" "}
+          <span>
             {(pPrazo / 10).toLocaleString("pt-BR", {
               minimumFractionDigits: 2,
               style: "currency",
               currency: "BRL",
             })}{" "}
-          </strong>
+          </span>
           sem juros{" "}
         </p>
         <p>
-          11X de{" "}
-          <strong>
+          11x de{" "}
+          <span>
             {(pPrazo / 11).toLocaleString("pt-BR", {
               minimumFractionDigits: 2,
               style: "currency",
               currency: "BRL",
             })}{" "}
-          </strong>
+          </span>
           sem juros{" "}
         </p>
         <p>
-          12X de{" "}
-          <strong>
+          12x de{" "}
+          <span>
             {(pPrazo / 12).toLocaleString("pt-BR", {
               minimumFractionDigits: 2,
               style: "currency",
               currency: "BRL",
             })}{" "}
-          </strong>
+          </span>
           sem juros{" "}
         </p>
       </div>
