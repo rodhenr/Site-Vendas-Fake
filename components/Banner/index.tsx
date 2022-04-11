@@ -11,8 +11,8 @@ function Index() {
             <Image
               src={"/images/banner-inteiro.jpg"}
               alt="Banner1"
-              layout="fill"
-              objectFit="cover"
+              height={390}
+              width={1920}
             />
           </div>
         </Link>
@@ -23,8 +23,8 @@ function Index() {
             <Image
               src={"/images/banner1.jpg"}
               alt="Banner1"
-              layout="fill"
-              objectFit="cover"
+              height={390}
+              width={1920}
             />
           </div>
         </Link>
@@ -33,8 +33,8 @@ function Index() {
             <Image
               src={"/images/banner2.jpg"}
               alt="Banner2"
-              layout="fill"
-              objectFit="cover"
+              height={390}
+              width={1920}
             />
           </div>
         </Link>

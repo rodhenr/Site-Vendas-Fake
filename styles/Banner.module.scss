@@ -16,29 +16,14 @@
   }
 }
 
+/* BANNER INTEIRO */
 .bannerInteiro {
-  height: 100px;
-  margin: 0;
-  position: relative;
-  width: 100%;
-
-  @media (min-width: 650px) {
-    height: 150px;
-  }
-
-  @media (min-width: 900px) {
-    height: 170px;
-  }
-
-  @media (min-width: 1024px) {
-    height: 130px;
-  }
-
-  @media (min-width: 1700px) {
-    height: 200px;
+  &:hover {
+    opacity: 0.8;
   }
 }
 
+/* CONTAINER BANNER DUPLO */
 .containerDuplo {
   @media (min-width: 1024px) {
     display: flex;
@@ -49,31 +34,16 @@
     }
   }
 
-  @media (min-width: 1700px) {
+  @media (min-width: 1500px) {
     margin: 0 auto;
   }
 }
 
+/* ITEM ÚNICO BANNER DUPLO */
 .banner {
-  height: 100px;
-  margin: 0;
-  position: relative;
-  width: 100%;
+  margin: -0.3rem 0;
 
-  @media (min-width: 650px) {
-    height: 150px;
-  }
-
-  @media (min-width: 900px) {
-    height: 170px;
-  }
-
-  @media (min-width: 1024px) {
-    height: 130px;
-  }
-
-  @media (min-width: 1700px) {
-    height: 140px;
-    width: 570px;
+  &:hover {
+    opacity: 0.8;
   }
 }

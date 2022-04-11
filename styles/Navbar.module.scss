@@ -1,21 +1,24 @@
 /*---------- GERAL ----------*/
 .container {
-  background-color: rgba(255, 0, 0);
+  background-color: #ff6801;
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
-  position: relative;
 
   svg {
+    color: #fff;
     cursor: pointer;
+    font-size: 1.3rem;
   }
 }
 
 /*----- CONTAINER TOPO -----*/
 .containerCima {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   margin-top: 0.5rem;
+  padding: 0 0 0.5rem;
 }
 
 /* Container da Navbar */
@@ -182,7 +185,7 @@
   padding-top: 0.5rem;
 
   svg {
-    color: rgba(255, 0, 0, 0.55);
+    color: #ff6801;
   }
 }
 
@@ -241,19 +244,24 @@
   color: #fff;
   display: flex;
   justify-content: center;
-
-  margin: 1.5rem 1rem 1rem;
+  width: 100vw;
+  z-index: 100;
 
   svg {
-    color: rgba(255, 0, 0);
-    width: 55px;
+    width: 45px;
   }
 
   input {
+    background-color: #cd5403;
     border: none;
-    height: 35px;
-    padding-left: 0.7rem;
-    width: 450px;
+    color: #fff;
+    height: 45px;
+    padding: 0 1rem;
+    width: 100%;
+
+    &::placeholder {
+      color: #fff;
+    }
   }
 
   @media (min-width: 768px) {
@@ -286,9 +294,10 @@
 
 .buscaIcone {
   align-items: center;
-  background-color: #000000;
+  background-color: #cd5403;
+  border-left: 1px #ebebeb solid;
   display: flex;
-  height: 35px;
+  height: 45px;
 
   @media (min-width: 768px) {
     height: 40px;

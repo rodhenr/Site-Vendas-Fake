@@ -30,6 +30,23 @@
   color: #000;
   font-size: 1rem;
   margin: 0 0 0.3rem;
+
+  @media (min-width: 540px) {
+    margin: 0 auto 0.3rem;
+    width: calc(550px - 1.8rem);
+  }
+
+  @media (min-width: 768px) {
+    width: calc(540px + 1.5rem);
+  }
+
+  @media (min-width: 970px) {
+    width: calc(810px + 3rem);
+  }
+
+  @media (min-width: 1300px) {
+    width: calc(1080px + 4.5rem);
+  }
 }
 
 /* OPÇÕES */
@@ -49,6 +66,23 @@
     font-size: 0.9rem;
     font-weight: 600;
     margin: 0;
+  }
+
+  @media (min-width: 540px) {
+    margin: 0 auto;
+    width: calc(550px - 1.8rem);
+  }
+
+  @media (min-width: 768px) {
+    width: calc(540px + 1.5rem);
+  }
+
+  @media (min-width: 970px) {
+    width: calc(810px + 3rem);
+  }
+
+  @media (min-width: 1300px) {
+    width: calc(1080px + 4.5rem);
   }
 }
 

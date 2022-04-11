@@ -14,9 +14,14 @@ import styles from "../../styles/Navbar.module.scss";
 
 function NavMobile() {
   const [open, setOpen] = useState(false);
+  const [busca, setBusca] = useState(false);
 
   function changeOpen() {
     setOpen(!open);
+  }
+
+  function changeBusca() {
+    setBusca(!busca);
   }
 
   return (
@@ -71,6 +76,9 @@ function NavMobile() {
         <h1 className={styles.nomeLoja}>
           <Link href="/">PC Shop</Link>
         </h1>
+        <div onClick={changeBusca}>
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </div>
         <div className={styles.loginCarrinho}>
           <FontAwesomeIcon icon={faUser} />
           <Link href="/carrinho" passHref>
@@ -78,12 +86,14 @@ function NavMobile() {
           </Link>
         </div>
       </div>
-      <div className={styles.busca}>
-        <input type="text" placeholder="Digite o que você procura" />
-        <div className={styles.buscaIcone}>
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
+      {busca ? (
+        <div className={styles.busca}>
+          <input type="text" placeholder="Digite o que você procura" />
+          <div className={styles.buscaIcone}>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </div>
         </div>
-      </div>
+      ) : null}
     </div>
   );
 }

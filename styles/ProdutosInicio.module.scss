@@ -9,24 +9,24 @@ $widthDesktop: calc(0.15 * 100vw);
 
 /* TITULO NO INICIO */
 .inicioTitulo {
-  color: #000;
   font-size: 1.3rem;
   margin: 0 1rem;
 
+  @media (min-width: 540px) {
+    margin: 0 auto;
+    width: calc(550px - 1.8rem);
+  }
+
   @media (min-width: 768px) {
-    margin: 0 1rem;
+    width: calc(540px + 1.5rem);
+  }
+
+  @media (min-width: 970px) {
+    width: calc(810px + 3rem);
   }
 
   @media (min-width: 1300px) {
-    margin: 0 calc(0.08 * 100vw);
-  }
-
-  @media (min-width: 1500px) {
-    margin: 0 calc(0.13 * 100vw);
-  }
-
-  @media (min-width: 1600px) {
-    margin: 0 calc(0.2 * 100vw);
+    width: calc(1080px + 4.5rem);
   }
 }
 
@@ -38,6 +38,10 @@ $widthDesktop: calc(0.15 * 100vw);
   justify-content: center;
   justify-items: center;
   padding-bottom: 5rem;
+
+  @media (min-width: 540px) {
+    grid-template-columns: 550px;
+  }
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 270px);

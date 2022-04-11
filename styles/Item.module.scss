@@ -6,6 +6,12 @@
   position: relative;
   text-align: center;
 
+  &:hover {
+    img {
+      opacity: 0.6;
+    }
+  }
+
   hr {
     background-color: #6969694a;
     border: none;
@@ -45,12 +51,12 @@
     position: absolute;
     width: 100%;
 
-    &:hover{
+    &:hover {
       background-color: #01681d;
       transition: all 0.5s ease;
     }
 
-    &:not(hover){
+    &:not(hover) {
       transition: all 0.5s ease;
     }
   }
