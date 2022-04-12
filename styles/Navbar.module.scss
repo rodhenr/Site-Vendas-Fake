@@ -1,27 +1,30 @@
+@use "colors";
+
 /*---------- GERAL ----------*/
 .container {
-  background-color: #ff6801;
+  background-color: colors.$background-primary;
   display: flex;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 
   svg {
-    color: #fff;
+    color: colors.$text-secondary;
     cursor: pointer;
     font-size: 1.3rem;
   }
 }
 
-/*----- CONTAINER TOPO -----*/
-.containerCima {
+/*----- ITENS TOPO -----*/
+.containerTopo {
   align-items: center;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 0.5rem;
   padding: 0 0 0.5rem;
 }
 
-/* Container da Navbar */
+/*--- NAVBAR ---*/
 .containerNavbar {
   align-self: center;
   font-size: 2rem;
@@ -37,44 +40,11 @@
   }
 }
 
-/* LOGIN*/
-.containerLogin {
-  align-items: center;
-  background: #000;
-  display: flex;
-  gap: 0.5rem;
-  height: 30px;
-  justify-content: end;
-  padding: 0 2rem;
-
-  p {
-    color: #fff;
-    margin: 0;
-  }
-
-  svg {
-    color: #fff;
-    cursor: pointer;
-  }
-}
-
-/* CONTAINER NOME E CATEGORIAS */
-.navNomeCategoria {
-  align-items: center;
-  display: flex;
-  gap: 1rem;
-
-  hr {
-    border: 1px #fff solid;
-    height: 60px;
-  }
-}
-
-/*CATEGORIAS*/
-.navbarCategorias {
+/* CATEGORIAS */
+.categorias {
   align-items: center;
   border-radius: 9px;
-  color: #fff;
+  color: colors.$text-secondary;
   cursor: pointer;
   display: flex;
   gap: 1rem;
@@ -90,7 +60,7 @@
   }
 
   @media (min-width: 768px) {
-    background-color: #000;
+    background-color: colors.$text-primary;
     margin-right: 0;
     padding: 1.5rem 0.7rem;
 
@@ -109,22 +79,9 @@
   }
 }
 
-/* NOME DA LOJA */
-.nomeLoja {
-  align-self: center;
-  color: #fff;
-  font-family: "Audiowide", cursive;
-  font-size: 1.8rem;
-  margin: 0;
-
-  @media (min-width: 768px) {
-    font-size: 1.2rem;
-  }
-}
-
-/* Classe geral da Navbar */
+/*----- NAVBAR -----*/
 .navbar {
-  background-color: #1f1f1f;
+  background-color: colors.$text-primary;
   height: 100vh;
   left: -100%;
   margin: 0;
@@ -142,8 +99,8 @@
     padding: 0;
 
     li {
-      border-bottom: 1px solid #333;
-      color: #fff;
+      border-bottom: 1px solid colors.$text-primary;
+      color: colors.$text-secondary;
       cursor: pointer;
       font-size: 1rem;
       font-family: "Open Sans", sans-serif;
@@ -156,7 +113,7 @@
       }
 
       &:hover {
-        background-color: orangered;
+        background-color: colors.$text-terceary;
         transition: all 0.4s ease;
       }
 
@@ -171,7 +128,7 @@
   }
 }
 
-/* Navbar no estado OPEN = true */
+/* NAVBAR OPEN = TRUE */
 .navbar.active {
   left: 0;
   transition: all 0.6s ease;
@@ -185,18 +142,18 @@
   padding-top: 0.5rem;
 
   svg {
-    color: #ff6801;
+    color: colors.$background-primary;
   }
 }
 
-/* LOGIN E CARRINHO CASO OPEN = TRUE*/
+/* LOGIN E CARRINHO CASO OPEN = TRUE */
 .navAtivoExtra {
   display: flex;
   gap: 0.6rem;
   padding-right: 1rem;
 
   svg {
-    background-color: #000;
+    background-color: colors.$text-primary;
     border-radius: 50%;
     font-size: 1rem;
     margin: 0;
@@ -204,60 +161,68 @@
   }
 }
 
-/* LOGIN/CARRINHO */
-.loginCarrinho {
+/* NOME DA LOJA */
+.nomeLoja {
+  align-self: center;
+  color: colors.$text-secondary;
+  font-family: "Audiowide", cursive;
+  font-size: 1.8rem;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+/* OPÇÕES EXTRAS DA NAVBAR */
+.opcoesExtras {
   align-self: center;
   cursor: pointer;
   display: flex;
-  gap: 1rem;
-  margin-right: 0.5rem;
+  gap: 0.6rem;
+  justify-content: end;
+  padding-right: 0.6rem;
   position: relative;
 
   svg {
-    color: #fff;
-    font-size: 1.8rem;
+    color: colors.$text-secondary;
+    font-size: 1.3rem;
   }
 }
 
-/* Carrinho */
-.carrinho {
-  align-self: center;
-  cursor: pointer;
-  display: flex;
-  gap: 0.5rem;
-  margin-right: 0.5rem;
-  position: absolute;
-  right: 0;
-
-  svg {
-    color: #fff;
-    font-size: 2rem;
-  }
-
-  @media (min-width: 768px) {
-    position: relative;
-  }
+/* ICONE DE BUSCA */
+.opcoesBusca {
+  margin-right: 1rem;
 }
 
+/* NÚMERO DE ITENS NO CARRINHO */
 .carrinhoNumeroItem {
   align-items: center;
-  background-color: #000000;
+  background-color: colors.$text-primary;
   border-radius: 50%;
-  color: #fff;
+  color: colors.$text-secondary;
   display: flex;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   height: 19px;
   justify-content: center;
   position: absolute;
-  right: -3px;
+  right: 2px;
   top: -10px;
   width: 19px;
+
+  @media (min-width: 768px) {
+    font-size: 0.8rem;
+    height: 21px;
+    right: -5px;
+    top: -6px;
+    width: 21px;
+  }
 }
 
-/* Barra de busca */
+/* BUSCA OPEN = TRUE */
 .busca {
   align-items: center;
-  color: #fff;
+  color: colors.$text-secondary;
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -268,15 +233,15 @@
   }
 
   input {
-    background-color: #cd5403;
+    background-color: colors.$text-terceary;
     border: none;
-    color: #fff;
+    color: colors.$text-secondary;
     height: 45px;
     padding: 0 1rem;
     width: 100%;
 
     &::placeholder {
-      color: #fff;
+      color: colors.$text-secondary;
     }
   }
 
@@ -308,14 +273,71 @@
   }
 }
 
+/* ÍCONE DA BUSCA OPEN = TRUE*/
 .buscaIcone {
   align-items: center;
-  background-color: #cd5403;
-  border-left: 1px #ebebeb solid;
+  background-color: colors.$text-terceary;
+  border-left: 1px colors.$border-primary solid;
   display: flex;
   height: 45px;
 
   @media (min-width: 768px) {
     height: 40px;
+  }
+}
+
+/*----- DESKTOP -----*/
+
+/* LOGIN*/
+.containerLogin {
+  align-items: center;
+  background: colors.$text-primary;
+  display: flex;
+  gap: 0.5rem;
+  height: 30px;
+  justify-content: end;
+  padding: 0 2rem;
+
+  p {
+    color: colors.$text-secondary;
+    margin: 0;
+  }
+
+  svg {
+    color: colors.$text-secondary;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+}
+
+/* CONTAINER NOME E CATEGORIAS */
+.navNomeCategoria {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+
+  hr {
+    border: 1px colors.$border-primary solid;
+    height: 60px;
+  }
+}
+
+/* CARRINHO */
+.carrinho {
+  align-self: center;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 0.5rem;
+  position: absolute;
+  right: 0;
+
+  svg {
+    color: colors.$text-secondary;
+    font-size: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    position: relative;
   }
 }

@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-import styles from "../../styles/Footer.module.scss";
+import styles from "../../styles/Informacoes.module.scss";
 
 function Pagamento() {
   return (
-    <div className={styles.containerPagamento}>
+    <div className={styles.pagamento}>
       <h1>PAGAMENTO</h1>
-      <div className={styles.pagamentoFormas}>
+      <div className={styles.containerFormas}>
         <div className={styles.pagamentoTipo}>
           <Image
             src={"/images/american.png"}

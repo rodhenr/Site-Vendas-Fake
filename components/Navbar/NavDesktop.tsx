@@ -1,12 +1,13 @@
 import { useState } from "react";
 import Link from "next/link";
 
+import Navbar from "./Navbar";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faUser,
   faCartShopping,
-  faXmark,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -35,7 +36,7 @@ function NavDesktop({ numCart }: Props) {
             <Link href="/">PC Shop</Link>
           </h1>
           <hr />
-          <div className={styles.navbarCategorias} onClick={changeOpen}>
+          <div className={styles.categorias} onClick={changeOpen}>
             <FontAwesomeIcon icon={faBars} />
             <div>
               <p>Compre por</p>
@@ -43,45 +44,7 @@ function NavDesktop({ numCart }: Props) {
             </div>
           </div>
         </div>
-        <div
-          className={open ? `${styles.navbar} ${styles.active}` : styles.navbar}
-        >
-          <div className={styles.navAtivoOpcoes}>
-            <FontAwesomeIcon icon={faXmark} onClick={changeOpen} />
-            <div className={styles.navAtivoExtra}>
-              <FontAwesomeIcon icon={faUser} />
-              <Link href="/carrinho" passHref>
-                <FontAwesomeIcon icon={faCartShopping} />
-              </Link>
-            </div>
-          </div>
-
-          <nav>
-            <ul onClick={changeOpen}>
-              <li>
-                <Link href="/placa-mae">Placa-Mãe</Link>
-              </li>
-              <li>
-                <Link href="/processador">Processador</Link>
-              </li>
-              <li>
-                <Link href="/placa-de-video">Placa de Vídeo</Link>
-              </li>
-              <li>
-                <Link href="/fonte">Fonte</Link>
-              </li>
-              <li>
-                <Link href="/gabinete">Gabinete</Link>
-              </li>
-              <li>
-                <Link href="/memoria-ram">Memória RAM</Link>
-              </li>
-              <li>
-                <Link href="/ssd">SSD</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <Navbar open={open} changeOpen={changeOpen} />
         <div className={styles.busca}>
           <input type="text" placeholder="Digite o que você procura" />
           <div className={styles.buscaIcone}>
@@ -90,9 +53,11 @@ function NavDesktop({ numCart }: Props) {
         </div>
         <div className={styles.carrinho}>
           <Link href="/carrinho" passHref>
-            <FontAwesomeIcon icon={faCartShopping} />
+            <div>
+              <FontAwesomeIcon icon={faCartShopping} />
+              <div className={styles.carrinhoNumeroItem}>{numCart}</div>
+            </div>
           </Link>
-          <div className={styles.carrinhoNumeroItem}>{numCart}</div>
         </div>
       </div>
     </div>

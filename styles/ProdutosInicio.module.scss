@@ -1,8 +1,9 @@
 $widthDesktop: calc(0.15 * 100vw);
+@use "colors";
 
 /*---------- GERAL ----------*/
 .container {
-  background-color: #ebebeb;
+  background-color: colors.$background-secondary;
   padding: 2.5rem 0 3rem;
   overflow: hidden;
 }
@@ -30,7 +31,7 @@ $widthDesktop: calc(0.15 * 100vw);
   }
 }
 
-/* ITENS (GERAL) */
+/*----- ITENS -----*/
 .itens {
   align-self: start;
   display: grid;

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 
+import Preco from './Precos'
 import { addToCart } from "../../store/slices/cartSlice";
 import { updateTotalPrice } from "../../store/slices/newSlice";
 
@@ -37,7 +38,7 @@ function Item(props: Props) {
   }
 
   return (
-    <div className={styles.containerItem}>
+    <div className={styles.container}>
       <Link href={`/${categoria}/${pathName}`} passHref>
         <Image src={img} alt="processador" height={200} width={200} />
       </Link>
@@ -45,57 +46,7 @@ function Item(props: Props) {
       <Link href={`/${categoria}/${pathName}`} passHref>
         <h2>{name}</h2>
       </Link>
-      {promo ? (
-        <div className={styles.itemPrecoPromo}>
-          <p>
-            {`De ${pPrazo.toLocaleString("pt-BR", {
-              minimumFractionDigits: 2,
-              style: "currency",
-              currency: "BRL",
-            })}`}
-          </p>
-          <p>por:</p>
-        </div>
-      ) : (
-        <></>
-      )}
-
-      <p className={styles.itemPrecoVista}>
-        {promo ? (
-          <>
-            {" "}
-            {`${(pPrazo * 0.7).toLocaleString("pt-BR", {
-              minimumFractionDigits: 2,
-              style: "currency",
-              currency: "BRL",
-            })} à vista`}
-          </>
-        ) : (
-          <>
-            {" "}
-            {`${(pPrazo * 0.85).toLocaleString("pt-BR", {
-              minimumFractionDigits: 2,
-              style: "currency",
-              currency: "BRL",
-            })} à vista`}
-          </>
-        )}
-      </p>
-      <p className={styles.itemPrecoPrazo}>
-        {promo ? (
-          <>{`Em até 12x de ${((pPrazo * 0.85) / 12).toLocaleString("pt-BR", {
-            minimumFractionDigits: 2,
-            style: "currency",
-            currency: "BRL",
-          })} no cartão`}</>
-        ) : (
-          <>{`Em até 12x de ${(pPrazo / 12).toLocaleString("pt-BR", {
-            minimumFractionDigits: 2,
-            style: "currency",
-            currency: "BRL",
-          })} no cartão`}</>
-        )}
-      </p>
+      <Preco pPrazo={pPrazo} promo={promo} />
 
       <button onClick={handleClick}>COMPRAR</button>
     </div>

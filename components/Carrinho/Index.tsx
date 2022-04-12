@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
+import Link from "next/link";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
@@ -9,9 +11,10 @@ import { RootState } from "../../store/Store";
 import { cleanCart } from "../../store/slices/cartSlice";
 import { cleanSlice } from "../../store/slices/newSlice";
 import Item from "./Item";
+import PrecoFinal from "./PrecoFinal";
+import Frete from "./Frete";
 
 import styles from "../../styles/Carrinho.module.scss";
-import Link from "next/link";
 
 function Index() {
   const cartStore = useSelector((state: RootState) => state.cartStore.cart);
@@ -63,7 +66,7 @@ function Index() {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.carrinhoTitulo}>CARRINHO</h2>
+      <h2>CARRINHO</h2>
       {cartStore.length === 0 ? (
         <div className={styles.carrinhoSemProdutos}>
           <p>Nenhum produto no seu carrinho.</p>
@@ -86,58 +89,11 @@ function Index() {
             />
           ))}
           <div className={styles.carrinhoLimpar}>
-            <button onClick={handleRemove}>
-              <FontAwesomeIcon icon={faCartShopping} /> LIMPAR CARRINHO
-            </button>
+            <button onClick={handleRemove}>LIMPAR CARRINHO</button>
           </div>
-
-          <div className={styles.carrinhoFrete}>
-            <h3>CALCULAR FRETE</h3>
-            <form className={styles.carrinhoFreteForm}>
-              <input
-                onChange={(e) => handleCepChange(e)}
-                type="text"
-                name="cep"
-                placeholder="CEP"
-                maxLength={8}
-              />
-              <button onClick={(e) => handleCep(e)}>Calcular</button>
-            </form>
-          </div>
-          <div className={styles.carrinhoPrecos}>
-            <div className={styles.carrinhoPrecosProdutos}>
-              <p>Subtotal</p>
-              <p>
-                {totalProdutos.toLocaleString("pt-BR", {
-                  minimumFractionDigits: 2,
-                  style: "currency",
-                  currency: "BRL",
-                })}
-              </p>
-            </div>
-            <div className={styles.carrinhoPrecosFrete}>
-              <p>Frete</p>
-              <p>
-                {valorCep.toLocaleString("pt-BR", {
-                  minimumFractionDigits: 2,
-                  style: "currency",
-                  currency: "BRL",
-                })}
-              </p>
-            </div>
-            <div className={styles.carrinhoPrecosTotal}>
-              <p>TOTAL</p>
-              <p>
-                {(totalProdutos + valorCep).toLocaleString("pt-BR", {
-                  minimumFractionDigits: 2,
-                  style: "currency",
-                  currency: "BRL",
-                })}
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.carrinhoFinalizar}>
+          <Frete handleCepChange={handleCepChange} handleCep={handleCep} />
+          <PrecoFinal valorCep={valorCep} totalProdutos={totalProdutos} />
+          <div className={styles.finalizarCompra}>
             <button>
               <Link href={"/"} passHref>
                 <p>

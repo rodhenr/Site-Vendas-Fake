@@ -1,26 +1,29 @@
+@use "colors";
+
 /*---------- GERAL ----------*/
 .container {
-  background-color: #ebebeb;
+  background-color: colors.$background-secondary;
   font-family: "Montserrat";
   padding: 0 1.5rem 0;
-}
 
-/* TÍTULO DO CARRINHO */
-.carrinhoTitulo {
-  margin: 0;
-  padding: 1rem 0;
+  h2 {
+    margin: 0;
+    padding: 1rem 0;
+  }
 }
 
 /*---------- CARRINHO SEM ITENS ----------*/
+
+/* CONTAINER */
 .carrinhoSemProdutos {
-  margin: 5rem 0 5rem;
+  padding: 5rem 0 5rem;
   text-align: center;
 
   button {
-    background-color: #60af44;
+    background-color: colors.$background-terceary;
     border: none;
     border-radius: 5px;
-    color: #fff;
+    color: colors.$text-secondary;
     font-size: 1.2rem;
     height: 40px;
     margin-top: 3rem;
@@ -30,176 +33,28 @@
 
 /*---------- CARRINHO COM ITENS ----------*/
 
-/* CONTAINER FRETE */
-.carrinhoFrete {
-  background-color: #fff;
-  padding: 1rem 0;
-
-  h3 {
-    margin: 0 1rem;
-  }
-}
-
-/* FORM FRETE */
-.carrinhoFreteForm {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 1rem;
-
-  input {
-    height: 35px;
-    padding-left: 10px;
-  }
-
-  button {
-    background-color: red;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    height: 35px;
-    margin-left: 0.5rem;
-
-    &:hover {
-      background-color: rgb(206, 1, 1);
-    }
-
-    &:active {
-      background-color: #60af44;
-    }
-  }
-}
-
-/* REMOVER TODOS ITENS DO CARRINHO */
-.carrinhoLimpar {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.5rem 0 2.5rem;
-
-  button {
-    background-color: #f00;
-    color: #fff;
-    cursor: pointer;
-    border: #000;
-    font-family: roboto;
-    font-size: 1rem;
-    height: 35px;
-    width: 210px;
-
-    &:hover {
-      background-color: rgb(206, 1, 1);
-    }
-  }
-
-  svg {
-    font-size: 1.1rem;
-    margin-right: 1rem;
-  }
-}
-
-/*----- PREÇOS -----*/
-.carrinhoPrecos {
-  background-color: #fff;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  font-family: "Montserrat";
-  margin: 2.5rem 0 0rem;
-
-  p {
-    margin: 0;
-  }
-}
-
-/* PREÇO PRODUTOS */
-.carrinhoPrecosProdutos {
-  border-bottom: 1px #e9e9e9 solid;
-  display: flex;
-  font-size: 0.8rem;
-  justify-content: space-between;
-  padding: 1rem 0.8rem;
-}
-
-/* PREÇO FRETE */
-.carrinhoPrecosFrete {
-  border-bottom: 1px #e9e9e9 solid;
-  display: flex;
-  font-size: 0.8rem;
-  justify-content: space-between;
-  padding: 0.5rem 0.8rem 1rem;
-}
-
-/* PREÇO TOTAL */
-.carrinhoPrecosTotal {
-  background-color: #e5f5e5;
-  display: flex;
-  font-size: 1rem;
-  font-weight: 600;
-  justify-content: space-between;
-  padding: 1rem 0.8rem;
-}
-
-/*--- FINALIZAR COMPRA ---*/
-.carrinhoFinalizar {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 6rem;
-
-  button {
-    background-color: #60af44;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    height: 60px;
-    width: 100%;
-
-    &:hover {
-      background-color: #42792e;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin: 0;
-    }
-  }
-
-  svg {
-    font-size: 1.2rem;
-    margin-right: 1rem;
-  }
-}
-
-/*---------- ITEM ----------*/
+/*----- CONTAINER DOS ITENS -----*/
 .containerItem {
-  background-color: #fff;
-  border: 1px solid rgb(179, 179, 179);
+  background-color: colors.$text-secondary;
+  border: 1px solid colors.$border-primary;
   margin-top: -1px;
 
   button {
-    background-color: #fff;
+    background-color: colors.$text-secondary;
     border: none;
-    color: #000;
+    color: colors.$text-primary;
     cursor: pointer;
   }
 
   svg {
     &:hover {
-      color: #ccc;
+      color: colors.$border-primary;
       cursor: pointer;
     }
   }
 }
 
-/* NÚMERO DO ITEM */
-.itemNumero {
-  background-color: rgb(240, 240, 240);
-  color: rgba(0, 0, 0, 0.3);
-  margin: 0;
-  padding: 10px;
-}
-
-/*----- CONTAINER PRINCIPAL DO ITEM -----*/
+/*--- ITEM INDIVIDUAL ---*/
 .item {
   display: flex;
   gap: 0.6rem;
@@ -219,11 +74,6 @@
   padding: 0.5rem 0 0;
 }
 
-/*--- CONTAINER DOS PREÇOS ---*/
-.itemPrecos {
-  margin: 1rem 0;
-}
-
 /*--- CONTAINER DE OPÇÕES DO ITEM ---*/
 .containerInfo {
   align-items: center;
@@ -232,15 +82,16 @@
   padding: 0 1rem 0;
 
   p {
-    color: #60af44;
+    color: colors.$background-terceary;
     font-size: 1.1rem;
     margin: 0;
   }
 }
 
+/* ADICIONAR/REMOVER QUANTIDADE */
 .itemAcoes {
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid colors.$border-primary;
   display: flex;
   font-family: Helvetica, sans-serif;
   justify-content: space-around;
@@ -252,15 +103,147 @@
   }
 
   svg {
-    color: rgb(157, 157, 157);
+    color: colors.$border-primary;
   }
 }
 
-/* REMOVER DO CARRINHO */
-.itemRemover {
-  margin-left: 0.5rem;
+/*--- PREÇO DO ITEM ---*/
+.itemPrecos {
+  margin: 1rem 0;
+}
+
+/*----- REMOVER TUDO DO CARRINHO ----*/
+.carrinhoLimpar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 0 2.5rem;
+
+  button {
+    background-color: colors.$background-primary;
+    color: colors.$text-secondary;
+    cursor: pointer;
+    border: colors.$text-primary;
+    font-family: roboto;
+    font-size: 1rem;
+    height: 35px;
+    width: 210px;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+/*----- CONTAINER FRETE ---*/
+.containerFrete {
+  background-color: colors.$text-secondary;
+  border: 1px solid colors.$border-primary;
+  padding: 1rem 0;
+
+  h3 {
+    margin: 0 1rem;
+  }
+}
+
+/* FORMULÁRIO DO FRETE */
+.freteForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem;
+
+  input {
+    height: 35px;
+    padding-left: 10px;
+  }
+
+  button {
+    background-color: colors.$background-primary;
+    border: none;
+    color: colors.$text-secondary;
+    cursor: pointer;
+    height: 35px;
+    margin-left: 0.5rem;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:active {
+      background-color: colors.$background-terceary;
+    }
+  }
+}
+
+/*----- PREÇOS FINAIS -----*/
+.containerPrecos {
+  background-color: colors.$text-secondary;
+  color: colors.$text-primary;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat";
+  margin: 2.5rem 0 0rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+/* PREÇO DOS PRODUTOS */
+.precosProdutos {
+  border-bottom: 1px colors.$background-secondary solid;
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: space-between;
+  padding: 1rem 0.8rem;
+}
+
+/* PREÇO DO FRETE */
+.precoFrete {
+  border-bottom: 1px colors.$background-secondary solid;
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: space-between;
+  padding: 0.5rem 0.8rem 1rem;
+}
+
+/* PREÇO TOTAL */
+.precoTotal {
+  background-color: #e5f5e5;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: space-between;
+  padding: 1rem 0.8rem;
+}
+
+/*--- FINALIZAR COMPRA ---*/
+.finalizarCompra {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 6rem;
+
+  button {
+    background-color: colors.$background-terceary;
+    border: none;
+    color: colors.$text-secondary;
+    cursor: pointer;
+    height: 60px;
+    width: 100%;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  }
 
   svg {
     font-size: 1.2rem;
+    margin-right: 1rem;
   }
 }

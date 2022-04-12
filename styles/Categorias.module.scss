@@ -1,14 +1,16 @@
+@use "colors";
+
 /*---------- GERAL ----------*/
-.containerCategoria {
-  background-color: #ebebeb;
+.container {
+  background-color: colors.$background-secondary;
   font-family: "Open Sans", sans-serif;
   padding-bottom: 15rem;
   margin: 0;
   padding: 2rem 0rem;
 }
 
-/*--- NOME E FILTRO ---*/
-.categoriaTopo {
+/*----- NOME E DO FILTRO -----*/
+.containerTopo {
   margin: 0 1rem;
 
   @media (min-width: 1300px) {
@@ -27,7 +29,7 @@
 /* NOME DA CATEGORIA */
 .categoriaNome {
   align-self: start;
-  color: #000;
+  color: colors.$text-primary;
   font-size: 1rem;
   margin: 0 0 0.3rem;
 
@@ -49,10 +51,10 @@
   }
 }
 
-/* OPÇÕES */
-.categoriaOpcao {
+/*----- FILTRO -----*/
+.containerFiltro {
   align-items: center;
-  background: #fff;
+  background: colors.$text-secondary;
   border-radius: 5px;
   display: flex;
   gap: 0.7rem;
@@ -62,7 +64,7 @@
   width: 100%;
 
   p {
-    color: #ff5510;
+    color: colors.$background-primary;
     font-family: "Open Sans", sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
@@ -87,36 +89,14 @@
   }
 }
 
-/*----- ITENS -----*/
-.containerItens {
-  align-self: start;
-  display: grid;
-  gap: 3.5rem 1.5rem;
-  justify-content: center;
-  justify-items: center;
-  padding-bottom: 5rem;
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 270px);
-  }
-
-  @media (min-width: 970px) {
-    grid-template-columns: repeat(3, 270px);
-  }
-
-  @media (min-width: 1300px) {
-    grid-template-columns: repeat(4, 270px);
-  }
-}
-
-/* BOTAO ORDERNAR*/
+/* BOTÃO ORDERNAR */
 .botaoOrdenar {
   position: relative;
 
   button {
     align-items: center;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: colors.$text-secondary;
+    border: 1px solid colors.$border-primary;
     cursor: pointer;
     display: flex;
     gap: 0.7rem;
@@ -127,8 +107,8 @@
   }
 
   ul {
-    background-color: #383838;
-    color: #fff;
+    background-color: colors.$background-primary;
+    color: colors.$text-secondary;
     display: none;
     margin: 0;
     padding: 0;
@@ -150,12 +130,12 @@
     text-align: center;
 
     &:hover {
-      background-color: rgb(26, 138, 198);
+      opacity: 0.9;
       transition: all 0.5s ease;
     }
 
     &:first-child {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      border-bottom: 1px solid colors.$border-primary;
     }
   }
 }
@@ -168,5 +148,27 @@
   hr {
     margin: 0 0 -1px;
     width: 100%;
+  }
+}
+
+/*----- ITENS -----*/
+.itens {
+  align-self: start;
+  display: grid;
+  gap: 3.5rem 1.5rem;
+  justify-content: center;
+  justify-items: center;
+  padding-bottom: 5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 270px);
+  }
+
+  @media (min-width: 970px) {
+    grid-template-columns: repeat(3, 270px);
+  }
+
+  @media (min-width: 1300px) {
+    grid-template-columns: repeat(4, 270px);
   }
 }

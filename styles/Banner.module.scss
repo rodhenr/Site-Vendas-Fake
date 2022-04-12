@@ -1,6 +1,8 @@
-/* GERAL */
+@use "colors";
+
+/*---------- GERAL ----------*/
 .container {
-  background-color: #ebebeb;
+  background-color: colors.$background-primary;
   display: flex;
   flex-direction: column;
 
@@ -16,14 +18,14 @@
   }
 }
 
-/* BANNER INTEIRO */
+/*----- BANNER INTEIRO -----*/
 .bannerInteiro {
   &:hover {
     opacity: 0.8;
   }
 }
 
-/* CONTAINER BANNER DUPLO */
+/*----- BANNER DUPLO -----*/
 .containerDuplo {
   @media (min-width: 1024px) {
     display: flex;
@@ -39,7 +41,7 @@
   }
 }
 
-/* ITEM ÚNICO BANNER DUPLO */
+/* BANNER ITEM ÚNICO */
 .banner {
   margin: -0.3rem 0;
 

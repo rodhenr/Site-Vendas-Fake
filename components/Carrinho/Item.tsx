@@ -19,7 +19,7 @@ interface Props {
   promo: boolean;
 }
 
-function Item({ id, img, name, pPrazo, promo }: Props) {
+function Item({ id, img, name, pPrazo }: Props) {
   const dispatch = useDispatch();
   const [itemQtde, setItemQtde] = useState(1);
 
@@ -64,9 +64,7 @@ function Item({ id, img, name, pPrazo, promo }: Props) {
           <button onClick={aumentarQtde}>
             <FontAwesomeIcon icon={faPlus} />
           </button>
-          <div className={styles.itemQuantidade}>
-            <span>{itemQtde}</span>
-          </div>
+          <span>{itemQtde}</span>
           <button onClick={diminuirQtde}>
             <FontAwesomeIcon icon={faMinus} />
           </button>

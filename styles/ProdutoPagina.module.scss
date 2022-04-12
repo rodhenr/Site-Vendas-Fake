@@ -1,9 +1,11 @@
+@use "colors";
+
 /*---------- GERAL ----------*/
 .container {
-  background-color: #ebebeb;
+  background-color: colors.$background-secondary;
   font-family: "Open Sans", sans-serif;
   overflow: hidden;
-  padding: 0 0 3rem;
+  padding: 0.5rem 0 3rem;
 
   svg {
     cursor: pointer;
@@ -22,9 +24,9 @@
   }
 }
 
-/* CAMINHO */
+/*----- CAMINHO -----*/
 .containerCaminho {
-  background: #fff;
+  background-color: colors.$text-secondary;
   display: none;
   margin: 0 0 0.8rem;
   padding: 1rem;
@@ -45,13 +47,13 @@
       width: 0;
 
       &:hover {
-        border: 1px black solid;
+        border: 1px colors.$text-primary solid;
         width: 100%;
       }
     }
 
     &:last-child {
-      color: #ff6801;
+      color: colors.$background-primary;
     }
   }
 
@@ -60,10 +62,10 @@
   }
 }
 
-/*----- CONTAINER DO PRODUTO -----*/
+/*----- PRODUTO -----*/
 .containerProduto {
   align-items: center;
-  background-color: #fff;
+  background-color: colors.$text-secondary;
   display: flex;
   flex-direction: column;
 
@@ -79,20 +81,8 @@
   }
 }
 
-/* INFORMAÇÃO DO PRODUTO */
-.produtoInfo {
-  align-items: center;
-  background-color: rgb(63, 63, 63);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 0 0 1rem;
-  width: 100%;
-}
-
-/* IMAGEM DO PRODUTO */
+/* IMAGEM */
 .produtoImagem {
-  background: rgb(63, 63, 63);
   padding: 1.5rem 1rem 0;
 
   img {
@@ -125,9 +115,19 @@
   }
 }
 
-/* NOME DO PRODUTO */
+/* INFORMAÇÃO */
+.produtoInfo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 0 1rem;
+  width: 100%;
+}
+
+/* NOME */
 .produtoNome {
-  color: #fff;
+  color: colors.$text-primary;
   font-size: 1.3rem;
   font-weight: 300;
   margin: 0;
@@ -139,39 +139,7 @@
   }
 }
 
-/* CONTAINER INFOS EXTRAS */
-.produtoInfoExtra {
-  align-items: center;
-  background-color: #ebebeb;
-  color: #60af44;
-  display: flex;
-  font-weight: 600;
-  height: 35px;
-  justify-content: space-between;
-  padding: 0 1rem;
-  width: 100%;
-
-  p {
-    margin: 0;
-  }
-}
-
-/* CONTAINER DO PREÇO À PRAZO */
-.containerPrazo {
-  align-items: center;
-  color: red;
-  display: flex;
-  font-size: 1.5rem;
-  gap: 1rem;
-  padding-top: 3rem;
-
-  svg {
-    color: red;
-    font-size: 1.5rem;
-  }
-}
-
-/* CONTAINER PREÇO/BOTÃO COMPRAR */
+/*--- PREÇO/BOTÃO COMPRAR ---*/
 .containerPrecoComprar {
   align-items: start;
   display: flex;
@@ -187,7 +155,7 @@
 
 /* PRECO À VISTA*/
 .precoVista {
-  color: #60af44;
+  color: colors.$text-terceary;
   font-size: 1.7rem;
   margin: 0;
 
@@ -196,8 +164,9 @@
   }
 }
 
+/* INFO EXTRA DO PREÇO À VISTA*/
 .precoVistaExtra {
-  color: #60af44;
+  color: colors.$text-terceary;
   font-size: 0.8rem;
   margin: 0;
   padding-bottom: 1rem;
@@ -205,9 +174,9 @@
 
 /* BOTÃO DE COMPRAR */
 .comprar {
-  background-color: #60af44;
+  background-color: colors.$background-terceary;
   border: none;
-  color: #fff;
+  color: colors.$text-secondary;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
@@ -223,7 +192,7 @@
   }
 }
 
-/* PARCELAMENTO */
+/*--- PARCELAMENTO ---*/
 .containerParcelamento {
   display: flex;
   flex-direction: column;
@@ -231,7 +200,7 @@
   width: 100%;
 
   h1 {
-    color: #fff;
+    color: colors.$text-secondary;
     font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
     font-weight: 500;
@@ -243,10 +212,11 @@
   }
 }
 
+/* ITENS DO PARCELAMENTO */
 .parcelamentoOpcoes {
-  background-color: #4e4e4e;
+  background-color: colors.$text-primary;
   border-radius: 7px;
-  color: #fff;
+  color: colors.$text-secondary;
   display: grid;
   font-size: 0.7rem;
   gap: 0.5rem 2rem;
@@ -257,14 +227,14 @@
   padding: 0.5rem;
 
   span {
-    color: #ff6801;
+    color: colors.$background-primary;
     font-weight: 700;
   }
 }
 
-/* CONTAINER DA DESCRIÇÃO DO PRODUTO */
+/*---- DESCRIÇÃO DO PRODUTO -----*/
 .produtoDescricao {
-  background-color: #fff;
+  background-color: colors.$text-secondary;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -282,17 +252,19 @@
   }
 }
 
+/* SOBRE/DESCRIÇÃO */
 .descricaoCima {
   align-items: end;
-  background-color: #8d8d8d;
-  border-bottom: 2px solid #ff6801;
-  border-top: 2px solid #ff6801;
-  color: #fff;
+  background-color: colors.$text-primary;
+  border-bottom: 2px solid colors.$background-primary;
+  border-top: 2px solid colors.$background-primary;
+  color: colors.$text-secondary;
   cursor: pointer;
   display: flex;
   padding: 0 1rem;
 }
 
+/* DESCRIÇÃO DO ITEM */
 .descricaoTitulo {
   align-items: center;
   display: flex;
@@ -310,24 +282,17 @@
   }
 }
 
+/* OPEN = TRUE */
 .descricaoTitulo.tituloAtivo {
-  background-color: #585858;
+  background-color: rgb(80, 80, 80); // hover
 
   h1 {
-    color: #ff6801;
+    color: colors.$background-primary;
   }
 
   svg {
-    color: #ff6801;
+    color: colors.$background-primary;
   }
-}
-
-.containerEspec {
-  padding: 1rem 1rem 0;
-}
-
-.especTitulo {
-  padding-bottom: 0.7rem;
 }
 
 /*----- VER MAIS -----*/

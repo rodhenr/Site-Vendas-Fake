@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Navbar from "../components/Navbar/Index";
 import Banner from "../components/Banner/Index";
 import Products from "../components/ProdutosInicio/Index";
-import Footer from "../components/Footer/Index";
+import Footer from "../components/Informacoes/Index";
 
 const Home: NextPage = () => {
   return (

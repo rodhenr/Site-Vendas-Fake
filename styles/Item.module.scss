@@ -1,6 +1,9 @@
-/*----- ITEM -----*/
-.containerItem {
-  background-color: #fff;
+@use "colors";
+
+/*----- GERAL -----*/
+
+.container {
+  background-color: colors.$text-secondary;
   font-family: "Open Sans", sans-serif;
   margin: 0rem 1rem;
   position: relative;
@@ -13,7 +16,7 @@
   }
 
   hr {
-    background-color: #6969694a;
+    background-color: colors.$border-primary;
     border: none;
     height: 1px;
   }
@@ -40,10 +43,10 @@
   }
 
   button {
-    background-color: #009e2a;
+    background-color: colors.$background-terceary;
     border: none;
     bottom: -40px;
-    color: #fff;
+    color: colors.$text-secondary;
     cursor: pointer;
     font-size: 1.2rem;
     height: 40px;
@@ -52,7 +55,7 @@
     width: 100%;
 
     &:hover {
-      background-color: #01681d;
+      opacity: 0.9;
       transition: all 0.5s ease;
     }
 
@@ -79,32 +82,15 @@
   }
 }
 
-/* PREÇO À VISTA */
-.itemPrecoVista {
-  color: green;
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin: 0 0 0.5rem;
-
-  @media (min-width: 1300px) {
-    font-size: 1.5rem;
-  }
+/*----- PREÇOS -----*/
+.precos {
+  display: flex;
+  flex-direction: column;
 }
 
-/* PREÇO À PRAZO */
-.itemPrecoPrazo {
-  color: #696969;
-  font-size: 0.8rem;
-  margin: 0 0 0.5rem 0;
-
-  @media (min-width: 1300px) {
-    font-size: 0.9rem;
-  }
-}
-
-/* PREÇO ANTERIOR PROMO */
-.itemPrecoPromo {
-  color: red;
+/* PREÇO PROMO */
+.precoPromo {
+  color: colors.$text-terceary;
   display: flex;
   font-size: 0.9rem;
 
@@ -120,5 +106,28 @@
 
   @media (min-width: 1300px) {
     font-size: 1rem;
+  }
+}
+
+/* PREÇO À VISTA */
+.precoVista {
+  color: colors.$background-terceary;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+
+  @media (min-width: 1300px) {
+    font-size: 1.5rem;
+  }
+}
+
+/* PREÇO À PRAZO */
+.precoPrazo {
+  color: colors.$text-primary;
+  font-size: 0.8rem;
+  margin: 0 0 0.5rem 0;
+
+  @media (min-width: 1300px) {
+    font-size: 0.9rem;
   }
 }

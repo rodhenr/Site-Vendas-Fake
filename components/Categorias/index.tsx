@@ -2,15 +2,14 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 
 import Navbar from "../Navbar/Index";
-import Footer from "../Footer/Index";
-import Item from "../Item/Item";
+import Footer from "../Informacoes/Index";
+import Filtro from "./Filtro";
 import itemsList from "../../listaItems/Index";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../../styles/Categorias.module.scss";
-import { umask } from "process";
 
 function Index() {
   const [filtro, setFiltro] = useState("");
@@ -18,83 +17,9 @@ function Index() {
   const router = useRouter();
   const { category } = router.query;
   const items = itemsList.filter((i) => i.categoria === category);
-  const itemsMenorPreco = items.slice().sort((a, b) => {
-    if (a.promo && b.promo) {
-      return a.pPrazo * 0.7 > b.pPrazo * 0.7 ? 1 : -1;
-    } else if (a.promo) {
-      return a.pPrazo * 0.7 > b.pPrazo ? 1 : -1;
-    } else if (b.promo) {
-      return a.pPrazo > b.pPrazo * 0.7 ? 1 : -1;
-    } else {
-      return a.pPrazo > b.pPrazo ? 1 : -1;
-    }
-  });
-  const itemsMaiorPreco = items.slice().sort((a, b) => {
-    if (a.promo && b.promo) {
-      return a.pPrazo * 0.7 > b.pPrazo * 0.7 ? -1 : 1;
-    } else if (a.promo) {
-      return a.pPrazo * 0.7 > b.pPrazo ? -1 : 1;
-    } else if (b.promo) {
-      return a.pPrazo > b.pPrazo * 0.7 ? -1 : 1;
-    } else {
-      return a.pPrazo > b.pPrazo ? -1 : 1;
-    }
-  });
 
   function handleChange(opt: string) {
     setFiltro(opt);
-  }
-
-  function renderItems(opt: string) {
-    if (opt === "") {
-      return items.map((i, key) => (
-        <Item
-          key={key}
-          img={i.img}
-          name={i.name}
-          pathName={i.pathName}
-          pPrazo={i.pPrazo}
-          categoria={i.categoria}
-          fabricante={i.fabricante}
-          id={i.id}
-          garantia={i.garantia}
-          specs={i.specs}
-          promo={i.promo}
-        />
-      ));
-    } else if (opt === "menor") {
-      return itemsMenorPreco.map((i, key) => (
-        <Item
-          key={key}
-          img={i.img}
-          name={i.name}
-          pathName={i.pathName}
-          pPrazo={i.pPrazo}
-          categoria={i.categoria}
-          fabricante={i.fabricante}
-          id={i.id}
-          garantia={i.garantia}
-          specs={i.specs}
-          promo={i.promo}
-        />
-      ));
-    } else if (opt === "maior") {
-      return itemsMaiorPreco.map((i, key) => (
-        <Item
-          key={key}
-          img={i.img}
-          name={i.name}
-          pathName={i.pathName}
-          pPrazo={i.pPrazo}
-          categoria={i.categoria}
-          fabricante={i.fabricante}
-          id={i.id}
-          garantia={i.garantia}
-          specs={i.specs}
-          promo={i.promo}
-        />
-      ));
-    }
   }
 
   function handleState() {
@@ -104,12 +29,12 @@ function Index() {
   return (
     <div>
       <Navbar />
-      <div className={styles.containerCategoria}>
-        <div className={styles.categoriaTopo}>
+      <div className={styles.container}>
+        <div className={styles.containerTopo}>
           <h1 className={styles.categoriaNome}>
             {items[0].categoria.replace(/-/g, " ").toUpperCase()}
           </h1>
-          <div className={styles.categoriaOpcao}>
+          <div className={styles.containerFiltro}>
             <p>FILTRAR:</p>
             <div
               className={
@@ -129,7 +54,7 @@ function Index() {
             </div>
           </div>
         </div>
-        <div className={styles.containerItens}>{renderItems(filtro)}</div>
+        <Filtro filtro={filtro} />
       </div>
       <Footer />
     </div>
