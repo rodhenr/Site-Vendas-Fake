@@ -2,10 +2,11 @@ import styles from "../../styles/Carrinho.module.scss";
 
 interface Props {
   handleCepChange: Function;
-  handleCep: Function;
+  handleValidarCep: Function;
+  cep: string;
 }
 
-function Frete({ handleCepChange, handleCep }: Props) {
+function Frete({ handleCepChange, handleValidarCep, cep }: Props) {
   return (
     <div className={styles.containerFrete}>
       <h3>CALCULAR FRETE</h3>
@@ -15,9 +16,11 @@ function Frete({ handleCepChange, handleCep }: Props) {
           type="text"
           name="cep"
           placeholder="CEP"
-          maxLength={8}
+          pattern="[0-9]8"
+          maxLength={9}
+          value={cep}
         />
-        <button onClick={(e) => handleCep(e)}>Calcular</button>
+        <button onClick={(e) => handleValidarCep(e)}>Calcular</button>
       </form>
     </div>
   );

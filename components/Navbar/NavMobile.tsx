@@ -31,39 +31,41 @@ function NavMobile({ numCart }: Props) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.containerTopo}>
-        <div className={styles.containerNavbar}>
-          <div className={styles.categorias} onClick={changeOpen}>
-            <FontAwesomeIcon icon={faBars} />
+      <div className={styles.containerFixed}>
+        <div className={styles.containerTopo}>
+          <div className={styles.containerNavbar}>
+            <div className={styles.categorias} onClick={changeOpen}>
+              <FontAwesomeIcon icon={faBars} />
+            </div>
+            <Navbar open={open} changeOpen={changeOpen} />
           </div>
-          <Navbar open={open} changeOpen={changeOpen} />
+          <h1 className={styles.nomeLoja}>
+            <Link href="/">PC Shop</Link>
+          </h1>
+          <div className={styles.opcoesExtras}>
+            <div className={styles.opcoesBusca} onClick={changeBusca}>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </div>
+            <FontAwesomeIcon icon={faUser} />
+            <div>
+              <Link href="/carrinho" passHref>
+                <div>
+                  <FontAwesomeIcon icon={faCartShopping} />
+                  <div className={styles.carrinhoNumeroItem}>{numCart}</div>
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
-        <h1 className={styles.nomeLoja}>
-          <Link href="/">PC Shop</Link>
-        </h1>
-        <div className={styles.opcoesExtras}>
-          <div className={styles.opcoesBusca} onClick={changeBusca}>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
+        {busca ? (
+          <div className={styles.busca}>
+            <input type="text" placeholder="Digite o que você procura" />
+            <div className={styles.buscaIcone}>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </div>
           </div>
-          <FontAwesomeIcon icon={faUser} />
-          <div>
-            <Link href="/carrinho" passHref>
-              <div>
-                <FontAwesomeIcon icon={faCartShopping} />
-                <div className={styles.carrinhoNumeroItem}>{numCart}</div>
-              </div>
-            </Link>
-          </div>
-        </div>
+        ) : null}
       </div>
-      {busca ? (
-        <div className={styles.busca}>
-          <input type="text" placeholder="Digite o que você procura" />
-          <div className={styles.buscaIcone}>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-          </div>
-        </div>
-      ) : null}
     </div>
   );
 }

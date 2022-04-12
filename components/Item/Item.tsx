@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 
-import Preco from './Precos'
+import Preco from "./Precos";
 import { addToCart } from "../../store/slices/cartSlice";
 import { updateTotalPrice } from "../../store/slices/newSlice";
 
@@ -28,12 +28,12 @@ function Item(props: Props) {
   function handleClick() {
     alert("Adicionado ao carrinho com sucesso!");
 
-    if (promo === true) {
+    if (promo) {
       dispatch(addToCart(props));
-      dispatch(updateTotalPrice({ id, valorTotal: 1111 }));
+      dispatch(updateTotalPrice({ id, valorTotal: pPrazo * 0.7 }));
     } else {
       dispatch(addToCart(props));
-      dispatch(updateTotalPrice({ id, valorTotal: 2222 }));
+      dispatch(updateTotalPrice({ id, valorTotal: pPrazo * 0.85 }));
     }
   }
 

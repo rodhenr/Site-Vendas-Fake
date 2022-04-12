@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
 
 import itemsList from "../../listaItems/Index";
 import Item from "../Item/Item";
 
 import styles from "../../styles/Categorias.module.scss";
+import { useEffect } from "react";
 
 interface Props {
   filtro: string;
@@ -18,27 +18,27 @@ function Filtro({ filtro }: Props) {
     if (a.promo && b.promo) {
       return a.pPrazo * 0.7 > b.pPrazo * 0.7 ? 1 : -1;
     } else if (a.promo) {
-      return a.pPrazo * 0.7 > b.pPrazo ? 1 : -1;
+      return a.pPrazo * 0.7 > b.pPrazo * 0.85 ? 1 : -1;
     } else if (b.promo) {
-      return a.pPrazo > b.pPrazo * 0.7 ? 1 : -1;
+      return a.pPrazo * 0.85 > b.pPrazo * 0.7 ? 1 : -1;
     } else {
-      return a.pPrazo > b.pPrazo ? 1 : -1;
+      return a.pPrazo * 0.85 > b.pPrazo * 0.85 ? 1 : -1;
     }
   });
   const itemsMaiorPreco = items.slice().sort((a, b) => {
     if (a.promo && b.promo) {
       return a.pPrazo * 0.7 > b.pPrazo * 0.7 ? -1 : 1;
     } else if (a.promo) {
-      return a.pPrazo * 0.7 > b.pPrazo ? -1 : 1;
+      return a.pPrazo * 0.7 > b.pPrazo * 0.85 ? -1 : 1;
     } else if (b.promo) {
-      return a.pPrazo > b.pPrazo * 0.7 ? -1 : 1;
+      return a.pPrazo * 0.85 > b.pPrazo * 0.7 ? -1 : 1;
     } else {
-      return a.pPrazo > b.pPrazo ? -1 : 1;
+      return a.pPrazo * 0.85 > b.pPrazo * 0.85 ? -1 : 1;
     }
   });
 
   function renderItems(opt: string) {
-    if (opt === "") {
+    if (opt === "Padrão") {
       return items.map((i, key) => (
         <Item
           key={key}
@@ -54,7 +54,7 @@ function Filtro({ filtro }: Props) {
           promo={i.promo}
         />
       ));
-    } else if (opt === "menor") {
+    } else if (opt === "Menor Preço") {
       return itemsMenorPreco.map((i, key) => (
         <Item
           key={key}
@@ -70,7 +70,7 @@ function Filtro({ filtro }: Props) {
           promo={i.promo}
         />
       ));
-    } else if (opt === "maior") {
+    } else if (opt === "Maior Preço") {
       return itemsMaiorPreco.map((i, key) => (
         <Item
           key={key}

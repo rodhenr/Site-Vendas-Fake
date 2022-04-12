@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import Navbar from "../Navbar/Index";
@@ -12,7 +12,7 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import styles from "../../styles/Categorias.module.scss";
 
 function Index() {
-  const [filtro, setFiltro] = useState("");
+  const [filtro, setFiltro] = useState("Padrão");
   const [open, setOpen] = useState(false);
   const router = useRouter();
   const { category } = router.query;
@@ -20,11 +20,16 @@ function Index() {
 
   function handleChange(opt: string) {
     setFiltro(opt);
+    handleState();
   }
 
   function handleState() {
     setOpen(!open);
   }
+
+  useEffect(() => {
+    setFiltro("Padrão");
+  }, [category]);
 
   return (
     <div>
@@ -44,12 +49,13 @@ function Index() {
               }
             >
               <button onClick={handleState}>
-                <span>Ordenar por</span>
+                {filtro}
                 <FontAwesomeIcon icon={faAngleDown} />
               </button>
               <ul>
-                <li onClick={() => handleChange("menor")}>Menor Preço</li>
-                <li onClick={() => handleChange("maior")}>Maior Preço</li>
+                <li onClick={() => handleChange("Padrão")}>Padrão</li>
+                <li onClick={() => handleChange("Menor Preço")}>Menor Preço</li>
+                <li onClick={() => handleChange("Maior Preço")}>Maior Preço</li>
               </ul>
             </div>
           </div>

@@ -3,11 +3,7 @@ import { GetStaticProps } from "next";
 import Categoria from "../../components/Categorias/Index";
 import itemsList from "../../listaItems/Index";
 
-interface Props {
-  itemObj: object[];
-}
-
-export default function index({ itemObj }: Props) {
+export default function index() {
   return (
     <div>
       <Categoria />
@@ -31,7 +27,7 @@ export async function getStaticPaths() {
   };
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {},
   };

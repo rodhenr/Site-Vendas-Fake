@@ -11,7 +11,7 @@
 
 /*----- NOME E DO FILTRO -----*/
 .containerTopo {
-  margin: 0 1rem;
+  margin: 3rem 1rem 0;
 
   @media (min-width: 1300px) {
     margin: 0 calc(0.05 * 100vw) + 1;
@@ -72,7 +72,7 @@
   }
 
   @media (min-width: 540px) {
-    margin: 0 auto;
+    margin: 1rem auto;
     width: calc(550px - 1.8rem);
   }
 
@@ -120,6 +120,7 @@
 
   li {
     align-items: center;
+    border-bottom: 1px solid colors.$border-primary;
     cursor: pointer;
     display: flex;
     font-size: 0.8rem;
@@ -134,8 +135,8 @@
       transition: all 0.5s ease;
     }
 
-    &:first-child {
-      border-bottom: 1px solid colors.$border-primary;
+    &:last-child {
+      border-bottom: none;
     }
   }
 }
@@ -143,11 +144,6 @@
 .botaoOrdenar.ativo {
   ul {
     display: block !important;
-  }
-
-  hr {
-    margin: 0 0 -1px;
-    width: 100%;
   }
 }
 

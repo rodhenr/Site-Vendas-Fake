@@ -170,7 +170,7 @@
 /*--- SOBRE A LOJA ---*/
 .lojaSobre {
   align-items: center;
-  background-color: colors.$text-primary;
+  background-color: rgb(26, 25, 25);
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 3fr;
@@ -208,7 +208,7 @@
 /* DESCRIÇÃO DA LOJA */
 .lojaSobreDesc {
   p {
-    color: colors.$border-primary;
+    color: colors.$text-secondary;
     font-size: 0.8rem;
     margin: 0;
     text-align: justify;

@@ -10,6 +10,7 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { RootState } from "../../store/Store";
 import { cleanCart } from "../../store/slices/cartSlice";
 import { cleanSlice } from "../../store/slices/newSlice";
+
 import Item from "./Item";
 import PrecoFinal from "./PrecoFinal";
 import Frete from "./Frete";
@@ -21,7 +22,7 @@ function Index() {
   const totalPrice = useSelector((state: RootState) => state.newSlice.obj);
   const dispatch = useDispatch();
   const [totalProdutos, setTotalProdutos] = useState(0);
-  const [testCep, setTestCep] = useState(false);
+  const [cep, setCep] = useState("");
   const [valorCep, setValorCep] = useState(0);
 
   useEffect(() => {
@@ -47,20 +48,22 @@ function Index() {
   }
 
   function handleCepChange(e: React.ChangeEvent<HTMLInputElement>) {
-    let cep = e.target.value;
-    if (cep.toString().length === 8) {
-      setTestCep(true);
+    let novoValor = e.target.value.replace(/\D/g, "");
+
+    if (novoValor.length > 5) {
+      let novoCep = `${novoValor.slice(0, 5)}-${novoValor.slice(5)}`;
+      setCep(novoCep);
     } else {
-      setTestCep(false);
+      setCep(novoValor);
     }
   }
 
-  function handleCep(e: React.MouseEvent<HTMLElement>) {
+  function handleValidarCep(e: React.MouseEvent<HTMLElement>) {
     e.preventDefault();
-    if (testCep) {
+    if (cep.length === 9) {
       setValorCep(50);
     } else {
-      setValorCep(0);
+      alert("CEP INVÁLIDO!");
     }
   }
 
@@ -91,7 +94,11 @@ function Index() {
           <div className={styles.carrinhoLimpar}>
             <button onClick={handleRemove}>LIMPAR CARRINHO</button>
           </div>
-          <Frete handleCepChange={handleCepChange} handleCep={handleCep} />
+          <Frete
+            handleCepChange={handleCepChange}
+            handleValidarCep={handleValidarCep}
+            cep={cep}
+          />
           <PrecoFinal valorCep={valorCep} totalProdutos={totalProdutos} />
           <div className={styles.finalizarCompra}>
             <button>

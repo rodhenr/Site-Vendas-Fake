@@ -19,25 +19,37 @@ interface Props {
   promo: boolean;
 }
 
-function Item({ id, img, name, pPrazo }: Props) {
+function Item({ id, img, name, pPrazo, promo }: Props) {
   const dispatch = useDispatch();
   const [itemQtde, setItemQtde] = useState(1);
-
+  
   useEffect(() => {
-    dispatch(updateTotalPrice({ id, valorTotal: itemQtde * pPrazo }));
+    if (promo) {
+      dispatch(updateTotalPrice({ id, valorTotal: itemQtde * (pPrazo * 0.7) }));
+    } else {
+      dispatch(updateTotalPrice({ id, valorTotal: itemQtde * pPrazo * 0.85 }));
+    }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   function aumentarQtde() {
     const newQtde = itemQtde + 1;
     setItemQtde(newQtde);
-    dispatch(updateTotalPrice({ id, valorTotal: newQtde * pPrazo }));
+    if (promo) {
+      dispatch(updateTotalPrice({ id, valorTotal: newQtde * pPrazo * 0.7 }));
+    } else {
+      dispatch(updateTotalPrice({ id, valorTotal: newQtde * pPrazo * 0.85 }));
+    }
   }
 
   function diminuirQtde() {
     if (itemQtde > 1) {
       const newQtde = itemQtde - 1;
       setItemQtde(newQtde);
-      dispatch(updateTotalPrice({ id, valorTotal: newQtde * pPrazo }));
+      if (promo) {
+        dispatch(updateTotalPrice({ id, valorTotal: newQtde * pPrazo * 0.7 }));
+      } else {
+        dispatch(updateTotalPrice({ id, valorTotal: newQtde * pPrazo * 0.85 }));
+      }
     }
   }
 
@@ -70,13 +82,23 @@ function Item({ id, img, name, pPrazo }: Props) {
           </button>
         </div>
         <div className={styles.itemPrecos}>
-          <p>
-            {(itemQtde * pPrazo * 0.85).toLocaleString("pt-BR", {
-              minimumFractionDigits: 2,
-              style: "currency",
-              currency: "BRL",
-            })}
-          </p>
+          {promo ? (
+            <p>
+              {(itemQtde * pPrazo * 0.7).toLocaleString("pt-BR", {
+                minimumFractionDigits: 2,
+                style: "currency",
+                currency: "BRL",
+              })}
+            </p>
+          ) : (
+            <p>
+              {(itemQtde * pPrazo * 0.85).toLocaleString("pt-BR", {
+                minimumFractionDigits: 2,
+                style: "currency",
+                currency: "BRL",
+              })}
+            </p>
+          )}
         </div>
       </div>
     </div>
