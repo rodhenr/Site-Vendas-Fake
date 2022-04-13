@@ -22,7 +22,23 @@ interface Props {
 function Item({ id, img, name, pPrazo, promo }: Props) {
   const dispatch = useDispatch();
   const [itemQtde, setItemQtde] = useState(1);
-  
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [setWidth]);
+
   useEffect(() => {
     if (promo) {
       dispatch(updateTotalPrice({ id, valorTotal: itemQtde * (pPrazo * 0.7) }));
@@ -62,45 +78,94 @@ function Item({ id, img, name, pPrazo, promo }: Props) {
 
   return (
     <div className={styles.containerItem}>
-      <div className={styles.item}>
-        <div className={styles.itemImagem}>
-          <Image src={img} alt="" height={1000} width={1000} />
+      {width < 1024 ? (
+        <>
+          <div className={styles.item}>
+            <div className={styles.itemImagem}>
+              <Image src={img} alt="" height={1000} width={1000} />
+            </div>
+            <div className={styles.itemDescricao}>
+              <p>{name}</p>
+            </div>
+            <div
+              onClick={() => handleDelete(id)}
+              className={styles.itemDeletar}
+            >
+              <FontAwesomeIcon icon={faXmark} />
+            </div>
+          </div>
+          <div className={styles.containerInfo}>
+            <div className={styles.itemAcoes}>
+              <button onClick={aumentarQtde}>
+                <FontAwesomeIcon icon={faPlus} />
+              </button>
+              <span>{itemQtde}</span>
+              <button onClick={diminuirQtde}>
+                <FontAwesomeIcon icon={faMinus} />
+              </button>
+            </div>
+            <div className={styles.itemPrecos}>
+              {promo ? (
+                <p>
+                  {(itemQtde * pPrazo * 0.7).toLocaleString("pt-BR", {
+                    minimumFractionDigits: 2,
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
+              ) : (
+                <p>
+                  {(itemQtde * pPrazo * 0.85).toLocaleString("pt-BR", {
+                    minimumFractionDigits: 2,
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
+              )}
+            </div>
+          </div>
+        </>
+      ) : (
+        <div className={styles.item}>
+          <div className={styles.itemImagem}>
+            <Image src={img} alt="" height={1000} width={1000} />
+          </div>
+          <div className={styles.itemDescricao}>
+            <p>{name}</p>
+          </div>
+          <div className={styles.itemAcoes}>
+            <button onClick={aumentarQtde}>
+              <FontAwesomeIcon icon={faPlus} />
+            </button>
+            <span>{itemQtde}</span>
+            <button onClick={diminuirQtde}>
+              <FontAwesomeIcon icon={faMinus} />
+            </button>
+          </div>
+          <div className={styles.itemPrecos}>
+            {promo ? (
+              <p>
+                {(itemQtde * pPrazo * 0.7).toLocaleString("pt-BR", {
+                  minimumFractionDigits: 2,
+                  style: "currency",
+                  currency: "BRL",
+                })}
+              </p>
+            ) : (
+              <p>
+                {(itemQtde * pPrazo * 0.85).toLocaleString("pt-BR", {
+                  minimumFractionDigits: 2,
+                  style: "currency",
+                  currency: "BRL",
+                })}
+              </p>
+            )}
+          </div>
+          <div onClick={() => handleDelete(id)} className={styles.itemDeletar}>
+            <FontAwesomeIcon icon={faXmark} />
+          </div>
         </div>
-        <p className={styles.itemDescricao}>{name}</p>
-        <div onClick={() => handleDelete(id)}>
-          <FontAwesomeIcon icon={faXmark} />
-        </div>
-      </div>
-      <div className={styles.containerInfo}>
-        <div className={styles.itemAcoes}>
-          <button onClick={aumentarQtde}>
-            <FontAwesomeIcon icon={faPlus} />
-          </button>
-          <span>{itemQtde}</span>
-          <button onClick={diminuirQtde}>
-            <FontAwesomeIcon icon={faMinus} />
-          </button>
-        </div>
-        <div className={styles.itemPrecos}>
-          {promo ? (
-            <p>
-              {(itemQtde * pPrazo * 0.7).toLocaleString("pt-BR", {
-                minimumFractionDigits: 2,
-                style: "currency",
-                currency: "BRL",
-              })}
-            </p>
-          ) : (
-            <p>
-              {(itemQtde * pPrazo * 0.85).toLocaleString("pt-BR", {
-                minimumFractionDigits: 2,
-                style: "currency",
-                currency: "BRL",
-              })}
-            </p>
-          )}
-        </div>
-      </div>
+      )}
     </div>
   );
 }

@@ -11,10 +11,15 @@
     cursor: pointer;
   }
 
+  @media (min-width: 768px) {
+    background-color: colors.$background-secondary;
+    margin-top: 0;
+  }
+
   @media (min-width: 1024px) {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 0.3rem;
     padding: 0.5rem 0.5rem;
   }
 }
@@ -29,16 +34,22 @@
 /*----- BANNER DUPLO -----*/
 .containerDuplo {
   @media (min-width: 1024px) {
-    display: flex;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
+
+  @media (min-width: 1300px) {
+    margin: 0 auto;
+    width: calc(1080px + 4.5rem);
 
     img {
       border-radius: 12px;
     }
   }
 
-  @media (min-width: 1500px) {
-    margin: 0 auto;
+  @media (min-width: 1600px) {
+    width: calc(1350px + 6rem);
   }
 }
 

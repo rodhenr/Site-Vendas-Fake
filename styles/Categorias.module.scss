@@ -9,7 +9,7 @@
   padding: 2rem 0rem;
 }
 
-/*----- NOME E DO FILTRO -----*/
+/*----- NOME E FILTRO -----*/
 .containerTopo {
   margin: 3rem 1rem 0;
 
@@ -107,7 +107,7 @@
   }
 
   ul {
-    background-color: colors.$background-primary;
+    background-color: colors.$text-primary;
     color: colors.$text-secondary;
     display: none;
     margin: 0;
@@ -131,8 +131,8 @@
     text-align: center;
 
     &:hover {
-      opacity: 0.9;
-      transition: all 0.5s ease;
+      background-color: colors.$background-primary;
+      transition: all 0.3s ease;
     }
 
     &:last-child {

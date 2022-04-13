@@ -12,7 +12,7 @@ function Especificacao({ specs }: Props) {
         console.log(a[0][1]);
 
         return (
-          <div key={key} className={styles.especTitulo}>
+          <div key={key} className={styles.especDesc}>
             <p>
               <strong> {a[0][0].replace(/_/g, " ")}:</strong>
             </p>

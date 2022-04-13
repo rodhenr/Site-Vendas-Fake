@@ -5,7 +5,7 @@
   background-color: colors.$background-secondary;
   font-family: "Open Sans", sans-serif;
   overflow: hidden;
-  padding: 2.5rem 0 3rem;
+  padding: 3.5rem 0 12rem;
 
   svg {
     cursor: pointer;
@@ -65,7 +65,10 @@
 /*----- PRODUTO -----*/
 .containerProduto {
   align-items: center;
-  background-color: colors.$text-secondary;
+  background-color: colors.$text-primary;
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
   display: flex;
   flex-direction: column;
 
@@ -77,6 +80,9 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1024px) {
     margin: 0 4rem;
   }
 }
@@ -98,6 +104,7 @@
   }
 
   @media (min-width: 768px) {
+    background-color: colors.$text-secondary;
     display: flex;
     justify-content: center;
     padding: 2rem 0;
@@ -105,6 +112,10 @@
     img {
       height: 100% !important;
     }
+  }
+
+  @media (min-width: 1024px) {
+    background-color: colors.$text-secondary;
   }
 
   @media (min-width: 1200px) {
@@ -127,7 +138,7 @@
 
 /* NOME */
 .produtoNome {
-  color: colors.$text-primary;
+  color: colors.$text-secondary;
   font-size: 1.3rem;
   font-weight: 300;
   margin: 0;
@@ -141,7 +152,7 @@
 
 /*--- PREÇO/BOTÃO COMPRAR ---*/
 .containerPrecoComprar {
-  align-items: start;
+  align-items: center;
   display: flex;
   flex-direction: column;
   padding: 0 1rem 2rem;
@@ -151,11 +162,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  @media (min-width: 1024px) {
+    align-items: start;
+    display: flex;
+    padding: 1.5rem 1rem 3.5rem;
+  }
 }
 
 /* PRECO À VISTA*/
 .precoVista {
-  color: colors.$text-terceary;
+  color: colors.$background-terceary;
   font-size: 1.7rem;
   margin: 0;
 
@@ -166,10 +183,15 @@
 
 /* INFO EXTRA DO PREÇO À VISTA*/
 .precoVistaExtra {
-  color: colors.$text-terceary;
+  color: colors.$background-terceary;
   font-size: 0.8rem;
   margin: 0;
   padding-bottom: 1rem;
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    text-align: start;
+  }
 }
 
 /* BOTÃO DE COMPRAR */
@@ -190,6 +212,10 @@
   @media (min-width: 768px) {
     width: 200px;
   }
+
+  @media (min-width: 1024px) {
+    width: 100%;
+  }
 }
 
 /*--- PARCELAMENTO ---*/
@@ -208,13 +234,14 @@
   }
 
   p {
+    color: colors.$text-primary;
     margin: 0;
   }
 }
 
 /* ITENS DO PARCELAMENTO */
 .parcelamentoOpcoes {
-  background-color: colors.$text-primary;
+  background-color: rgb(218, 218, 218);
   border-radius: 7px;
   color: colors.$text-secondary;
   display: grid;
@@ -227,37 +254,42 @@
   padding: 0.5rem;
 
   span {
-    color: colors.$background-primary;
     font-weight: 700;
   }
 }
 
-/*---- DESCRIÇÃO DO PRODUTO -----*/
+/*---- CONTAINER GERAL DA DESCRIÇÃO DO PRODUTO -----*/
 .produtoDescricao {
-  background-color: colors.$text-secondary;
+  background-color: colors.$text-primary;
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin: 3.5rem 0 0;
 
   p {
+    color: colors.$text-secondary;
     font-size: 0.8rem;
-    margin: 0rem 0 0;
-    padding: 0.2rem 0;
+    margin: 0;
     text-align: justify;
   }
 
-  @media (min-width: 768px) {
-    margin: 3rem 4rem 0;
+  @media (min-width: 1024px) {
+    margin: 2.5rem 4rem;
   }
 }
 
-/* SOBRE/DESCRIÇÃO */
+/**/
+.desc {
+  padding: 1.5rem 0;
+}
+
+/* CONTAINER SOBRE/DESCRIÇÃO */
 .descricaoCima {
   align-items: end;
-  background-color: colors.$text-primary;
-  border-bottom: 2px solid colors.$background-primary;
-  border-top: 2px solid colors.$background-primary;
+  background-color: colors.$background-primary;
   color: colors.$text-secondary;
   cursor: pointer;
   display: flex;
@@ -273,25 +305,68 @@
   padding: 1rem;
 
   svg {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   h1 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin: 0;
+  }
+}
+
+/* DESCRIÇÃO */
+.produtoDesc {
+  padding: 1rem;
+}
+
+/* IMAGENS*/
+.produtoDescImage {
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+
+  @media (min-width: 500px) {
+    height: 250px;
+  }
+
+  @media (min-width: 650px) {
+    height: 300px;
+  }
+
+  @media (min-width: 768px) {
+    height: 350px;
+  }
+
+  @media (min-width: 900px) {
+    height: 400px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 450px;
   }
 }
 
 /* OPEN = TRUE */
 .descricaoTitulo.tituloAtivo {
-  background-color: rgb(80, 80, 80); // hover
+  color: colors.$text-primary;
+  border-bottom: 2px solid colors.$text-primary;
+}
 
-  h1 {
-    color: colors.$background-primary;
+/*----- ESPECIFICAÇAÇÕES -----*/
+.containerEspec {
+  padding: 0.3rem 1rem;
+}
+
+/* DESCRIÇÃO*/
+.especDesc {
+  p {
+    font-size: 0.9rem;
+    padding: 0.5rem 0 0;
   }
 
-  svg {
-    color: colors.$background-primary;
+  p:last-child {
+    margin-bottom: 1rem;
   }
 }
 
@@ -300,7 +375,7 @@
   align-items: center;
   display: none;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 2rem auto 6rem;
 
   @media (min-width: 1024px) {
     display: flex;

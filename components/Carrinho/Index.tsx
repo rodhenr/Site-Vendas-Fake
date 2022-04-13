@@ -5,7 +5,8 @@ import { useDispatch } from "react-redux";
 import Link from "next/link";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+
+import { faCartPlus, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 import { RootState } from "../../store/Store";
 import { cleanCart } from "../../store/slices/cartSlice";
@@ -68,50 +69,66 @@ function Index() {
   }
 
   return (
-    <div className={styles.container}>
-      <h2>CARRINHO</h2>
-      {cartStore.length === 0 ? (
-        <div className={styles.carrinhoSemProdutos}>
-          <p>Nenhum produto no seu carrinho.</p>
-          <button>
-            <Link href={"/"}>CONTINUAR COMPRANDO</Link>
-          </button>
-        </div>
-      ) : (
-        <>
-          {cartStore.map((i, key) => (
-            <Item
-              key={key}
-              img={i.img}
-              id={i.id}
-              pPrazo={i.pPrazo}
-              name={i.name}
-              num={key}
-              handleRemove={handleRemove}
-              promo={i.promo}
-            />
-          ))}
-          <div className={styles.carrinhoLimpar}>
-            <button onClick={handleRemove}>LIMPAR CARRINHO</button>
-          </div>
-          <Frete
-            handleCepChange={handleCepChange}
-            handleValidarCep={handleValidarCep}
-            cep={cep}
-          />
-          <PrecoFinal valorCep={valorCep} totalProdutos={totalProdutos} />
-          <div className={styles.finalizarCompra}>
+    <div className={styles.geral}>
+      <div className={styles.container}>
+        <h2>CARRINHO</h2>
+        {cartStore.length === 0 ? (
+          <div className={styles.carrinhoSemProdutos}>
+            <div className={styles.semProdutosInfo}>
+              <p>Nenhum produto no seu carrinho!</p>
+              <FontAwesomeIcon icon={faCartPlus} />
+            </div>
             <button>
-              <Link href={"/"} passHref>
-                <p>
-                  <FontAwesomeIcon icon={faCartShopping} />
-                  FINALIZAR COMPRAR
-                </p>
-              </Link>
+              <Link href={"/"}>CONTINUAR COMPRANDO</Link>
             </button>
           </div>
-        </>
-      )}
+        ) : (
+          <>
+            <div className={styles.containerTeste}>
+              {cartStore.map((i, key) => (
+                <Item
+                  key={key}
+                  img={i.img}
+                  id={i.id}
+                  pPrazo={i.pPrazo}
+                  name={i.name}
+                  num={key}
+                  handleRemove={handleRemove}
+                  promo={i.promo}
+                />
+              ))}
+            </div>
+            <div className={styles.carrinhoLimpar}>
+              <button onClick={handleRemove}>LIMPAR CARRINHO</button>
+            </div>
+            <Frete
+              handleCepChange={handleCepChange}
+              handleValidarCep={handleValidarCep}
+              cep={cep}
+            />
+            <div className={styles.precoFinalizar}>
+              <PrecoFinal valorCep={valorCep} totalProdutos={totalProdutos} />
+              <div className={styles.finalizarCompra}>
+                <button disabled={valorCep === 0}>
+                  {valorCep === 0 ? (
+                    <p>
+                      <FontAwesomeIcon icon={faCartShopping} />
+                      FINALIZAR COMPRAR
+                    </p>
+                  ) : (
+                    <Link href={"/"} passHref>
+                      <p>
+                        <FontAwesomeIcon icon={faCartShopping} />
+                        FINALIZAR COMPRAR
+                      </p>
+                    </Link>
+                  )}
+                </button>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 }

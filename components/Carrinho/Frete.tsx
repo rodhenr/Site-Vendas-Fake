@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "../../styles/Carrinho.module.scss";
 
 interface Props {
@@ -7,6 +8,7 @@ interface Props {
 }
 
 function Frete({ handleCepChange, handleValidarCep, cep }: Props) {
+
   return (
     <div className={styles.containerFrete}>
       <h3>CALCULAR FRETE</h3>
@@ -20,7 +22,9 @@ function Frete({ handleCepChange, handleValidarCep, cep }: Props) {
           maxLength={9}
           value={cep}
         />
-        <button onClick={(e) => handleValidarCep(e)}>Calcular</button>
+        <button onClick={(e) => handleValidarCep(e)}>
+          Calcular
+        </button>
       </form>
     </div>
   );

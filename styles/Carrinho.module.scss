@@ -1,14 +1,48 @@
 @use "colors";
 
 /*---------- GERAL ----------*/
-.container {
+.geral {
   background-color: colors.$background-secondary;
+}
+
+.container {
   font-family: "Montserrat";
   padding: 3rem 1.5rem 0;
 
   h2 {
     margin: 0;
-    padding: 1rem 0;
+    padding: 2rem 0 0;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0 auto;
+    width: 900px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 950px;
+  }
+
+  @media (min-width: 1600px) {
+    width: 1100px;
+  }
+}
+
+.container.containerItem {
+  @media (min-width: 1024px) {
+    display: grid;
+    gap: 0.5rem 1rem;
+    grid-template-areas:
+      "titulo titulo"
+      "item valor"
+      "limpar valor"
+      "frete valor";
+    padding: 3.5rem 0 0;
+
+    h2 {
+      grid-area: titulo;
+      padding: 0;
+    }
   }
 }
 
@@ -16,8 +50,12 @@
 
 /* CONTAINER */
 .carrinhoSemProdutos {
-  padding: 5rem 0 5rem;
+  padding: 2rem 0 5rem;
   text-align: center;
+
+  p {
+    margin: 0;
+  }
 
   button {
     background-color: colors.$background-terceary;
@@ -29,15 +67,45 @@
     margin-top: 3rem;
     width: 300px;
   }
+
+  @media (min-width: 1024px) {
+    font-size: 3rem;
+    margin: 0 auto;
+    padding: 5rem 0 9rem;
+  }
+}
+
+.semProdutosInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  svg {
+    height: 100px;
+  }
 }
 
 /*---------- CARRINHO COM ITENS ----------*/
 
 /*----- CONTAINER DOS ITENS -----*/
+.containerTeste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem 0;
+
+  @media (min-width: 1024px) {
+    gap: 0.8rem 0;
+  }
+}
+
 .containerItem {
   background-color: colors.$text-secondary;
   border: 1px solid colors.$border-primary;
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075);
   margin-top: -1px;
+  position: relative;
+  overflow: hidden;
 
   button {
     background-color: colors.$text-secondary;
@@ -52,6 +120,14 @@
       cursor: pointer;
     }
   }
+
+  @media (min-width: 1024px) {
+    align-items: center;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    padding: 0 0.5rem;
+  }
 }
 
 /*--- ITEM INDIVIDUAL ---*/
@@ -59,19 +135,46 @@
   display: flex;
   gap: 0.6rem;
   padding: 0.5rem;
-  position: relative;
+
+  @media (min-width: 1024px) {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 1.5fr 1.5fr 30px;
+    padding: 0.5rem 0.2rem;
+  }
 }
 
 /* IMAGEM DO ITEM */
 .itemImagem {
   width: 150px;
+
+  @media (min-width: 1024px) {
+    width: 50px;
+  }
 }
 
 /* DESCRIÇÃO DO ITEM */
 .itemDescricao {
-  font-size: 0.8rem;
-  margin: 0;
   padding: 0.5rem 0 0;
+
+  p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    display: -webkit-box;
+    line-clamp: 2;
+    overflow: hidden;
+    padding: 0 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    p {
+      font-size: 0.75rem;
+      text-overflow: ellipsis;
+    }
+  }
 }
 
 /*--- CONTAINER DE OPÇÕES DO ITEM ---*/
@@ -79,37 +182,64 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem 0;
+  padding: 0 0.5rem 0;
 
-  p {
-    color: colors.$background-terceary;
-    font-size: 1.1rem;
-    margin: 0;
+  @media (min-width: 1024px) {
+    font-size: 0.75rem;
   }
 }
 
 /* ADICIONAR/REMOVER QUANTIDADE */
 .itemAcoes {
   align-items: center;
-  border: 1px solid colors.$border-primary;
   display: flex;
   font-family: Helvetica, sans-serif;
-  justify-content: space-around;
   padding: 0.3rem 0;
   width: 100px;
 
   span {
     font-size: 1rem;
+    font-weight: 600;
+    padding: 0 0.4rem;
   }
 
   svg {
     color: colors.$border-primary;
   }
+
+  @media (min-width: 1024px) {
+    justify-self: center;
+    padding: 0.3 1rem;
+    width: 70px;
+
+    span {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.itemDeletar {
+  svg {
+    color: colors.$border-primary;
+  }
+  @media (min-width: 1024px) {
+    align-self: start;
+    justify-self: end;
+  }
 }
 
 /*--- PREÇO DO ITEM ---*/
 .itemPrecos {
-  margin: 1rem 0;
+  p {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+
+  @media (min-width: 1024px) {
+    justify-self: center;
+  }
 }
 
 /*----- REMOVER TUDO DO CARRINHO ----*/
@@ -132,6 +262,17 @@
       opacity: 0.9;
     }
   }
+
+  @media (min-width: 1024px) {
+    grid-area: limpar;
+    padding: 0 0 2rem;
+
+    button {
+      font-size: 0.6rem;
+      height: 25px;
+      width: 120px;
+    }
+  }
 }
 
 /*----- CONTAINER FRETE ---*/
@@ -142,6 +283,22 @@
 
   h3 {
     margin: 0 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    align-items: center;
+    border: none;
+    display: flex;
+    gap: 2rem;
+    grid-area: frete;
+    justify-content: space-between;
+    margin: 0rem 0 3rem;
+    padding: 0.7rem 1rem;
+
+    h3 {
+      font-size: 1rem;
+      margin: 0;
+    }
   }
 }
 
@@ -172,9 +329,30 @@
       background-color: colors.$background-terceary;
     }
   }
+
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-self: end;
+    margin: 0.5rem 0;
+
+    input {
+      width: 220px;
+    }
+
+    button {
+      margin: 0;
+      width: 80px;
+    }
+  }
 }
 
 /*----- PREÇOS FINAIS -----*/
+.precoFinalizar {
+  @media (min-width: 1024px) {
+    grid-area: valor;
+  }
+}
+
 .containerPrecos {
   background-color: colors.$text-secondary;
   color: colors.$text-primary;
@@ -185,6 +363,11 @@
 
   p {
     margin: 0;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0;
+    width: 300px;
   }
 }
 
@@ -240,10 +423,31 @@
       font-size: 1.2rem;
       margin: 0;
     }
+
+    &:disabled {
+      background-color: gray;
+    }
   }
 
   svg {
     font-size: 1.2rem;
     margin-right: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    button {
+      border: 1px solid colors.$border-primary;
+      height: 40px;
+
+      p {
+        font-size: 0.9rem;
+        margin: 0;
+      }
+
+      svg {
+        font-size: 0.9rem;
+        margin-right: 0.5rem;
+      }
+    }
   }
 }

@@ -29,6 +29,10 @@ $widthDesktop: calc(0.15 * 100vw);
   @media (min-width: 1300px) {
     width: calc(1080px + 4.5rem);
   }
+
+  @media (min-width: 1600px) {
+    width: calc(1350px + 6rem);
+  }
 }
 
 /*----- ITENS -----*/
@@ -54,5 +58,9 @@ $widthDesktop: calc(0.15 * 100vw);
 
   @media (min-width: 1300px) {
     grid-template-columns: repeat(4, 270px);
+  }
+
+  @media (min-width: 1600px) {
+    grid-template-columns: repeat(5, 270px);
   }
 }

@@ -15,7 +15,7 @@
 
   &:hover {
     img {
-      opacity: 0.6;
+      opacity: 0.8;
     }
   }
 
@@ -50,6 +50,9 @@
     background-color: colors.$background-terceary;
     border: none;
     bottom: -40px;
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
     color: colors.$text-secondary;
     cursor: pointer;
     font-size: 1.2rem;
@@ -59,12 +62,8 @@
     width: 100%;
 
     &:hover {
-      opacity: 0.9;
-      transition: all 0.5s ease;
-    }
+      background-color: #447b30;
 
-    &:not(hover) {
-      transition: all 0.5s ease;
     }
   }
 
