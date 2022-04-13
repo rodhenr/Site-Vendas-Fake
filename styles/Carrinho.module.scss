@@ -15,8 +15,21 @@
   }
 
   @media (min-width: 1024px) {
+    display: grid;
+    gap: 0.5rem 1rem;
+    grid-template-areas:
+      "titulo titulo"
+      "item valor"
+      "limpar valor"
+      "frete valor";
     margin: 0 auto;
+    padding: 3.5rem 0 0;
     width: 900px;
+
+    h2 {
+      grid-area: titulo;
+      padding: 0;
+    }
   }
 
   @media (min-width: 1200px) {
@@ -28,21 +41,31 @@
   }
 }
 
-.container.containerItem {
+.containerSemItem {
+  font-family: "Montserrat";
+
+  h2 {
+    margin: 0;
+    padding: 3rem 0 0;
+  }
+
   @media (min-width: 1024px) {
-    display: grid;
-    gap: 0.5rem 1rem;
-    grid-template-areas:
-      "titulo titulo"
-      "item valor"
-      "limpar valor"
-      "frete valor";
-    padding: 3.5rem 0 0;
+    margin: 0 auto;
+    width: 900px;
 
     h2 {
+      font-size: 3rem;
       grid-area: titulo;
       padding: 0;
     }
+  }
+
+  @media (min-width: 1200px) {
+    width: 950px;
+  }
+
+  @media (min-width: 1600px) {
+    width: 1100px;
   }
 }
 
@@ -50,6 +73,10 @@
 
 /* CONTAINER */
 .carrinhoSemProdutos {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   padding: 2rem 0 5rem;
   text-align: center;
 
@@ -64,7 +91,6 @@
     color: colors.$text-secondary;
     font-size: 1.2rem;
     height: 40px;
-    margin-top: 3rem;
     width: 300px;
   }
 

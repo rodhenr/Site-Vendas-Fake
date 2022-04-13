@@ -70,10 +70,14 @@ function Index() {
 
   return (
     <div className={styles.geral}>
-      <div className={styles.container}>
-        <h2>CARRINHO</h2>
+      <div
+        className={
+          cartStore.length === 0 ? styles.containerSemItem : styles.container
+        }
+      >
         {cartStore.length === 0 ? (
           <div className={styles.carrinhoSemProdutos}>
+            <h2>CARRINHO</h2>
             <div className={styles.semProdutosInfo}>
               <p>Nenhum produto no seu carrinho!</p>
               <FontAwesomeIcon icon={faCartPlus} />
@@ -85,6 +89,7 @@ function Index() {
         ) : (
           <>
             <div className={styles.containerTeste}>
+              <h2>CARRINHO</h2>
               {cartStore.map((i, key) => (
                 <Item
                   key={key}
