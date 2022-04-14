@@ -85,7 +85,7 @@ function Item({ id, img, name, pPrazo, promo }: Props) {
               <Image src={img} alt="" height={1000} width={1000} />
             </div>
             <div className={styles.itemDescricao}>
-              <p>{name}</p>
+              <p>{`${name.slice(0,85)}...`}</p>
             </div>
             <div
               onClick={() => handleDelete(id)}

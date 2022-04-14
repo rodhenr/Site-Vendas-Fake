@@ -11,6 +11,7 @@
   display: grid;
   font-family: "Montserrat", sans-serif;
   grid-template-rows: 245px 80px 75px 40px;
+  width: 100%;
 
   p {
     padding: 0 0.5rem;
@@ -40,6 +41,7 @@
   align-self: flex-start;
   border-top: 1px solid colors.$background-secondary;
   padding-top: 1rem;
+  width: 100%;
 
   h2 {
     cursor: pointer;

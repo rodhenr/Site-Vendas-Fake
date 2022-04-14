@@ -68,7 +68,7 @@ function Produto(props: Props) {
         </Link>
         <FontAwesomeIcon icon={faAngleRight} />
         <Link href={`/${categoria}/${pathName}`} passHref>
-          <span>{pathName.toUpperCase()}</span>
+          <span>{`${pathName.toUpperCase().slice(0, 70)}...`}</span>
         </Link>
       </div>
       <div className={styles.containerProduto}>

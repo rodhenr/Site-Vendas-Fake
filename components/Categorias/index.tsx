@@ -36,27 +36,33 @@ function Index() {
       <Navbar />
       <div className={styles.container}>
         <div className={styles.containerTopo}>
-          <h1 className={styles.categoriaNome}>
-            {items[0].categoria.replace(/-/g, " ").toUpperCase()}
-          </h1>
           <div className={styles.containerFiltro}>
-            <p>FILTRAR:</p>
-            <div
-              className={
-                open
-                  ? `${styles.botaoOrdenar} ${styles.ativo}`
-                  : styles.botaoOrdenar
-              }
-            >
-              <button onClick={handleState}>
-                {filtro}
-                <FontAwesomeIcon icon={faAngleDown} />
-              </button>
-              <ul>
-                <li onClick={() => handleChange("Padrão")}>Padrão</li>
-                <li onClick={() => handleChange("Menor Preço")}>Menor Preço</li>
-                <li onClick={() => handleChange("Maior Preço")}>Maior Preço</li>
-              </ul>
+            <h1 className={styles.categoriaNome}>
+              {items[0].categoria.replace(/-/g, " ").toUpperCase()}
+            </h1>
+            <div className={styles.filtro}>
+              <p>FILTRAR:</p>
+              <div
+                className={
+                  open
+                    ? `${styles.botaoOrdenar} ${styles.ativo}`
+                    : styles.botaoOrdenar
+                }
+              >
+                <button onClick={handleState}>
+                  {filtro}
+                  <FontAwesomeIcon icon={faAngleDown} />
+                </button>
+                <ul>
+                  <li onClick={() => handleChange("Padrão")}>Padrão</li>
+                  <li onClick={() => handleChange("Menor Preço")}>
+                    Menor Preço
+                  </li>
+                  <li onClick={() => handleChange("Maior Preço")}>
+                    Maior Preço
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

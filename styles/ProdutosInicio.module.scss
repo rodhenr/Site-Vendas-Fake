@@ -28,7 +28,7 @@
   }
 
   @media (min-width: 1300px) {
-    width: calc(1080px + 4.5rem);
+    width: calc(1000px + 1.5rem);
   }
 
   @media (min-width: 1600px) {
@@ -40,16 +40,17 @@
 .itens {
   align-self: start;
   display: grid;
-  gap: 0.5rem;
+  gap: 2rem;
   justify-content: center;
   justify-items: center;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 
   @media (min-width: 540px) {
     grid-template-columns: 550px;
   }
 
   @media (min-width: 768px) {
+    gap: 0.5rem;
     grid-template-columns: repeat(2, 270px);
   }
 
@@ -63,5 +64,21 @@
 
   @media (min-width: 1600px) {
     grid-template-columns: repeat(4, 250px);
+  }
+}
+
+.botaoMais {
+  padding-bottom: 3rem;
+  text-align: center;
+
+  button {
+    background-color: #00A000;
+    border: none;
+    color: colors.$text-secondary;
+    font-family: "Montserrat";
+    font-size: 0.9rem;
+    font-weight: 600;
+    height: 40px;
+    width: 230px;
   }
 }
