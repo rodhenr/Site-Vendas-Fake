@@ -1,107 +1,127 @@
 @use "colors";
 
 /*----- GERAL -----*/
-
 .container {
+  align-items: center;
+  justify-items: center;
   background-color: colors.$text-secondary;
   box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
     0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
     0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
-  font-family: "Open Sans", sans-serif;
-  margin: 0rem 1rem;
-  position: relative;
-  width: calc(100% - 2rem);
-  text-align: center;
-
-  &:hover {
-    img {
-      opacity: 0.8;
-    }
-  }
-
-  hr {
-    background-color: colors.$border-primary;
-    border: none;
-    height: 1px;
-  }
+  display: grid;
+  font-family: "Montserrat", sans-serif;
+  grid-template-rows: 245px 80px 75px 40px;
 
   p {
     padding: 0 0.5rem;
     text-align: start;
   }
+}
+
+.botaoComprar {
+  width: 100%;
+
+  button {
+    background-color: colors.$background-terceary;
+    border: none;
+    color: colors.$text-secondary;
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 40px;
+    width: 100%;
+
+    &:hover {
+      background-color: #447b30;
+    }
+  }
+}
+
+.nome {
+  align-self: flex-start;
+  border-top: 1px solid colors.$background-secondary;
+  padding-top: 1rem;
 
   h2 {
     cursor: pointer;
     font-size: 0.8rem;
     font-weight: 400;
     margin: 0;
-    padding: 1rem 0.6rem 1.5rem;
+    padding: 0 0.6rem;
     text-align: justify;
-  }
-
-  img {
-    cursor: pointer;
-    height: 200px !important;
-    padding-top: 0.5rem !important;
-    width: 200px !important;
-  }
-
-  button {
-    background-color: colors.$background-terceary;
-    border: none;
-    bottom: -40px;
-    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-      0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
-    color: colors.$text-secondary;
-    cursor: pointer;
-    font-size: 1.2rem;
-    height: 40px;
-    left: 0;
-    position: absolute;
-    width: 100%;
-
-    &:hover {
-      background-color: #447b30;
-
-    }
-  }
-
-  @media (min-width: 480px) {
-    width: calc(100vw - 2rem);
-  }
-
-  @media (min-width: 540px) {
-    width: calc(550px - 1.8rem);
-  }
-
-  @media (min-width: 768px) {
-    margin: 0.5rem 1rem;
-    padding: 0;
-    width: 270px;
-
-    img {
-      height: 220px !important;
-      width: 220px !important;
-    }
   }
 
   @media (min-width: 1300px) {
     h2 {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
+  }
+}
+
+.imagem {
+  align-items: center;
+  display: flex;
+  height: 100%;
+
+  img {
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.promo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 0 0.5rem;
+  width: 100%;
+
+  p {
+    color: colors.$text-secondary;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  svg {
+    color: colors.$text-secondary;
+  }
+}
+
+.promoI {
+  align-items: center;
+  animation: pisca 2s ease infinite;
+  background-color: colors.$background-primary;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+@keyframes pisca {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
 /*----- PREÇOS -----*/
 .precos {
+  align-self: flex-end;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 /* PREÇO PROMO */
 .precoPromo {
-  color: colors.$text-terceary;
+  color: gray;
   display: flex;
   font-size: 0.9rem;
 
@@ -116,19 +136,19 @@
   }
 
   @media (min-width: 1300px) {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 }
 
 /* PREÇO À VISTA */
 .precoVista {
-  color: colors.$background-terceary;
+  color: colors.$background-primary;
   font-size: 1.4rem;
   font-weight: 500;
-  margin: 0 0 0.5rem;
+  margin: 0;
 
   @media (min-width: 1300px) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -139,6 +159,6 @@
   margin: 0 0 0.5rem 0;
 
   @media (min-width: 1300px) {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 }

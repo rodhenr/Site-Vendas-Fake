@@ -1,9 +1,9 @@
-$widthDesktop: calc(0.15 * 100vw);
 @use "colors";
 
 /*---------- GERAL ----------*/
 .container {
   background-color: colors.$background-secondary;
+  font-family: "Montserrat";
   padding: 2.5rem 0 3rem;
   overflow: hidden;
 }
@@ -12,6 +12,7 @@ $widthDesktop: calc(0.15 * 100vw);
 .inicioTitulo {
   font-size: 1.3rem;
   margin: 0 1rem;
+  padding: 0 0 1rem;
 
   @media (min-width: 540px) {
     margin: 0 auto;
@@ -31,7 +32,7 @@ $widthDesktop: calc(0.15 * 100vw);
   }
 
   @media (min-width: 1600px) {
-    width: calc(1350px + 6rem);
+    width: calc(1000px + 1.5rem);
   }
 }
 
@@ -39,7 +40,7 @@ $widthDesktop: calc(0.15 * 100vw);
 .itens {
   align-self: start;
   display: grid;
-  gap: 3.5rem 1.5rem;
+  gap: 0.5rem;
   justify-content: center;
   justify-items: center;
   padding-bottom: 5rem;
@@ -53,14 +54,14 @@ $widthDesktop: calc(0.15 * 100vw);
   }
 
   @media (min-width: 970px) {
-    grid-template-columns: repeat(3, 270px);
+    grid-template-columns: repeat(3, 250px);
   }
 
   @media (min-width: 1300px) {
-    grid-template-columns: repeat(4, 270px);
+    grid-template-columns: repeat(4, 250px);
   }
 
   @media (min-width: 1600px) {
-    grid-template-columns: repeat(5, 270px);
+    grid-template-columns: repeat(4, 250px);
   }
 }

@@ -4,7 +4,6 @@ import itemsList from "../../listaItems/Index";
 import styles from "../../styles/ProdutosInicio.module.scss";
 
 function Index() {
-
   return (
     <main className={styles.container}>
       <h1 className={styles.inicioTitulo}>PROMOÇÕES</h1>
@@ -26,6 +25,7 @@ function Index() {
               promo={i.promo}
             />
           ))}
+        <button>VER MAIS</button>
       </div>
       <h1 className={styles.inicioTitulo}>EM DESTAQUE</h1>
       <div className={styles.itens}>
@@ -46,6 +46,7 @@ function Index() {
               promo={i.promo}
             />
           ))}
+        <button>VER MAIS</button>
       </div>
     </main>
   );

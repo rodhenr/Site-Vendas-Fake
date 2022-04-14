@@ -26,29 +26,24 @@ function NavDesktop({ numCart }: Props) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.containerLogin}>
-        <FontAwesomeIcon icon={faUser} />
-        <p>Minha Conta</p>
-      </div>
       <div className={styles.containerNavbar}>
         <div className={styles.navNomeCategoria}>
           <h1 className={styles.nomeLoja}>
             <Link href="/">PC Shop</Link>
           </h1>
-          <hr />
-          <div className={styles.categorias} onClick={changeOpen}>
-            <FontAwesomeIcon icon={faBars} />
-            <div>
-              <p>Compre por</p>
-              <p>DEPARTAMENTO</p>
-            </div>
-          </div>
         </div>
-        <Navbar open={open} changeOpen={changeOpen} />
+
         <div className={styles.busca}>
           <input type="text" placeholder="Digite o que você procura" />
           <div className={styles.buscaIcone}>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </div>
+        </div>
+        <div className={styles.containerLogin}>
+          <FontAwesomeIcon icon={faUser} />
+          <div>
+            <p>Olá, seja bem-vindo</p>
+            <p>Entrar</p>
           </div>
         </div>
         <div className={styles.carrinho}>
@@ -60,6 +55,34 @@ function NavDesktop({ numCart }: Props) {
           </Link>
         </div>
       </div>
+      <nav className={styles.navDesktop} onClick={changeOpen}>
+        <ul>
+          <li>
+            <Link href="/">TODOS DEPARTAMENTOS</Link>
+          </li>
+          <li>
+            <Link href="/placa-mae">PLACA-MÃE</Link>
+          </li>
+          <li>
+            <Link href="/processador">PROCESSADOR</Link>
+          </li>
+          <li>
+            <Link href="/placa-de-video">PLACA DE VÍDEO</Link>
+          </li>
+          <li>
+            <Link href="/fonte">FONTE</Link>
+          </li>
+          <li>
+            <Link href="/gabinete">GABINETE</Link>
+          </li>
+          <li>
+            <Link href="/memoria-ram">MEMÓRIA RAM</Link>
+          </li>
+          <li>
+            <Link href="/ssd">SSD</Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }

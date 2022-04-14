@@ -53,11 +53,16 @@
   }
 
   @media (min-width: 1400px) {
-    padding: 0 10rem;
+    justify-items: center;
+    display: grid;
+    gap: 0;
+    grid-template-columns: 0.3fr 0.8fr 0.5fr 0.1fr;
+    margin: 0 auto;
+    width: calc(1080px + 4.5rem);
   }
 
-  @media (min-width: 1800px) {
-    padding: 0 20rem;
+  @media (min-width: 1600px) {
+    width: calc(1000px + 1.5rem);
   }
 }
 
@@ -80,6 +85,15 @@
     }
   }
 
+  &:hover {
+    background-color: #000;
+    transition: 0.2s all ease;
+  }
+
+  &:not(hover) {
+    transition: 1s all ease;
+  }
+
   @media (min-width: 768px) {
     background-color: colors.$text-primary;
     margin-right: 0;
@@ -90,13 +104,8 @@
     }
   }
 
-  &:hover {
-    background-color: #000;
-    transition: 0.2s all ease;
-  }
-
-  &:not(hover) {
-    transition: 1s all ease;
+  @media (min-width: 1300px) {
+    padding: 0 10rem;
   }
 }
 
@@ -188,11 +197,11 @@
   color: colors.$text-secondary;
   font-family: "Audiowide", cursive;
   font-size: 1.6rem;
-  justify-self: center;
   margin: 0;
 
   @media (min-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    width: 150px;
   }
 }
 
@@ -202,13 +211,13 @@
   cursor: pointer;
   display: flex;
   gap: 0.6rem;
-  justify-content: end;
+  justify-content: center;
   padding-right: 0.6rem;
   position: relative;
 
   svg {
     color: colors.$text-secondary;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -230,7 +239,7 @@
   height: 19px;
   justify-content: center;
   position: absolute;
-  right: 2px;
+  right: -3px;
   top: -10px;
   width: 19px;
 
@@ -289,15 +298,14 @@
   }
 
   @media (min-width: 1024px) {
+    width: 100%;
+
     input {
-      width: 400px;
+      width: 100%;
     }
   }
 
   @media (min-width: 1300px) {
-    input {
-      width: 600px;
-    }
   }
 }
 
@@ -319,15 +327,14 @@
 /* LOGIN*/
 .containerLogin {
   align-items: center;
-  background: colors.$text-primary;
   display: flex;
   gap: 0.5rem;
-  height: 30px;
-  justify-content: end;
   padding: 0 2rem;
+  width: 100%;
 
   p {
     color: colors.$text-secondary;
+    font-size: 1rem;
     margin: 0;
   }
 
@@ -335,6 +342,26 @@
     color: colors.$text-secondary;
     cursor: pointer;
     font-size: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    justify-content: flex-end;
+    padding: 0 1.5rem;
+
+    p {
+      &:first-child {
+        font-size: 0.9rem;
+      }
+
+      &:last-child {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+    }
+
+    svg {
+      font-size: 1.4rem;
+    }
   }
 }
 
@@ -362,10 +389,57 @@
 
   svg {
     color: colors.$text-secondary;
-    font-size: 2rem;
   }
 
   @media (min-width: 768px) {
     position: relative;
+
+    svg {
+      font-size: 2rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    justify-self: start;
+    padding: 0 0 0 1.5rem;
+  }
+}
+
+.navDesktop {
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+
+  ul {
+    align-items: center;
+    justify-content: center;
+    background-color: colors.$text-primary;
+    display: flex;
+    margin: 0;
+  }
+
+  li {
+    border-left: 1px solid rgba(170, 170, 170, 0.322);
+    color: colors.$text-secondary;
+    cursor: pointer;
+    font-size: 0.8rem;
+    list-style: none;
+    height: 100%;
+    padding: 0.8rem 2rem;
+    text-align: center;
+
+    &:first-child {
+      border: none;
+    }
+
+    &:hover {
+      background-color: colors.$text-secondary;
+      transition: all 0.3s ease;
+
+      a {
+        color: colors.$background-primary;
+      }
+    }
   }
 }

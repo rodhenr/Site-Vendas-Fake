@@ -88,8 +88,10 @@ function Index() {
           </div>
         ) : (
           <>
-            <div className={styles.containerTeste}>
+            <div className={styles.titulo}>
               <h2>CARRINHO</h2>
+            </div>
+            <div className={styles.containerTeste}>
               {cartStore.map((i, key) => (
                 <Item
                   key={key}

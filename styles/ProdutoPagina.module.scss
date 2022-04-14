@@ -3,7 +3,7 @@
 /*---------- GERAL ----------*/
 .container {
   background-color: colors.$background-secondary;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   overflow: hidden;
   padding: 3.5rem 0 12rem;
 
@@ -19,25 +19,28 @@
     padding: 3rem calc(0.1 * 100vw);
   }
 
-  @media (min-width: 1600px) {
-    padding: 3rem calc(0.15 * 100vw);
+  @media (min-width: 1700px) {
+    padding: 3rem calc(0.21 * 100vw);
   }
 }
 
 /*----- CAMINHO -----*/
 .containerCaminho {
+  align-items: center;
   background-color: colors.$text-secondary;
+  border-bottom: 1px solid colors.$border-primary;
   display: none;
-  margin: 0 0 0.8rem;
   padding: 1rem;
   position: relative;
 
   svg {
+    font-size: 0.6rem;
     margin: 0 0.6rem;
   }
 
   span {
     cursor: pointer;
+    font-size: 0.8rem;
 
     &:before {
       bottom: 0;
@@ -58,82 +61,117 @@
   }
 
   @media (min-width: 768px) {
-    display: blcok;
+    display: flex;
+
+    span {
+      font-size: 0.66rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    span {
+      font-size: 0.75rem;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    span {
+      font-size: 0.8rem;
+    }
   }
 }
 
 /*----- PRODUTO -----*/
 .containerProduto {
   align-items: center;
-  background-color: colors.$text-primary;
-  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+  }
+}
+
+/* IMAGEM */
+.containerProdutoImagem {
+  background-color: colors.$text-secondary;
+  display: flex;
+  justify-content: center;
+}
+
+.containerImagemAdicional {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.imagemAdicional {
+  border: 1px solid colors.$background-secondary;
+  cursor: pointer;
+  height: 65px;
+  width: 50px;
+  position: relative;
+
+  img {
+    height: 65px !important;
+    width: 50px !important;
+  }
+}
+
+.produtoImagem {
+  padding: 1.5rem 1rem 0;
 
   img {
     height: 400px !important;
   }
 
-  @media (min-width: 768px) {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (min-width: 1024px) {
-    margin: 0 4rem;
-  }
-}
-
-/* IMAGEM */
-.produtoImagem {
-  padding: 1.5rem 1rem 0;
-
-  img {
-    height: 100% !important;
-    width: 100% !important;
-  }
-
   @media (min-width: 500px) {
     img {
-      height: 400px !important;
-      margin-top: 1rem !important;
+      height: 500px !important;
     }
   }
 
   @media (min-width: 768px) {
-    background-color: colors.$text-secondary;
     display: flex;
     justify-content: center;
+    gap: 1rem;
     padding: 2rem 0;
 
     img {
-      height: 100% !important;
+      height: 450px !important;
     }
   }
 
   @media (min-width: 1024px) {
     background-color: colors.$text-secondary;
   }
+}
 
-  @media (min-width: 1200px) {
-    img {
-      height: 450px !important;
-      width: 450px !important;
+.imagemPrincipal {
+  cursor: pointer;
+  overflow: hidden;
+
+  img {
+    &:hover {
+      transform: scale(1.5);
     }
   }
 }
 
 /* INFORMAÇÃO */
 .produtoInfo {
-  align-items: center;
+  align-items: flex-start;
+  background-color: colors.$text-primary;
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 0 0 1rem;
   width: 100%;
+
+  @media (min-width: 1024px) {
+    width: auto;
+  }
 }
 
 /* NOME */
@@ -150,71 +188,106 @@
   }
 }
 
-/*--- PREÇO/BOTÃO COMPRAR ---*/
-.containerPrecoComprar {
-  align-items: center;
+/*----- PRECO -----*/
+.produtoPreco {
   display: flex;
   flex-direction: column;
-  padding: 0 1rem 2rem;
-  width: 100%;
-
-  @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (min-width: 1024px) {
-    align-items: start;
-    display: flex;
-    padding: 1.5rem 1rem 3.5rem;
-  }
+  gap: 1rem;
+  padding: 0 1rem 1.5rem;
 }
 
-/* PRECO À VISTA*/
-.precoVista {
-  color: colors.$background-terceary;
-  font-size: 1.7rem;
-  margin: 0;
+/*--- CONTAINER DO PREÇO À VISTA ---*/
+.produtoVista {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
 
-  @media (min-width: 768px) {
+  svg {
+    color: colors.$background-terceary;
     font-size: 2rem;
   }
 }
 
-/* INFO EXTRA DO PREÇO À VISTA*/
-.precoVistaExtra {
+/* PREÇO À VISTA */
+.precoVista {
+  align-self: start;
   color: colors.$background-terceary;
-  font-size: 0.8rem;
-  margin: 0;
-  padding-bottom: 1rem;
-  text-align: center;
+  font-size: 1.4rem;
 
-  @media (min-width: 1024px) {
-    text-align: start;
+  p {
+    margin: 0;
+  }
+
+  p:last-child {
+    font-size: 0.7rem;
+  }
+
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/*--- CONTAINER DO PREÇO À PRAZO ---*/
+.produtoPrazo {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+
+  svg {
+    color: red;
+    font-size: 2rem;
+  }
+}
+
+/* PREÇO À PRAZO */
+.precoPrazo {
+  align-self: start;
+  color: red;
+  font-size: 1.4rem;
+
+  p {
+    margin: 0;
+  }
+
+  p:last-child {
+    font-size: 0.7rem;
+  }
+
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.5rem;
+    }
   }
 }
 
 /* BOTÃO DE COMPRAR */
 .comprar {
-  background-color: colors.$background-terceary;
-  border: none;
-  color: colors.$text-secondary;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
-  height: 60px;
+  padding: 1rem 1rem 0.5rem;
   width: 100%;
+
+  button {
+    background-color: colors.$background-terceary;
+    border: none;
+    color: colors.$text-secondary;
+    cursor: pointer;
+    font-size: 1.1rem;
+    height: 40px;
+    width: 100%;
+  }
 
   svg {
     padding-right: 1rem;
   }
 
   @media (min-width: 768px) {
-    width: 200px;
+    button {
+      width: 100%;
+    }
   }
 
   @media (min-width: 1024px) {
-    width: 100%;
   }
 }
 
@@ -260,35 +333,28 @@
 
 /*---- CONTAINER GERAL DA DESCRIÇÃO DO PRODUTO -----*/
 .produtoDescricao {
-  background-color: colors.$text-primary;
-  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+  background-color: colors.$text-secondary;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin: 3.5rem 0 0;
 
   p {
-    color: colors.$text-secondary;
+    color: colors.$text-primary;
     font-size: 0.8rem;
     margin: 0;
     text-align: justify;
-  }
-
-  @media (min-width: 1024px) {
-    margin: 2.5rem 4rem;
   }
 }
 
 /**/
 .desc {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 /* CONTAINER SOBRE/DESCRIÇÃO */
 .descricaoCima {
-  align-items: end;
+  align-items: flex-end;
   background-color: colors.$background-primary;
   color: colors.$text-secondary;
   cursor: pointer;
@@ -302,14 +368,14 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 0.4rem 1rem;
 
   svg {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   h1 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin: 0;
   }
 }
@@ -372,20 +438,28 @@
 
 /*----- VER MAIS -----*/
 .containerVerMais {
-  align-items: center;
   display: none;
-  flex-direction: column;
-  margin: 2rem auto 6rem;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 980px) {
+    align-items: center;
+    justify-content: center;
     display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0 3rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
   }
 }
 
 .itemVerMais {
   display: flex;
+  justify-content: center;
+  width: 100%;
 
-  @media (min-width: 1024px) {
-    width: calc(1080px + 4.5rem);
+  img {
+    height: 150px !important;
+    width: 150px !important;
   }
 }

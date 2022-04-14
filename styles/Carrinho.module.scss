@@ -27,7 +27,6 @@
     width: 900px;
 
     h2 {
-      grid-area: titulo;
       padding: 0;
     }
   }
@@ -55,7 +54,6 @@
 
     h2 {
       font-size: 3rem;
-      grid-area: titulo;
       padding: 0;
     }
   }
@@ -124,11 +122,15 @@
   }
 }
 
+.titulo {
+  grid-area: titulo;
+}
 .containerItem {
   background-color: colors.$text-secondary;
   border: 1px solid colors.$border-primary;
   box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
     0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075);
+  grid-area: item;
   margin-top: -1px;
   position: relative;
   overflow: hidden;

@@ -19,7 +19,7 @@ function VerMais() {
 
   function sortear() {
     let sorteados = randNum();
-    let novoArray: object[] = [];
+    let novoArray = [];
 
     for (let i = 0; i < sorteados.length; i++) {
       let num = sorteados[i];

@@ -29,6 +29,11 @@
   &:hover {
     opacity: 0.8;
   }
+
+  @media (min-width: 1600px) {
+    margin: 0 auto;
+    width: calc(1000px + 1.5rem);
+  }
 }
 
 /*----- BANNER DUPLO -----*/
@@ -49,7 +54,7 @@
   }
 
   @media (min-width: 1600px) {
-    width: calc(1350px + 6rem);
+    width: calc(1000px + 1.5rem);
   }
 }
 

@@ -27,7 +27,7 @@ function Navbar({ open, changeOpen }: Props) {
         </div>
       </div>
 
-      <nav>
+      <nav >
         <ul onClick={() => changeOpen()}>
           <li>
             <Link href="/placa-mae">Placa-Mãe</Link>

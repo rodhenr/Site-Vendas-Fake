@@ -7,6 +7,8 @@ import { addToCart } from "../../store/slices/cartSlice";
 import { updateTotalPrice } from "../../store/slices/newSlice";
 
 import styles from "../../styles/Item.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   categoria: string;
@@ -39,16 +41,35 @@ function Item(props: Props) {
 
   return (
     <div className={styles.container}>
-      <Link href={`/${categoria}/${pathName}`} passHref>
-        <Image src={img} alt="processador" height={200} width={200} />
-      </Link>
-      <hr />
-      <Link href={`/${categoria}/${pathName}`} passHref>
-        <h2>{name}</h2>
-      </Link>
-      <Preco pPrazo={pPrazo} promo={promo} />
+      {promo ? (
+        <div className={styles.promo}>
+          <div className={styles.promoI}>
+            <FontAwesomeIcon icon={faStar} />
+            <p>PROMOÇÃO!!</p>
+          </div>
+          <div className={styles.imagem}>
+            <Link href={`/${categoria}/${pathName}`} passHref>
+              <Image src={img} alt="processador" height={200} width={200} />
+            </Link>
+          </div>
+        </div>
+      ) : (
+        <div className={styles.imagem}>
+          <Link href={`/${categoria}/${pathName}`} passHref>
+            <Image src={img} alt="processador" height={200} width={200} />
+          </Link>
+        </div>
+      )}
 
-      <button onClick={handleClick}>COMPRAR</button>
+      <div className={styles.nome}>
+        <Link href={`/${categoria}/${pathName}`} passHref>
+          <h2>{name}</h2>
+        </Link>
+      </div>
+      <Preco pPrazo={pPrazo} promo={promo} />
+      <div className={styles.botaoComprar}>
+        <button onClick={handleClick}>COMPRAR</button>
+      </div>
     </div>
   );
 }
