@@ -7,7 +7,7 @@ function VerMais() {
   function randNum() {
     let numArray: number[] = [];
 
-    while (numArray.length < 4) {
+    while (numArray.length < 5) {
       let newNum: number = Math.floor(Math.random() * listaItens.length);
       if (!numArray.includes(newNum)) {
         numArray.push(newNum);
@@ -31,10 +31,11 @@ function VerMais() {
 
   return (
     <div className={styles.containerVerMais}>
-      <h1>Veja Também!</h1>
+      <h1>PRODUTOS RELACIONADOS</h1>
       <div className={styles.itemVerMais}>
         {sortear().map((i, key) => (
           <Item
+            modelo={i.modelo}
             key={key}
             img={i.img}
             name={i.name}

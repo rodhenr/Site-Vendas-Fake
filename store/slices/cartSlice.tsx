@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface Props {
+  modelo: string;
   categoria: string;
   fabricante: string;
   id: string;

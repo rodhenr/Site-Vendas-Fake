@@ -4,6 +4,7 @@ const listaItens = [
   {
     categoria: "processador",
     fabricante: "intel",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/intel1.jpg",
     garantia: "36 meses",
@@ -33,6 +34,7 @@ const listaItens = [
   {
     categoria: "processador",
     fabricante: "intel",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/intel2.jpg",
     garantia: "36 meses",
@@ -62,6 +64,7 @@ const listaItens = [
   {
     categoria: "processador",
     fabricante: "intel",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/intel3.jpg",
     garantia: "36 meses",
@@ -91,6 +94,7 @@ const listaItens = [
   {
     categoria: "processador",
     fabricante: "intel",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/intel4.jpg",
     garantia: "36 meses",
@@ -120,6 +124,7 @@ const listaItens = [
   {
     categoria: "processador",
     fabricante: "amd",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/amd1.jpg",
     garantia: "12 meses",
@@ -149,6 +154,7 @@ const listaItens = [
   {
     categoria: "processador",
     fabricante: "amd",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/amd2.jpg",
     garantia: "12 meses",
@@ -178,6 +184,7 @@ const listaItens = [
   {
     categoria: "processador",
     fabricante: "amd",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/amd3.jpg",
     garantia: "12 meses",
@@ -207,6 +214,7 @@ const listaItens = [
   {
     categoria: "processador",
     fabricante: "amd",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/amd4.jpg",
     garantia: "12 meses",
@@ -236,6 +244,7 @@ const listaItens = [
   {
     categoria: "fonte",
     fabricante: "gigabyte",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/fonte-gigabyte-p450b.jpg",
     garantia: "36 meses",
@@ -262,6 +271,7 @@ const listaItens = [
   {
     categoria: "fonte",
     fabricante: "xpg",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/fonte-xpg-650.jpg",
     garantia: "36 meses",
@@ -288,6 +298,7 @@ const listaItens = [
   {
     categoria: "fonte",
     fabricante: "xpg",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/fonte-xpg-850.jpg",
     garantia: "36 meses",
@@ -314,6 +325,7 @@ const listaItens = [
   {
     categoria: "fonte",
     fabricante: "gigabyte",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/fonte-gigabyte-p550b.jpg",
     garantia: "36 meses",
@@ -340,6 +352,7 @@ const listaItens = [
   {
     categoria: "fonte",
     fabricante: "xpg",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/fonte-xpg-750.jpg",
     garantia: "36 meses",
@@ -366,6 +379,7 @@ const listaItens = [
   {
     categoria: "fonte",
     fabricante: "blue case",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/fonte-bluecase-230.jpg",
     garantia: "36 meses",
@@ -392,6 +406,7 @@ const listaItens = [
   {
     categoria: "placa-de-video",
     fabricante: "zotac",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gpu-rtx-2060.jpg",
     garantia: "24 meses",
@@ -420,6 +435,7 @@ const listaItens = [
   {
     categoria: "placa-de-video",
     fabricante: "zotac",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gpu-rtx-3050.jpg",
     garantia: "24 meses",
@@ -448,6 +464,7 @@ const listaItens = [
   {
     categoria: "placa-de-video",
     fabricante: "pc yes",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gpu-rx-550.jpg",
     garantia: "24 meses",
@@ -476,6 +493,7 @@ const listaItens = [
   {
     categoria: "placa-de-video",
     fabricante: "zotac",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gpu-rtx-3060ti.jpg",
     garantia: "24 meses",
@@ -504,6 +522,7 @@ const listaItens = [
   {
     categoria: "placa-de-video",
     fabricante: "sapphire",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gpu-rx-6500xt.jpg",
     garantia: "24 meses",
@@ -532,6 +551,7 @@ const listaItens = [
   {
     categoria: "placa-de-video",
     fabricante: "sapphire",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gpu-rx-6600xt.jpg",
     garantia: "24 meses",
@@ -560,6 +580,7 @@ const listaItens = [
   {
     categoria: "placa-mae",
     fabricante: "Asrock",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/placa-mae-asrock-b450m.jpg",
     garantia: "12 meses",
@@ -586,6 +607,7 @@ const listaItens = [
   {
     categoria: "placa-mae",
     fabricante: "Msi",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/placa-mae-msi-b450m.jpg",
     garantia: "12 meses",
@@ -611,6 +633,7 @@ const listaItens = [
   {
     categoria: "placa-mae",
     fabricante: "Asus",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/placa-mae-asus-b550m.jpg",
     garantia: "12 meses",
@@ -636,6 +659,7 @@ const listaItens = [
   {
     categoria: "placa-mae",
     fabricante: "Gigabyte",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/placa-mae-asus-h510m.jpg",
     garantia: "12 meses",
@@ -661,6 +685,7 @@ const listaItens = [
   {
     categoria: "placa-mae",
     fabricante: "Asus",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/placa-mae-asus-h510m.jpg",
     garantia: "12 meses",
@@ -687,6 +712,7 @@ const listaItens = [
   {
     categoria: "placa-mae",
     fabricante: "Gigabyte",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/placa-mae-gigabyte-b560m.jpg",
     garantia: "12 meses",
@@ -714,6 +740,7 @@ const listaItens = [
   {
     categoria: "gabinete",
     fabricante: "Husky",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gabinete-husky-polar.jpg",
     garantia: "12 meses",
@@ -742,6 +769,7 @@ const listaItens = [
   {
     categoria: "gabinete",
     fabricante: "Sharkoon",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gabinete-sharkoon.jpg",
     garantia: "12 meses",
@@ -770,6 +798,7 @@ const listaItens = [
   {
     categoria: "gabinete",
     fabricante: "Redragon",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gabinete-redragon.jpg",
     garantia: "12 meses",
@@ -798,6 +827,7 @@ const listaItens = [
   {
     categoria: "gabinete",
     fabricante: "Fortrek",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gabinete-fortrek.jpg",
     garantia: "12 meses",
@@ -825,6 +855,7 @@ const listaItens = [
   {
     categoria: "gabinete",
     fabricante: "Sharkoon",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gabinete-sharkoon-vs7.jpg",
     garantia: "12 meses",
@@ -852,6 +883,7 @@ const listaItens = [
   {
     categoria: "gabinete",
     fabricante: "Corsair",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gabinete-corsair.jpg",
     garantia: "12 meses",
@@ -880,6 +912,7 @@ const listaItens = [
   {
     categoria: "ssd",
     fabricante: "Crucial",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/ssd-crucial-240.jpg",
     garantia: "12 meses",
@@ -908,6 +941,7 @@ const listaItens = [
   {
     categoria: "ssd",
     fabricante: "Kingston",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/ssd-kingston-500.jpg",
     garantia: "12 meses",
@@ -936,6 +970,7 @@ const listaItens = [
   {
     categoria: "ssd",
     fabricante: "Husky",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/ssd-husky-128.jpg",
     garantia: "12 meses",
@@ -964,6 +999,7 @@ const listaItens = [
   {
     categoria: "ssd",
     fabricante: "WD",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/ssd-wd-480.jpg",
     garantia: "12 meses",
@@ -992,6 +1028,7 @@ const listaItens = [
   {
     categoria: "ssd",
     fabricante: "WD",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/ssd-wd-2tb.jpg",
     garantia: "12 meses",
@@ -1020,6 +1057,7 @@ const listaItens = [
   {
     categoria: "ssd",
     fabricante: "XPG",
+    modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/ssd-xpg-1tb.jpg",
     garantia: "12 meses",

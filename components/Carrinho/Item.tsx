@@ -6,7 +6,12 @@ import { removeFromCart } from "../../store/slices/cartSlice";
 import { updateTotalPrice, deleteItem } from "../../store/slices/newSlice";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faMinus, faXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faStar,
+  faPlus,
+  faMinus,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
 import styles from "../../styles/Carrinho.module.scss";
 
 interface Props {
@@ -78,14 +83,14 @@ function Item({ id, img, name, pPrazo, promo }: Props) {
 
   return (
     <div className={styles.containerItem}>
-      {width < 1024 ? (
+      {width < 900 ? (
         <>
           <div className={styles.item}>
             <div className={styles.itemImagem}>
               <Image src={img} alt="" height={1000} width={1000} />
             </div>
             <div className={styles.itemDescricao}>
-              <p>{`${name.slice(0,85)}...`}</p>
+              <p>{`${name.slice(0, 85)}...`}</p>
             </div>
             <div
               onClick={() => handleDelete(id)}
@@ -106,15 +111,27 @@ function Item({ id, img, name, pPrazo, promo }: Props) {
             </div>
             <div className={styles.itemPrecos}>
               {promo ? (
-                <p>
-                  {(itemQtde * pPrazo * 0.7).toLocaleString("pt-BR", {
-                    minimumFractionDigits: 2,
-                    style: "currency",
-                    currency: "BRL",
-                  })}
-                </p>
+                <div className={styles.containerPromo}>
+                  <div className={styles.promo}>
+                    <p>PROMOÇÃO</p>
+                  </div>
+                  <p className={styles.precoNormal}>
+                    {(itemQtde * pPrazo * 0.7).toLocaleString("pt-BR", {
+                      minimumFractionDigits: 2,
+                      style: "currency",
+                      currency: "BRL",
+                    })}
+                  </p>
+                  <p className={styles.promoValor}>
+                    {(itemQtde * pPrazo * 0.7).toLocaleString("pt-BR", {
+                      minimumFractionDigits: 2,
+                      style: "currency",
+                      currency: "BRL",
+                    })}
+                  </p>
+                </div>
               ) : (
-                <p>
+                <p className={styles.precoSemPromo}>
                   {(itemQtde * pPrazo * 0.85).toLocaleString("pt-BR", {
                     minimumFractionDigits: 2,
                     style: "currency",
@@ -131,7 +148,7 @@ function Item({ id, img, name, pPrazo, promo }: Props) {
             <Image src={img} alt="" height={1000} width={1000} />
           </div>
           <div className={styles.itemDescricao}>
-            <p>{name}</p>
+            <p>{`${name.slice(0, 85)}...`}</p>
           </div>
           <div className={styles.itemAcoes}>
             <button onClick={aumentarQtde}>
@@ -142,25 +159,46 @@ function Item({ id, img, name, pPrazo, promo }: Props) {
               <FontAwesomeIcon icon={faMinus} />
             </button>
           </div>
-          <div className={styles.itemPrecos}>
-            {promo ? (
-              <p>
-                {(itemQtde * pPrazo * 0.7).toLocaleString("pt-BR", {
-                  minimumFractionDigits: 2,
-                  style: "currency",
-                  currency: "BRL",
-                })}
-              </p>
-            ) : (
-              <p>
-                {(itemQtde * pPrazo * 0.85).toLocaleString("pt-BR", {
-                  minimumFractionDigits: 2,
-                  style: "currency",
-                  currency: "BRL",
-                })}
-              </p>
-            )}
-          </div>
+
+          {promo ? (
+            <>
+              <div className={styles.promo}>
+                <p>PROMOÇÃO</p>
+              </div>
+              <div className={styles.itemPrecos}>
+                <div className={styles.containerPromo}>
+                  <p className={styles.precoNormal}>
+                    {(itemQtde * pPrazo * 0.7).toLocaleString("pt-BR", {
+                      minimumFractionDigits: 2,
+                      style: "currency",
+                      currency: "BRL",
+                    })}
+                  </p>
+                  <p className={styles.promoValor}>
+                    {(itemQtde * pPrazo * 0.7).toLocaleString("pt-BR", {
+                      minimumFractionDigits: 2,
+                      style: "currency",
+                      currency: "BRL",
+                    })}
+                  </p>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+            <div></div>
+              <div className={styles.itemPrecos}>
+                <p className={styles.precoSemPromo}>
+                  {(itemQtde * pPrazo * 0.85).toLocaleString("pt-BR", {
+                    minimumFractionDigits: 2,
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
+              </div>
+            </>
+          )}
+
           <div onClick={() => handleDelete(id)} className={styles.itemDeletar}>
             <FontAwesomeIcon icon={faXmark} />
           </div>

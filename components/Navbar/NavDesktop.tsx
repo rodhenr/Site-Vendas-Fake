@@ -58,9 +58,6 @@ function NavDesktop({ numCart }: Props) {
       <nav className={styles.navDesktop} onClick={changeOpen}>
         <ul>
           <li>
-            <Link href="/">TODOS DEPARTAMENTOS</Link>
-          </li>
-          <li>
             <Link href="/placa-mae">PLACA-MÃE</Link>
           </li>
           <li>
@@ -80,6 +77,12 @@ function NavDesktop({ numCart }: Props) {
           </li>
           <li>
             <Link href="/ssd">SSD</Link>
+          </li>
+          <li>
+            <Link href="/ssd">PC GAMER</Link>
+          </li>
+          <li>
+            <Link href="/ssd">PERIFÉRICOS</Link>
           </li>
         </ul>
       </nav>

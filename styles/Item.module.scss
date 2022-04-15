@@ -1,16 +1,15 @@
 @use "colors";
 
-/*----- GERAL -----*/
+/*---------------------------GERAL---------------------------*/
 .container {
   align-items: center;
-  justify-items: center;
-  background-color: colors.$text-secondary;
-  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
-  display: grid;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
   font-family: "Montserrat", sans-serif;
-  grid-template-rows: 245px 80px 75px 40px;
+  gap: 1rem;
+  justify-items: center;
+  position: relative;
   width: 100%;
 
   p {
@@ -19,148 +18,81 @@
   }
 }
 
-.botaoComprar {
-  width: 100%;
-
-  button {
-    background-color: colors.$background-terceary;
-    border: none;
-    color: colors.$text-secondary;
-    cursor: pointer;
-    font-size: 1.2rem;
-    height: 40px;
-    width: 100%;
-
-    &:hover {
-      background-color: #447b30;
-    }
-  }
-}
-
-.nome {
-  align-self: flex-start;
-  border-top: 1px solid colors.$background-secondary;
-  padding-top: 1rem;
-  width: 100%;
-
-  h2 {
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: 400;
-    margin: 0;
-    padding: 0 0.6rem;
-    text-align: justify;
-  }
-
-  @media (min-width: 1300px) {
-    h2 {
-      font-size: 0.8rem;
-    }
-  }
-}
-
+/*-----------------IMAGEM-----------------*/
 .imagem {
   align-items: center;
   display: flex;
   height: 100%;
-
-  img {
-    cursor: pointer;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
+  position: relative;
+  height: 180px;
+  width: 180px;
 }
-
+/*-----------------PROMO-----------------*/
 .promo {
   align-items: center;
+  background-color: colors.$text-terceary;
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 0 0 0.5rem;
-  width: 100%;
+  height: 20px;
+  justify-content: center;
+  left: 5px;
+  position: absolute;
+  top: 5px;
+  width: 100px;
+  z-index: 100;
 
   p {
     color: colors.$text-secondary;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     margin: 0;
   }
-
-  svg {
-    color: colors.$text-secondary;
-  }
 }
 
-.promoI {
-  align-items: center;
-  animation: pisca 2s ease infinite;
-  background-color: colors.$background-primary;
-  display: flex;
-  height: 30px;
-  justify-content: center;
+/*-----------------NOME-----------------*/
+.nome {
+  font-family: "Poppins";
+  height: 100px;
+  padding: 0 0.5rem;
+  text-align: center;
   width: 100%;
-}
 
-@keyframes pisca {
-  0% {
-    opacity: 0;
-  }
-  45% {
-    opacity: 100;
-  }
-  100% {
-    opacity: 0;
+  h2 {
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin: 0;
   }
 }
 
-/*----- PREÇOS -----*/
-.precos {
-  align-self: flex-end;
+/*---PRECO---*/
+.produtoPreco {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  height: 80px;
 }
 
-/* PREÇO PROMO */
-.precoPromo {
-  color: gray;
+.containerPrecos {
+  align-items: center;
   display: flex;
-  font-size: 0.9rem;
+  gap: 0.5rem;
+  justify-content: center;
+}
 
-  p:first-child {
-    margin: 0 0 0.2rem;
-    text-decoration: line-through;
+.precoPrazo {
+  color: colors.$text-terceary;
+  font-size: 1.35rem;
+  padding-bottom: 0.2rem;
+
+  p {
+    margin: 0;
   }
+}
 
-  p:last-child {
+.precoDetalhe {
+  color: colors.$text-primary;
+  font-size: 0.7rem;
+
+  p {
     margin: 0;
     padding: 0;
-  }
-
-  @media (min-width: 1300px) {
-    font-size: 0.7rem;
-  }
-}
-
-/* PREÇO À VISTA */
-.precoVista {
-  color: colors.$background-primary;
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin: 0;
-
-  @media (min-width: 1300px) {
-    font-size: 1.3rem;
-  }
-}
-
-/* PREÇO À PRAZO */
-.precoPrazo {
-  color: colors.$text-primary;
-  font-size: 0.8rem;
-  margin: 0 0 0.5rem 0;
-
-  @media (min-width: 1300px) {
-    font-size: 0.7rem;
+    text-align: center;
   }
 }

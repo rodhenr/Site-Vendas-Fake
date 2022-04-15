@@ -7,7 +7,7 @@ interface Props {
 function Parcelamento({ pPrazo }: Props) {
   return (
     <div>
-      <div className={styles.parcelamentoOpcoes}>
+      <div className={styles.parcelamento}>
         <p>
           1x de{" "}
           <span>

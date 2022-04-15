@@ -2,7 +2,6 @@
 
 /*---------- GERAL ----------*/
 .container {
-  background-color: colors.$background-secondary;
   font-family: "Montserrat", sans-serif;
   padding-bottom: 15rem;
   margin: 0;
@@ -23,11 +22,7 @@
   }
 
   @media (min-width: 1500px) {
-    margin: 0 calc(0.1 * 100vw) + 1;
-  }
-
-  @media (min-width: 1600px) {
-    margin: 0 calc(0.15 * 100vw) + 1;
+    margin: 0 calc(0.08 * 100vw) + 1;
   }
 }
 
@@ -52,12 +47,16 @@
   @media (min-width: 1300px) {
     width: calc(1000px + 1.5rem);
   }
+
+  @media (min-width: 1500px) {
+    width: calc(1200px + 2rem);
+  }
 }
 
 /*----- FILTRO -----*/
 .containerFiltro {
   align-items: center;
-  background: colors.$text-secondary;
+  background: colors.$border-primary;
   border-radius: 5px;
   display: flex;
   gap: 0.7rem;
@@ -78,6 +77,10 @@
 
   @media (min-width: 1300px) {
     width: calc(1000px + 1.5rem);
+  }
+
+  @media (min-width: 1500px) {
+    width: calc(1200px + 2rem);
   }
 }
 
@@ -175,5 +178,9 @@
 
   @media (min-width: 1300px) {
     grid-template-columns: repeat(4, 250px);
+  }
+
+  @media (min-width: 1500px) {
+    grid-template-columns: repeat(5, 240px);
   }
 }

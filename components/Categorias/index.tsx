@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Navbar from "../Navbar/Index";
 import Footer from "../Informacoes/Index";
 import Filtro from "./Filtro";
+import FiltroLateral from "./FiltroLateral";
 import itemsList from "../../listaItems/Index";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -65,6 +66,9 @@ function Index() {
               </div>
             </div>
           </div>
+        </div>
+        <div>
+          <FiltroLateral />
         </div>
         <Filtro filtro={filtro} />
       </div>

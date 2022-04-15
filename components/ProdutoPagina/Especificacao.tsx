@@ -1,7 +1,7 @@
 import styles from "../../styles/ProdutoPagina.module.scss";
 
 interface Props {
-  specs: object[];
+  specs: Array<any>;
 }
 
 function Especificacao({ specs }: Props) {
@@ -9,7 +9,6 @@ function Especificacao({ specs }: Props) {
     <div className={styles.containerEspec}>
       {specs.map((i, key) => {
         let a = Object.entries(i);
-        console.log(a[0][1]);
 
         return (
           <div key={key} className={styles.especDesc}>
