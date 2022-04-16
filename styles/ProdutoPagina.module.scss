@@ -76,7 +76,7 @@
 /*-----------------PRODUTO-----------------*/
 .containerProduto {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   width: 100%;
 }
 
@@ -113,10 +113,10 @@
 
 .imagemPrincipal {
   cursor: pointer;
-  height: 550px;
+  height: 600px;
   overflow: hidden;
   position: relative;
-  width: 550px;
+  width: 600px;
 }
 
 /*---PROMO---*/
@@ -215,7 +215,7 @@
 
 .precoDetalhe {
   color: colors.$text-primary;
-  padding: 0 3rem;
+  padding: 0 1rem;
   text-align: center;
 
   p {
@@ -273,8 +273,8 @@
 
 /*---COMPRAR---*/
 .comprar {
-  display: grid;
-  grid-template-columns: 0.3fr 1.3fr;
+  display: flex;
+  gap: 0.75rem;
   padding-top: 1.3rem;
   text-align: center;
 
@@ -283,8 +283,10 @@
     border: none;
     color: colors.$text-secondary;
     cursor: pointer;
+    font-family: "Poppins";
     font-size: 1.1rem;
-    height: 52px;
+    height: 50px;
+    width: 100%;
   }
 }
 
@@ -321,21 +323,31 @@
 
 /*----- ESPECIFICAÇAÇÕES -----*/
 .containerEspec {
-  padding: 1rem 0rem;
+  font-family: "Poppins";
+  padding: 3.45rem 0rem 6.5rem;
+}
+
+.espec {
+  padding-bottom: 0.875rem;
+
+  h1 {
+    font-size: 0.875rem;
+    margin: 0;
+    padding-bottom: 0.3rem;
+  }
 }
 
 .especDesc {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  padding: 1rem 0 0;
 
   p {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
+    font-weight: 300;
     margin: 0;
   }
 }
-
 /*----- VER MAIS -----*/
 .containerVerMais {
   display: none;

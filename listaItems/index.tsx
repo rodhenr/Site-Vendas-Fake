@@ -16,19 +16,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Número_de_núcleos: "4" },
-      { Nº_de_threads: "8" },
-      { Frequência_baseada_em_processador: "3.70 GHz" },
-      { Frequência_turbo_max: "4.40 GHz" },
-      { Cache: "6 MB Intel Smart Cache" },
-      { TDP: "65 W" },
-      { Tamanho_máximo_de_memória: "128 GB" },
-      { Tipos_de_memória: "DDR4-2666" },
-      { Nº_máximo_de_canais_de_memória: "2" },
-      { Gráficos_UHD_Intel: "630" },
-      { Resolução_máxima: "4096 x 2304@60Hz" },
-      { Nº_de_monitores_aceitos: "3" },
-      { Soquetes_suportados: "FCLGA1200" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -46,19 +102,75 @@ const listaItens = [
     destaque: false,
     promo: true,
     specs: [
-      { Número_de_núcleos: "4" },
-      { Nº_de_threads: "8" },
-      { Frequência_baseada_em_processador: "3.70 GHz" },
-      { Frequência_turbo_max: "4.40 GHz" },
-      { Cache: "6 MB Intel Smart Cache" },
-      { TDP: "65 W" },
-      { Tamanho_máximo_de_memória: "128 GB" },
-      { Tipos_de_memória: "DDR4-2666" },
-      { Nº_máximo_de_canais_de_memória: "2" },
-      { Gráficos_UHD_Intel: "630" },
-      { Resolução_máxima: "4096 x 2304@60Hz" },
-      { Nº_de_monitores_aceitos: "3" },
-      { Soquetes_suportados: "FCLGA1200" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -76,19 +188,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Número_de_núcleos: "4" },
-      { Nº_de_threads: "8" },
-      { Frequência_baseada_em_processador: "3.70 GHz" },
-      { Frequência_turbo_max: "4.40 GHz" },
-      { Cache: "6 MB Intel Smart Cache" },
-      { TDP: "65 W" },
-      { Tamanho_máximo_de_memória: "128 GB" },
-      { Tipos_de_memória: "DDR4-2666" },
-      { Nº_máximo_de_canais_de_memória: "2" },
-      { Gráficos_UHD_Intel: "630" },
-      { Resolução_máxima: "4096 x 2304@60Hz" },
-      { Nº_de_monitores_aceitos: "3" },
-      { Soquetes_suportados: "FCLGA1200" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -106,19 +274,75 @@ const listaItens = [
     destaque: false,
     promo: true,
     specs: [
-      { Número_de_núcleos: "4" },
-      { Nº_de_threads: "8" },
-      { Frequência_baseada_em_processador: "3.70 GHz" },
-      { Frequência_turbo_max: "4.40 GHz" },
-      { Cache: "6 MB Intel Smart Cache" },
-      { TDP: "65 W" },
-      { Tamanho_máximo_de_memória: "128 GB" },
-      { Tipos_de_memória: "DDR4-2666" },
-      { Nº_máximo_de_canais_de_memória: "2" },
-      { Gráficos_UHD_Intel: "630" },
-      { Resolução_máxima: "4096 x 2304@60Hz" },
-      { Nº_de_monitores_aceitos: "3" },
-      { Soquetes_suportados: "FCLGA1200" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -136,19 +360,75 @@ const listaItens = [
     destaque: false,
     promo: true,
     specs: [
-      { Número_de_núcleos: "4" },
-      { Nº_de_threads: "8" },
-      { Frequência_baseada_em_processador: "3.70 GHz" },
-      { Frequência_turbo_max: "4.40 GHz" },
-      { Cache: "6 MB Intel Smart Cache" },
-      { TDP: "65 W" },
-      { Tamanho_máximo_de_memória: "128 GB" },
-      { Tipos_de_memória: "DDR4-2666" },
-      { Nº_máximo_de_canais_de_memória: "2" },
-      { Gráficos_UHD_Intel: "630" },
-      { Resolução_máxima: "4096 x 2304@60Hz" },
-      { Nº_de_monitores_aceitos: "3" },
-      { Soquetes_suportados: "FCLGA1200" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -166,19 +446,75 @@ const listaItens = [
     destaque: false,
     promo: true,
     specs: [
-      { Número_de_núcleos: "4" },
-      { Nº_de_threads: "8" },
-      { Frequência_baseada_em_processador: "3.70 GHz" },
-      { Frequência_turbo_max: "4.40 GHz" },
-      { Cache: "6 MB Intel Smart Cache" },
-      { TDP: "65 W" },
-      { Tamanho_máximo_de_memória: "128 GB" },
-      { Tipos_de_memória: "DDR4-2666" },
-      { Nº_máximo_de_canais_de_memória: "2" },
-      { Gráficos_UHD_Intel: "630" },
-      { Resolução_máxima: "4096 x 2304@60Hz" },
-      { Nº_de_monitores_aceitos: "3" },
-      { Soquetes_suportados: "FCLGA1200" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -196,19 +532,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Número_de_núcleos: "4" },
-      { Nº_de_threads: "8" },
-      { Frequência_baseada_em_processador: "3.70 GHz" },
-      { Frequência_turbo_max: "4.40 GHz" },
-      { Cache: "6 MB Intel Smart Cache" },
-      { TDP: "65 W" },
-      { Tamanho_máximo_de_memória: "128 GB" },
-      { Tipos_de_memória: "DDR4-2666" },
-      { Nº_máximo_de_canais_de_memória: "2" },
-      { Gráficos_UHD_Intel: "630" },
-      { Resolução_máxima: "4096 x 2304@60Hz" },
-      { Nº_de_monitores_aceitos: "3" },
-      { Soquetes_suportados: "FCLGA1200" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -226,19 +618,75 @@ const listaItens = [
     destaque: false,
     promo: false,
     specs: [
-      { Número_de_núcleos: "4" },
-      { Nº_de_threads: "8" },
-      { Frequência_baseada_em_processador: "3.70 GHz" },
-      { Frequência_turbo_max: "4.40 GHz" },
-      { Cache: "6 MB Intel Smart Cache" },
-      { TDP: "65 W" },
-      { Tamanho_máximo_de_memória: "128 GB" },
-      { Tipos_de_memória: "DDR4-2666" },
-      { Nº_máximo_de_canais_de_memória: "2" },
-      { Gráficos_UHD_Intel: "630" },
-      { Resolução_máxima: "4096 x 2304@60Hz" },
-      { Nº_de_monitores_aceitos: "3" },
-      { Soquetes_suportados: "FCLGA1200" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -255,17 +703,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Marca: "Gigabyte" },
-      { Modelo: "28200-P450B-1BRR" },
-      { PFC: "PFC ativo (> 0,9 típico)" },
-      { Tensão_de_entrada: "100-240 Vac (gama completa)" },
-      { Corrente_de_entrada: "8-4 A" },
-      { Frequência_de_entrada: "60-50 Hz" },
-      { Capacidade_de_saída: "450W" },
-      { OITENTA_PLUS: "Bronze" },
-      { Eficiência: "85% em carga típica" },
-      { Dimensões: "150 x 140 x 86 mm" },
-      { Peso: "1912 gramas (bruto com embalagem)" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -282,17 +788,75 @@ const listaItens = [
     destaque: false,
     promo: false,
     specs: [
-      { Marca: "Gigabyte" },
-      { Modelo: "28200-P450B-1BRR" },
-      { PFC: "PFC ativo (> 0,9 típico)" },
-      { Tensão_de_entrada: "100-240 Vac (gama completa)" },
-      { Corrente_de_entrada: "8-4 A" },
-      { Frequência_de_entrada: "60-50 Hz" },
-      { Capacidade_de_saída: "450W" },
-      { OITENTA_PLUS: "Bronze" },
-      { Eficiência: "85% em carga típica" },
-      { Dimensões: "150 x 140 x 86 mm" },
-      { Peso: "1912 gramas (bruto com embalagem)" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -309,17 +873,75 @@ const listaItens = [
     destaque: false,
     promo: true,
     specs: [
-      { Marca: "Gigabyte" },
-      { Modelo: "28200-P450B-1BRR" },
-      { PFC: "PFC ativo (> 0,9 típico)" },
-      { Tensão_de_entrada: "100-240 Vac (gama completa)" },
-      { Corrente_de_entrada: "8-4 A" },
-      { Frequência_de_entrada: "60-50 Hz" },
-      { Capacidade_de_saída: "450W" },
-      { OITENTA_PLUS: "Bronze" },
-      { Eficiência: "85% em carga típica" },
-      { Dimensões: "150 x 140 x 86 mm" },
-      { Peso: "1912 gramas (bruto com embalagem)" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -336,17 +958,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Marca: "Gigabyte" },
-      { Modelo: "28200-P450B-1BRR" },
-      { PFC: "PFC ativo (> 0,9 típico)" },
-      { Tensão_de_entrada: "100-240 Vac (gama completa)" },
-      { Corrente_de_entrada: "8-4 A" },
-      { Frequência_de_entrada: "60-50 Hz" },
-      { Capacidade_de_saída: "450W" },
-      { OITENTA_PLUS: "Bronze" },
-      { Eficiência: "85% em carga típica" },
-      { Dimensões: "150 x 140 x 86 mm" },
-      { Peso: "1912 gramas (bruto com embalagem)" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -363,17 +1043,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Marca: "Gigabyte" },
-      { Modelo: "28200-P450B-1BRR" },
-      { PFC: "PFC ativo (> 0,9 típico)" },
-      { Tensão_de_entrada: "100-240 Vac (gama completa)" },
-      { Corrente_de_entrada: "8-4 A" },
-      { Frequência_de_entrada: "60-50 Hz" },
-      { Capacidade_de_saída: "450W" },
-      { OITENTA_PLUS: "Bronze" },
-      { Eficiência: "85% em carga típica" },
-      { Dimensões: "150 x 140 x 86 mm" },
-      { Peso: "1912 gramas (bruto com embalagem)" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -390,17 +1128,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Marca: "Gigabyte" },
-      { Modelo: "28200-P450B-1BRR" },
-      { PFC: "PFC ativo (> 0,9 típico)" },
-      { Tensão_de_entrada: "100-240 Vac (gama completa)" },
-      { Corrente_de_entrada: "8-4 A" },
-      { Frequência_de_entrada: "60-50 Hz" },
-      { Capacidade_de_saída: "450W" },
-      { OITENTA_PLUS: "Bronze" },
-      { Eficiência: "85% em carga típica" },
-      { Dimensões: "150 x 140 x 86 mm" },
-      { Peso: "1912 gramas (bruto com embalagem)" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -418,18 +1214,75 @@ const listaItens = [
     destaque: false,
     promo: true,
     specs: [
-      { Marca: "Zotac" },
-      { Modelo: "ZT-T20600H-10M" },
-      { Núcleos_CUDA: "1920" },
-      { Clock_Boost: "1680 MHz" },
-      { Capacidade: "6GB GDDR5" },
-      { Barramento: "192 bits" },
-      { PCI_Express: "3.0" },
-      { Resfriamento: "Ventilador duplo" },
-      { Dimensões: "209.6 x 119.3 x 41mm" },
-      { Fonte_de_Alimentação_Recomendada: "500W" },
-      { Consumo_de_Energia: "160W" },
-      { Entrada_de_Energia: "8 pinos" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -447,18 +1300,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Marca: "Zotac" },
-      { Modelo: "ZT-T20600H-10M" },
-      { Núcleos_CUDA: "1920" },
-      { Clock_Boost: "1680 MHz" },
-      { Capacidade: "6GB GDDR5" },
-      { Barramento: "192 bits" },
-      { PCI_Express: "3.0" },
-      { Resfriamento: "Ventilador duplo" },
-      { Dimensões: "209.6 x 119.3 x 41mm" },
-      { Fonte_de_Alimentação_Recomendada: "500W" },
-      { Consumo_de_Energia: "160W" },
-      { Entrada_de_Energia: "8 pinos" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -476,18 +1386,75 @@ const listaItens = [
     destaque: false,
     promo: true,
     specs: [
-      { Marca: "Zotac" },
-      { Modelo: "ZT-T20600H-10M" },
-      { Núcleos_CUDA: "1920" },
-      { Clock_Boost: "1680 MHz" },
-      { Capacidade: "6GB GDDR5" },
-      { Barramento: "192 bits" },
-      { PCI_Express: "3.0" },
-      { Resfriamento: "Ventilador duplo" },
-      { Dimensões: "209.6 x 119.3 x 41mm" },
-      { Fonte_de_Alimentação_Recomendada: "500W" },
-      { Consumo_de_Energia: "160W" },
-      { Entrada_de_Energia: "8 pinos" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -505,18 +1472,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Marca: "Zotac" },
-      { Modelo: "ZT-T20600H-10M" },
-      { Núcleos_CUDA: "1920" },
-      { Clock_Boost: "1680 MHz" },
-      { Capacidade: "6GB GDDR5" },
-      { Barramento: "192 bits" },
-      { PCI_Express: "3.0" },
-      { Resfriamento: "Ventilador duplo" },
-      { Dimensões: "209.6 x 119.3 x 41mm" },
-      { Fonte_de_Alimentação_Recomendada: "500W" },
-      { Consumo_de_Energia: "160W" },
-      { Entrada_de_Energia: "8 pinos" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -534,18 +1558,75 @@ const listaItens = [
     destaque: false,
     promo: true,
     specs: [
-      { Marca: "Zotac" },
-      { Modelo: "ZT-T20600H-10M" },
-      { Núcleos_CUDA: "1920" },
-      { Clock_Boost: "1680 MHz" },
-      { Capacidade: "6GB GDDR5" },
-      { Barramento: "192 bits" },
-      { PCI_Express: "3.0" },
-      { Resfriamento: "Ventilador duplo" },
-      { Dimensões: "209.6 x 119.3 x 41mm" },
-      { Fonte_de_Alimentação_Recomendada: "500W" },
-      { Consumo_de_Energia: "160W" },
-      { Entrada_de_Energia: "8 pinos" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -563,18 +1644,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Marca: "Zotac" },
-      { Modelo: "ZT-T20600H-10M" },
-      { Núcleos_CUDA: "1920" },
-      { Clock_Boost: "1680 MHz" },
-      { Capacidade: "6GB GDDR5" },
-      { Barramento: "192 bits" },
-      { PCI_Express: "3.0" },
-      { Resfriamento: "Ventilador duplo" },
-      { Dimensões: "209.6 x 119.3 x 41mm" },
-      { Fonte_de_Alimentação_Recomendada: "500W" },
-      { Consumo_de_Energia: "160W" },
-      { Entrada_de_Energia: "8 pinos" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -592,16 +1730,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Marca: "ASROCK" },
-      { Modelo: "90-MXB9Y0-A0UAYZ" },
-      { Soquete: "AMD AM4" },
-      { TDP: "105W" },
-      { Slots: "4x DDR4 DIMM" },
-      { Máx_capacidade_de_memória_do_sistema: "64GB" },
-      { Peso: "1450 gramas" },
-      { Fases_de_energia: "6 fases" },
-      { Suporte_DDR4: "3533+ (OC) / 3200 (OC) / 2933 (OC) / 2667/2400/2133" },
-      { Chipset: "AMD Promontory B450" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -618,16 +1815,75 @@ const listaItens = [
     destaque: false,
     promo: false,
     specs: [
-      { Marca: "ASROCK" },
-      { Modelo: "90-MXB9Y0-A0UAYZ" },
-      { Soquete: "AMD AM4" },
-      { TDP: "105W" },
-      { Slots: "4x DDR4 DIMM" },
-      { Máx_capacidade_de_memória_do_sistema: "64GB" },
-      { Peso: "1450 gramas" },
-      { Fases_de_energia: "6 fases" },
-      { Suporte_DDR4: "3533+ (OC) / 3200 (OC) / 2933 (OC) / 2667/2400/2133" },
-      { Chipset: "AMD Promontory B450" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -644,16 +1900,75 @@ const listaItens = [
     destaque: false,
     promo: true,
     specs: [
-      { Marca: "ASROCK" },
-      { Modelo: "90-MXB9Y0-A0UAYZ" },
-      { Soquete: "AMD AM4" },
-      { TDP: "105W" },
-      { Slots: "4x DDR4 DIMM" },
-      { Máx_capacidade_de_memória_do_sistema: "64GB" },
-      { Peso: "1450 gramas" },
-      { Fases_de_energia: "6 fases" },
-      { Suporte_DDR4: "3533+ (OC) / 3200 (OC) / 2933 (OC) / 2667/2400/2133" },
-      { Chipset: "AMD Promontory B450" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -670,16 +1985,75 @@ const listaItens = [
     destaque: false,
     promo: true,
     specs: [
-      { Marca: "ASROCK" },
-      { Modelo: "90-MXB9Y0-A0UAYZ" },
-      { Soquete: "AMD AM4" },
-      { TDP: "105W" },
-      { Slots: "4x DDR4 DIMM" },
-      { Máx_capacidade_de_memória_do_sistema: "64GB" },
-      { Peso: "1450 gramas" },
-      { Fases_de_energia: "6 fases" },
-      { Suporte_DDR4: "3533+ (OC) / 3200 (OC) / 2933 (OC) / 2667/2400/2133" },
-      { Chipset: "AMD Promontory B450" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -697,16 +2071,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Marca: "ASROCK" },
-      { Modelo: "90-MXB9Y0-A0UAYZ" },
-      { Soquete: "AMD AM4" },
-      { TDP: "105W" },
-      { Slots: "4x DDR4 DIMM" },
-      { Máx_capacidade_de_memória_do_sistema: "64GB" },
-      { Peso: "1450 gramas" },
-      { Fases_de_energia: "6 fases" },
-      { Suporte_DDR4: "3533+ (OC) / 3200 (OC) / 2933 (OC) / 2667/2400/2133" },
-      { Chipset: "AMD Promontory B450" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -724,16 +2157,75 @@ const listaItens = [
     destaque: false,
     promo: false,
     specs: [
-      { Marca: "ASROCK" },
-      { Modelo: "90-MXB9Y0-A0UAYZ" },
-      { Soquete: "AMD AM4" },
-      { TDP: "105W" },
-      { Slots: "4x DDR4 DIMM" },
-      { Máx_capacidade_de_memória_do_sistema: "64GB" },
-      { Peso: "1450 gramas" },
-      { Fases_de_energia: "6 fases" },
-      { Suporte_DDR4: "3533+ (OC) / 3200 (OC) / 2933 (OC) / 2667/2400/2133" },
-      { Chipset: "AMD Promontory B450" },
+      {
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
+      },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
 
@@ -752,18 +2244,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Marca: "Fortrek" },
-      { Modelo: "SC501BK" },
-      { Cor: "Preto" },
-      { Fonte: "ATX e Micro-ATX de até 150 x 140 x 85 mm" },
-      { Dimensões: "350 x 315 x 165 mm" },
-      { Cooler_Traseiro: "80 mm" },
-      { Cooler_Lateral: "80 mm ou 120mm" },
       {
-        Espaço_Interno: "310 x 156 x 346 mm; para motherboard Mini e Micro ATX",
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
       },
-      { Posição_da_Fonte: "Superior" },
-      { Fonte: "NÃO INCLUSA" },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -781,18 +2330,75 @@ const listaItens = [
     destaque: false,
     promo: true,
     specs: [
-      { Marca: "Fortrek" },
-      { Modelo: "SC501BK" },
-      { Cor: "Preto" },
-      { Fonte: "ATX e Micro-ATX de até 150 x 140 x 85 mm" },
-      { Dimensões: "350 x 315 x 165 mm" },
-      { Cooler_Traseiro: "80 mm" },
-      { Cooler_Lateral: "80 mm ou 120mm" },
       {
-        Espaço_Interno: "310 x 156 x 346 mm; para motherboard Mini e Micro ATX",
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
       },
-      { Posição_da_Fonte: "Superior" },
-      { Fonte: "NÃO INCLUSA" },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -810,18 +2416,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Marca: "Fortrek" },
-      { Modelo: "SC501BK" },
-      { Cor: "Preto" },
-      { Fonte: "ATX e Micro-ATX de até 150 x 140 x 85 mm" },
-      { Dimensões: "350 x 315 x 165 mm" },
-      { Cooler_Traseiro: "80 mm" },
-      { Cooler_Lateral: "80 mm ou 120mm" },
       {
-        Espaço_Interno: "310 x 156 x 346 mm; para motherboard Mini e Micro ATX",
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
       },
-      { Posição_da_Fonte: "Superior" },
-      { Fonte: "NÃO INCLUSA" },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -838,18 +2501,75 @@ const listaItens = [
     destaque: false,
     promo: false,
     specs: [
-      { Marca: "Fortrek" },
-      { Modelo: "SC501BK" },
-      { Cor: "Preto" },
-      { Fonte: "ATX e Micro-ATX de até 150 x 140 x 85 mm" },
-      { Dimensões: "350 x 315 x 165 mm" },
-      { Cooler_Traseiro: "80 mm" },
-      { Cooler_Lateral: "80 mm ou 120mm" },
       {
-        Espaço_Interno: "310 x 156 x 346 mm; para motherboard Mini e Micro ATX",
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
       },
-      { Posição_da_Fonte: "Superior" },
-      { Fonte: "NÃO INCLUSA" },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -866,18 +2586,75 @@ const listaItens = [
     destaque: false,
     promo: true,
     specs: [
-      { Marca: "Fortrek" },
-      { Modelo: "SC501BK" },
-      { Cor: "Preto" },
-      { Fonte: "ATX e Micro-ATX de até 150 x 140 x 85 mm" },
-      { Dimensões: "350 x 315 x 165 mm" },
-      { Cooler_Traseiro: "80 mm" },
-      { Cooler_Lateral: "80 mm ou 120mm" },
       {
-        Espaço_Interno: "310 x 156 x 346 mm; para motherboard Mini e Micro ATX",
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
       },
-      { Posição_da_Fonte: "Superior" },
-      { Fonte: "NÃO INCLUSA" },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -895,18 +2672,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Marca: "Fortrek" },
-      { Modelo: "SC501BK" },
-      { Cor: "Preto" },
-      { Fonte: "ATX e Micro-ATX de até 150 x 140 x 85 mm" },
-      { Dimensões: "350 x 315 x 165 mm" },
-      { Cooler_Traseiro: "80 mm" },
-      { Cooler_Lateral: "80 mm ou 120mm" },
       {
-        Espaço_Interno: "310 x 156 x 346 mm; para motherboard Mini e Micro ATX",
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
       },
-      { Posição_da_Fonte: "Superior" },
-      { Fonte: "NÃO INCLUSA" },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -924,18 +2758,75 @@ const listaItens = [
     destaque: false,
     promo: true,
     specs: [
-      { Marca: "Husky Gaming" },
-      { Modelo: "HSS-ST-120" },
-      { Capacidade: "128GB" },
-      { Fonte: "ATX e Micro-ATX de até 150 x 140 x 85 mm" },
-      { Dimensões: "350 x 315 x 165 mm" },
-      { Cooler_Traseiro: "80 mm" },
-      { Cooler_Lateral: "80 mm ou 120mm" },
       {
-        Espaço_Interno: "310 x 156 x 346 mm; para motherboard Mini e Micro ATX",
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
       },
-      { Posição_da_Fonte: "Superior" },
-      { Fonte: "NÃO INCLUSA" },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -953,18 +2844,75 @@ const listaItens = [
     destaque: false,
     promo: true,
     specs: [
-      { Marca: "Husky Gaming" },
-      { Modelo: "HSS-ST-120" },
-      { Capacidade: "128GB" },
-      { Fonte: "ATX e Micro-ATX de até 150 x 140 x 85 mm" },
-      { Dimensões: "350 x 315 x 165 mm" },
-      { Cooler_Traseiro: "80 mm" },
-      { Cooler_Lateral: "80 mm ou 120mm" },
       {
-        Espaço_Interno: "310 x 156 x 346 mm; para motherboard Mini e Micro ATX",
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
       },
-      { Posição_da_Fonte: "Superior" },
-      { Fonte: "NÃO INCLUSA" },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -982,18 +2930,75 @@ const listaItens = [
     destaque: false,
     promo: false,
     specs: [
-      { Marca: "Husky Gaming" },
-      { Modelo: "HSS-ST-120" },
-      { Capacidade: "128GB" },
-      { Fonte: "ATX e Micro-ATX de até 150 x 140 x 85 mm" },
-      { Dimensões: "350 x 315 x 165 mm" },
-      { Cooler_Traseiro: "80 mm" },
-      { Cooler_Lateral: "80 mm ou 120mm" },
       {
-        Espaço_Interno: "310 x 156 x 346 mm; para motherboard Mini e Micro ATX",
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
       },
-      { Posição_da_Fonte: "Superior" },
-      { Fonte: "NÃO INCLUSA" },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -1011,18 +3016,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Marca: "Husky Gaming" },
-      { Modelo: "HSS-ST-120" },
-      { Capacidade: "128GB" },
-      { Fonte: "ATX e Micro-ATX de até 150 x 140 x 85 mm" },
-      { Dimensões: "350 x 315 x 165 mm" },
-      { Cooler_Traseiro: "80 mm" },
-      { Cooler_Lateral: "80 mm ou 120mm" },
       {
-        Espaço_Interno: "310 x 156 x 346 mm; para motherboard Mini e Micro ATX",
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
       },
-      { Posição_da_Fonte: "Superior" },
-      { Fonte: "NÃO INCLUSA" },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -1040,18 +3102,75 @@ const listaItens = [
     destaque: true,
     promo: false,
     specs: [
-      { Marca: "Husky Gaming" },
-      { Modelo: "HSS-ST-120" },
-      { Capacidade: "128GB" },
-      { Fonte: "ATX e Micro-ATX de até 150 x 140 x 85 mm" },
-      { Dimensões: "350 x 315 x 165 mm" },
-      { Cooler_Traseiro: "80 mm" },
-      { Cooler_Lateral: "80 mm ou 120mm" },
       {
-        Espaço_Interno: "310 x 156 x 346 mm; para motherboard Mini e Micro ATX",
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
       },
-      { Posição_da_Fonte: "Superior" },
-      { Fonte: "NÃO INCLUSA" },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
   {
@@ -1069,18 +3188,75 @@ const listaItens = [
     destaque: false,
     promo: false,
     specs: [
-      { Marca: "Husky Gaming" },
-      { Modelo: "HSS-ST-120" },
-      { Capacidade: "128GB" },
-      { Fonte: "ATX e Micro-ATX de até 150 x 140 x 85 mm" },
-      { Dimensões: "350 x 315 x 165 mm" },
-      { Cooler_Traseiro: "80 mm" },
-      { Cooler_Lateral: "80 mm ou 120mm" },
       {
-        Espaço_Interno: "310 x 156 x 346 mm; para motherboard Mini e Micro ATX",
+        Caracteristicas: ["Marca: Zotac", "Modelo: ZT-A30610E-10MLHR"],
       },
-      { Posição_da_Fonte: "Superior" },
-      { Fonte: "NÃO INCLUSA" },
+      {
+        Destaques: [
+          "IceStorm 2.0 Advanced Cooling",
+          "Active Fan Control",
+          "Metal Wraparound Backplate",
+          "GDDR6 Graphics Memory",
+          "2nd Gen Ray Tracing Cores",
+          "3rd Gen Tensor Cores",
+          "VR Ready, NVIDIA DLSS",
+          "NVIDIA® GeForce Experience™",
+          "NVIDIA G-SYNC® , NVIDIA GPU Boost™",
+          "LHR 25 MH/s ETH hash rate (est.)",
+        ],
+      },
+      {
+        Geral: [
+          "GPU: NVIDIA GeForce RTX 3060 Ti",
+          "Núcleos CUDA: 4864",
+          "Clock do motor: Boost: 1665 MHz",
+        ],
+      },
+      {
+        Memória: [
+          "Capacidade: 8 GB",
+          "Tipo: GDDR6",
+          "Barramento: 256-bits",
+          "Clock: 14.0 Gbps",
+          "PCI Express: 4,0 16x",
+        ],
+      },
+      {
+        Conexões: [
+          "3x DisplayPort 1.4a (até 7680x4320 @ 60Hz )",
+          "1x HDMI 2.1* (até 7680x4320 @ 60Hz )",
+          "SLI: Não suportado",
+        ],
+      },
+      {
+        Vídeo: [
+          "Suporte HDCP: 2,3",
+          "Capacidade de multi display: Quad Display",
+        ],
+      },
+      {
+        Energia: [
+          "Fonte de alimentação recomendada: 650W",
+          "Consumo de energia: 200W",
+          "Entrada de energia: 8 pinos",
+        ],
+      },
+      {
+        Software_Compatível: [
+          "Game Ready Drivers and NVIDIA Studio Drivers",
+          "Microsoft DirectX 12 Ultimate, Vulkan RT API",
+          "OpenGL 4.6",
+          "Windows 10 64-bit (2004 ou superior)",
+        ],
+      },
+      { Dimensão: ["222.1 x 115.6 x Dual slot (38.2mm)"] },
+      {
+        Conteúdo_da_Embalagem: [
+          "1 x Placa de Vídeo Zotac",
+          "1 x Manual do usuário",
+        ],
+      },
+      { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
 ];

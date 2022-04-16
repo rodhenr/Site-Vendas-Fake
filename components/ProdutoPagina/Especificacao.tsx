@@ -8,14 +8,17 @@ function Especificacao({ specs }: Props) {
   return (
     <div className={styles.containerEspec}>
       {specs.map((i, key) => {
-        let a = Object.entries(i);
+        let keyValue = Object.keys(i)[0].replace(/_/g, " ");
+        let values: [][] = Object.values(i);
 
         return (
-          <div key={key} className={styles.especDesc}>
-            <p>
-              <strong> {a[0][0].replace(/_/g, " ")}:</strong>
-            </p>
-            <p>{a[0][1]}</p>
+          <div key={key} className={styles.espec}>
+            <h1>{`${keyValue}:`}</h1>
+            <div className={styles.especDesc}>
+              {values[0].map((j, k) => {
+                return <p key={k}>{j}</p>;
+              })}
+            </div>
           </div>
         );
       })}
