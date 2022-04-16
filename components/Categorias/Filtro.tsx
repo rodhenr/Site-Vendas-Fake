@@ -41,7 +41,9 @@ function Filtro({ filtro }: Props) {
     if (opt === "Padrão") {
       return items.map((i, key) => (
         <Item
+          modelo={i.modelo}
           key={key}
+          img2={i.img2}
           img={i.img}
           name={i.name}
           pathName={i.pathName}
@@ -57,7 +59,9 @@ function Filtro({ filtro }: Props) {
     } else if (opt === "Menor Preço") {
       return itemsMenorPreco.map((i, key) => (
         <Item
+          modelo={i.modelo}
           key={key}
+          img2={i.img2}
           img={i.img}
           name={i.name}
           pathName={i.pathName}
@@ -73,7 +77,9 @@ function Filtro({ filtro }: Props) {
     } else if (opt === "Maior Preço") {
       return itemsMaiorPreco.map((i, key) => (
         <Item
+          modelo={i.modelo}
           key={key}
+          img2={i.img2}
           img={i.img}
           name={i.name}
           pathName={i.pathName}

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { useState } from "react";
+
 import Preco from "./Precos";
 
 import styles from "../../styles/Item.module.scss";
@@ -9,6 +11,7 @@ interface Props {
   modelo: string;
   categoria: string;
   img: string;
+  img2: string;
   id: string;
   fabricante: string;
   name: string;
@@ -20,10 +23,15 @@ interface Props {
 }
 
 function Item(props: Props) {
-  const { categoria, img, name, pathName, pPrazo, promo } = props;
+  const { categoria, img, img2, name, pathName, pPrazo, promo } = props;
+  const [hover, setHover] = useState(false);
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      onMouseOver={() => setHover(true)}
+      onMouseOut={() => setHover(false)}
+    >
       <div className={styles.imagem}>
         {promo ? (
           <div className={styles.promo}>
@@ -32,7 +40,7 @@ function Item(props: Props) {
         ) : null}
         <Link href={`/${categoria}/${pathName}`} passHref>
           <Image
-            src={img}
+            src={hover ? img2 : img}
             alt="processador"
             layout="fill"
             objectFit="contain"

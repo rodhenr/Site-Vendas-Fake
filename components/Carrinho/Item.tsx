@@ -186,7 +186,7 @@ function Item({ id, img, name, pPrazo, promo }: Props) {
             </>
           ) : (
             <>
-            <div></div>
+              <div></div>
               <div className={styles.itemPrecos}>
                 <p className={styles.precoSemPromo}>
                   {(itemQtde * pPrazo * 0.85).toLocaleString("pt-BR", {

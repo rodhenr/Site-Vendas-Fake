@@ -8,6 +8,7 @@ interface Props {
   modelo: string;
   categoria: string;
   img: string;
+  img2: string;
   id: string;
   fabricante: string;
   name: string;
@@ -28,6 +29,7 @@ export default function ItemPage({
   fabricante,
   id,
   img,
+  img2,
   garantia,
   name,
   pathName,
@@ -43,6 +45,7 @@ export default function ItemPage({
         fabricante={fabricante}
         id={id}
         img={img}
+        img2={img2}
         garantia={garantia}
         name={name}
         pathName={pathName}
@@ -83,6 +86,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       fabricante: obj.fabricante,
       id: obj.id,
       img: obj.img,
+      img2: obj.img2,
       garantia: obj.garantia,
       name: obj.name,
       pathName: obj.pathName,

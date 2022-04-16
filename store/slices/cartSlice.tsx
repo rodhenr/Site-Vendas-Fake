@@ -6,6 +6,7 @@ interface Props {
   fabricante: string;
   id: string;
   img: string;
+  img2: string;
   garantia: string;
   name: string;
   pathName: string;

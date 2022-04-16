@@ -12,6 +12,7 @@ interface Props {
   modelo: string;
   categoria: string;
   img: string;
+  img2: string;
   id: string;
   fabricante: string;
   name: string;
@@ -27,6 +28,7 @@ function Index(props: Props) {
   const {
     specs,
     img,
+    img2,
     name,
     pPrazo,
     categoria,
@@ -46,6 +48,7 @@ function Index(props: Props) {
           modelo={modelo}
           categoria={categoria}
           img={img}
+          img2={img2}
           id={id}
           fabricante={fabricante}
           name={name}

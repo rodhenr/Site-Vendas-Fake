@@ -291,15 +291,13 @@
 }
 
 .comprarQtde {
-  align-items: center;
-  border: 1px solid colors.$border-primary;
-  display: flex;
-  justify-content: center;
-  width: 75px;
-
-  span {
+  input {
+    border: 1px solid colors.$border-primary;
     font-size: 1rem;
     font-weight: 600;
+    height: 100%;
+    text-align: center;
+    width: 75px;
   }
 }
 

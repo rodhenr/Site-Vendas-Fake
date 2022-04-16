@@ -38,6 +38,7 @@ function VerMais() {
             modelo={i.modelo}
             key={key}
             img={i.img}
+            img2={i.img2}
             name={i.name}
             pathName={i.pathName}
             pPrazo={i.pPrazo}

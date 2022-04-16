@@ -19,6 +19,7 @@ interface Props {
   modelo: string;
   categoria: string;
   img: string;
+  img2: string;
   id: string;
   fabricante: string;
   name: string;
@@ -33,6 +34,7 @@ function Produto(props: Props) {
   const dispatch = useDispatch();
   const {
     img,
+    img2,
     name,
     pPrazo,
     categoria,
@@ -44,6 +46,7 @@ function Produto(props: Props) {
   } = props;
   const [imagemSelec, setImagemSelec] = useState(1);
   const [parcelamento, setParcelamento] = useState(false);
+  const [inputQtde, setInputQtde] = useState("1");
 
   function imgAtual() {
     if (imagemSelec === 2) {
@@ -66,6 +69,19 @@ function Produto(props: Props) {
   function handleClick() {
     alert("Adicionado ao carrinho com sucesso!");
     dispatch(addToCart(props));
+  }
+
+  function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
+    let novoValor = e.target.value;
+    const re = /^[0-9\b]+$/;
+
+    if (parseInt(novoValor) > 99) {
+      setInputQtde("99");
+    } else if (parseInt(novoValor) <= 0) {
+      setInputQtde("1");
+    } else if (re.test(novoValor)) {
+      setInputQtde(novoValor);
+    }
   }
 
   return (
@@ -248,7 +264,11 @@ function Produto(props: Props) {
           </div>
           <div className={styles.comprar}>
             <div className={styles.comprarQtde}>
-              <span>3</span>
+              <input
+                type="text"
+                onChange={(e) => handleInputChange(e)}
+                value={inputQtde}
+              ></input>
             </div>
             <button onClick={handleClick}>COMPRAR</button>
           </div>

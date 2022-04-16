@@ -13,8 +13,10 @@ function Index() {
             .filter((item) => item.promo === true)
             .map((i, key) => (
               <Item
+                modelo={i.modelo}
                 key={key}
                 img={i.img}
+                img2={i.img2}
                 name={i.name}
                 pathName={i.pathName}
                 pPrazo={i.pPrazo}
@@ -38,8 +40,10 @@ function Index() {
             .filter((item) => item.destaque === true)
             .map((i, key) => (
               <Item
+                modelo={i.modelo}
                 key={key}
                 img={i.img}
+                img2={i.img2}
                 name={i.name}
                 pathName={i.pathName}
                 pPrazo={i.pPrazo}

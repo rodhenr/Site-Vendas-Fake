@@ -7,6 +7,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/intel1.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "36 meses",
     name: "Processador Intel Core i3-10105, Cache 6MB, 3.7GHz (4.4GHz Max Turbo), LGA 1200 - BX8070110105",
     pathName:
@@ -93,6 +94,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/intel2.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "36 meses",
     name: "Processador Intel Core i5-12400F, Cache 18MB, 2.5GHz (4.4GHz Max Turbo), LGA 1700 - BX8071512400F",
     pathName:
@@ -179,6 +181,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/intel3.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "36 meses",
     name: "Processador Intel Core i7-12700K, Cache 25MB, 3.6GHz (5.0GHz Max Turbo), LGA 1700 - BX8071512700K",
     pathName:
@@ -264,7 +267,8 @@ const listaItens = [
     fabricante: "intel",
     modelo: "BX8070110105",
     id: uuidv4(),
-    img: "/images/intel4.jpg",
+    img: "/images/intel-i9.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "36 meses",
     name: "Processador Intel Core i9-12900K, Cache 30MB, 3.2GHz (5.2GHz Max Turbo), LGA 1700 - BX8071512900K",
     pathName:
@@ -351,6 +355,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/amd1.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Processador AMD Ryzen 3 3200G, 3.6GHz (4.0GHz Max Turbo), AM4, Vídeo Integrado, 4 Núcleos  - YD3200C5FHBOX",
     pathName:
@@ -437,6 +442,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/amd2.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Processador AMD Ryzen 5 5600G, 3.9GHz (4.4GHz Max Turbo), AM4, Vídeo Integrado, 6 Núcleos - 100-100000252BOX",
     pathName:
@@ -523,6 +529,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/amd3.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Processador AMD Ryzen 7 5700G, 3.8GHz (4.6GHz Max Turbo), AM4, Vídeo Integrado, 8 Núcleos - 100-100000263BOX",
     pathName:
@@ -609,6 +616,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/amd4.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Processador AMD Ryzen 9 5900X, 3.7GHz (4.8GHz Max Turbo), AM4, Vídeo Integrado, 12 Núcleos - 100-100000061WOF",
     pathName:
@@ -695,6 +703,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/fonte-gigabyte-p450b.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "36 meses",
     name: "Fonte Gigabyte GP-P450B 450W, 80 Plus Bronze - 28200-P450B-1BRR",
     pathName: "fonte-gigabyte-gpp450b-450w-80-plus-bronze-28200p450b1brr",
@@ -780,6 +789,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/fonte-xpg-650.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "36 meses",
     name: "Fonte XPG, Pylon, 650W, 80 Plus Bronze, PFC Ativo",
     pathName: "fonte-xpg-pylon-650w-80-plus-bronze-pfc-ativo",
@@ -865,6 +875,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/fonte-xpg-850.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "36 meses",
     name: "Fonte XPG Core Reactor, 850W, 80 Plus Gold Modular",
     pathName: "fonte-xpg-core-reactor-850w-80-plus-gold-modular",
@@ -950,6 +961,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/fonte-gigabyte-p550b.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "36 meses",
     name: "Fonte Gigabyte GP-P550B 550W, 80 Plus Bronze - 28200-P550B-1BRR",
     pathName: "fonte-gigabyte-gpp550b-550w-80-plus-bronze-28200p550b1brr",
@@ -1035,6 +1047,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/fonte-xpg-750.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "36 meses",
     name: "Fonte XPG Core Reactor, 750W, 80 Plus Gold Modular",
     pathName: "fonte-xpg-core-reactor-750w-80-plus-gold-modular",
@@ -1120,6 +1133,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/fonte-bluecase-230.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "36 meses",
     name: "Fonte Bluecase BLU230-EATX Small, 230W, Com Cabo - BLU230ESCASE",
     pathName: "fonte-bluecase-blu230eatx-small-230w-com-cabo-blu230escase",
@@ -1205,6 +1219,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gpu-rtx-2060.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "24 meses",
     name: "Placa de Vídeo Zotac Gaming NVIDIA GeForce RTX 2060, 6GB, GDDR6 - ZT-T20600H-10M",
     pathName:
@@ -1291,6 +1306,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gpu-rtx-3050.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "24 meses",
     name: "Placa de Vídeo Zotac Gaming NVIDIA Geforce RTX 3050 Twin Edge, 8GB, GDDR6, LHR, Ray Tracing, VR Ready - ZT-A30500E-10M",
     pathName:
@@ -1377,6 +1393,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gpu-rx-550.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "24 meses",
     name: "Placa de Vídeo Pcyes AMD Radeon RX 550, 4GB, GDDR5, Grafiti Series - PAJRX550DR5DF",
     pathName:
@@ -1463,6 +1480,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gpu-rtx-3060ti.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "24 meses",
     name: "Placa de Vídeo Zotac NVIDIA GeForce RTX 3060 Ti Twin Edge LHR, 8GB, 14.0 Gbps, GDDR6, DLSS, Ray Tracing - ZT-A30610E-10MLHR",
     pathName:
@@ -1549,6 +1567,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gpu-rx-6500xt.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "24 meses",
     name: "Placa de Vídeo Sapphire Pulse RX 6500 XT Gaming OC, 4GB, GDDR6, AMD - 11314-01-20G",
     pathName:
@@ -1635,6 +1654,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gpu-rx-6600xt.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "24 meses",
     name: "Placa de Vídeo Sapphire PULSE RX6600XT OC, 8GB GDDR6, AMD RDNA 2 Architecture - 11309-03-20G",
     pathName:
@@ -1721,6 +1741,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/placa-mae-asrock-b450m.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Placa-Mãe ASRock B450M Steel Legend, AMD AM4, mATX, DDR4 - 90-MXB9Y0-A0BAYZ",
     pathName:
@@ -1807,6 +1828,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/placa-mae-msi-b450m.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Placa-Mãe MSI B450M Pro-M2 Max p/ AMD AM4, m-ATX, DDR4",
     pathName: "placa-mãe-msi-b450m-prom2-max-p-amd-am4-matx-ddr4",
@@ -1892,6 +1914,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/placa-mae-asus-b550m.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Placa-Mãe Asus TUF Gaming B550M-Plus, AMD B550, mATX, DDR4",
     pathName: "placa-mãe-asus-tuf-gaming-b550mplus-amd-b550-matx-ddr4",
@@ -1977,6 +2000,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/placa-mae-asus-h510m.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Placa Mãe Gigabyte H510M (rev.1.0), Intel LGA 1200, ATX, DDR4 - H510M H",
     pathName: "placa-mãe-gigabyte-h510m-rev10-intel-lga-1200-atx-ddr4--h510m-h",
@@ -2062,6 +2086,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/placa-mae-asus-h510m.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Placa Mãe Asus PRIME H510M-A, Intel Socket LGA 1200, microATX, DDR4 - 90MB17C0-M0EAY0",
     pathName:
@@ -2148,6 +2173,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/placa-mae-gigabyte-b560m.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Placa Mãe Gigabyte B560M AORUS ELITE (rev. 1.0), LGA1200, Micro ATX, DDR4",
     pathName:
@@ -2235,6 +2261,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gabinete-husky-polar.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Gabinete Gamer Husky Polar, Mid Tower, ARGB, com FAN, Porta em Vidro Temperado - GA-HPO-140",
     pathName:
@@ -2321,6 +2348,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gabinete-sharkoon.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Gabinete ATX Sharkoon Som Virtual 7.1 Integrado, USB 3.0, Branco - M25-W",
     pathName:
@@ -2407,6 +2435,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gabinete-redragon.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Gabinete Gamer Redragon Tailgate, Mid Tower, RGB, Lateral e Frontal em Vidro - GC-702",
     pathName:
@@ -2493,6 +2522,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gabinete-fortrek.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Gabinete Fortrek ATX, Preto - SC501BK",
     pathName: "gabinete-fortrek-atx-preto-sc501bk",
@@ -2578,6 +2608,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gabinete-sharkoon-vs7.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Gabinete Sharkoon Mid-ATX VS7 Window USB 3.0 Preto",
     pathName: "gabinete-sharkoon-midatx-vs7-window-usb-30-preto",
@@ -2663,6 +2694,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/gabinete-corsair.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "Gabinete Gamer Corsair Crystal 570X, RGB, Mid-Tower, ATX, Lateral em Vidro Temperado Espelhado, Preto - CC-9011126-WW",
     pathName:
@@ -2749,6 +2781,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/ssd-crucial-240.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "SSD Crucial BX500, 240GB, SATA, Leitura 540MB/s, Gravação 500MB/s - CT240BX500SSD1",
     pathName:
@@ -2835,6 +2868,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/ssd-kingston-500.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "SSD Kingston NV1 500GB,M.2 2280 NVMe, Leitura: 2100MB/s e Gravação: 1700MB/s - SNVS/500G",
     pathName:
@@ -2921,6 +2955,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/ssd-husky-128.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "SSD Husky Gaming, Preto, Sata 3, 2.5, 128GB, 500MB/S de Leitura e Escrita - HGML000",
     pathName:
@@ -3007,6 +3042,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/ssd-wd-480.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "SSD WD Green PC SN350 480GB, PCIe, NVMe, Leitura: 2400MB/s, Escrita: 1650MB/s - WDS480G2G0C",
     pathName:
@@ -3093,6 +3129,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/ssd-wd-2tb.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "SSD WD BLACK SN750 2TB M.2 NVMe, Leitura: 3400MB/s, Gravação: 2900MB/s - WDS200T3X0C",
     pathName:
@@ -3179,6 +3216,7 @@ const listaItens = [
     modelo: "BX8070110105",
     id: uuidv4(),
     img: "/images/ssd-xpg-1tb.jpg",
+    img2: "/images/intel-i9-2.jpg",
     garantia: "12 meses",
     name: "SSD XPG S41 TUF, 1TB, M.2, PCIe, Leituras: 3500MB/s, Gravações: 3000MB/s - AGAMMIXS41-1T-C",
     pathName:
