@@ -4,7 +4,6 @@ import itemsList from "../../listaItems/Index";
 import Item from "../Item/Item";
 
 import styles from "../../styles/Categorias.module.scss";
-import { useEffect } from "react";
 
 interface Props {
   filtro: string;

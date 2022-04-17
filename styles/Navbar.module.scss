@@ -15,19 +15,6 @@
   }
 }
 
-.containerFixed {
-  background-color: colors.$background-primary;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 200;
-
-  @media (min-width: 768px) {
-    position: relative;
-  }
-}
-
 /*----- ITENS TOPO -----*/
 .containerTopo {
   align-items: center;
@@ -117,7 +104,6 @@
   margin: 0;
   position: absolute;
   top: 0;
-  width: 65%;
   transition: all 1s ease;
   z-index: 101;
 
@@ -255,12 +241,9 @@
 /* BUSCA OPEN = TRUE */
 .busca {
   align-items: center;
-  bottom: -40px;
   color: colors.$text-secondary;
   display: flex;
   justify-content: center;
-  left: 0;
-  position: absolute;
   width: 100vw;
 
   svg {
@@ -462,5 +445,60 @@
       font-size: 0.8rem;
       padding: 0.8rem 2rem;
     }
+  }
+}
+
+/*----------DETALHES----------*/
+.containerDetalhes {
+  align-items: center;
+  background-color: colors.$text-secondary;
+  display: flex;
+  font-family: "Poppins";
+  height: 55px;
+  justify-content: space-between;
+  padding: 0 1rem;
+
+  svg {
+    color: colors.$text-primary;
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    height: 100px;
+    padding: 0 0.5rem;
+
+    span {
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    gap: 3rem;
+    grid-template-columns: repeat(4, 210px);
+    margin: 0 auto;
+  }
+}
+
+.detalhesItem {
+  align-items: center;
+  color: colors.$text-primary;
+  display: flex;
+  gap: 1rem;
+
+  svg {
+    color: colors.$background-primary;
+    font-size: 1.4rem;
+  }
+
+  h1 {
+    font-size: 0.75rem;
+    margin: 0;
+  }
+
+  p {
+    font-size: 0.75rem;
+    margin: 0;
   }
 }

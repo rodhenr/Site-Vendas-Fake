@@ -14,9 +14,13 @@
     padding: 2rem 0 0;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 500px) {
     margin: 0 auto;
-    width: calc(750px);
+    width: calc(500px + 1rem);
+  }
+
+  @media (min-width: 768px) {
+    width: calc(750px + 1rem);
   }
 
   @media (min-width: 900px) {
@@ -35,16 +39,12 @@
     }
   }
 
-  @media (min-width: 1024px) {
-    width: 900px;
+  @media (min-width: 970px) {
+    width: calc(960px + 1.5rem);
   }
 
-  @media (min-width: 1300px) {
-    width: 1100px;
-  }
-
-  @media (min-width: 1500px) {
-    width: 1200px;
+  @media (min-width: 1200px) {
+    width: calc(1040px + 4.5rem);
   }
 }
 

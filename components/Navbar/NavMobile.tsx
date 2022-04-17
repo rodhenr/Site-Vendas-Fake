@@ -2,6 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 import Navbar from "./Navbar";
+import NavDetalhesMobile from "./NavDetalhesMobile";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -66,6 +67,7 @@ function NavMobile({ numCart }: Props) {
           </div>
         ) : null}
       </div>
+      <NavDetalhesMobile />
     </div>
   );
 }

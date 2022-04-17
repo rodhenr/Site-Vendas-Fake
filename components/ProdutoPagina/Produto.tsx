@@ -4,10 +4,10 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 import { addToCart } from "../../store/slices/cartSlice";
+import { updateTotalPrice } from "../../store/slices/newSlice";
 
 import Parcelamento from "./Parcelamento";
 
-import img2 from "../../public/images/fonte-xpg-850-2.jpg";
 import img3 from "../../public/images/fonte-xpg-850-3.jpg";
 
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
@@ -41,6 +41,7 @@ function Produto(props: Props) {
     pathName,
     promo,
     garantia,
+    id,
     modelo,
     fabricante,
   } = props;
@@ -69,6 +70,7 @@ function Produto(props: Props) {
   function handleClick() {
     alert("Adicionado ao carrinho com sucesso!");
     dispatch(addToCart(props));
+    dispatch(updateTotalPrice({ valorTotal: pPrazo, id: id }));
   }
 
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {

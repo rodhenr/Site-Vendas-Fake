@@ -27,34 +27,34 @@ function Item(props: Props) {
   const [hover, setHover] = useState(false);
 
   return (
-    <div
-      className={styles.container}
-      onMouseOver={() => setHover(true)}
-      onMouseOut={() => setHover(false)}
-    >
-      <div className={styles.imagem}>
-        {promo ? (
-          <div className={styles.promo}>
-            <p>PROMOÇÃO</p>
-          </div>
-        ) : null}
-        <Link href={`/${categoria}/${pathName}`} passHref>
+    <Link href={`/${categoria}/${pathName}`} passHref>
+      <div
+        className={styles.container}
+        onMouseOver={() => setHover(true)}
+        onMouseOut={() => setHover(false)}
+      >
+        <div className={styles.imagem}>
+          {promo ? (
+            <div className={styles.promo}>
+              <p>PROMOÇÃO</p>
+            </div>
+          ) : null}
           <Image
             src={hover ? img2 : img}
             alt="processador"
             layout="fill"
             objectFit="contain"
           />
-        </Link>
-      </div>
+        </div>
 
-      <div className={styles.nome}>
-        <Link href={`/${categoria}/${pathName}`} passHref>
-          <h2>{name}</h2>
-        </Link>
+        <div className={styles.nome}>
+          <Link href={`/${categoria}/${pathName}`} passHref>
+            <h2>{name}</h2>
+          </Link>
+        </div>
+        <Preco pPrazo={pPrazo} promo={promo} />
       </div>
-      <Preco pPrazo={pPrazo} promo={promo} />
-    </div>
+    </Link>
   );
 }
 

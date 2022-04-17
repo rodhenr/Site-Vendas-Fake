@@ -1,15 +1,14 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import Navbar from "./Navbar";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBars,
   faUser,
   faCartShopping,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
+
+import NavDetalhesDesktop from "./NavDetalhesDesktop";
 
 import styles from "../../styles/Navbar.module.scss";
 
@@ -86,6 +85,7 @@ function NavDesktop({ numCart }: Props) {
           </li>
         </ul>
       </nav>
+      <NavDetalhesDesktop />
     </div>
   );
 }

@@ -1,59 +1,36 @@
 @use "colors";
 
-/*---------- GERAL ----------*/
+/*---------------------------GERAL---------------------------*/
 .container {
+  display: flex;
+  flex-direction: column;
   font-family: "Montserrat", sans-serif;
+  gap: 2rem;
   padding-bottom: 15rem;
-  margin: 0;
-  padding: 2rem 0rem;
+  margin: 0 auto;
+  padding: 5rem 0rem;
   overflow: hidden;
-}
+  width: calc(360px + 1rem);
 
-/*----- NOME E FILTRO -----*/
-.containerTopo {
-  margin-top: 3rem;
-
-  @media (min-width: 1300px) {
-    margin: 3rem 1rem 0;
-  }
-
-  @media (min-width: 1300px) {
-    margin: 0 calc(0.05 * 100vw) + 1;
-  }
-
-  @media (min-width: 1500px) {
-    margin: 0 calc(0.08 * 100vw) + 1;
-  }
-}
-
-/* NOME DA CATEGORIA */
-.categoriaNome {
-  color: colors.$text-primary;
-  font-size: 1rem;
-  margin: 0;
-
-  @media (min-width: 540px) {
-    width: calc(550px - 1.8rem);
+  @media (min-width: 500px) {
+    width: calc(500px + 1rem);
   }
 
   @media (min-width: 768px) {
-    width: calc(500px + 0.5rem);
-  }
-
-  @media (min-width: 970px) {
     width: calc(750px + 1rem);
   }
 
-  @media (min-width: 1300px) {
-    width: calc(1000px + 1.5rem);
+  @media (min-width: 970px) {
+    width: calc(960px + 1.5rem);
   }
 
-  @media (min-width: 1500px) {
-    width: calc(1200px + 2rem);
+  @media (min-width: 1200px) {
+    padding: 2rem 0rem;
+    width: calc(1040px + 4.5rem);
   }
 }
 
-/*----- FILTRO -----*/
+/*-----------------FILTRO TOPO-----------------*/
 .containerFiltro {
   align-items: center;
   background: colors.$border-primary;
@@ -62,26 +39,15 @@
   gap: 0.7rem;
   height: 50px;
   justify-content: space-between;
-  margin: 1rem 0;
-  padding: 0 0.4rem;
+  margin: 0 auto;
+  padding: 0 1rem;
   width: 100%;
+}
 
-  @media (min-width: 768px) {
-    margin: 1rem auto;
-    width: calc(500px + 0.5rem);
-  }
-
-  @media (min-width: 970px) {
-    width: calc(750px + 1rem);
-  }
-
-  @media (min-width: 1300px) {
-    width: calc(1000px + 1.5rem);
-  }
-
-  @media (min-width: 1500px) {
-    width: calc(1200px + 2rem);
-  }
+.categoriaNome {
+  color: colors.$text-primary;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .filtro {
@@ -97,7 +63,6 @@
   }
 }
 
-/* BOTÃO ORDERNAR */
 .botaoOrdenar {
   position: relative;
 
@@ -121,8 +86,8 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    width: 110px;
-    top: 26px;
+    width: 100px;
+    top: 20px;
     z-index: 100;
   }
 
@@ -132,7 +97,7 @@
     cursor: pointer;
     display: flex;
     font-size: 0.7rem;
-    height: 32px;
+    height: 25px;
     justify-content: center;
     list-style: none;
     width: 100%;
@@ -155,32 +120,32 @@
   }
 }
 
-/*----- ITENS -----*/
+/*-----------------ITENS-----------------*/
 .itens {
   align-self: start;
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem 0.5rem;
+  grid-template-columns: repeat(2, 180px);
   justify-content: center;
   justify-items: center;
   padding-bottom: 5rem;
 
-  @media (min-width: 540px) {
-    gap: 0.5rem;
-  }
-
-  @media (min-width: 768px) {
+  @media (min-width: 500px) {
+    gap: 1rem;
     grid-template-columns: repeat(2, 250px);
   }
 
-  @media (min-width: 970px) {
+  @media (min-width: 768px) {
+    gap: 1rem 0.5rem;
     grid-template-columns: repeat(3, 250px);
   }
 
-  @media (min-width: 1300px) {
-    grid-template-columns: repeat(4, 250px);
+  @media (min-width: 970px) {
+    grid-template-columns: repeat(4, 240px);
   }
 
-  @media (min-width: 1500px) {
-    grid-template-columns: repeat(5, 240px);
+  @media (min-width: 1200px) {
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 260px);
   }
 }

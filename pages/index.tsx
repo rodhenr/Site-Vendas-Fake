@@ -9,7 +9,6 @@ const Home: NextPage = () => {
   return (
     <div>
       <Navbar />
-      <Banner />
       <Products />
       <Footer />
     </div>

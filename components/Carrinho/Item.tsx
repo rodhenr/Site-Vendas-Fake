@@ -116,7 +116,7 @@ function Item({ id, img, name, pPrazo, promo }: Props) {
                     <p>PROMOÇÃO</p>
                   </div>
                   <p className={styles.precoNormal}>
-                    {(itemQtde * pPrazo * 0.7).toLocaleString("pt-BR", {
+                    {(itemQtde * pPrazo).toLocaleString("pt-BR", {
                       minimumFractionDigits: 2,
                       style: "currency",
                       currency: "BRL",
@@ -168,7 +168,7 @@ function Item({ id, img, name, pPrazo, promo }: Props) {
               <div className={styles.itemPrecos}>
                 <div className={styles.containerPromo}>
                   <p className={styles.precoNormal}>
-                    {(itemQtde * pPrazo * 0.7).toLocaleString("pt-BR", {
+                    {(itemQtde * pPrazo).toLocaleString("pt-BR", {
                       minimumFractionDigits: 2,
                       style: "currency",
                       currency: "BRL",

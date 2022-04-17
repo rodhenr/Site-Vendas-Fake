@@ -10,28 +10,24 @@
 /* TITULO NO INICIO */
 .inicioTitulo {
   font-size: 1.3rem;
-  margin: 0 1rem;
+  margin: 0 auto;
   padding: 0 0 1rem;
+  width: calc(360px + 1rem);
 
-  @media (min-width: 540px) {
-    margin: 0 auto;
-    width: calc(550px - 1.8rem);
+  @media (min-width: 500px) {
+    width: calc(500px + 1rem);
   }
 
   @media (min-width: 768px) {
-    width: calc(540px + 1.5rem);
+    width: calc(750px + 1rem);
   }
 
   @media (min-width: 970px) {
-    width: calc(810px + 3rem);
+    width: calc(960px + 1.5rem);
   }
 
-  @media (min-width: 1300px) {
-    width: calc(1000px + 1.5rem);
-  }
-
-  @media (min-width: 1500px) {
-    width: calc(1200px + 2rem);
+  @media (min-width: 1200px) {
+    width: calc(1040px + 4.5rem);
   }
 }
 
@@ -39,30 +35,29 @@
 .itens {
   align-self: start;
   display: grid;
-  gap: 2rem;
+  gap: 2rem 0.5rem;
+  grid-template-columns: repeat(2, 180px);
   justify-content: center;
   justify-items: center;
   padding-bottom: 3rem;
 
-  @media (min-width: 540px) {
-    grid-template-columns: 550px;
+  @media (min-width: 500px) {
+    gap: 1rem;
+    grid-template-columns: repeat(2, 250px);
   }
 
   @media (min-width: 768px) {
-    gap: 0.5rem;
-    grid-template-columns: repeat(2, 270px);
-  }
-
-  @media (min-width: 970px) {
+    gap: 1rem 0.5rem;
     grid-template-columns: repeat(3, 250px);
   }
 
-  @media (min-width: 1300px) {
-    grid-template-columns: repeat(4, 250px);
+  @media (min-width: 970px) {
+    grid-template-columns: repeat(4, 240px);
   }
 
-  @media (min-width: 1500px) {
-    grid-template-columns: repeat(5, 240px);
+  @media (min-width: 1200px) {
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 260px);
   }
 }
 
@@ -71,7 +66,7 @@
   text-align: center;
 
   button {
-    background-color: #00A000;
+    background-color: #00a000;
     border: none;
     color: colors.$text-secondary;
     font-family: "Montserrat";
@@ -80,4 +75,102 @@
     height: 40px;
     width: 230px;
   }
+}
+
+/*----------BANNER----------*/
+.containerDuplo {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.bannerUm {
+  cursor: pointer;
+  height: 300px;
+  width: 500px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.bannerDois {
+  cursor: pointer;
+  height: 300px;
+  width: 500px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/*----------PROMOÇÕES----------*/
+.containerPromocoes {
+  align-items: center;
+  background-color: colors.$border-primary;
+  display: flex;
+  gap: 5rem;
+  height: 600px;
+  justify-content: center;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+.promocoesDesc {
+  button {
+    background-color: colors.$background-primary;
+    border: none;
+    color: colors.$text-secondary;
+    font-family: "Poppins";
+    font-size: 0.875rem;
+    height: 50px;
+    width: 160px;
+  }
+
+  h1 {
+    color: colors.$background-primary;
+    font-family: "Poppins";
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  p {
+    color: colors.$text-primary;
+    font-size: 0.875rem;
+    margin: 0.5rem 0 1rem;
+  }
+}
+
+.promocoesItens {
+  align-items: center;
+  display: flex;
+  gap: 1.7rem;
+
+  svg {
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+}
+
+.containerPromoItens {
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  width: 830px;
+}
+
+.itensPromo {
+  display: flex;
+  gap: 2rem;
+  height: 500px;
+  left: 0px;
+  position: absolute;
+  top: 0;
+}
+
+.item {
+  background-color: colors.$text-secondary;
+  height: 500px;
+  width: 250px;
 }

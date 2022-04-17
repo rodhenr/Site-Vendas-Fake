@@ -50,7 +50,7 @@
 /*-----------------NOME-----------------*/
 .nome {
   font-family: "Poppins";
-  height: 100px;
+  height: 110px;
   padding: 0 0.5rem;
   text-align: center;
   width: 100%;
@@ -60,13 +60,20 @@
     font-weight: 400;
     margin: 0;
   }
+
+  @media (min-width: 500px) {
+    height: 95px;
+  }
 }
 
 /*---PRECO---*/
 .produtoPreco {
+  align-items: center;
   display: flex;
   flex-direction: column;
   height: 80px;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .containerPrecos {

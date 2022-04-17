@@ -18,45 +18,40 @@
 
 /*-----------------CAMINHO-----------------*/
 .containerCaminho {
-  align-items: center;
   display: none;
-  padding: 1rem 0rem 2rem;
-  position: relative;
-  max-width: 1150px;
-
-  svg {
-    font-size: 0.7rem;
-    margin: 0 0.5rem;
-  }
-
-  span {
-    cursor: pointer;
-    font-size: 0.8rem;
-
-    &:before {
-      bottom: 0;
-      content: "";
-      height: 1px;
-      position: absolute;
-      width: 0;
-
-      &:hover {
-        border: 1px colors.$text-primary solid;
-        width: 100%;
-      }
-    }
-
-    &:last-child {
-      color: colors.$background-primary;
-    }
-  }
 
   @media (min-width: 768px) {
+    align-items: center;
     display: flex;
-    padding: 4rem 0 2rem;
+    padding: 4rem 0 2rem 1rem;
+    position: relative;
+    max-width: 1150px;
+
+    svg {
+      font-size: 0.7rem;
+      margin: 0 0.5rem;
+    }
 
     span {
+      cursor: pointer;
       font-size: 0.65rem;
+
+      &:before {
+        bottom: 0;
+        content: "";
+        height: 1px;
+        position: absolute;
+        width: 0;
+
+        &:hover {
+          border: 1px colors.$text-primary solid;
+          width: 100%;
+        }
+      }
+
+      &:last-child {
+        color: colors.$background-primary;
+      }
     }
   }
 
@@ -76,16 +71,34 @@
 /*-----------------PRODUTO-----------------*/
 .containerProduto {
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  padding: 5rem 2rem 0;
   width: 100%;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    padding: 0 0.625rem;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 410px;
+  }
 }
 
 /*--------IMAGEM--------*/
 .containerImagem {
   background-color: colors.$text-secondary;
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   justify-content: center;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    justify-items: center;
+    gap: 1rem;
+  }
 }
 
 .containerAdicional {
@@ -95,16 +108,19 @@
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
-    padding-right: 2rem;
-    padding-top: 0.5rem;
   }
 }
 
 .imagemMini {
   cursor: pointer;
-  height: 75px;
+  height: 55px;
   position: relative;
-  width: 75px;
+  width: 55px;
+
+  @media (min-width: 1024px) {
+    height: 75px;
+    width: 75px;
+  }
 }
 
 .imagemMiniAtiva {
@@ -113,10 +129,35 @@
 
 .imagemPrincipal {
   cursor: pointer;
-  height: 600px;
+  height: 400px;
   overflow: hidden;
   position: relative;
-  width: 600px;
+  width: 400px;
+
+  @media (min-width: 650px) {
+    height: 450px;
+    width: 450px;
+  }
+
+  @media (min-width: 768px) {
+    height: 300px;
+    width: 300px;
+  }
+
+  @media (min-width: 800px) {
+    height: 350px;
+    width: 350px;
+  }
+
+  @media (min-width: 900px) {
+    height: 450px;
+    width: 450px;
+  }
+
+  @media (min-width: 1024px) {
+    height: 500px;
+    width: 500px;
+  }
 }
 
 /*---PROMO---*/
@@ -146,19 +187,26 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 1rem;
-  max-width: 400px;
+  padding: 0 0.5rem;
+
+  @media (min-width: 1024px) {
+    padding: 0 1rem;
+  }
 }
 
 /*---NOME---*/
 .produtoNome {
   color: colors.$text-primary;
   font-family: "Poppins", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   line-height: 1.1;
   margin: 0;
   padding-bottom: 1.2rem;
-  text-align: justify;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 1.4rem;
+  }
 }
 
 /*---INFO ADICIONAL---*/
@@ -206,7 +254,8 @@
 .precoPrazo {
   align-self: center;
   color: colors.$text-terceary;
-  font-size: 1.35rem;
+  font-size: 1.375rem;
+  font-weight: 600;
 
   p {
     margin: 0;
@@ -307,8 +356,12 @@
   display: flex;
   flex-direction: column;
   font-family: "Work Sans", sans-serif;
-  margin: 5rem 0 0;
+  margin: 5rem 1rem;
   padding-top: 2rem;
+
+  @media (min-width: 1200px) {
+    margin: 5rem 0;
+  }
 }
 
 .descricaoTitulo {
@@ -322,7 +375,7 @@
 /*----- ESPECIFICAÇAÇÕES -----*/
 .containerEspec {
   font-family: "Poppins";
-  padding: 3.45rem 0rem 6.5rem;
+  padding: 3.45rem 0rem 4.5rem;
 }
 
 .espec {
@@ -370,10 +423,14 @@
   display: flex;
   height: 100%;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 
   img {
     height: 150px !important;
     width: 150px !important;
+  }
+
+  @media (min-width: 1020px) {
+    gap: 2rem;
   }
 }
