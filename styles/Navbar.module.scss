@@ -238,9 +238,10 @@
   }
 }
 
-/* BUSCA OPEN = TRUE */
+/*----------BUSCA----------*/
 .busca {
   align-items: center;
+  border: 1px solid colors.$text-primary;
   color: colors.$text-secondary;
   display: flex;
   justify-content: center;
@@ -261,9 +262,14 @@
     &::placeholder {
       color: colors.$text-primary;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   @media (min-width: 768px) {
+    border: none;
     bottom: 0;
     margin: 0;
     position: relative;
@@ -292,22 +298,21 @@
   }
 }
 
-/* ÍCONE DA BUSCA OPEN = TRUE*/
 .buscaIcone {
   align-items: center;
-  background-color: colors.$text-primary;
-  border-left: 1px colors.$border-primary solid;
+  background-color: colors.$background-primary;
+  border: none;
+  border-left: 1px solid colors.$text-primary;
   display: flex;
   height: 45px;
 
   @media (min-width: 768px) {
+    border-left: 1px colors.$border-primary solid;
     height: 30px;
   }
 }
 
 /*----- DESKTOP -----*/
-
-/* LOGIN*/
 .containerLogin {
   align-items: center;
   display: flex;
@@ -325,7 +330,7 @@
       font-size: 1rem;
       font-weight: 600;
 
-      &:hover{
+      &:hover {
         color: colors.$text-primary;
       }
     }

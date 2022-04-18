@@ -13,7 +13,7 @@ const listaItens = [
     pathName:
       "processador-intel-core-i3-10105-cache-6mb-3-7ghz-4-4ghz-max-turbo-lga-1200-bx8070110105",
     pPrazo: 1000,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -100,7 +100,7 @@ const listaItens = [
     pathName:
       "processador-intel-core-i5-12400f-cache-18mb-2-5ghz-4-4ghz-max-turbo-lga-1700-bx8071512400f",
     pPrazo: 1600,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: true,
     specs: [
@@ -187,7 +187,7 @@ const listaItens = [
     pathName:
       "processador-intel-core-i7-12700k-cache-25mb-3-6ghz-5-0ghz-max-turbo-lga-1700-bx8071512700k",
     pPrazo: 3400,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -274,7 +274,7 @@ const listaItens = [
     pathName:
       "processador-intel-core-i9-12900k-cache-30mb-3-2ghz-5-2ghz-max-turbo-lga-1700-bx8071512900k",
     pPrazo: 7500,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: true,
     specs: [
@@ -361,7 +361,7 @@ const listaItens = [
     pathName:
       "processador-amd-ryzen-3-3200g-3-6ghz-4-0ghz-max-turbo-am4-vídeo-integrado-4-núcleos--yd3200c5fhbox",
     pPrazo: 1100,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: true,
     specs: [
@@ -448,7 +448,7 @@ const listaItens = [
     pathName:
       "processador-amd-ryzen-5-5600g-3-9ghz-4-4ghz-max-turbo-am4-vídeo-integrado-6-núcleos-100100000252box",
     pPrazo: 1900,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: true,
     specs: [
@@ -535,7 +535,7 @@ const listaItens = [
     pathName:
       "processador-amd-ryzen-7-5700g-3-8ghz-4-6ghz-max-turbo-am4-vídeo-integrado-8-núcleos-100100000263box",
     pPrazo: 2400,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -622,7 +622,7 @@ const listaItens = [
     pathName:
       "processador-amd-ryzen-9-5900x-3-7ghz-4-8ghz-max-turbo-am4-vídeo-integrado-12-núcleos-100100000061wof",
     pPrazo: 3600,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: false,
     specs: [
@@ -708,7 +708,7 @@ const listaItens = [
     name: "Fonte Gigabyte GP-P450B 450W, 80 Plus Bronze - 28200-P450B-1BRR",
     pathName: "fonte-gigabyte-gpp450b-450w-80-plus-bronze-28200p450b1brr",
     pPrazo: 375,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -794,7 +794,7 @@ const listaItens = [
     name: "Fonte XPG, Pylon, 650W, 80 Plus Bronze, PFC Ativo",
     pathName: "fonte-xpg-pylon-650w-80-plus-bronze-pfc-ativo",
     pPrazo: 660,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: false,
     specs: [
@@ -880,7 +880,7 @@ const listaItens = [
     name: "Fonte XPG Core Reactor, 850W, 80 Plus Gold Modular",
     pathName: "fonte-xpg-core-reactor-850w-80-plus-gold-modular",
     pPrazo: 940,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: true,
     specs: [
@@ -966,7 +966,7 @@ const listaItens = [
     name: "Fonte Gigabyte GP-P550B 550W, 80 Plus Bronze - 28200-P550B-1BRR",
     pathName: "fonte-gigabyte-gpp550b-550w-80-plus-bronze-28200p550b1brr",
     pPrazo: 505,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -1052,7 +1052,7 @@ const listaItens = [
     name: "Fonte XPG Core Reactor, 750W, 80 Plus Gold Modular",
     pathName: "fonte-xpg-core-reactor-750w-80-plus-gold-modular",
     pPrazo: 770,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -1138,7 +1138,7 @@ const listaItens = [
     name: "Fonte Bluecase BLU230-EATX Small, 230W, Com Cabo - BLU230ESCASE",
     pathName: "fonte-bluecase-blu230eatx-small-230w-com-cabo-blu230escase",
     pPrazo: 80,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -1225,7 +1225,7 @@ const listaItens = [
     pathName:
       "placa-de-vídeo-zotac-gaming-nvidia-geforce-rtx-2060-6gb-gddr6-ztt20600h10m",
     pPrazo: 4000,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: true,
     specs: [
@@ -1312,7 +1312,7 @@ const listaItens = [
     pathName:
       "placa-de-vídeo-zotac-gaming-nvidia-geforce-rtx-3050-twin-edge-8gb-gddr6-lhr-ray-tracing-vr-ready-zta30500e10m",
     pPrazo: 3500,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -1399,7 +1399,7 @@ const listaItens = [
     pathName:
       "placa-de-vídeo-pcyes-amd-radeon-rx-550-4gb-gddr5-grafiti-series-pajrx550dr5df",
     pPrazo: 1100,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: true,
     specs: [
@@ -1486,7 +1486,7 @@ const listaItens = [
     pathName:
       "placa-de-vídeo-zotac-nvidia-geforce-rtx-3060-ti-twin-edge-lhr-8gb-140-gbps-gddr6-dlss-ray-tracing-zta30610e10mlhr",
     pPrazo: 6000,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -1573,7 +1573,7 @@ const listaItens = [
     pathName:
       "placa-de-vídeo-sapphire-pulse-rx-6500-xt-gaming-oc-4gb-gddr6-amd-113140120g",
     pPrazo: 2000,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: true,
     specs: [
@@ -1660,7 +1660,7 @@ const listaItens = [
     pathName:
       "placa-de-vídeo-sapphire-pulse-rx6600xt-oc-8gb-gddr6-amd-rdna-2-architecture-113090320g",
     pPrazo: 4500,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -1747,7 +1747,7 @@ const listaItens = [
     pathName:
       "placa-mãe-asrock-b450m-steel-legend-amd-am4-matx-ddr4-90mxb9y0a0bayz",
     pPrazo: 880,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -1833,7 +1833,7 @@ const listaItens = [
     name: "Placa-Mãe MSI B450M Pro-M2 Max p/ AMD AM4, m-ATX, DDR4",
     pathName: "placa-mãe-msi-b450m-prom2-max-p-amd-am4-matx-ddr4",
     pPrazo: 460,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: false,
     specs: [
@@ -1919,7 +1919,7 @@ const listaItens = [
     name: "Placa-Mãe Asus TUF Gaming B550M-Plus, AMD B550, mATX, DDR4",
     pathName: "placa-mãe-asus-tuf-gaming-b550mplus-amd-b550-matx-ddr4",
     pPrazo: 1250,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: true,
     specs: [
@@ -2005,7 +2005,7 @@ const listaItens = [
     name: "Placa Mãe Gigabyte H510M (rev.1.0), Intel LGA 1200, ATX, DDR4 - H510M H",
     pathName: "placa-mãe-gigabyte-h510m-rev10-intel-lga-1200-atx-ddr4--h510m-h",
     pPrazo: 700,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: true,
     specs: [
@@ -2092,7 +2092,7 @@ const listaItens = [
     pathName:
       "placa-mãe-asus-prime-h510ma-intel-socket-lga-1200-microatx-ddr4-90mb17c0m0eay0",
     pPrazo: 860,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -2179,7 +2179,7 @@ const listaItens = [
     pathName:
       "placa-mãe-gigabyte-b560m-aorus-elite-rev-10-lga1200-micro-atx-ddr4",
     pPrazo: 1130,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: false,
     specs: [
@@ -2266,7 +2266,7 @@ const listaItens = [
     pathName:
       "gabinete-gamer-husky-polar-mid-tower-argb-com-fan-porta-em-vidro-temperado-gahpo140k",
     pPrazo: 470,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -2353,7 +2353,7 @@ const listaItens = [
     pathName:
       "gabinete-atx-sharkoon-som-virtual-71-integrado-usb-30-branco--m25w",
     pPrazo: 505,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: true,
     specs: [
@@ -2440,7 +2440,7 @@ const listaItens = [
     pathName:
       "gabinete-gamer-redragon-tailgate-mid-tower-rgb-lateral-e-frontal-em-vidro-gc702",
     pPrazo: 860,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -2526,7 +2526,7 @@ const listaItens = [
     name: "Gabinete Fortrek ATX, Preto - SC501BK",
     pathName: "gabinete-fortrek-atx-preto-sc501bk",
     pPrazo: 160,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: false,
     specs: [
@@ -2612,7 +2612,7 @@ const listaItens = [
     name: "Gabinete Sharkoon Mid-ATX VS7 Window USB 3.0 Preto",
     pathName: "gabinete-sharkoon-midatx-vs7-window-usb-30-preto",
     pPrazo: 625,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: true,
     specs: [
@@ -2699,7 +2699,7 @@ const listaItens = [
     pathName:
       "gabinete-gamer-corsair-crystal-570x-rgb-midtower-atx-lateral-em-vidro-temperado-espelhado-preto-cc9011126ww",
     pPrazo: 1440,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -2786,7 +2786,7 @@ const listaItens = [
     pathName:
       "ssd-crucial-bx500-240gb-sata-leitura-540mbs-gravação-500mbs-ct240bx500ssd1",
     pPrazo: 240,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: true,
     specs: [
@@ -2873,7 +2873,7 @@ const listaItens = [
     pathName:
       "ssd-kingston-nv1-500gbm2-2280-nvme-leitura-2100mbs-e-gravação-1700mbs-snvs500g",
     pPrazo: 405,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: true,
     specs: [
@@ -2960,7 +2960,7 @@ const listaItens = [
     pathName:
       "ssd-husky-gaming-preto-sata-3-25-128gb-500mbs-de-leitura-e-escrita-hgml000",
     pPrazo: 140,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: false,
     promo: false,
     specs: [
@@ -3047,7 +3047,7 @@ const listaItens = [
     pathName:
       "ssd-wd-green-pc-sn350-480gb-pcie-nvme-leitura-2400mbs-escrita-1650mbs-wds480g2g0c",
     pPrazo: 400,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -3134,7 +3134,7 @@ const listaItens = [
     pathName:
       "ssd-wd-black-sn750-2tb-m2-nvme-leitura-3400mbs-gravação-2900mbs-wds200t3x0c",
     pPrazo: 2100,
-    tags: [],
+    tags: ["processador", "intel", "core", "i3", "10105", "ghz", "lga", "1200"],
     destaque: true,
     promo: false,
     specs: [
@@ -3221,7 +3221,17 @@ const listaItens = [
     pathName:
       "ssd-xpg-s41-tuf-1tb-m2-pcie-leituras-3500mbs-gravações-3000mbs-agammixs411tc",
     pPrazo: 940,
-    tags: [],
+    tags: [
+      "processador",
+      "intel",
+      "core",
+      "i3",
+      "10105",
+      "ghz",
+      "lga",
+      "1200",
+      "ssd",
+    ],
     destaque: false,
     promo: false,
     specs: [

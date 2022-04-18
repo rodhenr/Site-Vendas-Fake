@@ -29,12 +29,23 @@ function Index() {
   const [left, setLeft] = useState(0);
   const [destaque, setDestaque] = useState<Props[]>([]);
   const [promo, setPromo] = useState<Props[]>([]);
-  const itens = itemsList.filter((item) => item.promo === true);
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     getDestaque();
     getPromo();
-  }, []);
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [width, setWidth]);
 
   function getDestaque() {
     let destaques = itemsList.filter((item) => item.destaque === true);
@@ -68,15 +79,41 @@ function Index() {
     setPromo([...randPromo]);
   }
 
+  function getPosDireita() {
+    if (width < 650) {
+      return -1200;
+    } else if (width < 1300) {
+      return -900;
+    } else {
+      return -600;
+    }
+  }
+
+  function getPosDireitaExtra() {
+    if (width < 650) {
+      return -1250;
+    } else if (width < 1300) {
+      return -1100;
+    } else {
+      return -850;
+    }
+  }
+
+  let posDireita = getPosDireita();
+  let posDireitaExtra = getPosDireitaExtra();
+
   function moverPromo(direcao: string) {
     if (left === 0 && direcao === "direita") {
       setLeft(0);
-    } else if ((left === -600 || left === -850) && direcao === "esquerda") {
-      setLeft(-850);
+    } else if (
+      (left === posDireita || left === posDireitaExtra) &&
+      direcao === "esquerda"
+    ) {
+      setLeft(posDireitaExtra);
     } else if (direcao === "esquerda") {
       setLeft((st) => st - 300);
-    } else if (left === -850 && direcao === "direita") {
-      setLeft(-600);
+    } else if (left === posDireitaExtra && direcao === "direita") {
+      setLeft(posDireita);
     } else if (direcao === "direita") {
       setLeft((st) => st + 300);
     }
@@ -131,8 +168,10 @@ function Index() {
         </div>
         <div className={styles.containerPromocoes}>
           <div className={styles.promocoesDesc}>
-            <h1>PROMOÇÕES</h1>
-            <p>São várias ofertas para você aproveitar</p>
+            <div className={styles.desc}>
+              <h1>PROMOÇÕES</h1>
+              <span>São várias ofertas para você aproveitar</span>
+            </div>
             <Link href={"/ofertas"} passHref>
               <button>COMPRE JÁ</button>
             </Link>

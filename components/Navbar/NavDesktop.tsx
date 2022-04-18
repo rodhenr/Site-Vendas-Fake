@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -18,9 +19,23 @@ interface Props {
 
 function NavDesktop({ numCart }: Props) {
   const [open, setOpen] = useState(false);
+  const [busca, setBusca] = useState("");
+  const router = useRouter();
 
   function changeOpen() {
     setOpen(!open);
+  }
+
+  function handleBusca(evt: React.ChangeEvent<HTMLInputElement>) {
+    let novaBusca = evt.target.value;
+    setBusca(novaBusca);
+  }
+
+  function handleInputEnter(evt: React.KeyboardEvent<HTMLInputElement>) {
+    console.log(evt);
+    if (evt.key === "Enter") {
+      router.push(`/busca?q=${busca}`);
+    }
   }
 
   return (
@@ -33,10 +48,17 @@ function NavDesktop({ numCart }: Props) {
         </div>
 
         <div className={styles.busca}>
-          <input type="text" placeholder="Digite o que você procura" />
-          <div className={styles.buscaIcone}>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-          </div>
+          <input
+            type="text"
+            placeholder="Digite o que você procura"
+            onChange={handleBusca}
+            onKeyPress={handleInputEnter}
+          />
+          <Link href={{ pathname: "busca", query: { q: busca } }} passHref>
+            <button className={styles.buscaIcone}>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </button>
+          </Link>
         </div>
         <div className={styles.containerLogin}>
           <FontAwesomeIcon icon={faUser} />

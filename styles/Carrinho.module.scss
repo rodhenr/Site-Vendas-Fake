@@ -255,6 +255,10 @@
 .itemDeletar {
   svg {
     color: colors.$border-primary;
+
+    &:hover{
+      color: colors.$text-terceary;
+    }
   }
   @media (min-width: 900px) {
     align-self: start;
@@ -358,8 +362,8 @@
     height: 35px;
     width: 210px;
 
-    &:hover {
-      opacity: 0.9;
+    &:hover{
+      background-color: colors.$text-terceary;
     }
   }
 

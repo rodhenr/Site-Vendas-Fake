@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import Navbar from "./Navbar";
 import NavDetalhesMobile from "./NavDetalhesMobile";
@@ -20,14 +21,28 @@ interface Props {
 
 function NavMobile({ numCart }: Props) {
   const [open, setOpen] = useState(false);
-  const [busca, setBusca] = useState(false);
+  const [busca, setBusca] = useState("");
+  const [fazerBusca, setFazerBusca] = useState(false)
+  const router = useRouter();
 
   function changeOpen() {
     setOpen(!open);
   }
 
   function changeBusca() {
-    setBusca(!busca);
+    setFazerBusca(!fazerBusca);
+  }
+
+  function handleBusca(evt: React.ChangeEvent<HTMLInputElement>) {
+    let novaBusca = evt.target.value;
+    setBusca(novaBusca);
+  }
+
+  function handleInputEnter(evt: React.KeyboardEvent<HTMLInputElement>) {
+    console.log(evt);
+    if (evt.key === "Enter") {
+      router.push(`/busca?q=${busca}`);
+    }
   }
 
   return (
@@ -58,12 +73,19 @@ function NavMobile({ numCart }: Props) {
             </div>
           </div>
         </div>
-        {busca ? (
+        {fazerBusca ? (
           <div className={styles.busca}>
-            <input type="text" placeholder="Digite o que você procura" />
-            <div className={styles.buscaIcone}>
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
-            </div>
+            <input
+              type="text"
+              placeholder="Digite o que você procura"
+              onChange={handleBusca}
+              onKeyPress={handleInputEnter}
+            />
+            <Link href={{ pathname: "busca", query: { q: busca } }} passHref>
+              <button className={styles.buscaIcone}>
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </button>
+            </Link>
           </div>
         ) : null}
       </div>

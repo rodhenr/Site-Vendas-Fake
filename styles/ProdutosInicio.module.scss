@@ -80,27 +80,52 @@
 /*----------BANNER----------*/
 .containerDuplo {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: calc(360px + 1rem);
+
+  @media (min-width: 500px) {
+    flex-direction: row;
+    justify-content: space-around;
+    width: calc(500px + 1rem);
+  }
+
+  @media (min-width: 768px) {
+    width: calc(750px + 1rem);
+  }
+
+  @media (min-width: 970px) {
+    width: calc(960px + 1.5rem);
+  }
+
+  @media (min-width: 1200px) {
+    width: calc(1040px + 4.5rem);
+  }
 }
 
 .bannerUm {
   cursor: pointer;
-  height: 300px;
-  width: 500px;
 
   &:hover {
     opacity: 0.8;
+  }
+
+  @media (min-width: 768px) {
+    height: 300px;
+    width: 500px;
   }
 }
 
 .bannerDois {
   cursor: pointer;
-  height: 300px;
-  width: 500px;
 
   &:hover {
     opacity: 0.8;
+  }
+
+  @media (min-width: 768px) {
+    height: 300px;
+    width: 500px;
   }
 }
 
@@ -110,41 +135,73 @@
   background: #c9c9c9;
   background-color: colors.$border-primary;
   display: flex;
-  gap: 5rem;
-  height: 600px;
+  flex-direction: column;
+  gap: 3rem;
+  height: 800px;
   justify-content: center;
   margin: 1.5rem 0;
   padding: 1rem;
   width: 100%;
+
+  @media (min-width: 970px) {
+    gap: 3rem;
+    flex-direction: row;
+    height: 600px;
+  }
+
+  @media (min-width: 1300px) {
+    gap: 5rem;
+    height: 600px;
+  }
 }
 
 .promocoesDesc {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+
   button {
     background-color: colors.$background-primary;
     border: none;
     color: colors.$text-secondary;
     cursor: pointer;
     font-family: "Poppins";
-    font-size: 0.875rem;
+    font-size: 1rem;
     height: 50px;
     width: 160px;
 
     &:hover {
-      background-color: colors.$text-primary;
+      background-color: colors.$text-terceary;
     }
   }
+}
+
+.desc {
+  text-align: center;
 
   h1 {
     color: colors.$background-primary;
     font-family: "Poppins";
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin: 0;
   }
 
-  p {
+  span {
     color: colors.$text-primary;
-    font-size: 1rem;
-    margin: 1rem 0;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    width: 70%;
   }
 }
 
@@ -163,7 +220,27 @@
   height: 500px;
   overflow: hidden;
   position: relative;
-  width: 830px;
+  width: calc(100vw - 200px);
+
+  @media (min-width: 700px) {
+    width: calc(100vw - 200px);
+  }
+
+  @media (min-width: 850px) {
+    width: calc(100vw - 300px);
+  }
+
+  @media (min-width: 900px) {
+    width: 500px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 600px;
+  }
+
+  @media (min-width: 1300px) {
+    width: 830px;
+  }
 }
 
 .itensPromo {

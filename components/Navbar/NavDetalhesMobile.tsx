@@ -32,7 +32,7 @@ function NavDetalhesMobile() {
     },
     {
       titulo: "DESCONTO NO",
-      desc: "BBoleto/PIX",
+      desc: "Boleto/PIX",
       icone: faBarcode,
     },
     {
