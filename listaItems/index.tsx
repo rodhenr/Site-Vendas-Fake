@@ -2254,7 +2254,6 @@ const listaItens = [
       { Peso: ["1065 gramas (bruto com embalagem)"] },
     ],
   },
-
   {
     categoria: "gabinete",
     fabricante: "Husky",

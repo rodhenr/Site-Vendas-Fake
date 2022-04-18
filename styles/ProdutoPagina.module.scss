@@ -23,7 +23,7 @@
   @media (min-width: 768px) {
     align-items: center;
     display: flex;
-    padding: 4rem 0 2rem 1rem;
+    padding: 1rem 0 2rem 1rem;
     position: relative;
     max-width: 1150px;
 
@@ -408,7 +408,7 @@
     display: flex;
     flex-direction: column;
     margin: 1rem auto 7rem;
-    max-width: 1200;
+    max-width: 1200px;
 
     h1 {
       color: colors.$background-primary;

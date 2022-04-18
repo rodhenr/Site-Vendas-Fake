@@ -321,8 +321,13 @@
     margin: 0;
 
     &:last-child {
+      cursor: pointer;
       font-size: 1rem;
       font-weight: 600;
+
+      &:hover{
+        color: colors.$text-primary;
+      }
     }
   }
 
@@ -407,7 +412,6 @@
   }
 
   li {
-    border-left: 1px solid rgba(170, 170, 170, 0.322);
     color: colors.$text-secondary;
     cursor: pointer;
     font-size: 0.6rem;

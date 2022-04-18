@@ -107,6 +107,7 @@
 /*----------PROMOÇÕES----------*/
 .containerPromocoes {
   align-items: center;
+  background: #c9c9c9;
   background-color: colors.$border-primary;
   display: flex;
   gap: 5rem;
@@ -122,10 +123,15 @@
     background-color: colors.$background-primary;
     border: none;
     color: colors.$text-secondary;
+    cursor: pointer;
     font-family: "Poppins";
     font-size: 0.875rem;
     height: 50px;
     width: 160px;
+
+    &:hover {
+      background-color: colors.$text-primary;
+    }
   }
 
   h1 {
@@ -137,8 +143,8 @@
 
   p {
     color: colors.$text-primary;
-    font-size: 0.875rem;
-    margin: 0.5rem 0 1rem;
+    font-size: 1rem;
+    margin: 1rem 0;
   }
 }
 
@@ -167,10 +173,13 @@
   left: 0px;
   position: absolute;
   top: 0;
+  transition: all 1s ease;
 }
 
 .item {
+  align-items: center;
   background-color: colors.$text-secondary;
+  display: flex;
   height: 500px;
   width: 250px;
 }

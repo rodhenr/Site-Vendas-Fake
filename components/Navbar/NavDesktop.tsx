@@ -42,7 +42,9 @@ function NavDesktop({ numCart }: Props) {
           <FontAwesomeIcon icon={faUser} />
           <div>
             <p>Olá, seja bem-vindo</p>
-            <p>Entrar</p>
+            <Link href={"/"} passHref>
+              <p>Entrar</p>
+            </Link>
           </div>
         </div>
         <div className={styles.carrinho}>

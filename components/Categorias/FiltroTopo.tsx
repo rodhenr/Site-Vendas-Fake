@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 
 import itemsList from "../../listaItems/Index";
@@ -16,7 +16,7 @@ interface Props {
 function FiltroTopo({ handleFiltro, filtro }: Props) {
   const router = useRouter();
   const { category } = router.query;
-  const items = itemsList.filter((i) => i.categoria === category);
+  const items = itemsList.filter((i) => i.categoria === category) || "OFERTAS";
 
   const [open, setOpen] = useState(false);
 
@@ -32,7 +32,7 @@ function FiltroTopo({ handleFiltro, filtro }: Props) {
   return (
     <div className={styles.containerFiltro}>
       <h1 className={styles.categoriaNome}>
-        {items[0].categoria.replace(/-/g, " ").toUpperCase()}
+        {items[0].categoria.replace(/-/g, " ").toUpperCase() || items}
       </h1>
       <div className={styles.filtro}>
         <p>FILTRAR:</p>

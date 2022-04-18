@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useDispatch } from "react-redux";
 
 import { removeFromCart } from "../../store/slices/cartSlice";
@@ -22,9 +23,11 @@ interface Props {
   num: number;
   handleRemove: Function;
   promo: boolean;
+  pathName: string;
+  categoria: string;
 }
 
-function Item({ id, img, name, pPrazo, promo }: Props) {
+function Item({ id, img, name, pPrazo, promo, pathName, categoria }: Props) {
   const dispatch = useDispatch();
   const [itemQtde, setItemQtde] = useState(1);
 
@@ -90,7 +93,9 @@ function Item({ id, img, name, pPrazo, promo }: Props) {
               <Image src={img} alt="" height={1000} width={1000} />
             </div>
             <div className={styles.itemDescricao}>
-              <p>{`${name.slice(0, 85)}...`}</p>
+              <Link href={`/${categoria}/${pathName}`} passHref>
+                <p>{`${name.slice(0, 85)}...`}</p>
+              </Link>
             </div>
             <div
               onClick={() => handleDelete(id)}
@@ -148,7 +153,9 @@ function Item({ id, img, name, pPrazo, promo }: Props) {
             <Image src={img} alt="" height={1000} width={1000} />
           </div>
           <div className={styles.itemDescricao}>
-            <p>{`${name.slice(0, 85)}...`}</p>
+            <Link href={`/${categoria}/${pathName}`} passHref>
+              <p>{`${name.slice(0, 85)}...`}</p>
+            </Link>
           </div>
           <div className={styles.itemAcoes}>
             <button onClick={aumentarQtde}>

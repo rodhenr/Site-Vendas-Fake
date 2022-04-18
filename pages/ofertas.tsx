@@ -1,17 +1,14 @@
-import type { NextPage } from "next";
-
 import Navbar from "../components/Navbar/Index";
-import Products from "../components/ProdutosInicio/Index";
+import PaginaOfertas from "../components/Categorias/Ofertas";
 import Informacoes from "../components/Informacoes/Index";
 
-const Home: NextPage = () => {
+export default function Ofertas() {
+
   return (
     <div>
       <Navbar />
-      <Products />
+      <PaginaOfertas/>
       <Informacoes />
     </div>
   );
-};
-
-export default Home;
+}

@@ -265,13 +265,6 @@ function Produto(props: Props) {
             {parcelamento ? <Parcelamento pPrazo={pPrazo} /> : null}
           </div>
           <div className={styles.comprar}>
-            <div className={styles.comprarQtde}>
-              <input
-                type="text"
-                onChange={(e) => handleInputChange(e)}
-                value={inputQtde}
-              ></input>
-            </div>
             <button onClick={handleClick}>COMPRAR</button>
           </div>
         </div>

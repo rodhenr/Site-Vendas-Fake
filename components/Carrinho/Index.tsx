@@ -102,6 +102,8 @@ function Index() {
                   num={key}
                   handleRemove={handleRemove}
                   promo={i.promo}
+                  pathName={i.pathName}
+                  categoria={i.categoria}
                 />
               ))}
             </div>
