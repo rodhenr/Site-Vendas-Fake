@@ -1,6 +1,6 @@
 @use "colors";
 
-/*---------- GERAL ----------*/
+/*--------------------------GERAL--------------------------*/
 .container {
   border-top: 2px solid colors.$background-primary;
   color: colors.$background-secondary;
@@ -9,7 +9,6 @@
   overflow: hidden;
 }
 
-/*----- INFORMAÇÕES -----*/
 .containerLoja {
   align-items: center;
   background-color: colors.$text-primary;
@@ -55,7 +54,7 @@
   }
 }
 
-/*--- FUNCIONAMENTO ---*/
+/*----------FUNCIONAMENTO----------*/
 .funcionanento {
   grid-area: atendimento;
 
@@ -95,7 +94,7 @@
   }
 }
 
-/*--- PAGAMENTO ---*/
+/*----------PAGAMENTO----------*/
 .pagamento {
   align-items: center;
   display: flex;
@@ -125,7 +124,6 @@
   }
 }
 
-/* FORMAS DE PAGAMENTO */
 .containerFormas {
   align-items: center;
   display: grid;
@@ -142,7 +140,6 @@
   }
 }
 
-/* ITEM */
 .pagamentoTipo {
   background-color: colors.$text-secondary;
   border-radius: 5px;
@@ -151,7 +148,7 @@
   width: 60px;
 }
 
-/*--- INFORMAÇÕES EXTRAS ---*/
+/*----------EXTRA----------*/
 .lojaInfoExtra {
   grid-area: extra;
 
@@ -181,7 +178,7 @@
   }
 }
 
-/*--- SOBRE A LOJA ---*/
+/*----------SOBRE----------*/
 .lojaSobre {
   align-items: center;
   background-color: rgb(26, 25, 25);
@@ -227,7 +224,6 @@
   }
 }
 
-/* DESCRIÇÃO DA LOJA */
 .lojaSobreDesc {
   p {
     color: colors.$text-secondary;

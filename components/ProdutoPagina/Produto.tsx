@@ -1,17 +1,17 @@
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+
+import Image from "next/image";
+import Link from "next/link";
+
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { addToCart } from "../../store/slices/cartSlice";
 import { updateTotalPrice } from "../../store/slices/newSlice";
 
 import Parcelamento from "./Parcelamento";
-
 import img3 from "../../public/images/sample.jpg";
-
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from "../../styles/ProdutoPagina.module.scss";
 

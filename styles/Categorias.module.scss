@@ -1,6 +1,6 @@
 @use "colors";
 
-/*---------------------------GERAL---------------------------*/
+/*-------------------------GERAL-------------------------*/
 .container {
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@
   }
 }
 
-/*-----------------FILTRO TOPO-----------------*/
+/*----------FILTRO TOPO----------*/
 .containerFiltro {
   align-items: center;
   background: colors.$border-primary;
@@ -120,8 +120,41 @@
   }
 }
 
-/*-----------------ITENS-----------------*/
-.itens {
+.buscaDesc {
+  p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    align-items: center;
+    display: flex;
+    gap: 0.4rem;
+
+    h1 {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.buscaNenhum {
+  align-items: center;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/*----------ITENS----------*/
+.containerItens {
   align-self: start;
   display: grid;
   gap: 2rem 0.5rem;
@@ -147,38 +180,5 @@
   @media (min-width: 1200px) {
     gap: 1.5rem;
     grid-template-columns: repeat(4, 260px);
-  }
-}
-
-.itensSem {
-  align-items: center;
-  display: flex;
-  height: 300px;
-  justify-content: center;
-
-  h1 {
-    font-size: 2.5rem;
-  }
-}
-
-.buscaDesc {
-  p {
-    font-size: 0.8rem;
-    margin: 0;
-  }
-
-  h1 {
-    font-size: 1rem;
-    margin: 0;
-  }
-
-  @media (min-width: 768px) {
-    align-items: center;
-    display: flex;
-    gap: 0.4rem;
-
-    h1 {
-      font-size: 1.2rem;
-    }
   }
 }

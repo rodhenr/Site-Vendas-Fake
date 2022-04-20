@@ -1,6 +1,6 @@
 @use "colors";
 
-/*---------------------------GERAL---------------------------*/
+/*-------------------------GERAL-------------------------*/
 .container {
   align-items: center;
   cursor: pointer;
@@ -18,7 +18,7 @@
   }
 }
 
-/*-----------------IMAGEM-----------------*/
+/*----------IMAGEM----------*/
 .imagem {
   align-items: center;
   display: flex;
@@ -27,7 +27,7 @@
   height: 180px;
   width: 180px;
 }
-/*-----------------PROMO-----------------*/
+/*----------PROMO----------*/
 .promo {
   align-items: center;
   background-color: colors.$text-terceary;
@@ -47,7 +47,7 @@
   }
 }
 
-/*-----------------NOME-----------------*/
+/*----------NOME----------*/
 .nome {
   font-family: "Poppins";
   height: 110px;
@@ -66,8 +66,8 @@
   }
 }
 
-/*---PRECO---*/
-.produtoPreco {
+/*---PREÇOS---*/
+.containerPrecos {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -76,7 +76,7 @@
   width: 80%;
 }
 
-.containerPrecos {
+.produtoPrecos {
   align-items: center;
   display: flex;
   gap: 0.5rem;

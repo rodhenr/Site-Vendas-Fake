@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-import Item from "../Item/Item";
-import itemsList from "../../listaItems/Index";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+
+import Item from "../Item/Item";
+import itemsList from "../../listaItems/Index";
 
 import styles from "../../styles/Categorias.module.scss";
 
@@ -135,11 +135,9 @@ function Busca() {
           </div>
         </div>
       </div>
-      <div className={itens.length === 0 ? styles.itensSem : styles.itens}>
+      <div className={itens.length === 0 ? styles.buscaNenhum : styles.itens}>
         {itens.length === 0 ? (
-          <div className={styles.buscaSemItens}>
-            <h1>Nenhum item encontrado</h1>
-          </div>
+          <h1>Nenhum item encontrado</h1>
         ) : (
           renderItens(filtro)
         )}

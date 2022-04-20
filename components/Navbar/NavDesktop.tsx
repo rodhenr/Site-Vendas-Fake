@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -80,27 +81,41 @@ function NavDesktop({ numCart }: Props) {
       </div>
       <nav className={styles.navDesktop} onClick={changeOpen}>
         <ul>
-          <li>
-            <Link href="/placa-mae">PLACA-MÃE</Link>
-          </li>
-          <li>
-            <Link href="/processador">PROCESSADOR</Link>
-          </li>
-          <li>
-            <Link href="/placa-de-video">PLACA DE VÍDEO</Link>
-          </li>
-          <li>
-            <Link href="/fonte">FONTE</Link>
-          </li>
-          <li>
-            <Link href="/gabinete">GABINETE</Link>
-          </li>
-          <li>
-            <Link href="/memoria-ram">MEMÓRIA RAM</Link>
-          </li>
-          <li>
-            <Link href="/ssd">SSD</Link>
-          </li>
+          <Link href="/placa-mae" passHref>
+            <li>
+              <span>PLACA-MÃE</span>
+            </li>
+          </Link>
+          <Link href="/processador" passHref>
+            <li>
+              <span>PROCESSADOR </span>
+            </li>
+          </Link>
+          <Link href="/placa-de-video" passHref>
+            <li>
+              <span>PLACA DE VÍDEO </span>
+            </li>
+          </Link>
+          <Link href="/fonte" passHref>
+            <li>
+              <span>FONTE </span>
+            </li>
+          </Link>
+          <Link href="/gabinete" passHref>
+            <li>
+              <span> GABINETE </span>
+            </li>
+          </Link>
+          <Link href="/memoria-ram" passHref>
+            <li>
+              <span>MEMÓRIA RAM </span>
+            </li>
+          </Link>
+          <Link href="/ssd" passHref>
+            <li>
+              <span>SSD</span>
+            </li>
+          </Link>
         </ul>
       </nav>
       <NavDetalhesDesktop />

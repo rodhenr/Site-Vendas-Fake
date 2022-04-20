@@ -22,7 +22,7 @@ interface Props {
 function NavMobile({ numCart }: Props) {
   const [open, setOpen] = useState(false);
   const [busca, setBusca] = useState("");
-  const [fazerBusca, setFazerBusca] = useState(false)
+  const [fazerBusca, setFazerBusca] = useState(false);
   const router = useRouter();
 
   function changeOpen() {
@@ -47,7 +47,7 @@ function NavMobile({ numCart }: Props) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.containerFixed}>
+      <div>
         <div className={styles.containerTopo}>
           <div className={styles.containerNavbar}>
             <div className={styles.categorias} onClick={changeOpen}>

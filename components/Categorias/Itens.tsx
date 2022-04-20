@@ -94,7 +94,7 @@ function Filtro({ filtro }: Props) {
     }
   }
 
-  return <div className={styles.itens}>{renderItems(filtro)}</div>;
+  return <div className={styles.containerItens}>{renderItems(filtro)}</div>;
 }
 
 export default Filtro;

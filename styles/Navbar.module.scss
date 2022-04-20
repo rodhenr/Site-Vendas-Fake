@@ -1,6 +1,6 @@
 @use "colors";
 
-/*---------- GERAL ----------*/
+/*-------------------------GERAL-------------------------*/
 .container {
   background-color: colors.$background-primary;
   display: flex;
@@ -15,7 +15,7 @@
   }
 }
 
-/*----- ITENS TOPO -----*/
+/*----------ITENS TOPO----------*/
 .containerTopo {
   align-items: center;
   display: grid;
@@ -24,7 +24,7 @@
   padding: 0 0 0.5rem;
 }
 
-/*--- NAVBAR ---*/
+/*----------NAVBAR----------*/
 .containerNavbar {
   align-self: center;
   font-size: 2rem;
@@ -53,7 +53,6 @@
   }
 }
 
-/* CATEGORIAS */
 .categorias {
   align-items: center;
   border-radius: 9px;
@@ -144,13 +143,11 @@
   }
 }
 
-/* NAVBAR OPEN = TRUE */
 .navbar.active {
   left: 0;
   transition: all 0.6s ease;
 }
 
-/* OPÇÕES CASO OPEN = TRUE */
 .navAtivoOpcoes {
   align-items: center;
   display: flex;
@@ -162,7 +159,6 @@
   }
 }
 
-/* LOGIN E CARRINHO CASO OPEN = TRUE */
 .navAtivoExtra {
   display: flex;
   gap: 0.6rem;
@@ -177,7 +173,7 @@
   }
 }
 
-/* NOME DA LOJA */
+/*----------NOME DA LOJA----------*/
 .nomeLoja {
   align-self: center;
   color: colors.$text-secondary;
@@ -191,7 +187,7 @@
   }
 }
 
-/* OPÇÕES EXTRAS DA NAVBAR */
+/*----------EXTRAS----------*/
 .opcoesExtras {
   align-self: center;
   cursor: pointer;
@@ -207,14 +203,10 @@
   }
 }
 
-/* ICONE DE BUSCA */
 .opcoesBusca {
   margin-right: 1rem;
 }
 
-/*--- CARRINHO ---*/
-
-/* NÚMERO DE ITENS NO CARRINHO */
 .carrinhoNumeroItem {
   align-items: center;
   background-color: colors.$text-primary;
@@ -312,7 +304,7 @@
   }
 }
 
-/*----- DESKTOP -----*/
+/*----------DESKTOP----------*/
 .containerLogin {
   align-items: center;
   display: flex;
@@ -361,7 +353,6 @@
   }
 }
 
-/* CONTAINER NOME E CATEGORIAS */
 .navNomeCategoria {
   align-items: center;
   display: flex;
@@ -373,7 +364,6 @@
   }
 }
 
-/* CARRINHO */
 .carrinho {
   align-self: center;
   cursor: pointer;
@@ -433,7 +423,7 @@
       background-color: colors.$text-secondary;
       transition: all 0.3s ease;
 
-      a {
+      span {
         color: colors.$background-primary;
       }
     }

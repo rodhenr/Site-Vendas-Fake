@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import Navbar from "../Navbar/Index";
 import Informacoes from "../Informacoes/Index";
 import Produto from "./Produto";
@@ -24,7 +22,7 @@ interface Props {
 }
 
 function Index(props: Props) {
-  const [desc, setDesc] = useState({ sobre: true, spec: false });
+
   const {
     specs,
     img,

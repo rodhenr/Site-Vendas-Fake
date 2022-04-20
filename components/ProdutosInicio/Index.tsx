@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 
-import Item from "../Item/Item";
-import itemsList from "../../listaItems/Index";
-
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import Item from "../Item/Item";
+import itemsList from "../../listaItems/Index";
 
 import styles from "../../styles/ProdutosInicio.module.scss";
 

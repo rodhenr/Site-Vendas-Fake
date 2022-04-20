@@ -7,72 +7,70 @@ interface Props {
 
 function Precos({ promo, pPrazo }: Props) {
   return (
-    <div className={styles.precos}>
-      <div className={styles.produtoPreco}>
-        <div className={styles.containerPrecos}>
-          <div className={styles.precoPrazo}>
-            {promo ? (
-              <p>
-                {(pPrazo * 0.85).toLocaleString("pt-BR", {
-                  minimumFractionDigits: 2,
-                  style: "currency",
-                  currency: "BRL",
-                })}
-              </p>
-            ) : (
-              <p>
-                {pPrazo.toLocaleString("pt-BR", {
-                  minimumFractionDigits: 2,
-                  style: "currency",
-                  currency: "BRL",
-                })}
-              </p>
-            )}
-          </div>
-        </div>
-        <div className={styles.precoDetalhe}>
+    <div className={styles.containerPreco}>
+      <div className={styles.produtoPrecos}>
+        <div className={styles.precoPrazo}>
           {promo ? (
             <p>
-              <strong>
-                {(pPrazo * 0.7).toLocaleString("pt-BR", {
-                  minimumFractionDigits: 2,
-                  style: "currency",
-                  currency: "BRL",
-                })}{" "}
-              </strong>
-              à vista no boleto ou em até{" "}
-              <strong>
-                12x de{" "}
-                {((pPrazo * 0.85) / 12).toLocaleString("pt-BR", {
-                  minimumFractionDigits: 2,
-                  style: "currency",
-                  currency: "BRL",
-                })}{" "}
-              </strong>
-              sem juros
+              {(pPrazo * 0.85).toLocaleString("pt-BR", {
+                minimumFractionDigits: 2,
+                style: "currency",
+                currency: "BRL",
+              })}
             </p>
           ) : (
             <p>
-              <strong>
-                {(pPrazo * 0.85).toLocaleString("pt-BR", {
-                  minimumFractionDigits: 2,
-                  style: "currency",
-                  currency: "BRL",
-                })}{" "}
-              </strong>
-              à vista no boleto ou em até{" "}
-              <strong>
-                12x de{" "}
-                {(pPrazo / 12).toLocaleString("pt-BR", {
-                  minimumFractionDigits: 2,
-                  style: "currency",
-                  currency: "BRL",
-                })}{" "}
-              </strong>
-              sem juros
+              {pPrazo.toLocaleString("pt-BR", {
+                minimumFractionDigits: 2,
+                style: "currency",
+                currency: "BRL",
+              })}
             </p>
           )}
         </div>
+      </div>
+      <div className={styles.precoDetalhe}>
+        {promo ? (
+          <p>
+            <strong>
+              {(pPrazo * 0.7).toLocaleString("pt-BR", {
+                minimumFractionDigits: 2,
+                style: "currency",
+                currency: "BRL",
+              })}{" "}
+            </strong>
+            à vista no boleto ou em até{" "}
+            <strong>
+              12x de{" "}
+              {((pPrazo * 0.85) / 12).toLocaleString("pt-BR", {
+                minimumFractionDigits: 2,
+                style: "currency",
+                currency: "BRL",
+              })}{" "}
+            </strong>
+            sem juros
+          </p>
+        ) : (
+          <p>
+            <strong>
+              {(pPrazo * 0.85).toLocaleString("pt-BR", {
+                minimumFractionDigits: 2,
+                style: "currency",
+                currency: "BRL",
+              })}{" "}
+            </strong>
+            à vista no boleto ou em até{" "}
+            <strong>
+              12x de{" "}
+              {(pPrazo / 12).toLocaleString("pt-BR", {
+                minimumFractionDigits: 2,
+                style: "currency",
+                currency: "BRL",
+              })}{" "}
+            </strong>
+            sem juros
+          </p>
+        )}
       </div>
     </div>
   );

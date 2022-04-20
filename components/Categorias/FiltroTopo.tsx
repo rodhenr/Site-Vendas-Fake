@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-import itemsList from "../../listaItems/Index";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+
+import itemsList from "../../listaItems/Index";
 
 import styles from "../../styles/Categorias.module.scss";
 

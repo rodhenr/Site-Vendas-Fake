@@ -1,11 +1,72 @@
 @use "colors";
 
-/*---------- GERAL ----------*/
+/*------------------------------GERAL------------------------------*/
 .geral {
   background-color: colors.$background-secondary;
 }
 
-.container {
+/*----------CARRINHO SEM ITENS----------*/
+.semItem {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat";
+  gap: 3rem;
+  padding: 2rem 0 5rem;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 3rem 0 0;
+  }
+
+  button {
+    background-color: colors.$background-terceary;
+    border: none;
+    border-radius: 5px;
+    color: colors.$text-secondary;
+    font-size: 1rem;
+    height: 40px;
+    width: 300px;
+  }
+
+  @media (min-width: 900px) {
+    font-size: 2rem;
+    margin: 0 auto;
+    padding: 5rem 0 9rem;
+    width: 900px;
+
+    h2 {
+      font-size: 3rem;
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    width: 950px;
+  }
+
+  @media (min-width: 1600px) {
+    width: 1100px;
+  }
+}
+
+.semItemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  svg {
+    height: 50px;
+  }
+}
+
+/*----------CARRINHO COM ITENS----------*/
+.comItem {
   font-family: "Montserrat";
   padding: 3rem 1.5rem 0;
 
@@ -48,76 +109,11 @@
   }
 }
 
-/*---------- CARRINHO SEM ITENS ----------*/
-.containerSemItem {
-  font-family: "Montserrat";
-
-  h2 {
-    margin: 0;
-    padding: 3rem 0 0;
-  }
-
-  @media (min-width: 900px) {
-    margin: 0 auto;
-    width: 900px;
-
-    h2 {
-      font-size: 3rem;
-      padding: 0;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    width: 950px;
-  }
-
-  @media (min-width: 1600px) {
-    width: 1100px;
-  }
+.titulo {
+  grid-area: titulo;
 }
 
-/* CONTAINER */
-.carrinhoSemProdutos {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  padding: 2rem 0 5rem;
-  text-align: center;
-
-  p {
-    margin: 0;
-  }
-
-  button {
-    background-color: colors.$background-terceary;
-    border: none;
-    border-radius: 5px;
-    color: colors.$text-secondary;
-    font-size: 1rem;
-    height: 40px;
-    width: 300px;
-  }
-
-  @media (min-width: 900px) {
-    font-size: 2rem;
-    margin: 0 auto;
-    padding: 5rem 0 9rem;
-  }
-}
-
-.semProdutosInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  svg {
-    height: 50px;
-  }
-}
-
-/*---------- CARRINHO COM ITENS ----------*/
-.containerTeste {
+.itemCarrinho {
   display: flex;
   flex-direction: column;
   gap: 0.5rem 0;
@@ -127,10 +123,7 @@
   }
 }
 
-.titulo {
-  grid-area: titulo;
-}
-
+/*-----ITEM-----*/
 .containerItem {
   background-color: colors.$text-secondary;
   border: 1px solid colors.$border-primary;
@@ -164,7 +157,6 @@
   }
 }
 
-/*--- ITEM INDIVIDUAL ---*/
 .item {
   display: grid;
   grid-template-columns: 70px 1fr 20px;
@@ -178,14 +170,12 @@
   }
 }
 
-/* IMAGEM DO ITEM */
 .itemImagem {
   @media (min-width: 900px) {
     width: 50px;
   }
 }
 
-/* DESCRIÇÃO DO ITEM */
 .itemDescricao {
   cursor: pointer;
   padding: 0.5rem 0 0;
@@ -210,7 +200,20 @@
   }
 }
 
-/*--- CONTAINER DE OPÇÕES DO ITEM ---*/
+.itemDeletar {
+  svg {
+    color: colors.$border-primary;
+
+    &:hover {
+      color: colors.$text-terceary;
+    }
+  }
+  @media (min-width: 900px) {
+    align-self: start;
+    justify-self: flex-end;
+  }
+}
+
 .containerInfo {
   align-items: center;
   display: flex;
@@ -222,7 +225,6 @@
   }
 }
 
-/* ADICIONAR/REMOVER QUANTIDADE */
 .itemAcoes {
   align-items: center;
   display: flex;
@@ -252,21 +254,6 @@
   }
 }
 
-.itemDeletar {
-  svg {
-    color: colors.$border-primary;
-
-    &:hover{
-      color: colors.$text-terceary;
-    }
-  }
-  @media (min-width: 900px) {
-    align-self: start;
-    justify-self: flex-end;
-  }
-}
-
-/*--- PREÇO DO ITEM ---*/
 .itemPrecos {
   align-items: center;
   display: flex;
@@ -305,19 +292,19 @@
   }
 }
 
-.promoValor {
-  color: colors.$background-primary;
-  font-size: 0.8rem;
-  @media (min-width: 900px) {
-    font-size: 0.7rem;
-  }
-}
-
 .precoNormal {
   color: gray;
   font-size: 0.8rem;
   text-decoration: line-through;
 
+  @media (min-width: 900px) {
+    font-size: 0.7rem;
+  }
+}
+
+.precoPromo {
+  color: colors.$background-primary;
+  font-size: 0.8rem;
   @media (min-width: 900px) {
     font-size: 0.7rem;
   }
@@ -346,7 +333,7 @@
   }
 }
 
-/*----- REMOVER TUDO DO CARRINHO ----*/
+/*-----LIMPAR CARRINHO----*/
 .carrinhoLimpar {
   display: flex;
   justify-content: flex-end;
@@ -362,7 +349,7 @@
     height: 35px;
     width: 210px;
 
-    &:hover{
+    &:hover {
       background-color: colors.$text-terceary;
     }
   }
@@ -379,7 +366,7 @@
   }
 }
 
-/*----- CONTAINER FRETE ---*/
+/*-----FRETE-----*/
 .containerFrete {
   background-color: colors.$text-secondary;
   border: 1px solid colors.$border-primary;
@@ -406,7 +393,6 @@
   }
 }
 
-/* FORMULÁRIO DO FRETE */
 .freteForm {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -450,14 +436,14 @@
   }
 }
 
-/*----- PREÇOS FINAIS -----*/
+/*-----PREÇOS FINAIS-----*/
 .precoFinalizar {
   @media (min-width: 900px) {
     grid-area: valor;
   }
 }
 
-.containerPrecos {
+.containerPrecosFinal {
   background-color: colors.$text-secondary;
   color: colors.$text-primary;
   display: flex;
@@ -475,7 +461,6 @@
   }
 }
 
-/* PREÇO DOS PRODUTOS */
 .precosProdutos {
   border-bottom: 1px colors.$background-secondary solid;
   display: flex;
@@ -484,7 +469,6 @@
   padding: 1rem 0.8rem;
 }
 
-/* PREÇO DO FRETE */
 .precoFrete {
   border-bottom: 1px colors.$background-secondary solid;
   display: flex;
@@ -493,7 +477,6 @@
   padding: 0.5rem 0.8rem 1rem;
 }
 
-/* PREÇO TOTAL */
 .precoTotal {
   background-color: #e5f5e5;
   display: flex;
@@ -503,7 +486,6 @@
   padding: 1rem 0.8rem;
 }
 
-/*--- FINALIZAR COMPRA ---*/
 .finalizarCompra {
   align-items: center;
   display: flex;
