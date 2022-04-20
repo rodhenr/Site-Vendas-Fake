@@ -8,7 +8,7 @@ import { updateTotalPrice } from "../../store/slices/newSlice";
 
 import Parcelamento from "./Parcelamento";
 
-import img3 from "../../public/images/fonte-xpg-850-3.jpg";
+import img3 from "../../public/images/sample.jpg";
 
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

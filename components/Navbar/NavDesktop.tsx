@@ -101,12 +101,6 @@ function NavDesktop({ numCart }: Props) {
           <li>
             <Link href="/ssd">SSD</Link>
           </li>
-          <li>
-            <Link href="/ssd">PC GAMER</Link>
-          </li>
-          <li>
-            <Link href="/ssd">PERIFÉRICOS</Link>
-          </li>
         </ul>
       </nav>
       <NavDetalhesDesktop />
