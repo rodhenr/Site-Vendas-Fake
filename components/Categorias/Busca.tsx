@@ -135,7 +135,7 @@ function Busca() {
           </div>
         </div>
       </div>
-      <div className={itens.length === 0 ? styles.buscaNenhum : styles.itens}>
+      <div className={itens.length === 0 ? styles.buscaNenhum : styles.containerItens}>
         {itens.length === 0 ? (
           <h1>Nenhum item encontrado</h1>
         ) : (
