@@ -1,4 +1,4 @@
-Esse é um projeto feito para simular uma Landing Page de uma empresa. As informações contidas na página podem não ser reais, sendo usadas apenas de forma didática para elaboração do site.
+Esse é um projeto feito para simular uma página de vendas de peças de computador. As informações contidas na página podem não ser reais, sendo usadas apenas de forma didática para elaboração do site.
 
 Para este projeto foram utilizadas as seguintes tecnologias:
 
