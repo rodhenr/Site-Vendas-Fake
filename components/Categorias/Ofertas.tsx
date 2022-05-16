@@ -128,7 +128,7 @@ function Ofertas() {
           </div>
         </div>
       </div>
-      <div className={styles.itens}>{renderItens(filtro)}</div>
+      <div className={styles.containerItens}>{renderItens(filtro)}</div>
     </main>
   );
 }
