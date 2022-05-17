@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "../../styles/Carrinho.module.scss";
 
 interface Props {
