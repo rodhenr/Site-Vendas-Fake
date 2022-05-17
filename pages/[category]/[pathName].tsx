@@ -2,7 +2,7 @@ import { GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 
 import Produto from "../../components/ProdutoPagina/Index";
-import itemsList from "../../listaItems/Index";
+import itemsList from "../../listaItems";
 
 interface Props {
   modelo: string;

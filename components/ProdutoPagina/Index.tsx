@@ -1,4 +1,4 @@
-import Navbar from "../Navbar/Index";
+import Navbar from "../Navbar";
 import Informacoes from "../Informacoes/Index";
 import Produto from "./Produto";
 import VerMais from "./VerMais";

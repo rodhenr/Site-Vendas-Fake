@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 
-import Navbar from "../components/Navbar/Index";
+import Navbar from "../components/Navbar";
 import Products from "../components/ProdutosInicio/Index";
 import Informacoes from "../components/Informacoes/Index";
 

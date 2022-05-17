@@ -7,7 +7,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Item from "../Item/Item";
-import itemsList from "../../listaItems/Index";
+import itemsList from "../../listaItems";
 
 import styles from "../../styles/ProdutosInicio.module.scss";
 

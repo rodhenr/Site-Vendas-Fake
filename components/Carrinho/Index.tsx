@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 
-import { RootState } from "../../store/Store";
+import { RootState } from "../../store/store";
 
 import ComItens from "./ComItens";
 import SemItens from "./SemItens";

@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-import itemsList from "../../listaItems/Index";
+import itemsList from "../../listaItems";
 import Item from "../Item/Item";
 
 import styles from "../../styles/Categorias.module.scss";

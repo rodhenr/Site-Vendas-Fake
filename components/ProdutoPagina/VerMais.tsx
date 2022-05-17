@@ -1,4 +1,4 @@
-import listaItens from "../../listaItems/Index";
+import listaItens from "../../listaItems";
 import Item from "../Item/Item";
 
 import styles from "../../styles/ProdutoPagina.module.scss";

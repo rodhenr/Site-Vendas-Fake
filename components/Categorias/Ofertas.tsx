@@ -1,5 +1,5 @@
 import { useState } from "react";
-import itemsList from "../../listaItems/Index";
+import itemsList from "../../listaItems";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";

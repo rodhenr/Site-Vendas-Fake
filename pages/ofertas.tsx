@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar/Index";
+import Navbar from "../components/Navbar";
 import PaginaOfertas from "../components/Categorias/Ofertas";
 import Informacoes from "../components/Informacoes/Index";
 

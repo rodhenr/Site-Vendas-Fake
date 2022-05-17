@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { useSelector } from "react-redux";
 
-import { RootState } from "../../store/Store";
+import { RootState } from "../../store/store";
 
 import NavDesktop from "./NavDesktop";
 import NavMobile from "./NavMobile";

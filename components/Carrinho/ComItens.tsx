@@ -6,7 +6,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-import { RootState } from "../../store/Store";
+import { RootState } from "../../store/store";
 import { cleanCart } from "../../store/slices/cartSlice";
 import { cleanSlice } from "../../store/slices/newSlice";
 

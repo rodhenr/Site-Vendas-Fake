@@ -2,7 +2,7 @@ import { GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 
 
-import Navbar from "../../components/Navbar/Index";
+import Navbar from "../../components/Navbar";
 import Informacao from "../../components/Informacoes/Index";
 import Busca from "../../components/Categorias/Busca";
 

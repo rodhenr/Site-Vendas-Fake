@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 
 import Categoria from "../../components/Categorias/Index";
-import itemsList from "../../listaItems/Index";
+import itemsList from "../../listaItems";
 
 export default function index() {
   return (

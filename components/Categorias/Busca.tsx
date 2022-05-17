@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 import Item from "../Item/Item";
-import itemsList from "../../listaItems/Index";
+import itemsList from "../../listaItems";
 
 import styles from "../../styles/Categorias.module.scss";
 

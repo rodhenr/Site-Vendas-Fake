@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Navbar from "../Navbar/Index";
+import Navbar from "../Navbar/index";
 import Footer from "../Informacoes/Index";
 import Itens from "./Itens";
 import FiltroTopo from "./FiltroTopo";
