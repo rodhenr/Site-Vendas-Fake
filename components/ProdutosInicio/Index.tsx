@@ -33,8 +33,6 @@ function Index() {
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    getDestaque();
-    getPromo();
     function handleResize() {
       setWidth(window.innerWidth);
     }
@@ -47,6 +45,11 @@ function Index() {
       window.removeEventListener("resize", handleResize);
     };
   }, [width, setWidth]);
+
+  useEffect(() => {
+    getDestaque();
+    getPromo();
+  }, []);
 
   function getDestaque() {
     let destaques = itemsList.filter((item) => item.destaque === true);
