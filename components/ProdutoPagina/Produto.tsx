@@ -117,6 +117,7 @@ function Produto(props: Props) {
                 alt="testando"
                 layout="fill"
                 objectFit="contain"
+                priority={true}
               />
             </div>
             <div
@@ -132,6 +133,7 @@ function Produto(props: Props) {
                 alt="testando"
                 layout="fill"
                 objectFit="contain"
+                priority={true}
               />
             </div>
             <div
@@ -147,6 +149,7 @@ function Produto(props: Props) {
                 alt="testando"
                 layout="fill"
                 objectFit="contain"
+                priority={true}
               />
             </div>
           </div>
@@ -161,6 +164,7 @@ function Produto(props: Props) {
               alt="testando"
               layout="fill"
               objectFit="contain"
+              priority={true}
             />
           </div>
         </div>
