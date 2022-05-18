@@ -8,5 +8,5 @@ Para este projeto foram utilizadas as seguintes tecnologias:
 
 ## Live Demo
 
-Para visualização de uma versão demo do site clique [aqui]([LINK](https://site-vendas-fake.vercel.app/)).
+Para visualização de uma versão demo do site clique [aqui](https://site-vendas-fake.vercel.app/).
 
