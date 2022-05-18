@@ -29,34 +29,32 @@ function Item(props: Props) {
   return (
     <>
       <Link href={`/${categoria}/${pathName}`} passHref>
-        <a target="_blank" rel="noreferrer">
-          <div
-            className={styles.container}
-            onMouseOver={() => setHover(true)}
-            onMouseOut={() => setHover(false)}
-          >
-            <div className={styles.imagem}>
-              {promo ? (
-                <div className={styles.promo}>
-                  <p>PROMOÇÃO</p>
-                </div>
-              ) : null}
-              <Image
-                src={hover ? img2 : img}
-                alt="processador"
-                layout="fill"
-                objectFit="contain"
-              />
-            </div>
-
-            <div className={styles.nome}>
-              <Link href={`/${categoria}/${pathName}`} passHref>
-                <h2>{name}</h2>
-              </Link>
-            </div>
-            <Preco pPrazo={pPrazo} promo={promo} />
+        <div
+          className={styles.container}
+          onMouseOver={() => setHover(true)}
+          onMouseOut={() => setHover(false)}
+        >
+          <div className={styles.imagem}>
+            {promo ? (
+              <div className={styles.promo}>
+                <p>PROMOÇÃO</p>
+              </div>
+            ) : null}
+            <Image
+              src={hover ? img2 : img}
+              alt="processador"
+              layout="fill"
+              objectFit="contain"
+            />
           </div>
-        </a>
+
+          <div className={styles.nome}>
+            <Link href={`/${categoria}/${pathName}`} passHref>
+              <h2>{name}</h2>
+            </Link>
+          </div>
+          <Preco pPrazo={pPrazo} promo={promo} />
+        </div>
       </Link>
     </>
   );

@@ -72,7 +72,6 @@
   }
 
   &:hover {
-    background-color: #000;
     transition: 0.2s all ease;
   }
 
@@ -104,6 +103,7 @@
   position: absolute;
   top: 0;
   transition: all 1s ease;
+  width: 50%;
   z-index: 101;
 
   svg {
@@ -274,7 +274,7 @@
     }
 
     svg {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
   }
 
@@ -301,6 +301,7 @@
   @media (min-width: 768px) {
     border-left: 1px colors.$border-primary solid;
     height: 30px;
+    padding: 0;
   }
 }
 

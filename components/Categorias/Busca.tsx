@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,6 +15,10 @@ function Busca() {
   const [filtro, setFiltro] = useState("Padrão");
   const itens = itemsList.filter((i) => i.tags.some((j) => j === query));
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setFiltro("Padrão");
+  }, [query]);
 
   const itensMenorPreco = itens.slice().sort((a, b) => {
     if (a.promo && b.promo) {
@@ -135,7 +139,11 @@ function Busca() {
           </div>
         </div>
       </div>
-      <div className={itens.length === 0 ? styles.buscaNenhum : styles.containerItens}>
+      <div
+        className={
+          itens.length === 0 ? styles.buscaNenhum : styles.containerItens
+        }
+      >
         {itens.length === 0 ? (
           <h1>Nenhum item encontrado</h1>
         ) : (

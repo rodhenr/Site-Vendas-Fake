@@ -39,7 +39,6 @@ function NavMobile({ numCart }: Props) {
   }
 
   function handleInputEnter(evt: React.KeyboardEvent<HTMLInputElement>) {
-    console.log(evt);
     if (evt.key === "Enter") {
       router.push(`/busca?q=${busca}`);
     }

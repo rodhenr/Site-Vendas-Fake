@@ -1,5 +1,3 @@
-import { useRouter } from "next/router";
-
 import itemsList from "../../listaItems";
 import Item from "../Item/Item";
 
@@ -7,11 +5,10 @@ import styles from "../../styles/Categorias.module.scss";
 
 interface Props {
   filtro: string;
+  category: string | string[] | undefined;
 }
 
-function Filtro({ filtro }: Props) {
-  const router = useRouter();
-  const { category } = router.query;
+function Filtro({ filtro, category }: Props) {
   const items = itemsList.filter((i) => i.categoria === category);
   const itemsMenorPreco = items.slice().sort((a, b) => {
     if (a.promo && b.promo) {

@@ -22,7 +22,9 @@ function Navbar({ open, changeOpen }: Props) {
         <div className={styles.navAtivoExtra}>
           <FontAwesomeIcon icon={faUser} />
           <Link href="/carrinho" passHref>
-            <FontAwesomeIcon icon={faCartShopping} />
+            <span>
+              <FontAwesomeIcon icon={faCartShopping} />
+            </span>
           </Link>
         </div>
       </div>
