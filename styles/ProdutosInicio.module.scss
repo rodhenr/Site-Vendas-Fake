@@ -207,7 +207,7 @@
 .promocoesItens {
   align-items: center;
   display: flex;
-  gap: 1.7rem;
+  gap: 1.5rem;
 
   svg {
     cursor: pointer;
@@ -219,14 +219,10 @@
   height: 500px;
   overflow: hidden;
   position: relative;
-  width: calc(100vw - 200px);
+  width: 300px;
 
-  @media (min-width: 700px) {
-    width: calc(100vw - 200px);
-  }
-
-  @media (min-width: 850px) {
-    width: calc(100vw - 300px);
+  @media (min-width: 768px) {
+    width: 550px;
   }
 
   @media (min-width: 900px) {
@@ -246,9 +242,7 @@
   display: flex;
   gap: 2rem;
   height: 500px;
-  left: 0px;
-  position: absolute;
-  top: 0;
+  justify-content: center;
   transition: all 1s ease;
 }
 
@@ -258,4 +252,12 @@
   display: flex;
   height: 500px;
   width: 250px;
+}
+
+.promoLeft, .promoRight {
+  visibility: hidden;
+}
+
+.promoLeft.active, .promoRight.active {
+  visibility: visible;
 }
