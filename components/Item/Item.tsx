@@ -33,6 +33,7 @@ function Item(props: Props) {
           className={styles.container}
           onMouseOver={() => setHover(true)}
           onMouseOut={() => setHover(false)}
+          data-cy="item"
         >
           <div className={styles.imagem}>
             {promo ? (

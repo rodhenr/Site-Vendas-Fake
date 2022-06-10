@@ -269,7 +269,7 @@ function Produto(props: Props) {
             {parcelamento ? <Parcelamento pPrazo={pPrazo} /> : null}
           </div>
           <div className={styles.comprar}>
-            <button onClick={handleClick}>COMPRAR</button>
+            <button onClick={handleClick} data-cy="buy-button">COMPRAR</button>
           </div>
         </div>
       </div>

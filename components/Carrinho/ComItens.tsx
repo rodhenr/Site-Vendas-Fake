@@ -98,7 +98,7 @@ function ComItens() {
       <div className={styles.precoFinalizar}>
         <PrecoFinal valorCep={valorCep} totalProdutos={totalProdutos} />
         <div className={styles.finalizarCompra}>
-          <button disabled={valorCep === 0}>
+          <button disabled={valorCep === 0} data-cy="finish-button">
             {valorCep === 0 ? (
               <p>
                 <FontAwesomeIcon icon={faCartShopping} />

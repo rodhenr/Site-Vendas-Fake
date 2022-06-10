@@ -16,6 +16,7 @@ function Index() {
         className={
           cartStore.length === 0 ? styles.semItem : styles.comItem
         }
+        data-cy="cart-main"
       >
         {cartStore.length === 0 ? <SemItens /> : <ComItens />}
       </div>

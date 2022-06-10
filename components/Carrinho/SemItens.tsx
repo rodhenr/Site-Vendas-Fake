@@ -13,7 +13,7 @@ function SemItens() {
         <p>Nenhum produto no seu carrinho!</p>
         <FontAwesomeIcon icon={faCartPlus} />
       </div>
-      <button>
+      <button data-cy="cart-no-items">
         <Link href={"/"}>CONTINUAR COMPRANDO</Link>
       </button>
     </>

@@ -106,11 +106,11 @@ function Item({ id, img, name, pPrazo, promo, pathName, categoria }: Props) {
           </div>
           <div className={styles.containerInfo}>
             <div className={styles.itemAcoes}>
-              <button onClick={aumentarQtde}>
+              <button onClick={aumentarQtde} data-cy="cart-plus-qtd">
                 <FontAwesomeIcon icon={faPlus} />
               </button>
-              <span>{itemQtde}</span>
-              <button onClick={diminuirQtde}>
+              <span data-cy="cart-item-qtd">{itemQtde}</span>
+              <button onClick={diminuirQtde} data-cy="cart-minus-qtd">
                 <FontAwesomeIcon icon={faMinus} />
               </button>
             </div>
@@ -127,7 +127,7 @@ function Item({ id, img, name, pPrazo, promo, pathName, categoria }: Props) {
                       currency: "BRL",
                     })}
                   </p>
-                  <p className={styles.precoPromo}>
+                  <p className={styles.precoPromo} data-cy="item-price">
                     {(itemQtde * pPrazo * 0.7).toLocaleString("pt-BR", {
                       minimumFractionDigits: 2,
                       style: "currency",
@@ -136,7 +136,7 @@ function Item({ id, img, name, pPrazo, promo, pathName, categoria }: Props) {
                   </p>
                 </div>
               ) : (
-                <p className={styles.precoSemPromo}>
+                <p className={styles.precoSemPromo} data-cy="item-price">
                   {(itemQtde * pPrazo * 0.85).toLocaleString("pt-BR", {
                     minimumFractionDigits: 2,
                     style: "currency",
@@ -158,11 +158,11 @@ function Item({ id, img, name, pPrazo, promo, pathName, categoria }: Props) {
             </Link>
           </div>
           <div className={styles.itemAcoes}>
-            <button onClick={aumentarQtde}>
+            <button onClick={aumentarQtde} data-cy="cart-plus-qtd">
               <FontAwesomeIcon icon={faPlus} />
             </button>
-            <span>{itemQtde}</span>
-            <button onClick={diminuirQtde}>
+            <span data-cy="cart-item-qtd">{itemQtde}</span>
+            <button onClick={diminuirQtde} data-cy="cart-minus-qtd">
               <FontAwesomeIcon icon={faMinus} />
             </button>
           </div>
@@ -181,7 +181,7 @@ function Item({ id, img, name, pPrazo, promo, pathName, categoria }: Props) {
                       currency: "BRL",
                     })}
                   </p>
-                  <p className={styles.precoPromo}>
+                  <p className={styles.precoPromo} data-cy="item-price">
                     {(itemQtde * pPrazo * 0.7).toLocaleString("pt-BR", {
                       minimumFractionDigits: 2,
                       style: "currency",
@@ -195,7 +195,7 @@ function Item({ id, img, name, pPrazo, promo, pathName, categoria }: Props) {
             <>
               <div></div>
               <div className={styles.itemPrecos}>
-                <p className={styles.precoSemPromo}>
+                <p className={styles.precoSemPromo} data-cy="item-price">
                   {(itemQtde * pPrazo * 0.85).toLocaleString("pt-BR", {
                     minimumFractionDigits: 2,
                     style: "currency",

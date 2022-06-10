@@ -38,6 +38,16 @@ function Promo({ promo }: Props) {
 
     window.addEventListener("resize", handleResize);
 
+    function getIndex() {
+      if (width < 768) {
+        setIndex({ left: 0, right: 0 });
+      } else if (width > 768 && width < 1299) {
+        setIndex({ left: 0, right: 1 });
+      } else if (width > 1300) {
+        setIndex({ left: 0, right: 2 });
+      }
+    }
+
     handleResize();
     getIndex();
 
@@ -45,16 +55,6 @@ function Promo({ promo }: Props) {
       window.removeEventListener("resize", handleResize);
     };
   }, [width]);
-
-  function getIndex() {
-    if (width < 768) {
-      setIndex({ left: 0, right: 0 });
-    } else if (width > 768 && width < 1299) {
-      setIndex({ left: 0, right: 1 });
-    } else if (width > 1300) {
-      setIndex({ left: 0, right: 2 });
-    }
-  }
 
   function movePromo(direction: string) {
     if (direction === "left" && index.left > 0) {

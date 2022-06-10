@@ -71,9 +71,9 @@ function NavDesktop({ numCart }: Props) {
         </div>
         <div className={styles.carrinho}>
           <Link href="/carrinho" passHref>
-            <div>
+            <div data-cy="cart">
               <FontAwesomeIcon icon={faCartShopping} />
-              <div className={styles.carrinhoNumeroItem}>{numCart}</div>
+              <div className={styles.carrinhoNumeroItem} data-cy="num-cart">{numCart}</div>
             </div>
           </Link>
         </div>

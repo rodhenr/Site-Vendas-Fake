@@ -64,9 +64,11 @@ function NavMobile({ numCart }: Props) {
             <FontAwesomeIcon icon={faUser} />
             <div>
               <Link href="/carrinho" passHref>
-                <div className={styles.carrinho}>
+                <div className={styles.carrinho} data-cy="cart">
                   <FontAwesomeIcon icon={faCartShopping} />
-                  <div className={styles.carrinhoNumeroItem}>{numCart}</div>
+                  <div className={styles.carrinhoNumeroItem} data-cy="num-cart">
+                    {numCart}
+                  </div>
                 </div>
               </Link>
             </div>
