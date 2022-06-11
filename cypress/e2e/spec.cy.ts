@@ -6,31 +6,97 @@ describe("site", () => {
   });
 
   it("a loja deve mostrar a mensagem de estar vazia", () => {
-    cy.get('[data-cy="num-cart"]').should("have.text", "0");
+    cy.get('[data-cy="num-cart"]').should("be.visible").and("have.text", "0");
     cy.get('[data-cy="cart"]').click();
     cy.get('[data-cy="cart-main"]')
       .contains("Nenhum produto no seu carrinho!")
       .and("be.visible");
     cy.get('[data-cy="cart-no-items"]').click();
+    cy.url().should("eq", "http://localhost:3000/");
   });
 
-  it("deve fazer todo o processo desde escolher o item até a compra", () => {
-    cy.addItem();
+  it("deve escolher o item, clicar em comprar e entrar no carrinho para colocar o cep e finalizar a compra", () => {
+    cy.get('[data-cy="item"]').first().click();
+    cy.get('[data-cy="buy-button"]').click();
+    cy.get('[data-cy="num-cart"]').should("have.text", "1");
+    cy.get('[data-cy="cart"]').click();
     cy.get('[data-cy="input-cep"]').type("30000000");
     cy.get('[data-cy="cep-button"]').click();
     cy.get('[data-cy="finish-button"]').click();
   });
 
-  it.only("deve fazer todo o processo desde escolher o item até a compra", () => {
-    cy.addItem();
-    cy.get('[data-cy="cart-plus-qtd"]').click();
-    cy.get('[data-cy="cart-item-qtd"]').should("have.text", "2");
-    cy.get('[data-cy="cart-plus-qtd"]').click();
-    cy.get('[data-cy="cart-item-qtd"]').should("have.text", "3");
-    cy.get('[data-cy="cart-minus-qtd"]').click();
-    cy.get('[data-cy="cart-item-qtd"]').should("have.text", "2");
-    cy.get('[data-cy="cart-minus-qtd"]').click();
-    cy.get('[data-cy="cart-item-qtd"]').should("have.text", "1");
+  it.only("deve conseguir acrescentar 3 itens no carrinho e alterar a quantidade de cada item e deletá-los", () => {
+    cy.get('[data-cy="category-motherboard"]').click();
+    cy.get('[data-cy="filter-items"] [data-cy="item"]').first().click();
+    cy.get('[data-cy="buy-button"]').click();
+    cy.get('[data-cy="num-cart"]').should("have.text", "1");
+    cy.get('[data-cy="category-motherboard"]').click();
+    cy.get('[data-cy="filter-items"] [data-cy="item"]')
+      .should("be.visible")
+      .next()
+      .first()
+      .click();
+    cy.get('[data-cy="buy-button"]').click();
+    cy.get('[data-cy="num-cart"]').should("have.text", "2");
+    cy.get('[data-cy="cart"]').click();
+    cy.get('[data-cy="cart-item-qtd"]').first().should("have.text", "1");
+    cy.get('[data-cy="cart-minus-qtd"]').first().click();
+    cy.get('[data-cy="cart-item-qtd"]').first().should("have.text", "1");
+    cy.get('[data-cy="cart-plus-qtd"]').first().click();
+    cy.get('[data-cy="cart-item-qtd"]').first().should("have.text", "2");
+    cy.get('[data-cy="cart-plus-qtd"]').first().click();
+    cy.get('[data-cy="cart-item-qtd"]').first().should("have.text", "3");
+    cy.get('[data-cy="cart-minus-qtd"]').first().click();
+    cy.get('[data-cy="cart-item-qtd"]').first().should("have.text", "2");
+    cy.get('[data-cy="cart-minus-qtd"]').first().click();
+    cy.get('[data-cy="cart-item-qtd"]').first().should("have.text", "1");
+    cy.get('[data-cy="delete-item"]').first().click();
+    cy.get('[data-cy="delete-item"]').click();
+    cy.get('[data-cy="cart-main"]')
+      .contains("Nenhum produto no seu carrinho!")
+      .and("be.visible");
+    cy.get('[data-cy="cart-no-items"]').click();
+    cy.url().should("eq", "http://localhost:3000/");
+  });
+
+  it("deve mostrar o filtro corretamente", () => {
+    let optionsArray: number[] = [];
+    cy.get('[data-cy="category-motherboard"]').click();
+    cy.get('[data-cy="filter-button"]').click();
+    cy.get('[data-cy="filter-asc"]').click();
+    cy.get('[data-cy="category-item-price"]')
+      .each(($el, index) => {
+        optionsArray[index] = Number($el.text().slice(2, -3).replace(".", ""));
+      })
+      .then(() => {
+        const sorted = Cypress._.sortBy(optionsArray);
+        expect(sorted).to.deep.equal(optionsArray);
+      });
+    cy.get('[data-cy="filter-button"]').click();
+    cy.get('[data-cy="filter-desc"]').click();
+    cy.get('[data-cy="category-item-price"]')
+      .each(($el, index) => {
+        optionsArray[index] = Number($el.text().slice(2, -3).replace(".", ""));
+      })
+      .then(() => {
+        const sorted = Cypress._.sortBy(optionsArray).reverse();
+        expect(sorted).to.deep.equal(optionsArray);
+      });
+  });
+
+  it("deve conseguir ir para o próximo item em promoções", () => {
+    cy.get('[data-cy="promo-move-left"]').should("not.be.visible");
+    cy.get('[data-cy="promo-item"]').should("have.length", 2);
+    cy.get('[data-cy="promo-move-right"]').click();
+    cy.get('[data-cy="promo-move-left"]').should("be.visible");
+    cy.testPromo("right");
+    cy.get('[data-cy="promo-move-right"]').should("not.be.visible");
+    cy.get('[data-cy="promo-item"]').should("have.length", 2);
+    cy.get('[data-cy="promo-move-left"]').click();
+    cy.get('[data-cy="promo-move-right"]').should("be.visible");
+    cy.testPromo("left");
+    cy.get('[data-cy="promo-move-left"]').should("not.be.visible");
+    cy.get('[data-cy="promo-item"]').should("have.length", 2);
   });
 });
 

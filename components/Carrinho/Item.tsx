@@ -206,7 +206,7 @@ function Item({ id, img, name, pPrazo, promo, pathName, categoria }: Props) {
             </>
           )}
 
-          <div onClick={() => handleDelete(id)} className={styles.itemDeletar}>
+          <div onClick={() => handleDelete(id)} className={styles.itemDeletar} data-cy="delete-item">
             <FontAwesomeIcon icon={faXmark} />
           </div>
         </div>

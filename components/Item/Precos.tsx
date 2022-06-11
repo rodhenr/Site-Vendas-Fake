@@ -11,7 +11,7 @@ function Precos({ promo, pPrazo }: Props) {
       <div className={styles.produtoPrecos}>
         <div className={styles.precoPrazo}>
           {promo ? (
-            <p>
+            <p data-cy="category-item-price">
               {(pPrazo * 0.85).toLocaleString("pt-BR", {
                 minimumFractionDigits: 2,
                 style: "currency",
@@ -19,7 +19,7 @@ function Precos({ promo, pPrazo }: Props) {
               })}
             </p>
           ) : (
-            <p>
+            <p data-cy="category-item-price">
               {pPrazo.toLocaleString("pt-BR", {
                 minimumFractionDigits: 2,
                 style: "currency",

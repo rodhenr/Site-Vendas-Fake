@@ -91,7 +91,7 @@ function Filtro({ filtro, category }: Props) {
     }
   }
 
-  return <div className={styles.containerItens}>{renderItems(filtro)}</div>;
+  return <div className={styles.containerItens} data-cy="filter-items">{renderItems(filtro)}</div>;
 }
 
 export default Filtro;

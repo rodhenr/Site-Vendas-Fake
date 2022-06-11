@@ -95,6 +95,7 @@ function Promo({ promo }: Props) {
           <FontAwesomeIcon
             icon={faArrowLeft}
             onClick={() => movePromo("left")}
+            data-cy="promo-move-left"
           />
         </div>
         <div className={styles.containerPromoItens}>
@@ -102,7 +103,7 @@ function Promo({ promo }: Props) {
             {promo.map((i, key) => {
               if (key >= index.left && key <= index.right) {
                 return (
-                  <div className={styles.item} key={key}>
+                  <div className={styles.item} key={key} data-cy="promo-item">
                     <Item
                       modelo={i.modelo}
                       img={i.img}
@@ -133,6 +134,7 @@ function Promo({ promo }: Props) {
           <FontAwesomeIcon
             icon={faArrowRight}
             onClick={() => movePromo("right")}
+            data-cy="promo-move-right"
           />
         </div>
       </div>

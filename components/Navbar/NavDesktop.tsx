@@ -80,38 +80,38 @@ function NavDesktop({ numCart }: Props) {
       </div>
       <nav className={styles.navDesktop} onClick={changeOpen}>
         <ul>
-          <Link href="/placa-mae" passHref>
-            <li>
+          <Link href="/placa-mae" passHref >
+            <li data-cy="category-motherboard">
               <span>PLACA-MÃE</span>
             </li>
           </Link>
           <Link href="/processador" passHref>
-            <li>
+            <li data-cy="category-cpu">
               <span>PROCESSADOR </span>
             </li>
           </Link>
           <Link href="/placa-de-video" passHref>
-            <li>
+            <li data-cy="category-gpu">
               <span>PLACA DE VÍDEO </span>
             </li>
           </Link>
           <Link href="/fonte" passHref>
-            <li>
+            <li data-cy="category-psu">
               <span>FONTE </span>
             </li>
           </Link>
           <Link href="/gabinete" passHref>
-            <li>
+            <li data-cy="category-pccase">
               <span> GABINETE </span>
             </li>
           </Link>
           <Link href="/memoria-ram" passHref>
-            <li>
+            <li data-cy="category-ram">
               <span>MEMÓRIA RAM </span>
             </li>
           </Link>
           <Link href="/ssd" passHref>
-            <li>
+            <li data-cy="category-ssd">
               <span>SSD</span>
             </li>
           </Link>

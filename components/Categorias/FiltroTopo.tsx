@@ -43,16 +43,16 @@ function FiltroTopo({ handleFiltro, filtro }: Props) {
               : styles.botaoOrdenar
           }
         >
-          <button onClick={handleOpen}>
+          <button onClick={handleOpen} data-cy="filter-button">
             {filtro}
             <FontAwesomeIcon icon={faAngleDown} />
           </button>
           <ul>
             <li onClick={() => handleEscolhaFiltro("Padrão")}>Padrão</li>
-            <li onClick={() => handleEscolhaFiltro("Menor Preço")}>
+            <li onClick={() => handleEscolhaFiltro("Menor Preço")} data-cy="filter-asc">
               Menor Preço
             </li>
-            <li onClick={() => handleEscolhaFiltro("Maior Preço")}>
+            <li onClick={() => handleEscolhaFiltro("Maior Preço")} data-cy="filter-desc">
               Maior Preço
             </li>
           </ul>
