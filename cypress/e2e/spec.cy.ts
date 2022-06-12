@@ -25,7 +25,7 @@ describe("site", () => {
     cy.get('[data-cy="finish-button"]').click();
   });
 
-  it.only("deve conseguir acrescentar 3 itens no carrinho e alterar a quantidade de cada item e deletá-los", () => {
+  it("deve conseguir acrescentar 3 itens no carrinho e alterar a quantidade de cada item e deletá-los", () => {
     cy.addItemCart(0, 1);
     cy.addItemCart(1, 2);
     cy.addItemCart(2, 3);
@@ -46,7 +46,7 @@ describe("site", () => {
     cy.get('[data-cy="delete-item"]').eq(0).click();
     cy.get('[data-cy="cart-item"]').should("have.length", 2);
     cy.get('[data-cy="cart-clean"]').click();
-    
+
     cy.get('[data-cy="num-cart"]').should("have.text", 0);
     cy.get('[data-cy="cart-main"]')
       .contains("Nenhum produto no seu carrinho!")
@@ -80,7 +80,7 @@ describe("site", () => {
       });
   });
 
-  it("deve conseguir ir para o próximo item em promoções", () => {
+  it("deve conseguir navegar pelas promoções na tela inicial", () => {
     cy.get('[data-cy="promo-move-left"]').should("not.be.visible");
     cy.get('[data-cy="promo-item"]').should("have.length", 2);
     cy.get('[data-cy="promo-move-right"]').click();
