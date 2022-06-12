@@ -88,7 +88,7 @@ function Item({ id, img, name, pPrazo, promo, pathName, categoria }: Props) {
     <div className={styles.containerItem}>
       {width < 900 ? (
         <>
-          <div className={styles.item}>
+          <div className={styles.item} data-cy="cart-item">
             <div className={styles.itemImagem}>
               <Image src={img} alt="" height={1000} width={1000} />
             </div>
@@ -148,7 +148,7 @@ function Item({ id, img, name, pPrazo, promo, pathName, categoria }: Props) {
           </div>
         </>
       ) : (
-        <div className={styles.item}>
+        <div className={styles.item} data-cy="cart-item">
           <div className={styles.itemImagem}>
             <Image src={img} alt="" height={1000} width={1000} />
           </div>
@@ -206,7 +206,11 @@ function Item({ id, img, name, pPrazo, promo, pathName, categoria }: Props) {
             </>
           )}
 
-          <div onClick={() => handleDelete(id)} className={styles.itemDeletar} data-cy="delete-item">
+          <div
+            onClick={() => handleDelete(id)}
+            className={styles.itemDeletar}
+            data-cy="delete-item"
+          >
             <FontAwesomeIcon icon={faXmark} />
           </div>
         </div>

@@ -26,32 +26,28 @@ describe("site", () => {
   });
 
   it.only("deve conseguir acrescentar 3 itens no carrinho e alterar a quantidade de cada item e deletá-los", () => {
-    cy.get('[data-cy="category-motherboard"]').click();
-    cy.get('[data-cy="filter-items"] [data-cy="item"]').first().click();
-    cy.get('[data-cy="buy-button"]').click();
-    cy.get('[data-cy="num-cart"]').should("have.text", "1");
-    cy.get('[data-cy="category-motherboard"]').click();
-    cy.get('[data-cy="filter-items"] [data-cy="item"]')
-      .should("be.visible")
-      .next()
-      .first()
-      .click();
-    cy.get('[data-cy="buy-button"]').click();
-    cy.get('[data-cy="num-cart"]').should("have.text", "2");
+    cy.addItemCart(0, 1);
+    cy.addItemCart(1, 2);
+    cy.addItemCart(2, 3);
+
     cy.get('[data-cy="cart"]').click();
-    cy.get('[data-cy="cart-item-qtd"]').first().should("have.text", "1");
-    cy.get('[data-cy="cart-minus-qtd"]').first().click();
-    cy.get('[data-cy="cart-item-qtd"]').first().should("have.text", "1");
-    cy.get('[data-cy="cart-plus-qtd"]').first().click();
-    cy.get('[data-cy="cart-item-qtd"]').first().should("have.text", "2");
-    cy.get('[data-cy="cart-plus-qtd"]').first().click();
-    cy.get('[data-cy="cart-item-qtd"]').first().should("have.text", "3");
-    cy.get('[data-cy="cart-minus-qtd"]').first().click();
-    cy.get('[data-cy="cart-item-qtd"]').first().should("have.text", "2");
-    cy.get('[data-cy="cart-minus-qtd"]').first().click();
-    cy.get('[data-cy="cart-item-qtd"]').first().should("have.text", "1");
-    cy.get('[data-cy="delete-item"]').first().click();
-    cy.get('[data-cy="delete-item"]').click();
+    cy.get('[data-cy="cart-item-qtd"]')
+      .should("have.length", 3)
+      .each((el) => cy.wrap(el).should("have.text", "1"));
+    cy.getItemMinus(0).click();
+    cy.getItemQtd(0).should("have.text", "1");
+    cy.getItemPlus(0).click();
+    cy.getItemQtd(0).should("have.text", "2");
+    cy.getItemPlus(1).click();
+    cy.getItemQtd(1).should("have.text", "2");
+    cy.getItemPlus(2).click();
+    cy.getItemQtd(2).should("have.text", "2");
+
+    cy.get('[data-cy="delete-item"]').eq(0).click();
+    cy.get('[data-cy="cart-item"]').should("have.length", 2);
+    cy.get('[data-cy="cart-clean"]').click();
+    
+    cy.get('[data-cy="num-cart"]').should("have.text", 0);
     cy.get('[data-cy="cart-main"]')
       .contains("Nenhum produto no seu carrinho!")
       .and("be.visible");

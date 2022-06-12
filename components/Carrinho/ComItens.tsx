@@ -88,7 +88,9 @@ function ComItens() {
         ))}
       </div>
       <div className={styles.carrinhoLimpar}>
-        <button onClick={handleRemove}>LIMPAR CARRINHO</button>
+        <button onClick={handleRemove} data-cy="cart-clean">
+          LIMPAR CARRINHO
+        </button>
       </div>
       <Frete
         handleCepChange={handleCepChange}

@@ -10,7 +10,7 @@ function PrecoFinal({ valorCep, totalProdutos }: Props) {
     <div className={styles.containerPrecosFinal}>
       <div className={styles.precosProdutos}>
         <p>Subtotal</p>
-        <p>
+        <p data-cy="products-price">
           {totalProdutos.toLocaleString("pt-BR", {
             minimumFractionDigits: 2,
             style: "currency",
